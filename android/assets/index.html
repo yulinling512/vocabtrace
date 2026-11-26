@@ -1108,6 +1108,8 @@ body[data-anim="off"] #auth .acard{animation:none}
 @keyframes syncPulse{50%{opacity:.35}}
 .syncline{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
 .syncmsg{font-size:calc(11.5px * var(--fs));color:var(--faint);flex:1;min-width:0}
+.syncmeta{font-size:calc(11.5px * var(--fs));color:var(--faint);margin-top:8px;line-height:1.7}
+.syncmeta b{color:var(--ink2);font-weight:600}
 /* 鸣谢卡片 */
 .thxrow{display:flex;align-items:center;gap:12px;padding:14px 12px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
 .thxicon{width:40px;height:40px;border-radius:50%;background:var(--surface-2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -1544,6 +1546,11 @@ see &#183; say &#183; write
         <span class="syncmsg"><i class="syncdot" id="syncDot"></i><span id="syncMsg">未同步</span></span>
         <button class="btn ghost sm" id="syncNow">立即同步</button>
       </div>
+      <div class="syncmeta" id="syncMeta"></div>
+      <div class="row" style="justify-content:flex-start;margin-top:10px">
+        <button class="btn ghost sm" id="syncExport">导出一份存档</button>
+      </div>
+      <div class="anote" style="margin-top:8px">导出的 JSON 就是整套数据（书架、进度、头像、AI Key、设置），换设备或换云端时可以直接导入，不怕服务端出问题。</div>
     </div>
 
     <div class="box" style="margin-top:18px">
@@ -1696,7 +1703,7 @@ see &#183; say &#183; write
         </div>
       </div>
       <div class="cred" id="credRows">
-        <div class="credrow"><b>版本</b><span id="credVer">1.0.4 · Windows / Android / Linux</span></div>
+        <div class="credrow"><b>版本</b><span id="credVer">1.0.5 · Windows / Android / Linux</span></div>
         <div class="credrow"><b>词库</b><span>《高频词默写》601 词，按真题出现频次排序，每 36 词一页</span></div>
         <div class="credrow"><b>词源</b><span>参考 etymonline；记忆钩子与例句由作者逐词整理</span></div>
         <div class="credrow"><b>判分</b><span>本地字面规则打底，拿不准的交 AI 复核，你可随时翻案</span></div>
@@ -3822,7 +3829,10 @@ function renderCloudBox(){
     await syncCloud();
     btn.disabled = false;
   };
+  const ex = $('syncExport');
+  if(ex) ex.onclick = ()=> exportSnapshot();
   setSync(SYNC_STATE, $('syncMsg') ? $('syncMsg').textContent : '');
+  renderSyncMeta();
 }
 function renderSet(){
   renderAcctBox();
@@ -4166,7 +4176,10 @@ let CLOUD = null, CLOUD_USER = null;
 let SYNC_STATE = 'off';   /* off | ok | busy | fail */
 let pendingEmailOtp = null;
 let pendingPwdReset = null;
-let syncTimer = null;
+let syncTimer = null, syncHardTimer = null;
+let syncLastAt = 0, syncPending = false;
+let CLOUD_META = null;   /* 最近一次云端存档的概况：时间/大小/包含项 */
+let PULL_INFO = null;    /* 最近一次从云端取回时的现场，用来提示「换设备恢复」 */
 
 function cloudReady(){ return !!(CLOUD && CLOUD_USER); }
 function initCloud(){
@@ -4181,6 +4194,52 @@ function setSync(state, msg){
   const dot = $('syncDot'), txt = $('syncMsg');
   if(dot) dot.className = 'syncdot' + (state==='ok'?' on':state==='busy'?' busy':'');
   if(txt) txt.textContent = msg || ({off:'未登录云端',ok:'已同步',busy:'正在同步…',fail:'同步失败，本地记录仍在'}[state]||'');
+  renderSyncMeta();
+}
+
+/* 云端最新那份长什么样：时间、体积、带了什么。换设备前先看一眼，心里有底 */
+function renderSyncMeta(){
+  const el = $('syncMeta');
+  if(!el) return;
+  if(!cloudReady()){ el.textContent = ''; return; }
+  const m = CLOUD_META;
+  if(!m){ el.textContent = '云端还没有存档'; return; }
+  const d = m.at ? new Date(m.at) : null;
+  const stamp = d
+    ? (String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0') + ' '
+       + String(d.getHours()).padStart(2,'0') + ':' + String(d.getMinutes()).padStart(2,'0'))
+    : '未知时间';
+  const size = m.kb >= 1024 ? (m.kb / 1024).toFixed(1) + ' MB' : m.kb + ' KB';
+  const bits = ['<b>' + stamp + '</b> 更新', '<b>' + size + '</b>'];
+  if(m.books) bits.push('<b>' + m.books + '</b> 本书架 / <b>' + m.words + '</b> 词');
+  bits.push(m.avatar ? '头像<b>已带上</b>' : '头像<b>无</b>');
+  bits.push(m.key ? 'Key<b>已带上</b>' : 'Key<b>无</b>');
+  if(m.nick) bits.push('昵称<b>' + esc(m.nick) + '</b>');
+  if(m.email) bits.push('邮箱<b>' + esc(m.email) + '</b>');
+  el.innerHTML = '云端最新：' + bits.join(' · ');
+}
+
+/* 把整套数据存成一个 JSON 落盘：云端哪天不伺候了，这份也能拿回来重新导入 */
+function exportSnapshot(){
+  try{
+    const snap = cloudSnapshot();
+    snap.exportedAt = Date.now();
+    snap.exportedBy = (ACCT && ACCT.name) || '';
+    const blob = new Blob([JSON.stringify(snap)], {type:'application/json'});
+    const d = new Date();
+    const tag = d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0')
+              + '-' + String(d.getHours()).padStart(2,'0') + String(d.getMinutes()).padStart(2,'0');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = '词迹存档-' + tag + '.json';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(()=>{ try{ URL.revokeObjectURL(a.href); }catch(e){} }, 4000);
+    toast('已导出 ' + a.download);
+  }catch(e){
+    toast('导出没成功：' + (e && e.message || '浏览器不让写文件'));
+  }
 }
 
 /* 把内存里的整套数据拍成快照——和本地存档同一套字段，方便双向合并 */
@@ -4287,6 +4346,8 @@ async function pullCloud(){
   const remote = r && r.data && r.data.snapshot;
   if(!remote) return false;
   const local = cloudSnapshot();
+  /* 这台设备上来是不是「一张白纸」：决定了要不要给一句「已从云端恢复」 */
+  const blankBefore = !((local.books||[]).length) && !((local.words||[]).length) && !(Object.keys(local.daily||{}).length);
   const merged = mergeSnap(local, remote);
   state.books = merged.books || [];
   state.activeId = merged.activeId || state.activeId;
@@ -4304,10 +4365,40 @@ async function pullCloud(){
   localStorage.setItem(LS.daily, JSON.stringify(state.daily));
   localStorage.setItem(LS.cfg, JSON.stringify(state.cfg));
   localStorage.setItem(LS.meta, JSON.stringify({savedAt: merged.savedAt || Date.now()}));
+  /* 记下云端那份的概况：换设备时用户能自己看见「拿回来的是什么」 */
+  CLOUD_META = metaOf(remote);
+  PULL_INFO = {
+    blank: blankBefore,
+    learned: learnedCount(),
+    wrong: wrongPending().length,
+    words: (state.words || []).length,
+    avatar: !!(state.cfg && state.cfg.av),
+    key: !!(state.cfg && state.cfg.key),
+    books: (state.books || []).length
+  };
+  renderSyncMeta();
   /* 桌面版再把合并结果写回硬盘，两边彻底对齐 */
   pushState();
   return true;
 }
+
+/* 云端快照 → 一句能看懂的话 */
+function metaOf(snap){
+  if(!snap) return null;
+  const cfg = snap.cfg || {};
+  const b0 = (snap.books && snap.books[0]) || null;
+  return {
+    at: snap.savedAt || 0,
+    kb: Math.round(JSON.stringify(snap).length / 1024),
+    books: (snap.books || []).length,
+    words: (b0 && (b0.words || []).length) || 0,
+    avatar: !!(cfg.av),
+    key: !!(cfg.key),
+    nick: cfg.nick || '',
+    email: cfg.email || ''
+  };
+}
+
 
 /* 把本地整包推上云。owner_id 不传，数据库用 auth.uid() 自动填 */
 async function pushCloud(){
@@ -4315,6 +4406,10 @@ async function pushCloud(){
   const snap = cloudSnapshot();
   const r = await CLOUD.database.from('vocab_saves').upsert({snapshot:snap, saved_at:snap.savedAt});
   if(r && r.error) throw r.error;
+  syncLastAt = Date.now();
+  syncPending = false;
+  CLOUD_META = metaOf(snap);
+  renderSyncMeta();
 }
 
 /* 首次用邮箱登录：把这台电脑上已有的进度搬上云，一条不丢。
@@ -4373,12 +4468,30 @@ async function syncCloud(silent){
     return false;
   }
 }
-/* 数据变了就延迟推一次，别每次按键都发请求 */
+/* 数据变了就延迟推一次，别每次按键都发请求。
+   整包约 1MB，手机上每判一个词都传一遍太费流量，所以：距上次推送不足 20 秒就往后压，
+   压到 20 秒整点再发；另外挂一个 60 秒硬兜底，持续操作也保证一分钟内一定落云。 */
 function queueSync(){
   if(!cloudReady()) return;
+  syncPending = true;
   clearTimeout(syncTimer);
-  syncTimer = setTimeout(()=>{ pushCloud().then(()=>setSync('ok','已自动同步')).catch(()=>setSync('fail')); }, 2600);
+  const since = Date.now() - syncLastAt;
+  const wait = since >= 20000 ? 2600 : Math.max(2600, 20000 - since);
+  syncTimer = setTimeout(flushSync, wait);
+  clearTimeout(syncHardTimer);
+  syncHardTimer = setTimeout(()=>{ if(syncPending) flushSync(); }, 60000);
 }
+function flushSync(){
+  if(!syncPending && CLOUD_META) return;
+  clearTimeout(syncTimer); clearTimeout(syncHardTimer);
+  syncPending = false;
+  setSync('busy');
+  return pushCloud().then(()=>{ setSync('ok', '已同步 · ' + new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})); })
+                    .catch(()=>{ setSync('fail'); syncPending = true; });
+}
+/* 切走/关窗口前尽量补一脚，别把最后几十秒的进度落在本机 */
+document.addEventListener('visibilitychange', ()=>{ if(document.hidden && syncPending) flushSync(); });
+window.addEventListener('pagehide', ()=>{ if(syncPending) flushSync(); });
 
 /* 邮箱验证码：两个动作分开，发码和验证各自独立 */
 async function cloudSendCode(email){
@@ -4461,7 +4574,15 @@ async function enterApp(){
     try{
       const got = await pullCloud();
       if(!got) await migrateLocalToCloud();   /* 云端还是空的：把本机老存档搬上去 */
+      hydrateEmail();
     }catch(e){ /* 云端暂时不可用，本地记录照常显示 */ }
+    /* 这台设备本来什么都没有，靠登录从云端捡回来的：说清楚捡回了什么 */
+    if(PULL_INFO && PULL_INFO.blank){
+      const pi = PULL_INFO;
+      toast('已从云端恢复：已背 ' + pi.learned + ' / ' + pi.words + '，错词待复习 ' + pi.wrong + ' 个'
+            + (pi.avatar ? '，头像已同步' : '')
+            + (pi.key ? '，AI Key 已带上' : ''));
+    }
   }
   HYDRATED = true;   /* 清账动作必须写盘，所以先解锁写盘 */
   /* 一次性维护：今日计数与错题本清零。云端按最大值合并，必须先在这里清干净再推回去，
@@ -4531,6 +4652,7 @@ async function bootAuth(){
         CLOUD_USER = cu;
         ACCT = cloudAcct(cu);
         await enterApp();
+        hydrateEmail();
         syncCloud(true);       /* 开机自动同步，失败也不挡着进应用 */
         return;
       }
@@ -4556,12 +4678,39 @@ async function bootAuth(){
 
 /* 云端用户 → 应用里的账号对象。uid 用云端给的，天然多账号隔离 */
 function cloudAcct(cu){
-  const email = cu.email || '';
-  const name = email.split('@')[0] || cu.name || '我';
+  const email = (cu && cu.email) || '';
+  const nick = String((state.cfg && state.cfg.nick) || '').trim();
+  const name = (email ? email.split('@')[0] : '') || nick || (cu && cu.name) || '我';
   return {
     id: cu.id, name, email, cloud: true,
     color:'#B96A22', hasAvatar:false, avatarAt:0, colors:[]
   };
+}
+
+/* 云端会话里经常只有 uid、没带邮箱（token 里没塞），
+   这里补一次 /user/me 把邮箱取回来，写进 cfg 一起同步——手机上也就能看见自己登的是哪个邮箱 */
+async function hydrateEmail(){
+  if(!cloudReady() || !ACCT || !ACCT.cloud) return;
+  let mail = ACCT.email || (state.cfg && state.cfg.email) || '';
+  if(!mail){
+    try{
+      const r = await CLOUD.auth.getUser();
+      const u = r && r.data;
+      if(u && u.email) mail = u.email;
+    }catch(e){ /* 取不到就算了，不影响背词 */ }
+  }
+  if(!mail) return;
+  ACCT.email = mail;
+  if(!ACCT.name || ACCT.name === '我') ACCT.name = mail.split('@')[0];
+  if(!state.cfg) state.cfg = {};
+  if(state.cfg.email !== mail){
+    state.cfg.email = mail;
+    try{ localStorage.setItem(LS.cfg, JSON.stringify(state.cfg)); }catch(e){}
+    pushState();
+    queueSync();
+  }
+  renderWho();
+  if(state.view === 'set'){ renderAcctBox(); }
 }
 
 function showAuth(list){
@@ -4793,6 +4942,7 @@ function showAuth(list){
     ACCT = cloudAcct(CLOUD_USER);
     try{ localStorage.setItem(LS_REMEMBER, '__cloud__'); }catch(e){}
     await enterApp();
+    hydrateEmail();
     syncCloud(true);
   }
 
@@ -4870,11 +5020,11 @@ function renderAcctBox(){
   const cloud = !!ACCT.cloud;
   const nm = displayName();
   const sub = cloud
-    ? ('邮箱账号 · 验证码登录' + (ACCT.email ? ' · ' + ACCT.email : ''))
+    ? ('云端账号' + (ACCT.email ? ' · ' + ACCT.email : ' · 邮箱读取中…') + ' · 手机和电脑同一份')
     : (rememberOn()?'已记住，下次直接进':'下次要输密码');
   box.innerHTML = `
     <h3>账号</h3>
-    <div class="desc">${cloud?'邮箱账号：进度存在本机和云端，手机登录同一个邮箱就能接着背。':'这台电脑上的账号，每个账号一本书架，互不打扰。点左边的头像可以换一张。'}</div>
+    <div class="desc">${cloud?'云端账号：书架、进度、错词、头像、AI Key、昵称全跟着这个账号走。换一台设备用同一个邮箱登录，进去就是现在这个样子。':'这台电脑上的账号，每个账号一本书架，互不打扰。点左边的头像可以换一张。'}</div>
     <div class="acctrow">
       <button class="avn" id="acctAv" title="换头像">${avatarHTML()}</button>
       <div class="acctmeta"><b>${esc(nm)}</b><span>${esc(sub)}</span></div>
