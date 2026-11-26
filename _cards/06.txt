@@ -1,0 +1,420 @@
+@@pesticide
+C: [pest]-i-cide || pest 是「害虫」，cide 是「杀」（suicide 自杀同源）。杀害虫的药——杀虫剂。
+E: Farmers spray [pesticides] on the crop. ~ 农民给作物喷[农药]。
+E: [Pesticide] residues were found. ~ 检出[农药]残留。
+L: pesticide residue / chemical pesticide / spray pesticide
+T: dark 🧪
+M: suicide ~ 自杀。cide 结尾都是「杀」，一眼认出来。
+@@pile
+C: [pile] || 拉丁 pila 是「柱、堆」。东西摞起来——堆，人往里涌——涌入。
+E: There is a [pile] of books. ~ 有一[堆]书。
+E: They [piled] into the bus. ~ 他们[涌]上公交。
+L: a pile of / pile up / piles of
+T: warm 📚
+M: file ~ 文件。只差一个字母，pile 是堆，file 是归档。
+@@pirate
+C: [pirat]-e || 希腊 peirates 是「海上攻击者」。海上抢船的——海盗，抢别人成果的——盗版者。
+E: [Pirates] attacked the ship. ~ [海盗]袭击了船。
+E: The film was [pirated] online. ~ 影片在网上被[盗版]。
+L: pirate copy / pirate ship / software pirate
+T: dark 🏴‍☠️
+M: pilot ~ 飞行员。拼写相近，一个抢船，一个开飞机。
+@@plastic
+C: [plast]-ic || 希腊 plastos 是「可塑的」。能捏成任何形状——塑料、可塑的，笑得像捏出来的——不自然的。
+E: The bottle is [plastic]. ~ 这瓶子是[塑料]的。
+E: His smile looked [plastic]. ~ 他的笑很[假]。
+L: plastic bag / plastic surgery / plastic smile
+T: cool ♻️
+M: plaster ~ 石膏。同根「塑」，一个是材料，一个是糊上去的东西。
+@@poison
+C: [poison] || 古法语 puison 原是「饮料、药水」。喝下去要命的那口——毒药。
+E: The well was [poisoned]. ~ 井水被[下毒]。
+E: Jealousy [poisoned] their friendship. ~ 嫉妒[毒害]了他们的友谊。
+L: poison gas / poison sb's mind / deadly poison
+T: dark ☠️
+M: prison ~ 监狱。拼写像，poison 是毒，prison 是牢。
+@@polish
+C: [polish] || 拉丁 polire 是「磨光」。一遍遍擦到发亮——磨光，文章也擦——润色。
+E: He [polished] his shoes. ~ 他[擦亮]了鞋。
+E: The essay needs [polishing]. ~ 文章需要[润色]。
+L: polish up / polish shoes / nail polish
+T: bright ✨
+M: Polish ~ 波兰的。大写是国籍，小写才是「擦亮」。
+@@political
+C: [polit]-ical || polis 是「城邦」（police、policy 同源）。管城邦的事——政治的。
+E: The decision was [political]. ~ 这决定是[政治性]的。
+E: He has no [political] ambition. ~ 他没有[政治]野心。
+L: political party / political system / political issue
+T: cool 🏛️
+M: policy ~ 政策。同根「城邦」，一个是治理的学问，一个是治理的条文。
+@@pollution
+C: pol-[lut]-ion || lut 是「泥、脏」（lute 泥封同源）。把干净的水弄成泥——污染。
+E: Air [pollution] is serious here. ~ 这里空气[污染]严重。
+E: The river is full of [pollutants]. ~ 河里满是[污染物]。
+L: air pollution / pollution control / environmental pollution
+T: dark 🏭
+M: pollute ~ 污染（动词）。同根，-ion 是名词，-ant 是那个脏东西。
+@@popularity
+C: [popul]-arity || populus 是「人民」（popular 同源）。被众人围着——受欢迎、流行。
+E: The song gained [popularity] fast. ~ 这首歌很快[走红]。
+E: His [popularity] has fallen. ~ 他的[声望]下降了。
+L: gain popularity / popularity among / a surge in popularity
+T: bright 🌟
+M: population ~ 人口。同根「人民」，一个是被喜欢，一个是被计数。
+@@portable
+C: [port]-able || port 是「搬、运」（transport 同源）。能搬着走——便携的。
+E: This is a [portable] radio. ~ 这是[便携]收音机。
+E: The file is [portable] across systems. ~ 这文件可跨系统[移植]。
+L: portable computer / portable device / highly portable
+T: cool 🎒
+M: transport ~ 运输。同根「搬」，一个是能搬，一个是搬过去。
+@@positive
+C: [posit]-ive || posit 是「放、定」。定下来的、明确的——确定的，往好那头定的——积极的。
+E: She has a [positive] attitude. ~ 她态度[积极]。
+E: The result was [positive]. ~ 结果是[阳性]。
+L: positive attitude / positive effect / be positive about
+T: bright ➕
+M: negative ~ 消极的。一正一负，成对出现。
+@@possess
+C: pos-[sess] || sed 是「坐」（session 会期同源）。坐在上面掌着——拥有，被什么坐住了——支配。
+E: He [possesses] great talent. ~ 他[拥有]非凡才华。
+E: She was [possessed] by fear. ~ 她被恐惧[攫住]。
+L: possess a quality / be possessed of / be possessed by
+T: warm 💎
+M: session ~ 会期。都含 sess「坐」，一个坐着拥有，一个坐着开会。
+@@potential
+C: [potent]-ial || pot 是「能、力」（power 同源）。还没使出来但有的劲——潜在的、潜力。
+E: She has great [potential]. ~ 她[潜力]很大。
+E: This is a [potential] problem. ~ 这是个[潜在]问题。
+L: reach one's potential / potential customer / great potential
+T: bright 🌱
+M: potent ~ 有力的。同根，-ial 是「还没发作的」。
+@@poverty
+C: [pover]-ty || pauper 是「穷人」（poor 同源）。穷到那个份上——贫困，东西少也叫贫乏。
+E: Many families live in [poverty]. ~ 许多家庭生活[贫困]。
+E: There is a [poverty] of ideas. ~ [缺乏]创意。
+L: live in poverty / poverty line / relative poverty
+T: dark 🥀
+M: poor ~ 穷的。同一条词源线，poverty 是那个状态。
+@@praise
+C: [praise] || 拉丁 pretium 是「价值」。把人的价值估高——称赞。
+E: The teacher [praised] her work. ~ 老师[表扬]了她的作业。
+E: He is loud in his [praise]. ~ 他[赞不绝口]。
+L: praise sb for / win praise / in praise of
+T: warm 👏
+M: price ~ 价格。同根「价值」，一个是估价，一个是出价。
+@@precious
+C: [preci]-ous || pretium 是「价值」（price 同源）。值钱到不敢碰——珍贵的。
+E: Time is [precious]. ~ 时间[宝贵]。
+E: These are [precious] stones. ~ 这些是[宝石]。
+L: precious stone / precious time / precious little
+T: bright 💎
+M: price ~ 价格。同根「值钱」，-ous 是「充满了价值」。
+@@precise
+C: pre-[cise] || cis 是「切」（scissors 同源）。切得齐边齐沿——精确的。
+E: Give me the [precise] figure. ~ 给我[确切]数字。
+E: At that [precise] moment he came. ~ 就在[恰好]那一刻他来了。
+L: to be precise / precise measurement / precise moment
+T: sharp 🎯
+M: concise ~ 简洁的。都含 cis「切」，切掉多余的。
+@@predict
+C: pre-[dict] || dict 是「说」（dictionary 同源）。提前说出来——预言、预报。
+E: No one can [predict] the result. ~ 没人能[预测]结果。
+E: Rain is [predicted] for tomorrow. ~ [预报]明天有雨。
+L: predict the future / as predicted / hard to predict
+T: cool 🔮
+M: dictionary ~ 词典。都含 dict「说」，一个说未来，一个说词义。
+@@pregnant
+C: pre-[gn]-ant || gn 是「出生」（generate 同源）。孩子出生之前——怀孕的，话里「怀着」意思——充满的。
+E: She is six months [pregnant]. ~ 她[怀孕]六个月。
+E: The silence was [pregnant] with meaning. ~ 那沉默[意味深长]。
+L: pregnant with / heavily pregnant / pregnant pause
+T: warm 🤰
+M: generate ~ 产生。同根「生」，一个是人要生，一个是东西要生。
+@@prejudice
+C: pre-[judic]-e || judic 是「判断」（judge 同源）。没看就先判了——偏见。
+E: He has a [prejudice] against outsiders. ~ 他对外人有[偏见]。
+E: The report [prejudiced] the case. ~ 报道[损害]了案件。
+L: prejudice against / racial prejudice / without prejudice
+T: dark 🚫
+M: judge ~ 法官。同根「判」，一个先判了，一个照法判。
+@@preserve
+C: pre-[serve] || serv 是「保存」（reserve 同源）。提前守住不变——保护、保存。
+E: We must [preserve] the forest. ~ 我们必须[保护]森林。
+E: Salt [preserves] food. ~ 盐能[保存]食物。
+L: preserve the environment / preserve food / a nature preserve
+T: bright 🌳
+M: reserve ~ 预订、保留。都含 serv「守」，一个守住不变，一个留起来备用。
+@@previous
+C: pre-[vi]-ous || vi 是「路」（via 经由同源）。走在前一条路上的——以前的。
+E: He had no [previous] experience. ~ 他没有[先前]经验。
+E: [Previous to] this, nothing happened. ~ [在]此[之前]什么也没发生。
+L: previous experience / previous to / the previous day
+T: cool ⏮️
+M: obvious ~ 明显的。都含 vi「路」，一个在前面的路上，一个在路上挡着。
+@@primary
+C: [prim]-ary || primus 是「第一」（prime 首要的同源）。排在第一——首要的、初级的。
+E: Safety is our [primary] concern. ~ 安全是我们[首要]关切。
+E: She teaches [primary] school. ~ 她教[小学]。
+L: primary school / primary concern / primary care
+T: warm 🥇
+M: prime ~ 首要的。同根「第一」，一个是形容词，一个是那个「头一份」。
+@@principle
+C: [princip]-le || princeps 是「第一人、首领」（prince 王子同源）。做人做事的头一条——原则。
+E: He is a man of [principle]. ~ 他是个有[原则]的人。
+E: The [principle] is simple. ~ [原理]很简单。
+L: in principle / on principle / a matter of principle
+T: calm 📏
+M: principal ~ 主要的、校长。同音不同词，-ple 是原则，-pal 是校长。
+@@priority
+C: [prior]-ity || prior 是「在前的」。排在前面那一位——优先、优先事项。
+E: Safety has [priority]. ~ 安全[优先]。
+E: My first [priority] is the family. ~ 我的[头等大事]是家庭。
+L: give priority to / top priority / priority over
+T: sharp 🥇
+M: prior ~ 先前的。同根，-ity 是那个「排在前」的资格。
+@@prison
+C: [pris]-on || prehendere 是「抓」（prisoner 囚犯同源）。被抓起来关着的地方——监狱。
+E: He spent ten years in [prison]. ~ 他坐了十年[牢]。
+E: The [prison] is overcrowded. ~ [监狱]人满为患。
+L: in prison / prison sentence / break out of prison
+T: dark 🔒
+M: prize ~ 奖品。差一个字母，一个是牢，一个是奖。
+@@private
+C: [priv]-ate || privus 是「个人的、独有的」。只属于自己——私人的、秘密的。
+E: This is a [private] matter. ~ 这是[私]事。
+E: She has a [private] tutor. ~ 她请了[私人]家教。
+L: private life / in private / private sector
+T: calm 🔐
+M: deprive ~ 剥夺。同根「个人的」，把私有的拿走就是剥夺。
+@@procedure
+C: pro-[ced]-ure || ced 是「走」（proceed 同源）。一步步往前走——程序、手续。
+E: Follow the correct [procedure]. ~ 按正确[程序]办。
+E: The [procedure] takes two weeks. ~ 这个[手续]要两周。
+L: legal procedure / follow procedure / standard procedure
+T: cool 📋
+M: proceed ~ 继续进行。同根「走」，一个是走的过程，一个是继续走。
+@@professional
+C: pro-[fess]-ional || fess 是「公开说」（confess 坦白同源）。公开宣称以此为业——专业的。
+E: She is a [professional] dancer. ~ 她是[职业]舞者。
+E: The work is highly [professional]. ~ 这活很[专业]。
+L: professional advice / professional athlete / turn professional
+T: cool 💼
+M: confess ~ 坦白。都含 fess「说」，一个公开说了自己的职业。
+@@profit
+C: pro-[fit] || fit 是「做」（fact 同源）。做出来的进项——利润，对人有益——有益于。
+E: The firm made a [profit]. ~ 公司[盈利]了。
+E: It would not [profit] you to wait. ~ 等下去对你[没好处]。
+L: make a profit / profit from / profit margin
+T: warm 📈
+M: benefit ~ 好处。profit 多指钱上的，benefit 泛指好处。
+@@promote
+C: pro-[mote] || mot 是「动」（move 同源）。往前推——促进、推销，往上推——升职。
+E: The ads [promote] the new phone. ~ 广告[推销]新手机。
+E: She was [promoted] to manager. ~ 她[升]为经理。
+L: promote sales / be promoted to / promote health
+T: bright 🚀
+M: remote ~ 遥远的。同一个 mot「动」，pro 往前，re 往后。
+@@propose
+C: pro-[pose] || pos 是「放」（compose 同源）。摆到桌面上——提议，摆出心意——求婚。
+E: He [proposed] a new plan. ~ 他[提出]新方案。
+E: She [proposed] to him. ~ 她向他[求婚]。
+L: propose a plan / propose to sb / propose doing
+T: warm 💍
+M: purpose ~ 目的。都含 pos「放」，一个是摆出来，一个是摆在前面的目标。
+@@prosperity
+C: pro-[sper]-ity || sper 是「希望」（desperate 同源）。顺着希望走——繁荣。
+E: The city enjoyed long [prosperity]. ~ 这座城市长期[繁荣]。
+E: Peace brings [prosperity]. ~ 和平带来[兴旺]。
+L: economic prosperity / peace and prosperity / a period of prosperity
+T: bright 🌾
+M: desperate ~ 绝望的。同一个 sper「希望」，一正一反。
+@@protest
+C: pro-[test] || test 是「作证」（testify 同源）。站到人前作证反对——抗议。
+E: They [protested] against the closure. ~ 他们[抗议]关停。
+E: The [protest] was peaceful. ~ [抗议]是和平的。
+L: protest against / in protest / a peaceful protest
+T: sharp ✊
+M: testify ~ 作证。同根「证」，一个证明，一个证反对。
+@@psychology
+C: [psycho]-logy || psycho 是「灵魂、心」（psychic 通灵的同源），logy 是「学问」。研究心的学问——心理学。
+E: She majored in [psychology]. ~ 她主修[心理学]。
+E: Child [psychology] is complex. ~ 儿童[心理]很复杂。
+L: clinical psychology / reverse psychology / child psychology
+T: cool 🧠
+M: psychiatrist ~ 精神科医生。同一个 psycho，-logy 是学问，-iatry 是治疗。
+@@publish
+C: [publ]-ish || publ 是「公众」（public 同源）。让公众看到——出版、公布。
+E: The book was [published] in May. ~ 书五月[出版]。
+E: The results were [published] online. ~ 结果在网上[公布]。
+L: publish a book / publish results / be published in
+T: warm 📰
+M: public ~ 公众的。同根，-ish 变动词，让事情变「公开」。
+@@purchase
+C: pur-[chase] || 古法语 purchacier 是「追逐求得」。追着把它弄到手——购买，脚下使力——支点。
+E: They [purchased] a new car. ~ 他们[购买]了新车。
+E: Keep the [purchase] receipt. ~ 留好[购物]小票。
+L: make a purchase / purchase price / purchase order
+T: warm 🛒
+M: chase ~ 追逐。同一条线「追」，追到手就是买下。
+@@pure
+C: [pure] || 拉丁 purus 是「干净、不掺」。一点杂质没有——纯的，想法也干净——纯洁的。
+E: The water is [pure]. ~ 水很[纯净]。
+E: It was [pure] luck. ~ 那[纯粹]是运气。
+L: pure water / pure chance / pure and simple
+T: bright 💧
+M: purify ~ 净化。同根，-ify 是「使纯」。
+@@pursue
+C: pur-[sue] || sequ 是「跟随」（sequence 同源）。一路跟下去——追求、从事。
+E: She [pursued] a career in law. ~ 她[从事]法律职业。
+E: Police [pursued] the car. ~ 警察[追]那辆车。
+L: pursue a goal / pursue a career / pursue one's studies
+T: sharp 🎯
+M: purchase 也从这个「追」，追到手就是买到。
+@@quit
+C: [quit] || 古法语 quiter 是「免除、了结」。把事结掉不干了——停止、辞职。
+E: He [quit] his job. ~ 他[辞]了工作。
+E: [Quit] complaining. ~ [别]抱怨了。
+L: quit doing / quit one's job / quit smoking
+T: cool 🚪
+M: quite ~ 相当。多一个 e，quit 是走人，quite 是「挺」。
+@@quote
+C: [quot]-e || 拉丁 quotare 是「标章节号」。照原话标出来——引用，给出价码——报价。
+E: She [quoted] a line from the poem. ~ 她[引用]了诗里一句。
+E: The [quote] was too high. ~ [报价]太高。
+L: quote from / a quote from / quote a price
+T: cool ❝
+M: quota ~ 配额。同根「标数」，一个是标话，一个是标量。
+@@radiation
+C: [radi]-ation || radi 是「射线」（radio 同源）。像光一样射出去——辐射。
+E: [Radiation] levels are safe. ~ [辐射]水平安全。
+E: The plant leaked [radiation]. ~ 电站泄漏了[放射物]。
+L: nuclear radiation / radiation therapy / radiation level
+T: sharp ☢️
+M: radio ~ 收音机。同根「射线」，靠电波传声。
+@@random
+C: [random] || 古法语 randon 是「猛冲」。没头没脑地冲——随机的。
+E: Choose a card at [random]. ~ [随机]抽一张牌。
+E: The results were [random]. ~ 结果是[杂乱]的。
+L: at random / random sample / random access
+T: cool 🎲
+M: at random 是固定搭配，介词只用 at。
+@@range
+C: [range] || 古法语 ranc 是「排、行」。排成一列——排列，从这头到那头——范围。
+E: Prices [range] from 10 to 50 yuan. ~ 价格[在]十到五十元[之间]。
+E: That is beyond my [range]. ~ 那超出我的[范围]。
+L: range from to / a wide range of / within range
+T: cool 📏
+M: arrange ~ 安排。同根「排列」，加 ar- 就是把它排好。
+@@rapid
+C: [rapid] || rapere 是「抢、夺」（rape、rapture 同源）。像被抢走一样快——迅速的。
+E: The [rapid] growth surprised us. ~ [迅速]增长让我们吃惊。
+E: They shot the [rapids] in a boat. ~ 他们乘船冲过[急流]。
+L: rapid growth / rapid change / a rapid response
+T: sharp ⚡
+M: rapid 与 rabbit 无关；记住 rap「抢」→ 快。
+@@reaction
+C: re-[act]-ion || act 是「做、行动」。被推一下之后的回手——反应。
+E: My first [reaction] was anger. ~ 我第一[反应]是生气。
+E: There was an allergic [reaction]. ~ 出现了过敏[反应]。
+L: reaction to / chain reaction / in reaction to
+T: sharp ⚡
+M: action ~ 行动。同根，re 是「回」，回过来的行动就是反应。
+@@rebel
+C: re-[bel] || bel 是「战争」（bellicose 好战的同源）。反过来打——造反。
+E: The peasants [rebelled] against the tax. ~ 农民[反抗]赋税。
+E: He was a [rebel] in his youth. ~ 他年轻时是个[叛逆者]。
+L: rebel against / rebel forces / a born rebel
+T: sharp ✊
+M: bellicose ~ 好战的。同根「战」，一个是打回去，一个是爱打。
+@@recall
+C: re-[call] || call 是「叫」。把记忆叫回来——回忆，把产品叫回来——召回。
+E: I cannot [recall] his name. ~ 我想不[起]他名字。
+E: The company [recalled] the toys. ~ 公司[召回]了玩具。
+L: recall doing / product recall / beyond recall
+T: cool 🔁
+M: remember ~ 记得。recall 更强调「主动想起来」。
+@@recommend
+C: re-[commend] || commend 是「托付、称赞」。把人和事托付给你——推荐。
+E: I [recommend] this book. ~ 我[推荐]这本书。
+E: The doctor [recommended] rest. ~ 医生[建议]休息。
+L: recommend doing / highly recommend / recommend sb for
+T: warm 👍
+M: commend ~ 称赞。同根，re- 加强，值得称的才会被推出去。
+@@recover
+C: re-[cover] || cover 原是「取得」。重新拿回来——找回，身体拿回原样——恢复。
+E: He [recovered] from the flu. ~ 他感冒[好了]。
+E: The police [recovered] the car. ~ 警方[找回]了车。
+L: recover from / recover losses / recover consciousness
+T: bright 🌱
+M: cover ~ 覆盖。拼写里有 cover，但词源是「取得」，不是「盖上」。
+@@recycle
+C: re-[cycle] || cycle 是「循环」（bicycle 同源）。再走一圈——回收再利用。
+E: We [recycle] paper and glass. ~ 我们[回收]纸和玻璃。
+E: These bottles are [recycled]. ~ 这些瓶子是[再生]的。
+L: recycle waste / recycled paper / recycling bin
+T: bright ♻️
+M: bicycle ~ 自行车。同根「圈」，一个是轮子转，一个是材料转。
+@@reflect
+C: re-[flect] || flect 是「弯」（flexible 同源）。光弯回来——反射，心思弯回来——沉思。
+E: The lake [reflects] the sky. ~ 湖面[映]着天空。
+E: Take time to [reflect] on it. ~ 花点时间[反思]。
+L: reflect on / be reflected in / reflect light
+T: cool 🪞
+M: flexible ~ 灵活的。都含 flect「弯」，一个光弯，一个身段弯。
+@@reform
+C: re-[form] || form 是「形」。重新塑形——改革。
+E: The system needs [reform]. ~ 体制需要[改革]。
+E: He [reformed] his habits. ~ 他[改掉]了旧习。
+L: economic reform / reform the system / land reform
+T: cool 🔧
+M: form ~ 形式。同根，re 是「重新」，重造形状就是改革。
+@@refresh
+C: re-[fresh] || fresh 是「新鲜」。重新变新鲜——使精神恢复，页面重新载入——刷新。
+E: A cold shower [refreshed] me. ~ 冷水澡让我[精神一振]。
+E: [Refresh] the page. ~ [刷新]页面。
+L: refresh one's memory / refresh the page / feel refreshed
+T: bright 🌊
+M: fresh ~ 新鲜的。同根，re 是「再」，再来一次新鲜。
+@@regardless
+C: re-[gard]-less || regard 是「看、顾及」，-less 是「不」。不去看——不顾。
+E: He went [regardless] of the risk. ~ 他不顾风险[照去]。
+E: [Regardless] of cost, buy it. ~ [不管]多少钱，买。
+L: regardless of / regardless of the cost / carry on regardless
+T: sharp 🚶
+M: regard ~ 看待。同根，-less 一加就成「不顾」。
+@@region
+C: [reg]-ion || reg 是「统治」（regent 摄政的同源）。被划出来管的那一片——地区。
+E: This [region] is dry. ~ 这个[地区]干旱。
+E: Pain in the lower [region]. ~ 下部[区域]疼痛。
+L: in the region of / a coastal region / the region of
+T: cool 🗺️
+M: regular ~ 规则的。同根「统治」，按规矩来就是规则。
+@@register
+C: [regist]-er || regesta 是「记录下来的东西」。写进册子——登记，仪表把数记下来——显示。
+E: You must [register] to vote. ~ 你得[登记]才能投票。
+E: The thermometer [registered] 40°C. ~ 温度计[显示]40度。
+L: register for / register with / a register of
+T: cool 📒
+M: registration ~ 注册。同根，-er 是那个本子或动作。
+@@regret
+C: re-[gret] || 古诺斯语 grata 是「哭」。事后还在哭——后悔。
+E: I [regret] saying that. ~ 我[后悔]说了那话。
+E: Please accept my [regrets]. ~ 请接受我的[歉意]。
+L: regret doing / regret to say / deep regret
+T: dark 😔
+M: greet ~ 问候。只差一个字母，一个哭，一个笑。
+@@reject
+C: re-[ject] || ject 是「扔」（project 同源）。扔回去——拒绝。
+E: They [rejected] our offer. ~ 他们[拒绝]了我们的报价。
+E: The body [rejected] the organ. ~ 身体[排斥]了器官。
+L: reject an offer / reject a plan / feel rejected
+T: dark 🚫
+M: project ~ 项目、投射。同一个 ject「扔」，一个扔回去，一个扔向前。
+@@relate
+C: re-[late] || lat 是「带」（translate 同源）。把两头带到一起——关联，把事带给人听——讲述。
+E: These facts [relate] to the case. ~ 这些事实与案子[有关]。
+E: She [related] the story calmly. ~ 她平静地[讲述]了经过。
+L: relate to / be related to / relate a story
+T: cool 🔗
+M: translate ~ 翻译。都含 lat「带」，一个把话带过去，一个把事连起来。
