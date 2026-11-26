@@ -1,0 +1,420 @@
+@@associate
+C: as-[soci]-ate || soci 是「同伴」，social 同源。把人拉进同一伙——联系、同事。
+E: People often [associate] this smell with childhood. ~ 人常把这气味和童年[联系]起来。
+E: She is an [associate] professor at the law school. ~ 她是法学院的[副]教授。
+L: associate with / associate professor / business associate
+T: cool 🤝
+M: assemble ~ 集合。associate 是「连线」，assemble 是「聚到一处」。
+@@assume
+C: as-[sum]-e || sum 是「拿、取」（consume 也用它）。拿过来当作自己的——假定，也指承担。
+E: We [assume] that the data are reliable. ~ 我们[假定]这些数据可靠。
+E: He will [assume] office next month. ~ 他下月[就任]。
+L: assume responsibility / let us assume / assume office
+T: calm 🎭
+M: consume ~ 消耗。都是 sum「取」，consume 取尽，assume 取来当自己的。
+@@astonish
+C: as-[ton]-ish || ton 是「雷」（thunder 同源）。像被雷劈一下——惊得说不出话。
+E: The result [astonished] everyone. ~ 结果让所有人[大为震惊]。
+E: She stared at him in [astonishment]. ~ 她[惊愕]地盯着他。
+L: be astonished at / to one's astonishment / astonishingly good
+T: sharp ⚡
+M: astound ~ 震惊。同一家族，astonish 偏「愣住」，astound 程度更重。
+@@astronaut
+C: [astro]-naut || astro 是「星」（astronomy），naut 是「水手」（nautical）。在星海里航行的人。
+E: The [astronaut] spent six months in orbit. ~ 这名[宇航员]在轨道上待了六个月。
+E: China has sent [astronauts] to its space station. ~ 中国已把[航天员]送上空间站。
+L: astronaut training / former astronaut / manned astronaut
+T: cool 🚀
+M: astronomy ~ 天文学。astro 打头都是「星」，naut 打头都是「航行」。
+@@athletic
+C: [athlet]-ic || 希腊 athlon 是「奖品、竞赛」。为拿奖而练身体的人——运动员的、健壮的。
+E: She has an [athletic] build. ~ 她体格[健壮]。
+E: The school held an [athletic] meeting. ~ 学校办了[运动]会。
+L: athletic ability / athletic meeting / athletic wear
+T: bright 🏃
+M: athlete ~ 运动员。记 athl 这串字母，加 -ic 变成形容词。
+@@atmosphere
+C: [atmo]-sphere || atmo 是「气、蒸汽」，sphere 是「球」。包着地球的那层气——大气，引申为气氛。
+E: The [atmosphere] is mostly nitrogen. ~ [大气]主要成分是氮。
+E: The cafe has a relaxed [atmosphere]. ~ 这家咖啡馆[氛围]轻松。
+L: atmosphere pressure / a relaxed atmosphere / clear the atmosphere
+T: calm 🌫️
+M: sphere ~ 球体。hemisphere 半球、biosphere 生物圈，都是「一层球」。
+@@attach
+C: at-[tach] || tache 是「钉子、扣」（detach 拆开就是它的反义）。拿钉子钉上去——附上、系上。
+E: Please [attach] the file to your email. ~ 请把文件[附]在邮件里。
+E: She [attaches] great importance to details. ~ 她[极其看重]细节。
+L: attach to / attach importance to / be attached to
+T: warm 📎
+M: detach ~ 拆下。de 是「去掉」，at 是「靠近」，一对反义。
+@@attain
+C: at-[tain] || tain 是「触碰」（contact 同源）。手够到了——达到、获得。
+E: He [attained] his goal after ten years. ~ 他十年后[达到]了目标。
+E: Few students [attain] this level. ~ 少有学生[达到]这个水平。
+L: attain a goal / attain success / attain the age of
+T: bright 🎯
+M: obtain ~ 获得。ob 是「朝向」，at 是「触及」，都落在「拿到手」上。
+@@attempt
+C: at-[tempt] || tempt 是「试探」（temptation 诱惑同源）。伸手去试一下——企图、尝试。
+E: They [attempted] to climb the north face. ~ 他们[试图]攀登北壁。
+E: His first [attempt] failed. ~ 他第一次[尝试]失败了。
+L: attempt to do / make an attempt / in an attempt to
+T: warm 🪜
+M: tempt ~ 诱惑。都是「试」，tempt 试的是人心。
+@@attend
+C: at-[tend] || tend 是「伸」（extend 同源）。把心伸过去——出席、照料。
+E: Over 300 people [attended] the meeting. ~ 三百多人[出席]了会议。
+E: Please [attend] to this matter at once. ~ 请立刻[处理]此事。
+L: attend a meeting / attend to / attend on
+T: calm 🪑
+M: extend ~ 延伸。tend 拉长就是 extend，心伸过去就是 attend。
+@@attribute
+C: at-[tribut]-e || tribut 是「分配、给予」（tribute 贡品同源）。把功劳分给谁——归因。
+E: She [attributes] her success to hard work. ~ 她把成功[归因]于努力。
+E: Patience is a rare [attribute]. ~ 耐心是难得的[品质]。
+L: attribute to / a key attribute / personal attributes
+T: cool 🏷️
+M: contribute ~ 贡献。都是 tribut「给出」，一个给出功劳，一个给出力量。
+@@automatic
+C: [auto]-matic || auto 是「自己」，mat 是「动」（automobile 自动车）。自己会动——自动的。
+E: The door is [automatic]. ~ 这门是[自动]的。
+E: Breathing is largely [automatic]. ~ 呼吸基本是[无意识]的。
+L: automatic door / fully automatic / automatic response
+T: cool ⚙️
+M: automobile ~ 汽车。auto 打头都是「自」，graph 打头都是「写」。
+@@average
+C: a-[ver]-age || 源自阿拉伯语 awariya，指海损分摊。货主们把损失「摊平」——平均。
+E: The [average] score was 78. ~ [平均]分是 78。
+E: On [average], it rains ten days a month. ~ [平均]每月下十天雨。
+L: on average / above average / average out
+T: calm 📊
+M: revenge ~ 报复。都含 aver 这串字母，但词源毫无关系，别混。
+@@aware
+C: a-[ware] || 古英语 gewær 是「警觉」。睁着眼、心里有数——意识到。
+E: Are you [aware] of the risk? ~ 你[意识到]风险了吗？
+E: She became [aware] that someone was watching. ~ 她[察觉]有人在看她。
+L: be aware of / become aware / environmentally aware
+T: bright 👁️
+M: beware ~ 当心。都是 ware「警觉」，beware 是喊出来的警告。
+@@awful
+C: [awe]-ful || awe 是「敬畏」。原本是「令人敬畏的」，后来反着用成「糟透了」。
+E: The weather was [awful]. ~ 天气[糟透了]。
+E: I feel [awful] about what happened. ~ 我对这事感到[很难受]。
+L: awful weather / feel awful / an awful lot of
+T: dark 😖
+M: awesome ~ 极好的。同一个 awe，一个往上（敬畏），一个往下（糟糕）。
+@@awkward
+C: [awk]-ward || ward 是「朝向」（forward 同源）。手反着来、使不上劲——笨拙、尴尬。
+E: There was an [awkward] silence. ~ 出现了[尴尬]的沉默。
+E: He is [awkward] with his hands. ~ 他手很[笨]。
+L: awkward silence / feel awkward / an awkward position
+T: warm 😅
+M: forward ~ 向前。ward 是方向词尾，awk 是「反手」，方向反了就别扭。
+@@background
+C: [back]-ground || 背后那片地——背景。人背后的经历也是背景。
+E: The photo has a white [background]. ~ 照片[背景]是白的。
+E: Students from a rural [background] often hesitate. ~ 农村[出身]的学生常常犹豫。
+L: in the background / family background / background music
+T: calm 🖼️
+M: foreground ~ 前景。back / fore 是一对，ground 是「地面」。
+@@bankrupt
+C: bank-[rupt] || rupt 是「断裂」（interrupt 打断同源）。柜台被砸断——破产。
+E: The firm went [bankrupt] last year. ~ 公司去年[破产]了。
+E: The scandal [bankrupted] him. ~ 丑闻让他[倾家荡产]。
+L: go bankrupt / declare bankrupt / morally bankrupt
+T: dark 💸
+M: interrupt ~ 打断。rupt 都是「断」，一个断柜台，一个断话头。
+@@barely
+C: [bare]-ly || bare 是「光秃秃的、仅剩的」。只剩一点点——几乎不、勉强。
+E: I could [barely] hear him. ~ 我[几乎]听不见他说话。
+E: She had [barely] enough money. ~ 她钱[勉强]够。
+L: barely enough / can barely / barely visible
+T: calm 🪶
+M: rare ~ 稀少的。bare 是「去掉覆盖物」，rare 是「少见」，只差一个字母。
+@@bargain
+C: [barg]-ain || 古法语 bargaignier 就是「讨价还价」。来回砍价砍下来的——便宜货、协议。
+E: This coat was a real [bargain]. ~ 这件外套真是[便宜货]。
+E: They [bargained] over the price for an hour. ~ 他们为价钱[讨价还价]一小时。
+L: a real bargain / bargain with / bargain for
+T: warm 🏷️
+M: bargain / bargin 拼错常见，记住中间是 -gain「得到」。
+@@belief
+C: be-[lief] || lief 是「亲爱的、许可的」（love 远亲）。心里认下的东西——信念。
+E: It is my [belief] that hard work pays. ~ 我[相信]努力有回报。
+E: These [beliefs] are deeply rooted. ~ 这些[观念]根深蒂固。
+L: belief in / beyond belief / hold a belief
+T: calm 🕯️
+M: believe ~ 相信（动词）。-f 结尾是名词，-ve 结尾是动词。
+@@beneath
+C: be-[neath] || neothan 是「下方」。位置在下面，身份也在下面——不值得。
+E: The valley lies [beneath] us. ~ 山谷在我们[下面]。
+E: Such behaviour is [beneath] him. ~ 这种行为[有失]他的身份。
+L: beneath the surface / beneath one's dignity / far beneath
+T: dark ⬇️
+M: underneath ~ 在下面。neath 是同一串，be- 表「在」。
+@@beneficial
+C: [bene]-fic-ial || bene 是「好」（benefit 同源），fic 是「做」。做好事——有益的。
+E: Exercise is [beneficial] to health. ~ 运动对健康[有益]。
+E: The change proved [beneficial]. ~ 这一改变证明是[有利]的。
+L: beneficial to / mutually beneficial / beneficial effect
+T: bright 🌱
+M: benefactor ~ 恩人。bene 打头都是「好」，male 打头都是「坏」（malefactor）。
+@@bid
+C: [bid] || 古英语 beodan 是「宣告、命令」。当场喊出价——出价、投标。
+E: She [bid] 500 yuan for the painting. ~ 她为这幅画[出价]五百。
+E: Three firms will [bid] for the contract. ~ 三家公司将[投标]这个合同。
+L: bid for / make a bid / bid farewell
+T: warm 🔨
+M: forbid ~ 禁止。for- 是「否定」，bid 是「命令」，连起来就是「不许」。
+@@bitter
+C: [bit]-ter || 古英语 biter，和 bite「咬」同源。咬舌头的那种味道——苦。
+E: The medicine tastes [bitter]. ~ 这药[苦]。
+E: They had a [bitter] quarrel. ~ 他们[激烈]地吵了一架。
+L: bitter taste / bitter cold / bitter experience
+T: dark ☕
+M: better ~ 更好。bitter 中间是 i，better 是 e，一字之差意思相反。
+@@block
+C: [block] || 中古荷兰语 blok 是「木块」。一整块挡住路——阻塞、街区。
+E: The road was [blocked] by snow. ~ 路被雪[堵]住了。
+E: Walk two [blocks] east. ~ 往东走两个[街区]。
+L: block the way / office block / block up
+T: dark 🧱
+M: bloke ~ 家伙（英式俚语）。长得像，但一个是方块，一个是大活人。
+@@bound
+C: [bound] || bind（绑）的过去分词。被绑住了——必定的，也是「受约束的」。
+E: He is [bound] to fail. ~ 他[必定]失败。
+E: The train is [bound] for Shanghai. ~ 火车开[往]上海。
+L: be bound to / bound for / bound up with
+T: cool 🔗
+M: boundary ~ 边界。bind 绑出来的线就是 boundary。
+@@boundary
+C: [bound]-ary || bound 是「界限」，-ary 是名词尾。划出来的那条线——边界。
+E: The river forms the [boundary]. ~ 这条河构成[边界]。
+E: Push the [boundaries] of knowledge. ~ 拓展知识的[边界]。
+L: national boundary / boundary line / push the boundaries
+T: cool 🗺️
+M: bound ~ 必定的。同一个词根，一个指「被绑住」，一个指「绑出来的线」。
+@@breakthrough
+C: [break]-through || 破开、穿过去——突破了那道墙。
+E: The team made a major [breakthrough]. ~ 团队取得重大[突破]。
+E: Scientists announced a [breakthrough] in cancer treatment. ~ 科学家宣布癌症治疗[突破]。
+L: make a breakthrough / a breakthrough in / major breakthrough
+T: bright 💥
+M: breakdown ~ 崩溃。through 是穿过去，down 是塌下来，方向相反。
+@@brief
+C: [brief] || 拉丁 brevis 是「短」（abbreviate 缩写同源）。时间短、话也短。
+E: He gave a [brief] account of the trip. ~ 他[简短]讲了行程。
+E: The manager [briefed] the team. ~ 经理向团队[做了简报]。
+L: in brief / a brief visit / brief sb on sth
+T: calm 📄
+M: abbreviate ~ 缩写。都从 brevis「短」来，brief 是短本身。
+@@brilliant
+C: [brill]-iant || 法语 briller 是「闪耀」，可能源自 beryl 绿宝石。亮得刺眼——卓越的。
+E: She had a [brilliant] idea. ~ 她有个[绝妙]的主意。
+E: The sky was [brilliant] blue. ~ 天空[湛蓝]耀眼。
+L: brilliant idea / brilliant career / brilliant colours
+T: bright ✨
+M: bright ~ 明亮。bright 是本族词，brilliant 是法语借来的「更亮版」。
+@@broaden
+C: [broad]-en || broad 是「宽」，-en 是动词尾（加宽）。把窄的弄宽——扩大。
+E: Travel [broadens] the mind. ~ 旅行[开阔]眼界。
+E: The road [broadens] after the bridge. ~ 过桥后路[变宽]了。
+L: broaden the mind / broaden horizons / broaden out
+T: bright 🌅
+M: abroad ~ 在国外。a + broad，走到宽阔的外面去了。
+@@burden
+C: [bur]-den || 古英语 byrthen 是「承载之物」。压在肩上的东西——负担。
+E: High rent is a heavy [burden]. ~ 高房租是沉重[负担]。
+E: Don't [burden] him with your problems. ~ 别拿你的问题[烦]他。
+L: a heavy burden / bear the burden / burden sb with
+T: dark 🎒
+M: board ~ 木板。burden 里有 bur，别和 board 混。
+@@burst
+C: [burst] || 古英语 berstan 是「破裂」。装不下、炸开来——爆发。
+E: The pipe [burst] in the cold. ~ 管子冻[裂]了。
+E: She [burst] into tears. ~ 她突然[哭]了出来。
+L: burst into / burst out / a burst of
+T: sharp 💧
+M: bust ~ 打破、破产。少一个 r，意思近但更口语。
+@@bury
+C: [bur]-y || 古英语 byrgan 是「埋」。放进土里，也指把头埋进书里。
+E: They [buried] him beside the river. ~ 他们把他[葬]在河边。
+E: He [buried] himself in work. ~ 他[埋头]工作。
+L: bury oneself in / be buried in / bury the hatchet
+T: dark ⚰️
+M: berry ~ 浆果。多一个 r，一个埋人，一个结果子。
+@@calculate
+C: [calcul]-ate || 拉丁 calculus 是「小石子」——古人用石子计数。摆石子算数——计算。
+E: Let me [calculate] the cost. ~ 让我[算]一下成本。
+E: The move was [calculated] to impress. ~ 这举动是[蓄意]为之。
+L: calculate the cost / be calculated to / calculated risk
+T: cool 🧮
+M: calculator ~ 计算器。同根，多一个 -or 就是那个物件。
+@@cancel
+C: [cancel] || 拉丁 cancelli 是「栅栏、格子」。在格子里划叉——划掉、取消。
+E: The flight was [cancelled]. ~ 航班[取消]了。
+E: The two effects [cancel] each other out. ~ 两个效应相互[抵消]。
+L: cancel out / cancel a flight / cancel an order
+T: cool ❌
+M: cancer ~ 癌症。都从「格子、蟹钳」来，意思差很远。
+@@candidate
+C: [candid]-ate || candid 是「白色的」（candle 同源）。古罗马竞选者穿白袍示清白——候选人。
+E: There are five [candidates] for the post. ~ 这个职位有五名[候选人]。
+E: She is a strong [candidate]. ~ 她是很有力的[人选]。
+L: candidate for / a strong candidate / presidential candidate
+T: warm 🗳️
+M: candid ~ 坦率的。白袍的人说话不藏——坦率。
+@@capability
+C: [cap]-ability || cap 是「抓、容纳」（capture 同源），-able 是「能」。能抓得住——能力。
+E: The task is beyond his [capability]. ~ 这任务超出他的[能力]。
+E: The engine has a strong [capability]. ~ 这发动机[性能]很强。
+L: beyond one's capability / technical capability / capability of
+T: cool 🛠️
+M: capacity ~ 容量。同根 cap，-ity 是名词，偏「装多少」。
+@@capital
+C: [capit]-al || capit 是「头」（captain、decapitate 都用它）。头一个的——首都、首要，钱的本金也叫「头」。
+E: Beijing is the [capital] of China. ~ 北京是中国的[首都]。
+E: They lack [capital] to expand. ~ 他们缺[资金]扩张。
+L: capital city / capital market / death capital
+T: warm 🏛️
+M: captain ~ 队长。capit 是「头」，当头的人就是 captain。
+@@capture
+C: [capt]-ure || capt 是「抓」（captive 俘虏同源）。抓住——捕获，抓住眼球也是 capture。
+E: The police [captured] the suspect. ~ 警方[抓获]嫌疑人。
+E: The photo [captures] her smile. ~ 照片[捕捉]到她的笑。
+L: capture the attention / capture a moment / capture the market
+T: sharp 🎯
+M: captive ~ 俘虏。同根，-ive 是被抓的人。
+@@cast
+C: [cast] || 古诺斯语 kasta 是「投、掷」。把东西扔出去——投射，把角色「投」给人就是选角。
+E: The tree [cast] a long shadow. ~ 树[投]下长长的影。
+E: She was [cast] as the mother. ~ 她被[分配]演母亲。
+L: cast a shadow / cast a vote / cast doubt on
+T: cool 🎬
+M: cost ~ 花费。cast 是扔出去，cost 是付出的代价，字母顺序不同。
+@@casual
+C: ca-[su]-al || cas 是「落下」（case、accident 同源）。偶然落下来的——不经心的、随便的。
+E: He wore [casual] clothes. ~ 他穿[休闲]装。
+E: A [casual] remark hurt her. ~ 一句[随口]的话伤了她。
+L: casual clothes / casual worker / casual remark
+T: calm 👕
+M: causal ~ 因果的。casual 是「随便」，causal 是「原因」，中间多个 l。
+@@category
+C: [categ]-ory || 希腊 kategoria 是「断言、指控」，cata- 向下 + agora 集会。当众把东西归到某类——类别。
+E: This falls into a different [category]. ~ 这属于另一个[类别]。
+E: Books are arranged by [category]. ~ 书按[类别]排列。
+L: fall into a category / age category / a category of
+T: cool 🗂️
+M: catalogue ~ 目录。都从「归类」来，catalog 是把名目列成册。
+@@cater
+C: [cater] || 古法语 acater 是「采购、置办」。替人把吃的备齐——承办伙食，引申为迎合。
+E: The hotel [caters] for weddings. ~ 这家酒店[承办]婚宴。
+E: TV should not [cater] to bad taste. ~ 电视不该[迎合]低级趣味。
+L: cater for / cater to / catering service
+T: warm 🍽️
+M: cater 与 cat 无关；记住 cater to「迎合」这个搭配最实用。
+@@cautious
+C: [caut]-ious || caut 是「当心」（caution 同源）。心里留着一道防——谨慎的。
+E: Be [cautious] about lending money. ~ 借钱要[谨慎]。
+E: She gave a [cautious] reply. ~ 她[审慎]地回答。
+L: be cautious about / a cautious approach / cautiously optimistic
+T: calm 🛡️
+M: care ~ 关心。caut 与 care 同一路，都是「上心」。
+@@celebrate
+C: [celebr]-ate || celebr 是「众多、著名」（celebrity 名人同源）。众人聚起来——庆祝。
+E: We [celebrated] her birthday. ~ 我们[庆祝]她的生日。
+E: The poem [celebrates] rural life. ~ 这首诗[赞美]田园生活。
+L: celebrate a festival / celebrate success / be celebrated for
+T: bright 🎉
+M: celebrity ~ 名人。同根，一个人被众人围着就是名人。
+@@ceremony
+C: [ceremon]-y || 拉丁 caerimonia 是「神圣仪式」。按规矩一步步走完——典礼。
+E: The opening [ceremony] lasted an hour. ~ 开幕[典礼]持续一小时。
+E: There is no need for [ceremony] between us. ~ 我们之间不必[客套]。
+L: opening ceremony / wedding ceremony / stand on ceremony
+T: warm 🎊
+M: ceremonial ~ 仪式的。同根加 -al 变形容词。
+@@certificate
+C: [cert]-ific-ate || cert 是「确定」（certain 同源），fic 是「做」。做出来证明「确定」的纸——证书。
+E: Show your birth [certificate]. ~ 出示你的出生[证明]。
+E: The course ends with a [certificate]. ~ 课程结业发[证书]。
+L: birth certificate / certificate of origin / issue a certificate
+T: calm 📜
+M: certain ~ 确定的。cert 打头都跟「确定」有关。
+@@chain
+C: [chain] || 拉丁 catena 是「锁链」。一环扣一环——链条，引申为一连串、连锁店。
+E: The dog was tied with a [chain]. ~ 狗被[链子]拴着。
+E: A [chain] of events led to the war. ~ 一[连串]事件导致战争。
+L: chain store / a chain of / food chain
+T: cool ⛓️
+M: chair ~ 椅子。只差一个 n，一个是链，一个是凳。
+@@champion
+C: [champ]-ion || 拉丁 campus 是「战场」，campio 是「上场搏斗的人」。战场上赢下来的——冠军。
+E: She is the world [champion]. ~ 她是世界[冠军]。
+E: He [champions] the cause of the poor. ~ 他[捍卫]穷人的事业。
+L: world champion / champion a cause / defending champion
+T: bright 🏆
+M: campaign ~ 运动、战役。都从 campus「战场」来，一个是人，一个是仗。
+@@character
+C: [charact]-er || 希腊 charassein 是「刻划」。石头被刻出的印子——特征，引申为性格、人物。
+E: He has a strong [character]. ~ 他[性格]坚强。
+E: The novel has few [characters]. ~ 小说里[人物]不多。
+L: strong character / main character / in character
+T: warm 🎭
+M: characteristic ~ 特征。同根加 -istic，把「性格」变成「特点」。
+@@charge
+C: [charge] || 拉丁 carrus 是「车」（cargo 同源）。往车上装东西——装载，转成「要价、指控、掌管」。
+E: They [charged] me 50 yuan for delivery. ~ 他们收了我五十[运费]。
+E: He was [charged] with theft. ~ 他被[指控]盗窃。
+L: in charge of / free of charge / charge sb with
+T: sharp ⚡
+M: discharge ~ 卸下、释放。dis 是「去掉」，charge 是「装载」。
+@@charity
+C: [char]-ity || 拉丁 caritas 是「爱、珍贵」（cherish 同源）。出于爱的给予——慈善。
+E: The money goes to [charity]. ~ 这笔钱捐给[慈善机构]。
+E: She gave the clothes to [charity]. ~ 她把衣服捐了[慈善]。
+L: charity event / give to charity / out of charity
+T: warm ❤️
+M: cherish ~ 珍爱。同一串 char「爱」，一个是给予，一个是珍惜。
+@@charm
+C: [charm] || 拉丁 carmen 是「歌、咒语」。念一句就把人勾住——魅力，原义是护身符。
+E: She has great [charm]. ~ 她很有[魅力]。
+E: The village [charmed] us at once. ~ 这村子一下子[迷住]了我们。
+L: good luck charm / charm sb into / work like a charm
+T: bright 🪄
+M: charm / charisma 都指吸引力，charm 偏亲和，charisma 偏领袖气场。
+@@cheat
+C: [cheat] || 古法语 escheat 是「财产归公」。私吞本该充公的东西——欺骗、作弊。
+E: He was caught [cheating] in the exam. ~ 他考试[作弊]被抓。
+E: Don't be [cheated] by the price. ~ 别被价格[骗]了。
+L: cheat in an exam / cheat sb out of / cheat on sb
+T: dark 🎲
+M: treat ~ 对待。只差一个字母，cheat 是骗，treat 是待。
+@@chemical
+C: [chem]-ical || 源自 chemia「炼金术」。炼出来的东西——化学的、化学品。
+E: The [chemical] reaction is fast. ~ 这个[化学]反应很快。
+E: These [chemicals] are harmful. ~ 这些[化学物质]有害。
+L: chemical reaction / chemical weapon / harmful chemicals
+T: cool 🧪
+M: chemist ~ 化学家、药剂师。同根加 -ist 指人。
+@@cheque
+C: [cheque] || 与 check「核对」同一个词，英国拼成 que。凭它去银行核对取钱——支票。
+E: He paid by [cheque]. ~ 他用[支票]付的款。
+E: Please write a [cheque] for 200 pounds. ~ 请开一张两百镑的[支票]。
+L: pay by cheque / write a cheque / a blank cheque
+T: calm 🧾
+M: check ~ 检查。美式把支票也写成 check，英式才用 cheque。
+@@cherish
+C: [cher]-ish || cher 是「亲爱」（cherry、charity 同源）。捧在手心里——珍爱。
+E: I [cherish] the memory of that summer. ~ 我[珍视]那个夏天的记忆。
+E: She [cherished] the hope of returning. ~ 她[怀着]回去的希望。
+L: cherish a hope / cherish the memory / cherish freedom
+T: warm 💗
+M: charity ~ 慈善。同一串 cher「爱」，一个给出去，一个留下来。
+@@chief
+C: [chief] || 拉丁 caput 是「头」（capital 同源）。头一个的——首要的，也是首领。
+E: Our [chief] concern is safety. ~ 我们[主要]的顾虑是安全。
+E: The [chief] of police resigned. ~ 警察[局长]辞职了。
+L: chief executive / chief concern / in chief
+T: warm 👑
+M: chef ~ 主厨。同一个词源「头」，法国人把「头」用成了厨房的头。
