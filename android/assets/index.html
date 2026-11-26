@@ -217,6 +217,10 @@ body[data-desk="1"] .who.on{background:var(--accent-soft);border-color:transpare
 }
 .keybtn:hover{border-color:var(--accent);color:var(--accent)}
 .keybtn.listening{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.keylist{margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+.keylist i{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:5px 0;
+  font-size:calc(11.5px * var(--fs));color:var(--faint);font-style:normal}
+.keylist i b{font-weight:600;color:var(--ink2);letter-spacing:.02em}
 
 /* ===== 错词本 ===== */
 .wshell{margin-top:16px}
@@ -1617,16 +1621,22 @@ see &#183; say &#183; write
     </div>
 
     <div class="box">
-      <h3>默写快捷键</h3>
-      <div class="desc">只在全屏时接管。点按钮，再按一个键就能改；按 Esc 取消。判分键按一次判分、判完再按一次进入下一个；跳过键用来直接过掉不会的词。</div>
+      <h3>快捷键</h3>
+      <div class="desc">点按钮，再按一个键就能改；按 Esc 取消。背诵页和默写页各管各的，同一个键在两个页面可以分别当不同的用。</div>
       <div class="setrow" style="margin-top:14px">
-        <div><div class="lb">判分 / 下一个</div><div class="sb">写完按它判分，再按它进入下一个词</div></div>
+        <div><div class="lb">背诵 · 看释义</div><div class="sb">背的时候按一下翻出中文意思、词源和例句，再按一下收回去</div></div>
+        <button class="keybtn" id="keyReveal"></button>
+      </div>
+      <div class="setrow">
+        <div><div class="lb">默写 · 判分 / 下一个</div><div class="sb">写完按它判分，判完再按它进入下一个词</div></div>
         <button class="keybtn" id="keyJudge"></button>
       </div>
       <div class="setrow">
-        <div><div class="lb">不会，跳过</div><div class="sb">建议用逗号、斜杠这类冷门键，避开中英文输入法都会占用的句号</div></div>
+        <div><div class="lb">默写 · 不会，跳过</div><div class="sb">建议用逗号、斜杠这类冷门键；句号在中英文输入法里都常见，容易被抢</div></div>
         <button class="keybtn" id="keySkip"></button>
       </div>
+      <div class="keylist" id="keyList"></div>
+      <div class="note" style="margin-top:10px">默写里逗号本来是普通字符（用来分隔多个意思）。如果你把逗号设成跳过键，它就不再当分隔符用了，改用顿号「、」或分号分隔。空格只在全屏时被接管，窗口化时照常打字；Shift+空格 永远能打出真正的空格。</div>
       <div class="row" style="justify-content:flex-start;margin-top:6px">
         <button class="btn ghost sm" id="keyReset">恢复默认</button>
         <span class="kbd" style="margin:0;align-self:center" id="keyHint"></span>
@@ -1703,7 +1713,7 @@ see &#183; say &#183; write
         </div>
       </div>
       <div class="cred" id="credRows">
-        <div class="credrow"><b>版本</b><span id="credVer">1.0.5 · Windows / Android / Linux</span></div>
+        <div class="credrow"><b>版本</b><span id="credVer">1.0.6 · Windows / Android / Linux</span></div>
         <div class="credrow"><b>词库</b><span>《高频词默写》601 词，按真题出现频次排序，每 36 词一页</span></div>
         <div class="credrow"><b>词源</b><span>参考 etymonline；记忆钩子与例句由作者逐词整理</span></div>
         <div class="credrow"><b>判分</b><span>本地字面规则打底，拿不准的交 AI 复核，你可随时翻案</span></div>
@@ -1850,10 +1860,14 @@ const state = {
   _mainSession:null, _revMode:''
 };
 /* 默写快捷键：记物理键位 code，中文输入法下也不会跟句号、空格抢 */
-const KEY_DEFAULT = {judge:'Space', skip:'Period'};
+const KEY_DEFAULT = {judge:'Space', skip:'Period', reveal:'Space'};
 function keyCfg(){
   const k = (state.cfg && state.cfg.keys) || {};
-  return {judge:k.judge || KEY_DEFAULT.judge, skip:k.skip || KEY_DEFAULT.skip};
+  return {
+    judge: k.judge || KEY_DEFAULT.judge,
+    skip:  k.skip  || KEY_DEFAULT.skip,
+    reveal:k.reveal|| KEY_DEFAULT.reveal
+  };
 }
 function keyLabel(code){
   const M = {Space:'空格',Period:'句号 .',Comma:'逗号 ,',Slash:'斜杠 /',Semicolon:'分号 ;',
@@ -3113,6 +3127,7 @@ function renderRead(){
 
   const w = byId(s.ids[s.index]);
   if(!w){ s.done = true; saveSes(); renderReadDone(); return; }
+  const K = keyCfg();
 
   $('view-read').innerHTML = `
     <div class="pagehd">${backTag()}<h1>背诵</h1><span>第 ${s.page} 页 · ${s.index+1}/${s.ids.length} 个${s.carry?` · 含没默完的 ${s.carry} 个`:''}</span></div>
@@ -3122,10 +3137,10 @@ function renderRead(){
         <div class="w">${w.word}</div>
         ${w.phonetic?`<div class="ph">${w.phonetic}</div>`:''}
       </div>
-      ${state.revealed?'':'<div class="hint">先自己想一想它的意思，再翻面</div>'}
+      ${state.revealed?'':'<div class="hint">先自己想一想它的意思，再按「'+keyLabel(K.reveal)+'」看释义</div>'}
     </div>
     <div class="row" id="rActions"></div>
-    <div class="kbd">空格翻面 · 1 认识 · 2 不认识</div>
+    <div class="kbd">${keyLabel(K.reveal)} 看释义 · 1 认识 · 2 不认识</div>
   `;
   if(state.revealed) fillBack(w);
   renderReadActions();
@@ -3347,17 +3362,23 @@ function renderWrite(){
   const w = byId(state.wq[state.wi]);
   if(!w){ state.wi++; renderWrite(); return; }
 
-  const fsm = winFull();               /* 全屏才显示键位、才接管空格 */
+  const fsm = winFull();               /* 全屏才接管空格；其他快捷键任何窗口状态都生效 */
   const K = keyCfg();
+  const sepHint = (K.skip === 'Comma') ? '用顿号「、」或分号隔开' : '用逗号或顿号隔开';
+  const spaceHint = (K.judge === 'Space')
+    ? (fsm ? '（想打空格就按 Shift+空格）' : '（窗口化时空格照常输入）')
+    : '';
   $('view-write').innerHTML = `
     <div class="pagehd">${backTag()}<h1>默写</h1><span>第 ${(state.session&&state.session.page)||1} 页 · ${state.wi+1}/${state.wq.length} 个</span></div>
     <div class="prompt">${w.word}</div>
     <div class="ptext">${w.phonetic||''}</div>
-    <textarea id="wInput" placeholder="${fsm?(K.judge==='Space'?'写下它的中文意思。多个意思用逗号或顿号隔开（想打空格就按 Shift+空格）。':'写下它的中文意思。多个意思用逗号或顿号隔开。'):'写下它的中文意思。多个意思用空格或逗号隔开都行。'}"></textarea>
+    <textarea id="wInput" placeholder="写下它的中文意思。多个意思${sepHint}${spaceHint}。"></textarea>
     <div class="row" style="justify-content:flex-start;margin-top:14px">
-      <button class="btn primary" id="wSubmit">判分${fsm?'（'+keyLabel(K.judge)+'）':''}</button>
-      <button class="btn ghost" id="wSkip">不会，跳过${fsm?'（'+keyLabel(K.skip)+'）':''}</button>
-      ${fsm?'':'<span class="kbd" style="margin:0;align-self:center">全屏后可用「'+keyLabel(K.judge)+'」连续作答</span>'}
+      <button class="btn primary" id="wSubmit">判分（${keyLabel(K.judge)}）</button>
+      <button class="btn ghost" id="wSkip">不会，跳过（${keyLabel(K.skip)}）</button>
+      ${fsm
+        ? '<span class="kbd" style="margin:0;align-self:center">全屏中：空格也能连续作答</span>'
+        : '<span class="kbd" style="margin:0;align-self:center">'+keyLabel(K.skip)+' 现在就生效；空格窗口化时留给打字，全屏后可用「'+keyLabel(K.judge)+'」</span>'}
     </div>
     <div class="result" id="wResult"></div>
     <div class="row" id="wNextRow" style="display:none;justify-content:flex-start">
@@ -3369,15 +3390,16 @@ function renderWrite(){
   inp.addEventListener('keydown', e=>{
     /* 中文输入法还在拼写时，按键归输入法，不抢 */
     if(e.isComposing || e.keyCode === 229) return;
-    if(!winFull()) return;               /* 非全屏：空格、句号都还给输入框 */
     const plain = !e.ctrlKey && !e.altKey && !e.metaKey;
     const K = keyCfg();
-    /* 判分键；如果它就是空格，Shift+空格 留给真正的空格 */
-    if(plain && e.code === K.judge && !(K.judge==='Space' && e.shiftKey)){
-      e.preventDefault(); e.__judged = true; submitWrite(); return;
-    }
-    /* 跳过键：记录物理键位，换中英文输入法也不会变 */
-    if(plain && e.code === K.skip){ e.preventDefault(); e.__judged = true; skipWrite(); return; }
+    const fsm = winFull();
+    /* 空格留给人打字的规矩只对空格本身有效：窗口化时它不抢。
+       其他键（逗号、斜杠、句号……）一旦被设成快捷键，什么时候都生效，
+       而且这里先 preventDefault，字符不会再掉进输入框——
+       以前「设了逗号还是打出一个逗号」就是这个缺口。 */
+    const armed = code => plain && e.code === code && !(code === 'Space' && (!fsm || e.shiftKey));
+    if(armed(K.judge)){ e.preventDefault(); e.__judged = true; submitWrite(); return; }
+    if(armed(K.skip)){ e.preventDefault(); e.__judged = true; skipWrite(); return; }
     /* Enter 保留作备用；若已被设成判分或跳过，就不重复触发 */
     if(plain && e.code === 'Enter' && K.judge !== 'Enter' && K.skip !== 'Enter'){
       e.preventDefault(); e.__judged = true; submitWrite();
@@ -3398,17 +3420,16 @@ function winFull(){
 function writeKeyFlow(e){
   if(state.view !== 'write') return false;
   if(e.isComposing || e.keyCode === 229) return false;
-  if(!winFull()) return false;
   const row = $('wNextRow');
   if(!row || row.style.display === 'none') return false;
   if(state._wPending) return false;              /* 判分还没回来，先别过 */
   const K = keyCfg();
-  if(e.code === K.judge || e.code === 'Enter'){
-    e.preventDefault();
-    nextWrite();
-    return true;
-  }
-  return false;
+  if(e.code !== 'Enter' && e.code !== K.judge) return false;
+  /* 空格仍要全屏才接管；逗号这类自定义键窗口化也能用 */
+  if(e.code === 'Space' && !winFull()) return false;
+  e.preventDefault();
+  nextWrite();
+  return true;
 }
 
 /* 结果区单独成函数：判错了能就地翻案，不用整块重排 */
@@ -3766,13 +3787,27 @@ function renderShelf(){
 let keyCapture = null;
 function paintKeyCfg(){
   const K = keyCfg();
-  const jb = $('keyJudge'), sb = $('keySkip');
-  if(jb){ jb.textContent = keyCapture==='judge' ? '请按一个键…' : keyLabel(K.judge);
-          jb.classList.toggle('listening', keyCapture==='judge'); }
-  if(sb){ sb.textContent = keyCapture==='skip' ? '请按一个键…' : keyLabel(K.skip);
-          sb.classList.toggle('listening', keyCapture==='skip'); }
+  const rb = $('keyReveal'), jb = $('keyJudge'), sb = $('keySkip');
+  const cap = (code, which)=> keyCapture===which ? '请按一个键…' : keyLabel(code);
+  if(rb){ rb.textContent = cap(K.reveal,'reveal'); rb.classList.toggle('listening', keyCapture==='reveal'); }
+  if(jb){ jb.textContent = cap(K.judge,'judge');  jb.classList.toggle('listening', keyCapture==='judge'); }
+  if(sb){ sb.textContent = cap(K.skip,'skip');    sb.classList.toggle('listening', keyCapture==='skip'); }
   const hint = $('keyHint');
-  if(hint) hint.textContent = '当前：判分 ' + keyLabel(K.judge) + ' · 跳过 ' + keyLabel(K.skip);
+  if(hint) hint.textContent = '当前：看释义 ' + keyLabel(K.reveal) + ' · 判分 ' + keyLabel(K.judge) + ' · 跳过 ' + keyLabel(K.skip);
+  /* 一张总表：能改的在上面，不能改的列在这里，省得以后又忘 */
+  const list = $('keyList');
+  if(list){
+    const rows = [
+      ['背诵 · 看释义（按一下翻面，再按收回）', keyLabel(K.reveal)],
+      ['背诵 · 认识', '1'],
+      ['背诵 · 不认识', '2'],
+      ['默写 · 判分 / 下一个', keyLabel(K.judge)],
+      ['默写 · 不会跳过', keyLabel(K.skip)],
+      ['默写 · 判分备用键', '回车'],
+      ['设置 · 改键时取消', 'Esc'],
+    ];
+    list.innerHTML = rows.map(r=>'<i><span>'+r[0]+'</span><b>'+r[1]+'</b></i>').join('');
+  }
 }
 document.addEventListener('keydown', e=>{
   if(!keyCapture) return;
@@ -3782,13 +3817,18 @@ document.addEventListener('keydown', e=>{
     toast('这个键不合适，换一个'); return;
   }
   const K = keyCfg();
+  /* 判分和跳过必须分开：同一个键既判分又跳过，就没法用了。
+     看释义在背诵页、判分在默写页，两页互不打扰，允许都设成空格 */
   if((keyCapture==='judge' && e.code===K.skip) || (keyCapture==='skip' && e.code===K.judge)){
-    toast('两个快捷键不能一样'); return;
+    toast('判分键和跳过键不能一样'); return;
   }
   const which = keyCapture; keyCapture = null;
+  if(!state.cfg.keys) state.cfg.keys = {};
   state.cfg.keys[which] = e.code;
   saveCfg(); paintKeyCfg();
-  toast((which==='judge'?'判分键 → ':'跳过键 → ') + keyLabel(e.code));
+  const label = {judge:'判分键', skip:'跳过键', reveal:'看释义键'}[which] || '键';
+  toast(label + ' → ' + keyLabel(e.code));
+  if(which === 'reveal' && state.view === 'read') renderRead();
 }, true);
 
 /* 一个账号对应一份齐全的数据：书架索引 / 背默数量与百分比 / 错题记录 */
@@ -3917,6 +3957,8 @@ function renderSet(){
   const kj = $('keyJudge'), ks = $('keySkip');
   if(kj) kj.onclick = ()=>{ keyCapture='judge'; paintKeyCfg(); toast('按一个键，Esc 取消'); };
   if(ks) ks.onclick = ()=>{ keyCapture='skip';  paintKeyCfg(); toast('按一个键，Esc 取消'); };
+  const rv = $('keyReveal');
+  if(rv) rv.onclick = ()=>{ keyCapture='reveal'; paintKeyCfg(); toast('按一个键，Esc 取消'); };
   const kr = $('keyReset');
   if(kr) kr.onclick = ()=>{
     state.cfg.keys = Object.assign({}, KEY_DEFAULT); keyCapture = null;
@@ -5816,7 +5858,16 @@ async function init(){
 
   document.addEventListener('keydown', e=>{
     if(state.view === 'read'){
-      if(e.code === 'Space'){ e.preventDefault(); if(!state.revealed) revealRead(); }
+      if(e.isComposing || e.keyCode === 229) return;
+      const K = keyCfg();
+      const plain = !e.ctrlKey && !e.altKey && !e.metaKey;
+      /* 看释义键：按一下翻面，再按一下收回去。默认是空格 */
+      if(plain && e.code === K.reveal){
+        e.preventDefault();
+        if(!state.revealed) revealRead();
+        else { state.revealed = false; renderRead(); }
+        return;
+      }
       if(state.revealed && e.key === '1') gradeRead(true);
       if(state.revealed && e.key === '2') gradeRead(false);
     }
