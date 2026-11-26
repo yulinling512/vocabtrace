@@ -19,33 +19,42 @@
 - **配色交给 AI 生成**：按节气、天气、季节和你最近在背的词，每天换一套色板，不用你手动挑。
 - **界面是一张纸**：线描莲花、书页框、朱印、编号卡片、代码底纹——不做成常见的"卡片 + 渐变按钮"。
 
+## 下载
+
+到 [Releases](https://github.com/yulinling512/vocabtrace/releases) 取安装包：
+
+- 安卓：`词迹-安卓-1.0.4.apk`，直接安装
+- Linux：`词迹-1.0.4-amd64.deb`，`sudo dpkg -i` 安装
+- Windows：仓库存放源码，用 `desktop/` 自行构建，或取 Release 附件里的绿色版
+
 ## 目录
 
 ```
-app/index.html          界面全部（单文件 HTML，无构建依赖）
-desktop/                桌面端外壳（Electron 主进程、打包脚本、图标生成）
-android/                安卓工程（WebView 壳 + 原生资源）
-data/高频词默写.csv      词库（601 词，按真题频次排序）
-docs/                   打包与部署文档
+app/index.html              界面全部（单文件 HTML，无构建依赖）
+desktop/                    桌面端外壳：主进程、打包脚本、图标生成
+android/                    安卓工程（WebView 壳 + 原生资源）
+schema/  spec/              词库结构定义、导入格式与 AI 出题提示词
+data/                       词库（601 词，含释义、词源、例句、搭配）
+decks/  pipeline/           词库加工与合并流水线
+_cards/  _etym/  _tips/     分词卡的原始文本批次
+tools/                      辅助脚本（快捷方式、PDF 抽页）
+docs/                       打包、部署与使用说明
+icons/                      应用图标
 ```
 
-## 运行
-
-桌面端直接双击可执行文件即可，无需安装。安卓端为 apk，Linux 端为 deb。
-
-从源码构建：
+## 从源码构建
 
 ```bash
 # 桌面端（Electron）
 cd desktop && npm install && npm run build
 
-# 安卓（需要 JDK 17 + Android SDK build-tools 34）
+# 安卓（需 JDK 17 + Android SDK build-tools 34）
 cd android && ./build-apk.ps1 -Ver 1.0.4 -Code 5
 ```
 
 ## 不包含什么
 
-这个仓库**只放源码**，不含：个人学习进度存档、云端 API 密钥、签名证书、打包产物（exe / apk / deb）。授权信息在运行时由使用者自己填写。
+这个仓库**不含**：个人学习进度存档、云端 API 密钥、签名证书、以及 exe / deb 这类体积较大的打包产物（大件走 Release 附件）。授权信息在运行时由使用者自己填写。
 
 ## 授权
 
