@@ -1,0 +1,420 @@
+@@citizen
+C: [citi]-zen || citi 就是 city 的变体，-zen 是中古英语的「人」。住在城里的人——市民、公民。
+E: Every [citizen] has the right to vote. ~ 每个[公民]都有投票权。
+E: He became a [citizen] last year. ~ 他去年成了[公民]。
+L: senior citizen / citizen of / fellow citizen
+T: warm 🏙️
+M: city ~ 城市。同一个城，加个 -zen 就成了人。
+@@civil
+C: [civ]-il || civ 是「公民」（civilian 平民同源）。与公民有关——民事的、公民的，懂规矩就叫文明。
+E: The case went to a [civil] court. ~ 案子交[民事]法庭。
+E: Keep a [civil] tongue. ~ 说话[文明]点。
+L: civil war / civil rights / civil servant
+T: calm ⚖️
+M: civic ~ 市政的。都从 civ「公民」来，civil 偏「民事」，civic 偏「城市」。
+@@clarify
+C: [clar]-ify || clar 是「清楚」（clear 同源），-ify 是「使…」。把话说清——阐明。
+E: Could you [clarify] the second point? ~ 你能[澄清]第二点吗？
+E: The statement [clarified] nothing. ~ 那份声明什么也没[说明]。
+L: clarify a point / clarify the situation / to clarify
+T: cool 🔍
+M: declare ~ 宣布。都从 clar「清楚」，一个是说清，一个是对众说。
+@@classify
+C: [class]-ify || class 是「类别」，-ify 是「使…」。把东西分组——分类；把文件标上等级就叫列为机密。
+E: Books are [classified] by subject. ~ 书按主题[分类]。
+E: The file was [classified] as secret. ~ 文件被[列为]机密。
+L: classify into / be classified as / classified information
+T: cool 🗃️
+M: classify / class 同根；-ify 结尾的动词还有 simplify、beautify。
+@@colleague
+C: col-[league] || col- 是「共同」，legare 是「派遣」。被同一个主人派出去办事的人——同事。
+E: She is a [colleague] of mine. ~ 她是我的[同事]。
+E: I discussed it with [colleagues]. ~ 我和[同事]讨论了此事。
+L: a colleague of / work colleague / former colleague
+T: warm 🤝
+M: college ~ 学院。都从 legare「派」，college 原指「被派到一起的团体」。
+@@collection
+C: col-[lect]-ion || lect 是「收集」（collect、select 同源）。收拢到一处——收集、收藏品。
+E: The museum has a fine [collection]. ~ 博物馆[藏品]精美。
+E: There was a [collection] for the flood victims. ~ 为洪灾灾民[募捐]。
+L: a collection of / stamp collection / raise a collection
+T: warm 🗄️
+M: collect ~ 收集（动词）。-tion 结尾变名词，意思还是「收来的那堆」。
+@@combine
+C: com-[bine] || com- 是「一起」，bini 是「两个一排」。两个并成一个——结合。
+E: The two firms [combined] into one. ~ 两家公司[合并]了。
+E: She [combines] work with study. ~ 她[兼顾]工作与学习。
+L: combine with / combine A and B / a combined effort
+T: cool 🔗
+M: combination ~ 组合。同根名词，com 打头多是「一起」。
+@@command
+C: com-[mand] || mand 是「命令、托付」（demand 同源）。交给你办——命令，也指掌握语言。
+E: The officer [commanded] his men to advance. ~ 军官[命令]士兵前进。
+E: She [commands] four languages. ~ 她[精通]四门语言。
+L: command a view of / in command of / command respect
+T: sharp 🎖️
+M: demand ~ 要求。同一个 mand「交代」，demand 是强烈要，command 是下命令。
+@@commercial
+C: [commer]-cial || com- 是「一起」，merx 是「商品」（market 同源）。一起做买卖——商业的。
+E: The film was a [commercial] success. ~ 这部片[商业]上成功。
+E: The ad break is full of [commercials]. ~ 广告时段全是[商业广告]。
+L: commercial value / commercial bank / TV commercial
+T: warm 💼
+M: commerce ~ 商业。同根名词，-ial 变形容词。
+@@communicate
+C: com-[mun]-icate || mun 是「共同、服务」（common、municipal 同源）。让大家共有——交流、传达。
+E: We [communicate] by email. ~ 我们用邮件[沟通]。
+E: The disease [communicates] easily. ~ 这病很易[传染]。
+L: communicate with / communicate clearly / communicate ideas
+T: cool 💬
+M: common ~ 共同的。都从 mun「共有」，交流就是把话说成共有的。
+@@compete
+C: com-[pete] || pete 是「追求」（appetite、petition 同源）。大家追同一个东西——竞争。
+E: Ten teams [competed] for the prize. ~ 十支队伍[角逐]奖项。
+E: No one can [compete] with her. ~ 没人能与她[匹敌]。
+L: compete with / compete for / compete against
+T: sharp 🏁
+M: competent ~ 有能力的。同根 pete「追求」，追得上就是胜任。
+@@complain
+C: com-[plain] || 拉丁 plangere 是「捶胸哀号」。拍着胸口诉苦——抱怨、投诉。
+E: She [complained] about the noise. ~ 她[抱怨]噪音。
+E: He [complained] of a headache. ~ 他[诉说]头痛。
+L: complain about / complain to / complain of
+T: dark 😤
+M: complaint ~ 投诉（名词）。-t 结尾是那个「诉状」，-n 结尾是动作。
+@@complex
+C: com-[plex] || plectere 是「编织」（perplex 同源）。缠成一团——复杂的，也指建筑群。
+E: This is a [complex] issue. ~ 这是个[复杂]问题。
+E: They live in a housing [complex]. ~ 他们住在一个住宅[小区]。
+L: complex problem / sports complex / inferiority complex
+T: dark 🧩
+M: perplex ~ 使困惑。都含 plex「编织」，一个缠住东西，一个缠住人。
+@@compose
+C: com-[pose] || pos 是「放」（position 同源）。把东西放齐——组成、创作；把自己放平就叫镇静。
+E: Water [composes] most of the body. ~ 人体大部分[由]水[组成]。
+E: She [composed] herself before speaking. ~ 她说话前先[镇定]下来。
+L: be composed of / compose music / compose oneself
+T: calm 🎼
+M: compose / comprise 都指「构成」，compose 常被动 be composed of。
+@@compound
+C: com-[pound] || 与 compose 同源，pon 是「放」。放上再放一层——复合的，也指把麻烦加重。
+E: Water is a [compound] of hydrogen and oxygen. ~ 水是氢氧[化合物]。
+E: The delay [compounded] the problem. ~ 延误[加重]了问题。
+L: chemical compound / compound interest / compound the problem
+T: cool ⚗️
+M: compound / compose 同根，compound 重在「叠一层」。
+@@comprehension
+C: com-[prehend]-sion || prehend 是「抓住」（prehensile 抓握的）。把意思抓住——理解。
+E: The text is beyond my [comprehension]. ~ 这段文字超出我的[理解]。
+E: Reading [comprehension] is tested first. ~ 先考阅读[理解]。
+L: beyond comprehension / reading comprehension / listening comprehension
+T: calm 🧠
+M: comprehend ~ 理解（动词）。同根，-sion 结尾是那个「抓得住」的状态。
+@@concentrate
+C: con-[centr]-ate || centr 是「中心」（center 同源）。把心思赶到中心——集中。
+E: I cannot [concentrate] in this noise. ~ 这么吵我没法[集中]。
+E: The juice is [concentrated]. ~ 这果汁是[浓缩]的。
+L: concentrate on / concentrated effort / concentrate one's attention
+T: cool 🎯
+M: eccentric ~ 古怪的。ec 是「偏出」，centr 是中心，偏出中心就是怪人。
+@@concept
+C: con-[cept] || cept 是「抓、拿」（accept、receive 同源）。心里抓住的那个东西——概念。
+E: The [concept] is hard to explain. ~ 这个[概念]不好解释。
+E: He has no [concept] of time. ~ 他毫无时间[观念]。
+L: basic concept / the concept of / grasp a concept
+T: cool 💡
+M: conception ~ 构想、受孕。同根，一个抓的是想法，一个抓的是生命。
+@@concern
+C: con-[cern] || cern 是「筛、分辨」（discern 同源）。心里反复筛这件事——关心、涉及。
+E: This [concerns] everyone here. ~ 这事[涉及]在场每个人。
+E: She showed great [concern] for him. ~ 她对他十分[关心]。
+L: be concerned about / as far as I am concerned / a going concern
+T: warm 💗
+M: discern ~ 辨别。都从 cern「筛」，一个筛出差别，一个筛出心事。
+@@concert
+C: con-[cert] || cert 是「争斗、较量」（certamen 竞赛）。众人较着劲却合成一调——音乐会，引申为一致。
+E: They went to a [concert]. ~ 他们去听[音乐会]。
+E: The two acted in [concert]. ~ 两人[协力]行动。
+L: in concert / concert hall / live concert
+T: bright 🎻
+M: concerto ~ 协奏曲。同根，乐队的「较劲」更明显。
+@@conclude
+C: con-[clude] || clud 是「关闭」（include、exclude 同源）。把门关上——结束，把话收成一句——断定。
+E: The talk [concluded] at noon. ~ 演讲中午[结束]。
+E: We [concluded] that he was lying. ~ 我们[断定]他在撒谎。
+L: conclude that / to conclude / conclude a deal
+T: calm 🔚
+M: include ~ 包括。clud 都是「关」，include 关进来，exclude 关出去。
+@@conduct
+C: con-[duct] || duct 是「引导」（introduce 同源）。带着人走——实施、指挥，也指导电。
+E: They [conducted] a survey. ~ 他们[开展]了一项调查。
+E: Copper [conducts] heat well. ~ 铜[传导]热很好。
+L: conduct a survey / conduct oneself / code of conduct
+T: cool 🎩
+M: conductor ~ 指挥、导体。同根，一个带乐队，一个带电。
+@@confidence
+C: con-[fid]-ence || fid 是「信任」（fidelity 忠诚同源）。完全信得过——信心、信任。
+E: She spoke with [confidence]. ~ 她[自信]地发言。
+E: I have [confidence] in you. ~ 我[信任]你。
+L: have confidence in / self-confidence / in confidence
+T: bright 💪
+M: confidential ~ 机密的。同根，被「托付信任」的事就是机密。
+@@confirm
+C: con-[firm] || firm 是「坚固」（firm 结实的）。把它压结实——证实、确认。
+E: Please [confirm] your booking. ~ 请[确认]预订。
+E: The results [confirmed] our guess. ~ 结果[证实]了我们的猜测。
+L: confirm a booking / confirm that / confirmed by
+T: cool ✅
+M: firm ~ 坚定的。同根，形容词变动词就是「使它坚定」。
+@@conflict
+C: con-[flict] || flict 是「打击」（inflict 施加同源）。两边互相打——冲突。
+E: The two views [conflict]. ~ 两种观点相[冲突]。
+E: He is in [conflict] with his boss. ~ 他和上司[不合]。
+L: in conflict with / armed conflict / conflict of interest
+T: dark ⚔️
+M: inflict ~ 使遭受。都含 flict「打」，一个是互打，一个是打别人。
+@@confuse
+C: con-[fuse] || fus 是「倒、流」（refuse、fusion 同源）。几种东西倒在一起——混淆、困惑。
+E: I [confused] her with her sister. ~ 我把她和她姐姐[弄混]了。
+E: The instructions [confused] me. ~ 说明把我[搞糊涂]了。
+L: confuse A with B / be confused about / confuse the issue
+T: dark 🌪️
+M: refuse ~ 拒绝。都含 fus「倒」，refuse 是把东西倒回去。
+@@conscience
+C: con-[sci]-ence || sci 是「知道」（science 同源）。心里那个「知道」——良心。
+E: His [conscience] troubled him. ~ 他[良心]不安。
+E: I have a clear [conscience]. ~ 我[问心无愧]。
+L: a clear conscience / guilty conscience / in all conscience
+T: calm 🕊️
+M: conscious ~ 有意识的。同根，多一个 n 就是那个「知道对错」的东西。
+@@consequence
+C: con-[sequ]-ence || sequ 是「跟随」（sequence 同源）。跟在行为后面来的东西——后果。
+E: He must face the [consequences]. ~ 他必须面对[后果]。
+E: As a [consequence], prices rose. ~ [结果]，物价上涨。
+L: as a consequence / in consequence of / serious consequences
+T: dark ⏳
+M: sequence ~ 顺序。都含 sequ「跟」，一个跟出顺序，一个跟出后果。
+@@conservation
+C: con-[serv]-ation || serv 是「保存」（preserve 同源）。让它别变、别少——保护、节约。
+E: [Conservation] of wildlife is urgent. ~ 野生动植物[保护]很紧迫。
+E: Energy [conservation] saves money. ~ 节约能源能省钱。
+L: energy conservation / wildlife conservation / conservation area
+T: bright 🌳
+M: conversation ~ 谈话。只差一个字母，一个是保，一个是聊。
+@@consist
+C: con-[sist] || sist 是「站立」（insist、resist 同源）。几样东西一并站着——组成、在于。
+E: The team [consists] of six members. ~ 团队[由]六人[组成]。
+E: Happiness [consists] in contentment. ~ 幸福[在于]知足。
+L: consist of / consist in / consist with
+T: calm 🧱
+M: insist ~ 坚持。都含 sist「站」，一个站成整体，一个站着不走。
+@@constant
+C: con-[stant] || sta 是「站」（stand 同源）。一直站着不动——持续不断的，也指常数。
+E: The [constant] noise annoyed him. ~ [持续]的噪音让他烦。
+E: Keep the temperature [constant]. ~ 保持温度[恒定]。
+L: constant change / constant temperature / a constant reminder
+T: cool 🧭
+M: instant ~ 瞬间。都从 sta「站」，instant 是「站在眼前的那一刻」。
+@@construct
+C: con-[struct] || struct 是「堆建」（structure、instruct 同源）。往里堆——建造。
+E: They [constructed] a bridge. ~ 他们[建造]了一座桥。
+E: The theory is well [constructed]. ~ 理论[构建]得很好。
+L: construct a model / construct a sentence / social construct
+T: cool 🏗️
+M: destroy ~ 摧毁。struct 是「建」，de 是「去掉」，一对反义。
+@@consult
+C: con-[sult] || 拉丁 consulere 是「商议」。凑在一起问——咨询、查阅。
+E: You should [consult] a doctor. ~ 你该[咨询]医生。
+E: He [consulted] the dictionary. ~ 他[查]了词典。
+L: consult with / consult a dictionary / consult a lawyer
+T: calm 📖
+M: insult ~ 侮辱。只差一个字母，consult 是问人，insult 是骂人。
+@@consume
+C: con-[sume] || sum 是「取」（assume、resume 同源）。一路取光——消耗、吃喝。
+E: The car [consumes] little fuel. ~ 这车[耗]油少。
+E: Fire [consumed] the house. ~ 火[吞没]了房子。
+L: consume energy / time-consuming / consumer goods
+T: warm 🔥
+M: assume ~ 假定。都是 sum「取」，一个取光，一个取来当自己的。
+@@contact
+C: con-[tact] || tact 是「触碰」（tactile 触觉的）。手碰到手——接触、联系。
+E: Please [contact] me by phone. ~ 请电话[联系]我。
+E: We are still in [contact]. ~ 我们还保持[联系]。
+L: in contact with / contact details / make contact with
+T: warm 📞
+M: tactile ~ 触觉的。同根 tact「触」，一个动作，一种感觉。
+@@contemporary
+C: con-[tempor]-ary || tempor 是「时间」（temporary 同源）。同一个时间段的——当代的、同代人。
+E: She studies [contemporary] art. ~ 她研究[当代]艺术。
+E: He was a [contemporary] of Mozart. ~ 他是莫扎特的[同时代人]。
+L: contemporary art / contemporary with / a contemporary of
+T: cool 🕰️
+M: temporary ~ 暂时的。都含 tempor「时间」，一个共时，一个短时。
+@@content
+C: con-[tent] || tent 是「握住」（contain 同源）。里面握着的部分——内容；心里握得住——满足。
+E: Check the [content] of the box. ~ 看看盒子的[内容]。
+E: She is [content] with her life. ~ 她对生活很[满足]。
+L: be content with / table of contents / content oneself with
+T: calm 📦
+M: contain ~ 包含。同根，-t 结尾是装的东西，-n 结尾是装的动作。
+@@contest
+C: con-[test] || test 是「作证」（testify 同源）。各带证人来争——竞赛、争辩。
+E: She won the speech [contest]. ~ 她赢了演讲[比赛]。
+E: He [contested] the decision. ~ 他对决定提出[异议]。
+L: speech contest / contest a decision / no contest
+T: sharp 🏅
+M: protest ~ 抗议。都含 test「作证」，一个是争胜负，一个是当众反对。
+@@contract
+C: con-[tract] || tract 是「拉」（attract、tractor 同源）。两边拉到一起——合同；往内拉——收缩。
+E: They signed a [contract]. ~ 他们签了[合同]。
+E: Metal [contracts] when cold. ~ 金属遇冷[收缩]。
+L: sign a contract / contract with / contract a disease
+T: cool 📝
+M: attract ~ 吸引。都含 tract「拉」，一个拉到签约，一个拉到身边。
+@@contribute
+C: con-[tribut]-e || tribut 是「给予」（tribute 同源）。一起拿出来给——贡献、投稿。
+E: Everyone [contributed] to the fund. ~ 人人都向基金[捐款]。
+E: She [contributes] to a magazine. ~ 她给杂志[投稿]。
+L: contribute to / contribute money / contribute an article
+T: warm 🎁
+M: distribute ~ 分发。都含 tribut「给」，一个往里给，一个分散给。
+@@convenient
+C: con-[ven]-ient || ven 是「来」（invent、event 同源）。能凑到一块来的——方便的。
+E: Come at any [convenient] time. ~ 你[方便]的时候来。
+E: The shop is [convenient] for the station. ~ 这店离车站[近便]。
+L: convenient for / a convenient time / convenience store
+T: calm 🚪
+M: convenience ~ 便利（名词）。-ient 是形容词尾，-ience 是名词尾。
+@@cooperate
+C: co-[oper]-ate || oper 是「工作」（operate 同源）。一起干活——合作。
+E: The two sides agreed to [cooperate]. ~ 双方同意[合作]。
+E: He [cooperated] with the police. ~ 他[配合]警方。
+L: cooperate with / cooperate on / full cooperation
+T: warm 🤲
+M: operate ~ 操作。同根，co- 是「一起」，加不加就差在「谁干」。
+@@correspond
+C: cor-[respond] || respond 是「回应」。一来一回地对上——对应、通信。
+E: The results [correspond] to our theory. ~ 结果与理论相[对应]。
+E: They [correspond] regularly. ~ 他们定期[通信]。
+L: correspond to / correspond with / correspond with sb
+T: cool ✉️
+M: respond ~ 回应。同根，cor- 是「相互」，加不加差在「来回」。
+@@courageous
+C: [cour]-ageous || cour 是「心」（拉丁 cor 心，record 同源）。心里有底、敢往上冲——勇敢的。
+E: It was a [courageous] decision. ~ 这是个[勇敢]的决定。
+E: She remained [courageous] to the end. ~ 她到最后都很[英勇]。
+L: a courageous decision / courageous enough to / politically courageous
+T: bright 🦁
+M: courage ~ 勇气（名词）。-age 是名词尾，-ageous 变形容词。
+@@creative
+C: cre-[ative] || cre 是「造」（create、increase 同源）。能生出新东西的——创造性的。
+E: She is a [creative] writer. ~ 她是个[有创造力]的作家。
+E: We need [creative] solutions. ~ 我们需要[创造性]的方案。
+L: creative thinking / creative writing / creative industry
+T: bright 🎨
+M: create ~ 创造。同根，-ive 表示「有这种性质的」。
+@@credit
+C: [cred]-it || cred 是「相信」（credible 可信的）。别人信你——信用；你信别人的功劳——把…归于。
+E: He bought it on [credit]. ~ 他[赊账]买的。
+E: She [credited] him with the idea. ~ 她把这个主意[归功]于他。
+L: on credit / credit card / give credit to
+T: warm 💳
+M: credible ~ 可信的。都含 cred「信」，一个信人，一个信话。
+@@crime
+C: [crim]-e || 拉丁 crimen 是「指控、罪名」。被告席上那条——罪行。
+E: The [crime] rate has fallen. ~ [犯罪]率下降了。
+E: It is a [crime] to waste food. ~ 浪费粮食是[罪过]。
+L: commit a crime / crime rate / a crime against
+T: dark 🚨
+M: criminal ~ 罪犯。同根加 -al，一个是事，一个是人。
+@@crisis
+C: [cri]-sis || 希腊 krinein 是「判断、决断」（critical 同源）。到了必须做决断的那一刻——危机。
+E: The country faces an economic [crisis]. ~ 国家面临经济[危机]。
+E: The fever reached a [crisis]. ~ 高烧到了[危急]关头。
+L: economic crisis / in crisis / resolve a crisis
+T: dark ⚠️
+M: critical ~ 关键的。同根，危机就是那个「必须判断」的点。
+@@critical
+C: [crit]-ical || crit 是「判断」（critic 批评家）。能定生死的那一判——关键性的，也指爱挑刺。
+E: Timing is [critical]. ~ 时机[至关重要]。
+E: He was [critical] of the plan. ~ 他对方案持[批评]态度。
+L: critical of / critical moment / critical thinking
+T: sharp 🔎
+M: critic ~ 批评家。同根，-al 变形容词，一个是人，一个是性质。
+@@curiosity
+C: [cur]-iosity || cur 是「关心」（cure、accurate 同源）。心里老惦记着——好奇心。
+E: [Curiosity] killed the cat. ~ [好奇]害死猫。
+E: He opened it out of [curiosity]. ~ 他出于[好奇]打开了它。
+L: out of curiosity / arouse curiosity / curiosity about
+T: bright 🔭
+M: curious ~ 好奇的。同根，-osity 是名词尾，-ous 是形容词尾。
+@@current
+C: [curr]-ent || curr 是「跑」（occur、course 同源）。正在跑着的——现在的、水流、电流。
+E: The [current] situation is stable. ~ [当前]形势稳定。
+E: The [current] is strong here. ~ 这里[水流]很急。
+L: current affairs / electric current / against the current
+T: cool 🌊
+M: currency ~ 货币。同根 curr「跑」，流通着跑的就是货币。
+@@damp
+C: [damp] || 中古荷兰语 damp 是「蒸汽、湿气」。空气里挂着水汽——潮湿的。
+E: The walls feel [damp]. ~ 墙摸上去[潮]。
+E: Wipe it with a [damp] cloth. ~ 用[湿]布擦。
+L: damp cloth / damp weather / damp down
+T: cool 💧
+M: damp / humid 都指潮，damp 是「不舒服的湿」，humid 是气候术语。
+@@dash
+C: [dash] || 拟声词，东西猛撞的声音。一冲、一撞——猛冲，也指破折号那一划。
+E: He [dashed] across the road. ~ 他[冲]过马路。
+E: Our hopes were [dashed]. ~ 我们的希望[破灭]了。
+L: dash off / make a dash for / a dash of
+T: sharp 💨
+M: rush ~ 冲。dash 更短促，rush 更强调人多事急。
+@@deadline
+C: [dead]-line || 原是美国监狱在地上画的一条线，越过就开枪。那条线——截止期限。
+E: The [deadline] is Friday. ~ [截止]时间是周五。
+E: We missed the [deadline]. ~ 我们错过[期限]了。
+L: meet the deadline / miss the deadline / tight deadline
+T: sharp ⏰
+M: lifeline ~ 生命线。同一串 line，一个是死线，一个是活线。
+@@debate
+C: de-[bate] || 法语 debattre 是「打、争」。用嘴来回打——辩论，心里反复打——斟酌。
+E: They [debated] the issue for hours. ~ 他们[辩论]了几小时。
+E: She [debated] whether to go. ~ 她[斟酌]要不要去。
+L: debate on / under debate / heated debate
+T: warm 🗣️
+M: battle ~ 战斗。都从 battre「打」，一个用嘴，一个用兵器。
+@@decade
+C: [dec]-ade || dec 是「十」（decimal、December 同源）。十个年头——十年。
+E: Prices doubled in a [decade]. ~ 十年间物价翻倍。
+E: The last [decade] saw great change. ~ 过去[十年]变化巨大。
+L: over the past decade / for decades / a decade of
+T: calm 📅
+M: decimal ~ 十进制。同根 dec「十」，一个是年，一个是数。
+@@deceive
+C: de-[ceive] || ceive 是「抓、拿」（receive、capture 同源）。设个套把人抓住——欺骗。
+E: Don't let appearances [deceive] you. ~ 别被外表[骗]了。
+E: He [deceived] her into signing. ~ 他[骗]她签了字。
+L: deceive sb into / be deceived by / deceive oneself
+T: dark 🎭
+M: receive ~ 收到。都含 ceive「拿」，一个拿到手，一个被套住。
+@@decisive
+C: de-[cis]-ive || cis 是「切」（scissors、decide 同源）。一刀切下去——决定性的、果断的。
+E: This was the [decisive] battle. ~ 这是[决定性]的一战。
+E: She is a [decisive] leader. ~ 她是个[果断]的领导。
+L: decisive factor / decisive victory / be decisive about
+T: sharp ⚔️
+M: decide ~ 决定。同根，-ive 表示「能切的」，一刀下去不再改。
+@@declare
+C: de-[clare] || clar 是「清楚」（clear、clarify 同源）。把话说清楚给人听——声明，向海关报——申报。
+E: They [declared] independence. ~ 他们[宣布]独立。
+E: Do you have anything to [declare]? ~ 有东西要[申报]吗？
+L: declare war on / declare that / declare independence
+T: warm 📢
+M: clarify ~ 澄清。都从 clar「清楚」，一个是自己弄清，一个是对众宣布。
+@@decline
+C: de-[cline] || clin 是「倾斜」（incline、recline 同源）。往下倾——下降；把身子偏开——婉拒。
+E: Sales [declined] sharply. ~ 销量急剧[下降]。
+E: He [declined] the invitation. ~ 他[婉拒]了邀请。
+L: decline an offer / a sharp decline / in decline
+T: dark 📉
+M: incline ~ 倾向。都含 clin「倾」，往上倾是倾向，往下倾是下滑。
