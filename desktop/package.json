@@ -1,7 +1,7 @@
 {
   "name": "vocab-trace",
   "productName": "词迹",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
   "description": "认读型背词工具",
   "author": {
