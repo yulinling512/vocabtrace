@@ -1,0 +1,420 @@
+@@legend
+C: [leg]-end || leg 是「读」（lecture 同源）。该被读的东西——传奇，图上要读的说明——图例。
+E: The story became a [legend]. ~ 这故事成了[传奇]。
+E: See the [legend] at the bottom. ~ 见底部[图例]。
+L: urban legend / a living legend / legend has it that
+T: warm 📖
+M: lecture ~ 讲座。同根「读」，一个是读给人听，一个是被传诵。
+@@lighten
+C: [light]-en || light 是「轻、光」，-en 是「使…」。变亮，或者变轻——减轻。
+E: The sky [lightened] at dawn. ~ 天亮时天空[放亮]。
+E: The news [lightened] her mood. ~ 消息让她心情[轻松]了。
+L: lighten the load / lighten up / lighten the mood
+T: bright 🌤️
+M: lightning ~ 闪电。拼写差一个 n，一个是变亮，一个是那道闪。
+@@literature
+C: [liter]-ature || littera 是「字母」（letter 同源）。写下来的东西——文学、文献。
+E: She studies English [literature]. ~ 她研究英国[文学]。
+E: The [literature] on this topic is huge. ~ 这个题目的[文献]很多。
+L: English literature / scientific literature / review the literature
+T: calm 📚
+M: letter ~ 字母、信。同根，letters 复数还能指「学问」。
+@@loose
+C: [loose] || 古诺斯语 lauss 是「松、自由」。没系紧——宽松，放出去——释放。
+E: These trousers are too [loose]. ~ 这裤子太[松]。
+E: The dog got [loose]. ~ 狗[跑脱]了。
+L: come loose / let loose / loose fitting
+T: calm 🧵
+M: lose ~ 丢失。多一个 o，loose 是「松」，lose 是「丢」。
+@@luxury
+C: [luxur]-y || 拉丁 luxus 是「过度、放纵」。超出了必需——奢侈。
+E: They live in [luxury]. ~ 他们生活[奢华]。
+E: A car is a [luxury] here. ~ 这里汽车是[奢侈品]。
+L: luxury goods / live in luxury / a luxury hotel
+T: warm 💎
+M: luxurious ~ 奢华的。同根，-ious 是形容词尾。
+@@maintain
+C: main-[tain] || manu 是「手」，tenere 是「握」。手里一直握着——维持、保养，嘴上一直握着——坚称。
+E: They [maintain] the roads well. ~ 他们把路[养护]得很好。
+E: He [maintains] that he is innocent. ~ 他[坚称]自己无罪。
+L: maintain order / maintain that / maintain a family
+T: calm 🔧
+M: contain ~ 包含。都含 tain「握」，一个握在手里，一个装在里面。
+@@manufacture
+C: manu-[fact]-ure || manu 是「手」，fact 是「做」。用手做出来——制造。
+E: The factory [manufactures] shoes. ~ 这家厂[生产]鞋。
+E: The story was pure [manufacture]. ~ 这故事纯属[编造]。
+L: manufacture goods / manufacturing industry / of foreign manufacture
+T: cool 🏭
+M: factory ~ 工厂。都从 fact「做」，一个是做的动作，一个是做的地方。
+@@mature
+C: [matur]-e || maturus 是「成熟、及时」。果子熟了——成熟的，票据到期也是「熟了」。
+E: She is very [mature] for her age. ~ 她比同龄人[成熟]。
+E: The bond [matures] in five years. ~ 债券五年后[到期]。
+L: mature student / mature into / a mature attitude
+T: calm 🍎
+M: nature ~ 自然。只差一个字母，mature 是熟，nature 是天性。
+@@migrate
+C: [migr]-ate || migrare 是「迁移」（immigrant 移民同源）。成群地搬走——迁徙。
+E: Birds [migrate] south in winter. ~ 鸟冬天[迁徙]南飞。
+E: Many workers [migrated] to the coast. ~ 许多工人[迁往]沿海。
+L: migrate to / migrate south / seasonal migration
+T: cool 🦅
+M: immigrate ~ 移入。同一个 migr，im 往里，e 往外。
+@@mild
+C: [mild] || 古英语 milde 是「温和、宽厚」。不烈、不狠——温和的，味道也不冲——淡的。
+E: The winter was [mild]. ~ 这个冬天很[暖和]。
+E: He has a [mild] headache. ~ 他[轻微]头痛。
+L: mild weather / mild taste / to put it mildly
+T: calm 🌤️
+M: wild ~ 野的。只差一个字母，mild 是温，wild 是野。
+@@minimize
+C: [minim]-ize || minimus 是「最小」（minimum 同源）。往最小处压——使减到最低，也指故意看小——贬低。
+E: We must [minimize] the risk. ~ 必须把风险[降到最低]。
+E: Don't [minimize] her effort. ~ 别[轻视]她的付出。
+L: minimize the risk / minimize damage / to minimize costs
+T: cool 📉
+M: maximum ~ 最大。同一个 -mum 家族，mini 是小，maxi 是大。
+@@minor
+C: [min]-or || min 是「小」（minimum 同源）。较小的一方——次要的，年纪还小——未成年人。
+E: It is a [minor] problem. ~ 这是[小]问题。
+E: He is still a [minor]. ~ 他还是[未成年]人。
+L: minor problem / minor in / a minor role
+T: calm 🔽
+M: major ~ 主要的。一个是小，一个是大，正好一对。
+@@miracle
+C: [mir]-acle || mir 是「惊奇」（mirror 镜子同源，原义「惊叹地看着」）。惊得说不出话的事——奇迹。
+E: It is a [miracle] he survived. ~ 他活下来是个[奇迹]。
+E: The garden is a [miracle] of patience. ~ 这园子是耐心的[奇迹]。
+L: work miracles / by a miracle / a miracle cure
+T: bright ✨
+M: mirror ~ 镜子。同根「惊奇地看」，镜子就是让人看的东西。
+@@miserable
+C: [miser]-able || miser 是「可怜的、吝啬的」。惨到让人同情——悲惨的。
+E: They live in [miserable] conditions. ~ 他们住得[很惨]。
+E: I feel [miserable] today. ~ 我今天[很难受]。
+L: miserable weather / feel miserable / miserable failure
+T: dark 🌧️
+M: misery ~ 痛苦。同根，-able 是形容词，-y 是那个状态。
+@@mislead
+C: mis-[lead] || mis- 是「错」，lead 是「带」。带错路——误导。
+E: The label [misleads] consumers. ~ 标签[误导]消费者。
+E: Don't be [misled] by the ads. ~ 别被广告[误导]。
+L: mislead sb into / misleading information / be misled by
+T: dark 🪤
+M: mis- 打头多是「错」：mistake、misunderstand、misjudge。
+@@mistaken
+C: mis-[tak]-en || take 是「拿」，mis- 是「错」。拿错了——错误的。
+E: You are [mistaken] about him. ~ 你[看错]他了。
+E: It was a [mistaken] belief. ~ 那是个[错误]的看法。
+L: be mistaken about / mistaken identity / if I am not mistaken
+T: cool ❓
+M: mistake ~ 错误。同根，-en 结尾是「已经错了的」。
+@@moderate
+C: [moder]-ate || modus 是「尺度」（mode 方式同源）。守着中间那杆秤——适度的，把火调小——缓和。
+E: Do [moderate] exercise daily. ~ 每天做[适度]运动。
+E: He [moderated] the discussion. ~ 他[主持]了讨论。
+L: moderate exercise / moderate view / in moderation
+T: calm ⚖️
+M: modest ~ 谦虚的。同一串 mod「尺度」，一个守中，一个收敛。
+@@modify
+C: [mod]-ify || modus 是「尺度、方式」，-ify 是「使…」。改一下尺寸——修改、修饰。
+E: We [modified] the design. ~ 我们[修改]了设计。
+E: Adjectives [modify] nouns. ~ 形容词[修饰]名词。
+L: modify a plan / be modified to / genetically modified
+T: cool 🔧
+M: mode ~ 模式。同根「尺度」，改模式就是 modify。
+@@moral
+C: [mor]-al || mos 是「习俗、风气」（mores 风俗同源）。一个地方公认的规矩——道德的，故事里的那点道理——寓意。
+E: It raises a [moral] question. ~ 这引出[道德]问题。
+E: The [moral] of the story is clear. ~ 故事的[寓意]很清楚。
+L: moral standards / moral support / the moral of the story
+T: calm 🕯️
+M: morale ~ 士气。多一个 e，一个是道德，一个是干劲。
+@@motivate
+C: [motiv]-ate || mot 是「动」（motion、emotion 同源）。给人一个动的理由——激发。
+E: Good teachers [motivate] students. ~ 好老师能[激励]学生。
+E: What [motivated] the attack? ~ 是什么[促使]了这次袭击？
+L: motivate sb to do / highly motivated / motivate by
+T: bright 🔥
+M: motive ~ 动机。同根，-ate 是动词，-e 是那个理由本身。
+@@multiple
+C: [multi]-ple || multi 是「多」（multimedia 多媒体同源）。不止一个——多种的，数学里的倍数。
+E: There are [multiple] causes. ~ 有[多个]原因。
+E: 12 is a [multiple] of 3. ~ 12 是 3 的[倍数]。
+L: multiple choice / multiple factors / in multiples of
+T: cool 🔢
+M: multiply ~ 乘、繁殖。同根「多」，越乘越多。
+@@murder
+C: [murder] || 古英语 morther 是「秘密杀人」。悄悄要人性命——谋杀。
+E: He was charged with [murder]. ~ 他被控[谋杀]。
+E: The actor [murdered] the song. ~ 这歌手把歌[唱砸]了。
+L: commit murder / murder case / get away with murder
+T: dark 🔪
+M: manslaughter ~ 过失杀人。murder 是有意，manslaughter 是失手。
+@@mysterious
+C: [myster]-ious || 希腊 mysterion 是「闭口不言的秘密」。说不清的——神秘的。
+E: A [mysterious] light appeared. ~ 出现一道[神秘]的光。
+E: He was [mysterious] about his plans. ~ 他对计划[讳莫如深]。
+L: mysterious disappearance / mysterious stranger / be mysterious about
+T: cool 🌑
+M: mystery ~ 谜。同根，-ious 是形容词，-y 是那个谜。
+@@necessarily
+C: [necess]-arily || necesse 是「不可避免」。一定会这样——必然地。
+E: That is not [necessarily] true. ~ 那[未必]是真的。
+E: A big house [necessarily] costs more. ~ 大房子[必然]更贵。
+L: not necessarily / necessarily mean / necessarily true
+T: cool ⚙️
+M: necessary ~ 必要的。同根，-ily 是副词尾，语气是「免不了」。
+@@negative
+C: [neg]-ative || neg 是「否认」（deny 同源）。说不、往反方向——消极的、否定的，底片也是「反的」。
+E: Don't be so [negative]. ~ 别这么[消极]。
+E: The test was [negative]. ~ 检测结果[阴性]。
+L: negative effect / negative answer / test negative
+T: dark ➖
+M: positive ~ 积极的。一正一负，考场上常成对出现。
+@@neglect
+C: neg-[lect] || neg 是「不」，lect 是「挑选」（select 挑选同源）。该挑的没挑——忽视、疏忽。
+E: He [neglected] his studies. ~ 他[荒废]了学业。
+E: The building fell into [neglect]. ~ 这楼[无人照管]。
+L: neglect to do / neglect one's duty / in a state of neglect
+T: dark 🕸️
+M: select ~ 挑选。同一个 lect，一个挑，一个不挑。
+@@negotiate
+C: neg-[oti]-ate || 拉丁 negotium 是 nec（不）+ otium（闲）——不闲着，忙正事，即做生意。坐下来谈生意——协商。
+E: They [negotiated] a new contract. ~ 他们[谈成]了新合同。
+E: She [negotiated] the bend carefully. ~ 她小心地[绕过]弯道。
+L: negotiate with / negotiate a deal / negotiate a bend
+T: warm 🤝
+M: otium 也生出 otiose「无所事事的」，正好反着。
+@@noble
+C: [noble] || 拉丁 gnobilis 是「可知的、出众的」。出众到人人认得——高贵的。
+E: He comes from a [noble] family. ~ 他出身[贵族]。
+E: It was a [noble] act. ~ 那是[高尚]之举。
+L: noble family / noble cause / noble gas
+T: warm 👑
+M: ignoble ~ 卑劣的。同一个 noble，ig- 是「不」。
+@@notorious
+C: [not]-orious || not 是「已知」（notice 注意同源）。出名得人人都知道——臭名昭著。
+E: The area is [notorious] for theft. ~ 这一带[以]盗窃[出名]。
+E: He was a [notorious] liar. ~ 他是[出了名]的骗子。
+L: notorious for / notorious case / a notorious criminal
+T: dark 🌑
+M: famous ~ 著名的。famous 是中性偏好，notorious 是「出名得不好」。
+@@numerous
+C: [numer]-ous || numer 是「数」（number 同源）。数都数不清——众多的。
+E: There were [numerous] complaints. ~ 有[许多]投诉。
+E: He has [numerous] friends. ~ 他[朋友众多]。
+L: numerous times / on numerous occasions / a numerous family
+T: cool 🔢
+M: numeral ~ 数字。同根，-ous 是「多到成数」。
+@@obesity
+C: ob-[es]-ity || ob- 是「过度」，edere 是「吃」。吃得过头——肥胖。
+E: [Obesity] is a growing problem. ~ [肥胖]问题日益严重。
+E: Child [obesity] worries doctors. ~ 儿童[肥胖症]让医生担忧。
+L: child obesity / obesity rate / fight obesity
+T: dark 🍔
+M: eat ~ 吃。词源上同一条线，obese 就是「吃过头」。
+@@object
+C: ob-[ject] || ject 是「扔」（reject、project 同源）。扔到面前的东西——物体、目标，扔到对面去——反对。
+E: I [object] to the plan. ~ 我[反对]这个方案。
+E: The [object] is very old. ~ 这件[物品]很古老。
+L: object to / a strange object / direct object
+T: cool 🎯
+M: reject ~ 拒绝。都含 ject「扔」，一个扔回去，一个扔到对面。
+@@occasion
+C: oc-[cas]-ion || cas 是「落」（case、casual 同源）。事情落到眼前的那一刻——场合、时机。
+E: It is an important [occasion]. ~ 这是个重要[场合]。
+E: I have no [occasion] to complain. ~ 我[没有理由]抱怨。
+L: on occasion / a special occasion / rise to the occasion
+T: warm 🎉
+M: occasional ~ 偶尔的。同根「落到」，偶尔落一次就是偶尔。
+@@offence
+C: of-[fence] || fend 是「打」（defend 同源）。冲着人打过去——冒犯、犯罪。
+E: He was charged with a minor [offence]. ~ 他被控轻微[违法]。
+E: I meant no [offence]. ~ 我无意[冒犯]。
+L: take offence at / a criminal offence / cause offence
+T: dark ⚔️
+M: defense ~ 防守。同一个 fend，一个攻，一个守；美式拼 offense。
+@@official
+C: [offic]-ial || officium 是「职责、本分」（office 办公室同源）。按职责办事的——官方的，担职责的人——官员。
+E: We await the [official] result. ~ 我们等[官方]结果。
+E: A government [official] spoke. ~ 一位政府[官员]发了言。
+L: official website / government official / official language
+T: cool 🏛️
+M: officer ~ 军官、警官。同根「职责」，-al 是性质，-er 是人。
+@@operate
+C: [oper]-ate || opus 是「工作」（opera 歌剧原指「作品」）。干活——操作、运转，在人身上干活——动手术。
+E: He [operates] the machine. ~ 他[操作]这台机器。
+E: The doctor [operated] at once. ~ 医生立刻[动手术]。
+L: operate on / operate a machine / operate smoothly
+T: cool ⚙️
+M: cooperate ~ 合作。同一个 oper，co- 是「一起」。
+@@opponent
+C: op-[pon]-ent || pon 是「放」（position 同源）。放在你对面的人——对手。
+E: He beat a strong [opponent]. ~ 他打败了强[对手]。
+E: [Opponents] of the plan protested. ~ 计划的[反对者]抗议。
+L: a worthy opponent / opponent of / political opponent
+T: sharp 🥊
+M: component ~ 组成部分。都含 pon「放」，一个放在对面，一个放在一起。
+@@opposite
+C: [opposit]-e || posit 是「放」。放在正对面的——相反的。
+E: The bank is [opposite] the school. ~ 银行在学校[对面]。
+E: They hold [opposite] views. ~ 他们观点[相反]。
+L: opposite to / the opposite of / in the opposite direction
+T: cool ↔️
+M: oppose ~ 反对。同根「对着放」，动词就是反对。
+@@optimistic
+C: [optim]-istic || optimus 是「最好的」（optimism 乐观同源）。总想到最好那头——乐观的。
+E: She is [optimistic] about the future. ~ 她对未来[乐观]。
+E: The report is [optimistic]. ~ 报告[偏乐观]。
+L: optimistic about / cautiously optimistic / an optimistic view
+T: bright 🌤️
+M: pessimistic ~ 悲观的。一对反义，考场上常一起出现。
+@@optional
+C: [opt]-ional || optare 是「选择」（option 选项同源）。可挑可不挑——可选的。
+E: The essay is [optional]. ~ 这篇作文[可选]。
+E: [Optional] extras cost more. ~ [自选]项目另收费。
+L: optional extra / optional course / it is optional
+T: calm 🔘
+M: compulsory ~ 必修的。optional 是选，compulsory 是必须。
+@@ordinary
+C: [ordin]-ary || ordo 是「顺序、常规」（order 同源）。按常规来的——普通的。
+E: It was an [ordinary] day. ~ 那是[平常]的一天。
+E: He is no [ordinary] student. ~ 他不是[普通]学生。
+L: ordinary people / out of the ordinary / ordinary life
+T: calm 📎
+M: extraordinary ~ 非凡的。extra 是「超出」，超出常规就不普通。
+@@original
+C: [origin]-al || origo 是「起源」（origin 同源）。最开头那个——原始的，自己开头的——有独创性的。
+E: Keep the [original] copy. ~ 留[原件]。
+E: She has an [original] style. ~ 她风格[独到]。
+L: original idea / original copy / in the original
+T: bright 🎨
+M: origin ~ 起源。同根，-al 是形容词，指「源头那个」。
+@@overcome
+C: over-[come] || over 是「越过」，come 是「来」。跨过去——克服，被情绪压过来——使受不了。
+E: She [overcame] her fear. ~ 她[克服]了恐惧。
+E: He was [overcome] by smoke. ~ 他被烟[熏倒]了。
+L: overcome difficulties / be overcome by / overcome fear
+T: bright 💪
+M: overdo ~ 做过头。同是 over-，一个跨过去，一个做过头。
+@@overwhelm
+C: over-[whelm] || whelm 是「淹没、翻倒」。水漫过头顶——压倒、使不知所措。
+E: She was [overwhelmed] by the response. ~ 反响让她[不知所措]。
+E: The wave [overwhelmed] the boat. ~ 浪[吞没]了小船。
+L: be overwhelmed by / overwhelming majority / overwhelm sb with
+T: sharp 🌊
+M: overwhelming ~ 压倒性的。同根，-ing 形容「压过来的」。
+@@paradise
+C: [paradise] || 波斯语 pairidaeza 是「围起来的花园」。四周有墙的园子——天堂。
+E: This beach is a [paradise]. ~ 这海滩是[天堂]。
+E: They found a [paradise] in the hills. ~ 他们在山里找到[乐园]。
+L: a tropical paradise / earthly paradise / fool's paradise
+T: bright 🌴
+M: parasite ~ 寄生虫。拼写相近，但 parasite 是 para（旁边）+ site（食物）。
+@@participate
+C: [part]-icip-ate || part 是「部分」，cip 是「拿」（capture 同源）。拿一份——参加。
+E: All students [participated] in the debate. ~ 全体学生[参加]了辩论。
+E: She [participates] in local politics. ~ 她[参与]地方政治。
+L: participate in / participate fully / participate actively
+T: warm 🙋
+M: participant ~ 参与者。同根，-ant 指人。
+@@particular
+C: [particul]-ar || particula 是「小部分」（particle 粒子同源）。挑到那一小点上——特别的，也指挑剔。
+E: Pay [particular] attention to this. ~ [特别]注意这一点。
+E: She is [particular] about food. ~ 她对吃很[挑剔]。
+L: in particular / particular about / a particular case
+T: sharp 🔍
+M: particle ~ 微粒。同根「小部分」，一个是小粒，一个是「特定那一小点」。
+@@pause
+C: [pause] || 希腊 pausis 是「停止」。话到这儿停一下——停顿。
+E: He [paused] before answering. ~ 他回答前[停顿]了一下。
+E: There was a long [pause]. ~ 有很长一段[沉默]。
+L: pause for breath / without pause / pause to do
+T: calm ⏸️
+M: cause ~ 原因。只差一个字母，pause 是停，cause 是原因。
+@@pavement
+C: [pave]-ment || pave 是「铺石」。铺出来的那层——人行道、路面。
+E: Walk on the [pavement]. ~ 走[人行道]。
+E: The [pavement] is wet. ~ [路面]很湿。
+L: on the pavement / pavement cafe / pavement artist
+T: calm 🧱
+M: pave ~ 铺路。同根，-ment 是铺出来的结果。
+@@payment
+C: [pay]-ment || pay 是「付」。付出去的那一笔——付款、报酬。
+E: [Payment] is due on Friday. ~ 周五[付款]。
+E: He received a small [payment]. ~ 他收到一笔小额[报酬]。
+L: make a payment / payment method / in payment for
+T: warm 💳
+M: pay ~ 付。同根，-ment 是那一笔钱或那个动作。
+@@peak
+C: [peak] || 可能是 pike「尖」的变体。山尖上那一点——顶峰，到了那一点——达到高峰。
+E: Snow covers the [peak]. ~ 雪盖着[山顶]。
+E: Sales [peaked] in July. ~ 销量七月[达到顶峰]。
+L: peak season / reach a peak / peak hours
+T: sharp ⛰️
+M: peek ~ 偷看。多一个 e，一个是山顶，一个是偷瞄。
+@@pedestrian
+C: [ped]-estrian || ped 是「脚」（pedal 踏板同源）。用脚走的人——行人，写得像走路一样平——平淡的。
+E: [Pedestrians] have priority. ~ [行人]优先。
+E: The film is rather [pedestrian]. ~ 这电影比较[平淡]。
+L: pedestrian crossing / pedestrian street / pedestrian performance
+T: calm 🚶
+M: pedal ~ 踏板。同根 ped「脚」，一个是走的人，一个是脚踩的。
+@@peer
+C: [peer] || 拉丁 par 是「相等」（pair 一对同源）。跟你一般高的人——同辈，探头细看——凝视。
+E: He is respected by his [peers]. ~ 他受[同行]尊重。
+E: She [peered] at the small print. ~ 她[眯眼细看]小字。
+L: peer pressure / peer review / peer at
+T: cool 👓
+M: pair ~ 一对。同根「相等」，一对就是两个一样的。
+@@perception
+C: per-[cept]-ion || cept 是「抓」（accept、concept 同源）。抓住了外界的样子——感知，抓住的道理——看法。
+E: Colour [perception] varies. ~ 颜色[感知]因人而异。
+E: Public [perception] has changed. ~ 公众[看法]变了。
+L: public perception / perception of / depth perception
+T: cool 👁️
+M: concept ~ 概念。同一个 cept，一个抓外面的，一个抓心里的。
+@@perform
+C: per-[form] || form 是「形、成形」。把事做成形——执行，在台上做成形——表演。
+E: The team [performed] well. ~ 团队[表现]很好。
+E: She [performed] on stage. ~ 她上台[表演]。
+L: perform well / perform a task / perform on stage
+T: bright 🎭
+M: performance ~ 表现、演出。同根，-ance 是那个「做出来的样子」。
+@@permanent
+C: per-[man]-ent || man 是「停留」（remain 同源）。一直留着不走——永久的。
+E: He got a [permanent] job. ~ 他有了[固定]工作。
+E: The damage is [permanent]. ~ 损伤是[永久]的。
+L: permanent job / permanent damage / permanent residence
+T: calm 🧱
+M: temporary ~ 临时的。一对反义，考试里常对照。
+@@permit
+C: per-[mit] || mit 是「送」（submit、admit 同源）。放它过去——允许，放行的纸——许可证。
+E: Smoking is not [permitted]. ~ 不准[吸烟]。
+E: You need a work [permit]. ~ 你需要工作[许可]。
+L: permit sb to do / work permit / weather permitting
+T: cool 🎫
+M: admit ~ 承认、准入。都含 mit「送」，一个放行，一个放进来。
+@@persist
+C: per-[sist] || sist 是「站」（insist、resist 同源）。一直站着不挪——坚持、持续。
+E: She [persisted] in her efforts. ~ 她[坚持]努力。
+E: The pain [persisted] for days. ~ 疼痛[持续]了几天。
+L: persist in / persist with / if symptoms persist
+T: sharp 🧗
+M: insist ~ 坚持说。都含 sist「站」，一个站着做，一个站着说。
+@@perspective
+C: per-[spect]-ive || spect 是「看」（inspect、spectator 同源）。从某个点看过去——视角、透视。
+E: Try a different [perspective]. ~ 换个[角度看]。
+E: The drawing lacks [perspective]. ~ 这幅画缺[透视]。
+L: from a perspective / put into perspective / a new perspective
+T: cool 🔭
+M: prospect ~ 前景。同一个 spect，一个看进去，一个往前看。
+@@persuade
+C: per-[suade] || suad 是「劝」（suave 温和的同源）。好好劝到人心动——说服。
+E: She [persuaded] him to stay. ~ 她[说服]他留下。
+E: I am [persuaded] of his honesty. ~ 我[相信]他诚实。
+L: persuade sb to do / persuade sb of / be persuaded that
+T: warm 🗣️
+M: dissuade ~ 劝阻。同一个 suade，per 是「彻底」，dis 是「反着」。
