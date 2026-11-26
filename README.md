@@ -37,13 +37,17 @@
 - **配色交给 AI 生成**：按节气、天气、季节和你最近在背的词，每天换一套色板，不用你手动挑。
 - **界面是一张纸**：线描莲花、书页框、朱印、编号卡片、代码底纹——不做成常见的"卡片 + 渐变按钮"。
 
+## 快捷键
+
+背诵页空格看释义，再按一下收回；`1` 认识、`2` 不认识。默写页默认空格判分、逗号跳过——**逗号一旦设成跳过键，它就不再当分隔符**，多个意思改用顿号「、」或分号；空格只在全屏时被接管，窗口化时照常打字，`Shift+空格` 永远打出真正的空格。所有键位都在设置页列出来，点一下再按一个键就能换。
+
 ## 下载
 
-到 [Releases](https://github.com/yulinling512/vocabtrace/releases) 取安装包（当前 1.0.5）：
+到 [Releases](https://github.com/yulinling512/vocabtrace/releases) 取安装包（当前 1.0.6）：
 
-- 安卓：`vocabtrace-1.0.5.apk`，直接安装（同一签名，可覆盖升级）
-- Linux：`vocabtrace-1.0.5-amd64.deb`，`sudo dpkg -i` 安装
-- Windows：`vocabtrace-1.0.5-win-portable.zip`，解压即用（绿色版）
+- 安卓：`vocabtrace-1.0.6.apk`，直接安装（同一签名，可覆盖升级）
+- Linux：`vocabtrace-1.0.6-amd64.deb`，`sudo dpkg -i` 安装
+- Windows：`vocabtrace-1.0.6-win-portable.zip`，解压即用（绿色版）
 
 ## 目录
 
@@ -67,7 +71,7 @@ icons/                      应用图标
 cd desktop && npm install && npm run build
 
 # 安卓（需 JDK 17 + Android SDK build-tools 34）
-cd android && ./build-apk.ps1 -Ver 1.0.5 -Code 6
+cd android && ./build-apk.ps1 -Ver 1.0.6 -Code 7
 ```
 
 ## 不包含什么
