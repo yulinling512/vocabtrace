@@ -39,15 +39,15 @@
 
 ## 快捷键
 
-背诵页空格看释义，再按一下收回；`1` 认识、`2` 不认识。默写页默认空格判分、逗号跳过——**逗号一旦设成跳过键，它就不再当分隔符**，多个意思改用顿号「、」或分号；空格只在全屏时被接管，窗口化时照常打字，`Shift+空格` 永远打出真正的空格。所有键位都在设置页列出来，点一下再按一个键就能换。
+背诵只有两个动作：空格看释义，释义页再按空格就是下一个；数字 `1` 把卡翻回正面重看，不记错、不跳词。默写默认空格判分、逗号跳过——**逗号一旦设成跳过键，它就不再当分隔符**，多个意思改用顿号「、」或分号；想打真正的空格用 `Shift+空格`。所有键位都在设置页列出来，点一下再按一个键就能换。
 
 ## 下载
 
-到 [Releases](https://github.com/yulinling512/vocabtrace/releases) 取安装包（当前 1.0.6）：
+到 [Releases](https://github.com/yulinling512/vocabtrace/releases) 取安装包（当前 1.0.7）：
 
-- 安卓：`vocabtrace-1.0.6.apk`，直接安装（同一签名，可覆盖升级）
-- Linux：`vocabtrace-1.0.6-amd64.deb`，`sudo dpkg -i` 安装
-- Windows：`vocabtrace-1.0.6-win-portable.zip`，解压即用（绿色版）
+- 安卓：`vocabtrace-1.0.7.apk`，直接安装（同一签名，可覆盖升级）
+- Linux：`vocabtrace-1.0.7-amd64.deb`，`sudo dpkg -i` 安装
+- Windows：`vocabtrace-1.0.7-win-portable.zip`，解压即用（绿色版）
 
 ## 目录
 
@@ -71,7 +71,7 @@ icons/                      应用图标
 cd desktop && npm install && npm run build
 
 # 安卓（需 JDK 17 + Android SDK build-tools 34）
-cd android && ./build-apk.ps1 -Ver 1.0.6 -Code 7
+cd android && ./build-apk.ps1 -Ver 1.0.7 -Code 8
 ```
 
 ## 不包含什么
