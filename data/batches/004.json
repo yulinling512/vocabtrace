@@ -1,0 +1,222 @@
+{
+  "acknowledge": {
+    "hk": { "cut": "[ac]-knowledge", "line": "ac 是「对着」，knowledge 是「[知道]」。对着人把知道的事[说出来]——承认。" },
+    "eg": [
+      ["He [acknowledged] the mistake.", "他[承认]了错误。"],
+      ["She [acknowledged] my help.", "她[谢过]了我的帮忙。"]
+    ],
+    "col": ["acknowledge receipt", "acknowledge the fact", "widely acknowledged"],
+    "mx": [["admit", "admit 常指「不情愿地承认」，acknowledge 更中性、更正式。"]],
+    "tone": "cool",
+    "icon": "🙋"
+  },
+  "acquire": {
+    "hk": { "cut": "ac-[quire]", "line": "quire 是「[寻求]」（require、query 同根）。求到手——获得。" },
+    "eg": [
+      ["[acquire] a skill", "[掌握]一门技能"],
+      ["[acquire] a company", "[收购]一家公司"]
+    ],
+    "col": ["acquire knowledge", "acquire a taste for", "newly acquired"],
+    "mx": [["require", "要求。同一个 quire——向你要。"], ["inquire", "询问。往里问。"]],
+    "tone": "cool",
+    "icon": "🧲"
+  },
+  "adapt": {
+    "hk": { "cut": "[ad]-apt", "line": "apt 是「[扣得上、合适]」。把自己调到能[扣上]——适应。" },
+    "eg": [
+      ["[adapt] to a new environment", "[适应]新环境"],
+      ["a film [adapted] from a novel", "由小说[改编]的电影"]
+    ],
+    "col": ["adapt to", "adapt from", "well adapted"],
+    "mx": [["adopt", "adapt 是改自己去贴合，adopt 是拿过来用。"]],
+    "tone": "calm",
+    "icon": "🧩"
+  },
+  "addiction": {
+    "hk": { "cut": "[ad]-[dict]-ion", "line": "dict 是「[说、宣判]」。法官一句宣判，把人[判给]了对方——从此身不由己，即成瘾。" },
+    "eg": [
+      ["drug [addiction]", "毒品[成瘾]"],
+      ["[addicted] to his phone", "[沉迷]手机"]
+    ],
+    "col": ["drug addiction", "be addicted to", "addiction to"],
+    "mx": [["addict", "上瘾的人；也可作动词「使沉迷」。"]],
+    "tone": "dark",
+    "icon": "🔗"
+  },
+  "adequate": {
+    "hk": { "cut": "[ad]-[equ]ate", "line": "equ 是「[相等]」（equal 同根）。拉到跟需要[齐平]——够用，但不多。" },
+    "eg": [
+      ["[adequate] supply", "[充足的]供应"],
+      ["The food was [adequate].", "饭菜还[过得去]。"]
+    ],
+    "col": ["adequate for", "barely adequate", "adequate supply"],
+    "mx": [["sufficient", "sufficient 更书面，adequate 强调「刚好够用」。"]],
+    "tone": "calm",
+    "icon": "📏"
+  },
+  "adjust": {
+    "hk": { "cut": "[ad]-just", "line": "just 本义是「[靠近、对准]」（juxta）。往近里对一对——调整。" },
+    "eg": [
+      ["[adjust] the volume", "[调]音量"],
+      ["[adjust] to city life", "[适应]城市生活"]
+    ],
+    "col": ["adjust to", "adjust the settings", "well adjusted"],
+    "mx": [["justice", "正义。同源但走远了——just 本义是「合乎准绳」。"]],
+    "tone": "calm",
+    "icon": "⚙️"
+  },
+  "administration": {
+    "hk": { "cut": "ad-[minister]-ation", "line": "minister 是「[仆从]」（minus 较少）。为别人做事——「服务」生出了「管理」。" },
+    "eg": [
+      ["the [administration] of the school", "学校的[管理层]"],
+      ["drug [administration]", "[给药]（医疗用语）"]
+    ],
+    "col": ["business administration", "public administration", "the administration"],
+    "mx": [["minister", "部长。原意是「仆人」——为众人做事的人。"]],
+    "tone": "cool",
+    "icon": "📋"
+  },
+  "admire": {
+    "hk": { "cut": "[ad]-mire", "line": "mire 是「[惊奇]」（miracle 同根）。看着它发呆——钦佩。" },
+    "eg": [
+      ["I [admire] her courage.", "我[佩服]她的勇气。"],
+      ["[admire] the view", "[欣赏]风景"]
+    ],
+    "col": ["admire sb for", "greatly admire", "admire the view"],
+    "mx": [["admirable", "值得钦佩的。形容词，别和 admire 混。"]],
+    "tone": "bright",
+    "icon": "✨"
+  },
+  "adolescent": {
+    "hk": { "cut": "adol-[esc]-ent", "line": "esc 是「[开始长]」。还在长的这一段——青春期；adult 是长完的版本。" },
+    "eg": [
+      ["[adolescent] boys", "[青春期的]男孩"],
+      ["[adolescent] behaviour", "[幼稚的]行为"]
+    ],
+    "col": ["adolescent years", "adolescent behaviour"],
+    "mx": [["adult", "adult 是「长成了」，adolescent 是「还在长」。"]],
+    "tone": "bright",
+    "icon": "🌱"
+  },
+  "adopt": {
+    "hk": { "cut": "[ad]-opt", "line": "opt 是「[选择]」（option 同根）。挑来当自己的——收养、采纳是同一个动作。" },
+    "eg": [
+      ["[adopt] a child", "[收养]一个孩子"],
+      ["[adopt] a new method", "[采用]新方法"]
+    ],
+    "col": ["adopt a policy", "adopt a child", "adopt an approach"],
+    "mx": [["adapt", "adapt 改自己，adopt 拿过来。"]],
+    "tone": "warm",
+    "icon": "🏠"
+  },
+  "adore": {
+    "hk": { "cut": "[ad]-ore", "line": "ore 是「[开口说]」（oral 同根）。对着它开口祈求——崇拜、极爱。" },
+    "eg": [
+      ["She [adores] her grandson.", "她[极疼]孙子。"],
+      ["I [adore] this song.", "我[超爱]这首歌。"]
+    ],
+    "col": ["adore sb", "absolutely adore"],
+    "mx": [["oracle", "神谕。神开口说话。"], ["oral", "口头的。同一个「口」。"]],
+    "tone": "warm",
+    "icon": "💗"
+  },
+  "advance": {
+    "hk": { "cut": "[ad]-vance", "line": "vance 背后是拉丁 ante——「[前]」。一路向前——推进，也可指预付款。" },
+    "eg": [
+      ["[advance] the deadline", "[提前]截止日期"],
+      ["pay in [advance]", "[预先]付款"]
+    ],
+    "col": ["in advance", "advance payment", "make advances"],
+    "mx": [["advantage", "优势。同一个「前」——站到前面去。"]],
+    "tone": "bright",
+    "icon": "⏩"
+  },
+  "advocate": {
+    "hk": { "cut": "ad-[voc]-ate", "line": "voc 是「[叫、声音]」（voice 同根）。被[叫来]替你说话的——辩护人、提倡者。" },
+    "eg": [
+      ["an [advocate] of reform", "改革的[倡导者]"],
+      ["[advocate] for change", "[主张]变革"]
+    ],
+    "col": ["advocate for", "strong advocate", "devil's advocate"],
+    "mx": [["voice", "声音。同一个 voc 根。"]],
+    "tone": "cool",
+    "icon": "📢"
+  },
+  "affair": {
+    "hk": { "cut": "af-fair", "line": "法语 à faire——「[要做的事]」。一桩待办——事情、事务。" },
+    "eg": [
+      ["current [affairs]", "[时事]"],
+      ["a love [affair]", "一段[恋情]"]
+    ],
+    "col": ["current affairs", "foreign affairs", "love affair"],
+    "mx": [["matter", "affair 偏「事件、事务」，matter 偏「问题、要紧事」。"]],
+    "tone": "cool",
+    "icon": "📰"
+  },
+  "affect": {
+    "hk": { "cut": "af-[fect]", "line": "fect 是「[做]」（factory 同根）。对你做了一下——影响。" },
+    "eg": [
+      ["Smoking [affects] health.", "吸烟[影响]健康。"],
+      ["deeply [affected] by the news", "被那条消息深深[触动]"]
+    ],
+    "col": ["be affected by", "affect health", "affect the outcome"],
+    "mx": [["effect", "effect 是「结果」（多为名词），affect 是「影响」（动词）。这是最常错的一对。"]],
+    "tone": "sharp",
+    "icon": "💥"
+  },
+  "affordable": {
+    "hk": { "cut": "af-[ford]-able", "line": "ford 在古英语里是「[推进、办到]」。办得到——[付得起]。" },
+    "eg": [
+      ["[affordable] housing", "[买得起的]住房"],
+      ["an [affordable] price", "一个[能承受的]价格"]
+    ],
+    "col": ["affordable housing", "affordable price"],
+    "mx": [["afford", "动词「负担得起」。affordable 是它的形容词。"]],
+    "tone": "warm",
+    "icon": "🏷️"
+  },
+  "aggressive": {
+    "hk": { "cut": "ag-[gress]-ive", "line": "gress 是「[走]」（progress 同根）。主动[朝你走过来]——带攻击性。" },
+    "eg": [
+      ["[aggressive] behaviour", "[攻击性的]行为"],
+      ["an [aggressive] sales plan", "[激进的]销售计划"]
+    ],
+    "col": ["aggressive behaviour", "aggressive strategy"],
+    "mx": [["progressive", "进步的。pro 向前 + gress 走。"]],
+    "tone": "dark",
+    "icon": "⚔️"
+  },
+  "allocate": {
+    "hk": { "cut": "al-[loc]-ate", "line": "loc 是「[地方]」（local 同根）。指定放在哪儿——分配。" },
+    "eg": [
+      ["[allocate] funds", "[分配]资金"],
+      ["[allocate] time", "[安排]时间"]
+    ],
+    "col": ["allocate resources", "allocate funds to"],
+    "mx": [["locate", "定位。同一个 loc——找到那个地方。"]],
+    "tone": "cool",
+    "icon": "🗂️"
+  },
+  "alternative": {
+    "hk": { "cut": "[alter]-native", "line": "alter 是「[另一个]」。另一个可选的——替代方案。" },
+    "eg": [
+      ["an [alternative] plan", "一个[备选]方案"],
+      ["[alternative] energy", "[替代]能源"]
+    ],
+    "col": ["alternative to", "alternative energy", "have no alternative"],
+    "mx": [["alternate", "alternate 是「轮流的」，alternative 是「可选的」。"]],
+    "tone": "cool",
+    "icon": "🔀"
+  },
+  "amaze": {
+    "hk": { "cut": "a-[maze]", "line": "maze 是「[迷宫]」。把人绕进迷宫——愣住，就是惊叹。" },
+    "eg": [
+      ["I was [amazed] by the view.", "这景色让我[惊叹]。"],
+      ["[amazing] news", "[惊人的]消息"]
+    ],
+    "col": ["be amazed at", "amazing news"],
+    "mx": [["maze", "迷宫。amaze 就是「把你弄进迷宫」。"]],
+    "tone": "bright",
+    "icon": "😲"
+  }
+}
