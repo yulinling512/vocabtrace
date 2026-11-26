@@ -1,0 +1,420 @@
+@@specific
+C: [spec]-ific || spec 是「看」，fic 是「做」。专门指出来那一个——特定的、具体的。
+E: Give me a [specific] example. ~ 给我一个[具体]例子。
+E: This is [specific] to the region. ~ 这是该地区[特有]的。
+L: specific to / a specific example / specific purpose
+T: cool 🎯
+M: special ~ 特殊的。specific 偏「明确指定」，special 偏「不一般」。
+@@spirit
+C: [spir]-it || spir 是「呼吸」（inspire 吸气/激励同源）。那口活气——精神，蒸馏出来的烈——烈酒。
+E: She has a strong [spirit]. ~ 她[精神]很强。
+E: He was in high [spirits]. ~ 他[情绪]很高。
+L: team spirit / in high spirits / the spirit of the law
+T: bright 🔥
+M: inspire ~ 激励。同根「呼吸」，把气吹进去就是激励。
+@@splendid
+C: [splend]-id || splendere 是「发光」（splendour 同源）。亮得晃眼——壮丽的、极好的。
+E: The view is [splendid]. ~ 景色[壮丽]。
+E: That is a [splendid] idea. ~ 这主意[极好]。
+L: splendid view / splendid idea / a splendid occasion
+T: bright 🌟
+M: splendid 和 magnificent 都指「宏伟」，splendid 更偏「光彩夺目」。
+@@spot
+C: [spot] || 中古荷兰 spot 是「斑点」。身上那一点——斑点，地上那一点——地点，眼睛瞄到——发现。
+E: This is a good [spot] for a picnic. ~ 这是野餐好[地方]。
+E: I [spotted] him in the crowd. ~ 我在人群里[认出]他。
+L: on the spot / a spot of / spot the difference
+T: warm 📍
+M: on the spot 是「当场」，不是「在点上」。
+@@spread
+C: [spread] || 古英语 sprædan 是「铺开」。往四面摊——铺开、传播。
+E: The news [spread] quickly. ~ 消息[传开]很快。
+E: She [spread] jam on the bread. ~ 她往面包上[抹]果酱。
+L: spread out / spread the news / spread over
+T: warm 🧈
+M: spread 的过去式还是 spread，不加 -ed。
+@@stare
+C: [stare] || 古英语 starian 是「盯着看」。眼睛不动——凝视。
+E: Don't [stare] at people. ~ 别[盯着]人看。
+E: She [stared] at the screen. ~ 她[凝视]屏幕。
+L: stare at / stare into space / a blank stare
+T: cool 👁️
+M: stair ~ 楼梯。多一个 i，一个是看，一个是台阶。
+@@starve
+C: [starve] || 古英语 steorfan 是「死」。饿到死——挨饿，渴到极点——渴望。
+E: Many people [starved] that winter. ~ 那年冬天很多人[饿死]。
+E: He was [starved] of affection. ~ 他[渴望]关爱。
+L: starve to death / be starved of / starve for
+T: dark 🍞
+M: starve for 不只是「饿」，也指「极缺」。
+@@stick
+C: [stick] || 古英语 sticca 是「棍」，stician 是「刺、粘」。插进去就粘住——粘、坚持。
+E: The stamp [stuck] to my hand. ~ 邮票[粘]在我手上。
+E: [Stick] to the plan. ~ [坚持]按计划来。
+L: stick to / stick out / get stuck
+T: cool 🩹
+M: stuck 是 stick 的过去式，卡住也说 get stuck。
+@@stimulus
+C: [stimul]-us || 拉丁 stimulus 是「赶牲口的刺棒」。戳一下才动——刺激、激励。
+E: Tax cuts are a [stimulus] to growth. ~ 减税是增长的[刺激]。
+E: Light is a [stimulus] to the eye. ~ 光是眼睛的[刺激物]。
+L: economic stimulus / stimulus to / respond to a stimulus
+T: sharp ⚡
+M: stimulate ~ 刺激（动词）。同根，-us 是名词，-ate 是动词。
+@@sting
+C: [sting] || 古英语 stingan 是「刺」。蜜蜂扎一下——叮，心里扎一下——刺痛。
+E: A bee [stung] me. ~ 蜜蜂[叮]了我。
+E: The remark [stung] him. ~ 这话[刺痛]了他。
+L: sting sb / a sting in the tail / bee sting
+T: sharp 🐝
+M: stick ~ 刺。同一条线，sting 是「扎进去」，stick 是「插住」。
+@@stress
+C: [stress] || 拉丁 strictus 是「拉紧」。人绷紧了——压力，话绷紧了——强调。
+E: He is under great [stress]. ~ 他[压力]很大。
+E: She [stressed] the need for care. ~ 她[强调]要细心。
+L: under stress / stress the importance / lay stress on
+T: dark 😰
+M: strain ~ 拉紧。同根，一个是绷着的状态，一个是拉着的力量。
+@@strict
+C: [strict] || stringere 是「拉紧、捆紧」。规矩捆得死死的——严格的。
+E: The school is [strict] about uniforms. ~ 学校对校服很[严]。
+E: It is a [strict] rule. ~ 这是条[严格]的规矩。
+L: strict with / strict rule / in the strict sense
+T: sharp 📏
+M: strict 后面接 with sb，about sth，介词别混。
+@@strike
+C: [strike] || 古英语 strican 是「抚过、打」。一巴掌下去——打，工人一起停手——罢工，念头打中——想到。
+E: The workers went on [strike]. ~ 工人开始[罢工]。
+E: An idea [struck] me. ~ 我[想到]一个主意。
+L: go on strike / strike a balance / it strikes me that
+T: sharp 🔨
+M: stroke ~ 抚摸、中风。拼写像，strike 是打，stroke 是抚。
+@@struggle
+C: [struggle] || 中古英语 strugge 是「扭打」。手脚并用挣——挣扎、斗争。
+E: They [struggled] against the wind. ~ 他们与风[搏斗]。
+E: She [struggled] to pay the rent. ~ 她[艰难]地付房租。
+L: struggle with / struggle against / a struggle for
+T: sharp 💪
+M: struggle 后面 against 是对抗，with 是「与…较劲」，都可。
+@@subordinate
+C: sub-[ordin]-ate || sub 是「下」，ordin 是「顺序」。排在下面那一级——下级的、使服从。
+E: He is [subordinate] to the manager. ~ 他[从属]于经理。
+E: She [subordinated] her wishes to duty. ~ 她把愿望[服从]于责任。
+L: subordinate to / subordinate clause / be subordinate to
+T: cool 📉
+M: coordinate ~ 协调。都含 ordin「顺序」，一个排下面，一个排一起。
+@@suffer
+C: suf-[fer] || fer 是「承受」（transfer 同源）。往身上扛——遭受，扛着病——患病。
+E: He [suffers] from asthma. ~ 他[患]哮喘。
+E: The company [suffered] heavy losses. ~ 公司[遭受]重创。
+L: suffer from / suffer losses / suffer in silence
+T: dark 🤕
+M: suffer from 接疾病，suffer 直接接损失，介词看对象。
+@@summarize
+C: [summ]-arize || summa 是「总数」（sum 同源）。把话收成一个总数——概述。
+E: [Summarize] the article in 100 words. ~ 用一百字[概括]全文。
+E: To [summarize], we agree. ~ [总之]，我们同意。
+L: to summarize / summarize the main points / briefly summarize
+T: cool 📝
+M: summary ~ 摘要。同根，-ize 是动词，-y 是那份摘要。
+@@superior
+C: [super]-ior || super 是「在上」（supermarket 同源）。位置在上——上级的，质量在上——优于。
+E: She is [superior] to me in chess. ~ 她棋[比]我[强]。
+E: Report it to your [superior]. ~ 向你[上级]报告。
+L: superior to / superior quality / immediate superior
+T: warm 👆
+M: inferior ~ 下级的。一上一下，成对出现，都接 to 不接 than。
+@@suppose
+C: sup-[pose] || pos 是「放」（compose 同源）。先放在那儿当真的——假设。
+E: I [suppose] you are right. ~ 我[想]你是对的。
+E: You are [supposed] to be here at nine. ~ 你[应该]九点到。
+L: be supposed to / I suppose so / suppose that
+T: cool 🤔
+M: be supposed to 是「按理应该」，不是「被假设」。
+@@surgery
+C: [surg]-ery || 希腊 cheir 是「手」，ergon 是「工作」。用手做的活——外科手术。
+E: She needs [surgery] on her knee. ~ 她膝盖要[手术]。
+E: The [surgery] lasted three hours. ~ [手术]持续三小时。
+L: plastic surgery / heart surgery / undergo surgery
+T: sharp 🏥
+M: surgeon ~ 外科医生。同根「手工作业」，-ery 是那门技艺。
+@@surround
+C: sur-[round] || sur 是「在上、外」，undare 是「涌」。水从四面涌上来——包围。
+E: The house is [surrounded] by trees. ~ 房子[四周]都是树。
+E: Police [surrounded] the building. ~ 警察[包围]了楼。
+L: be surrounded by / surround sound / surrounding area
+T: cool 🌀
+M: round ~ 圆的。拼写里有 round，四周一圈就是包围。
+@@survive
+C: sur-[vive] || viv 是「活」（revive 同源）。活过头——幸存，比别人活得久——比…活得长。
+E: Only one passenger [survived]. ~ 只有一名乘客[生还]。
+E: She [survived] her husband by ten years. ~ 她比丈夫[多活]十年。
+L: survive on / survive the crash / survive from
+T: bright 🌱
+M: revive ~ 复苏。都含 viv「活」，一个活过来，一个活下来。
+@@sustainable
+C: sus-[tain]-able || tain 是「握」（maintain 同源）。能一直握住的——可持续的。
+E: We need [sustainable] growth. ~ 我们需要[可持续]增长。
+E: The pace is not [sustainable]. ~ 这节奏[维持]不了。
+L: sustainable development / sustainable growth / environmentally sustainable
+T: bright 🌍
+M: maintain ~ 维持。同根「握」，能一直握得住才叫可持续。
+@@swallow
+C: [swallow] || 古英语 swelgan 是「吞」。一口下去——吞下，把话咽回去——忍受，那种鸟——燕子。
+E: [Swallow] the pill with water. ~ 用水[吞]药片。
+E: He had to [swallow] his pride. ~ 他只好[咽下]自尊。
+L: swallow up / swallow one's pride / a bitter pill to swallow
+T: warm 🐦
+M: 同一个词既是「吞」也是「燕子」，靠语境分辨。
+@@sweep
+C: [sweep] || 古英语 swapan 是「扫」。一扫帚过去——打扫，一扫而过的势——席卷。
+E: She [swept] the floor. ~ 她[扫]了地。
+E: The storm [swept] the coast. ~ 风暴[席卷]海岸。
+L: sweep up / sweep the floor / a clean sweep
+T: cool 🧹
+M: sweep 的过去式是 swept，双写不行。
+@@switch
+C: [switch] || 中古荷兰 swijch 是「枝条」。一拨就换——开关、转换。
+E: [Switch] off the light. ~ 把灯[关]了。
+E: He [switched] to another topic. ~ 他[转]到另一个话题。
+L: switch on / switch to / switch off
+T: cool 🔀
+M: switch on/off 是开关，switch to 是转向，别只记一个。
+@@symbol
+C: [sym]-bol || syn 是「一起」，ballein 是「扔」。两样东西扔到一起作对照——象征、符号。
+E: The dove is a [symbol] of peace. ~ 鸽子是和平的[象征]。
+E: What does this [symbol] mean? ~ 这个[符号]什么意思？
+L: a symbol of / chemical symbol / status symbol
+T: calm 🔣
+M: symptom ~ 症状。同根「一起落下」，一个是标志，一个是跟着病来的表现。
+@@sympathy
+C: [sym]-pathy || syn 是「一起」，pathos 是「感受」。跟人一起感受——同情。
+E: I have great [sympathy] for her. ~ 我十分[同情]她。
+E: He has no [sympathy] with the plan. ~ 他[不赞同]这计划。
+L: in sympathy with / feel sympathy for / a letter of sympathy
+T: warm 💗
+M: empathy ~ 共情。sympathy 是「我同情你」，empathy 是「我懂你的感受」。
+@@symptom
+C: [sym]-ptom || syn 是「一起」，piptein 是「落下」。跟着病一起落下来的——症状。
+E: Fever is a [symptom] of flu. ~ 发烧是流感的[症状]。
+E: The strike is a [symptom] of deeper trouble. ~ 罢工是更深问题的[征兆]。
+L: symptom of / early symptoms / show symptoms
+T: cool 🌡️
+M: symbol ~ 象征。拼写近，一个是症的兆，一个是意的号。
+@@talent
+C: [talent] || 希腊 talanton 是「一秤的重量」，后指一笔钱。老天给的这份本钱——天赋。
+E: She has a [talent] for music. ~ 她有音乐[天赋]。
+E: The firm hires young [talent]. ~ 公司招年轻[人才]。
+L: a talent for / talent show / natural talent
+T: bright 🌟
+M: gift ~ 天赋。talent 偏「练出来的本事」，gift 偏「白给的」。
+@@tax
+C: [tax] || 拉丁 tangere 是「触、评估」。官方伸手一估——征税，压在身上——使负重担。
+E: Income [tax] is high here. ~ 这里所得[税]很高。
+E: The long walk [taxed] his strength. ~ 长途步行[耗]他的体力。
+L: income tax / tax on / tax sb with
+T: cool 🧾
+M: taxi ~ 出租车。同根「评估」，原指按里程计费的小车。
+@@temporary
+C: [tempor]-ary || tempor 是「时间」（contemporary 同源）。只占一段时间——暂时的。
+E: This is a [temporary] solution. ~ 这是[临时]方案。
+E: He took a [temporary] job. ~ 他做了份[临时]工作。
+L: temporary job / temporary measure / on a temporary basis
+T: cool ⏳
+M: contemporary ~ 当代的。都含 tempor「时间」，一个短暂，一个同时。
+@@temptation
+C: [tempt]-ation || temptare 是「试、诱」。摆在眼前勾人的那口——诱惑。
+E: I could not resist the [temptation]. ~ 我抵不住[诱惑]。
+E: The [temptation] to quit was strong. ~ [想]放弃的[念头]很强。
+L: resist temptation / the temptation to / yield to temptation
+T: warm 🍰
+M: attempt ~ 尝试。同根「试」，一个试自己，一个试人心。
+@@tend
+C: [tend] || tendere 是「伸」（extend 同源）。往某个方向伸——趋向，把心伸过去——照料。
+E: Prices [tend] to rise in spring. ~ 春天物价[往往]上涨。
+E: She [tends] the garden daily. ~ 她每天[照料]花园。
+L: tend to do / tend to / tend towards
+T: calm 🌱
+M: attend ~ 出席。都含 tend「伸」，把心伸过去就是出席照料。
+@@theory
+C: [theor]-y || 希腊 theorein 是「观看、思辨」。看出来的那套道理——理论。
+E: In [theory], it should work. ~ [理论上]它该管用。
+E: Darwin's [theory] changed biology. ~ 达尔文的[学说]改变了生物学。
+L: in theory / theory of / put forward a theory
+T: cool 📐
+M: in theory 常与 in practice 对照，一个理论一个实际。
+@@thoroughly
+C: [thorough]-ly || through 是「穿过」。从头穿到尾——彻底地。
+E: She cleaned the room [thoroughly]. ~ 她把房间[彻底]打扫了。
+E: I [thoroughly] enjoyed it. ~ 我[完全]享受其中。
+L: thoroughly enjoy / check thoroughly / thoroughly understand
+T: sharp ✅
+M: through ~ 穿过。同根，多一个 o 和 -ly 就是「彻底地」。
+@@threaten
+C: [threat]-en || threat 是「威胁」。把狠话摆出来——威胁，坏兆头压过来——预示危险。
+E: He [threatened] to leave. ~ 他[威胁]要走。
+E: Dark clouds [threaten] rain. ~ 乌云[预示]要下雨。
+L: threaten to do / threaten sb with / threaten violence
+T: dark 🗡️
+M: threat ~ 威胁（名词）。同根，-en 变动词。
+@@tight
+C: [tight] || 古诺斯语 thettr 是「密、紧」。缝得密——紧的，钱管得紧——手头紧。
+E: These shoes are too [tight]. ~ 这鞋太[紧]。
+E: Money is [tight] this month. ~ 这个月[手头紧]。
+L: tight schedule / hold tight / a tight budget
+T: sharp 🔒
+M: tights 是「紧身裤」，加 s 变名词，别当成「很紧」。
+@@time-consuming
+C: [time]-consuming || time 是「时间」，consume 是「消耗」。吃掉时间的——费时的。
+E: The process is [time-consuming]. ~ 这过程很[费时]。
+E: It is a [time-consuming] task. ~ 这是[耗时长]的活。
+L: time-consuming task / highly time-consuming / too time-consuming
+T: cool ⏳
+M: consume ~ 消耗。复合词里 -consuming 就是「吃…的」。
+@@tiresome
+C: [tire]-some || tire 是「使累」，-some 是「令人…的」。让人累的——令人厌倦的。
+E: His complaints are [tiresome]. ~ 他的抱怨很[烦人]。
+E: It was a [tiresome] journey. ~ 那趟旅程[累人]。
+L: a tiresome task / tiresome person / rather tiresome
+T: dark 😑
+M: tired ~ 累的。tiresome 是「让人累」，tired 是「自己累」。
+@@tolerate
+C: [toler]-ate || tolerare 是「承受」。扛着不发作——容忍，身体扛得住——耐受。
+E: I cannot [tolerate] the noise. ~ 我[受不了]这噪音。
+E: The plant [tolerates] cold. ~ 这植物[耐]寒。
+L: tolerate behaviour / cannot tolerate / tolerate differences
+T: calm 🧘
+M: tolerance ~ 容忍度。同根，-ate 是动词，-ance 是那个度。
+@@tough
+C: [tough] || 古英语 toh 是「结实、难啃」。肉咬不动——老，日子咬不动——艰难，人咬不动——强硬。
+E: It was a [tough] decision. ~ 那是[艰难]的决定。
+E: He is a [tough] negotiator. ~ 他是[强硬]的谈判者。
+L: tough time / tough decision / get tough with
+T: sharp 🪨
+M: rough ~ 粗糙。tough 偏「难对付」，rough 偏「不平顺」。
+@@tourism
+C: [tour]-ism || tour 是「绕一圈」（turn 同源）。到处转着看——旅游，这门生意——旅游业。
+E: [Tourism] brings income. ~ [旅游业]带来收入。
+E: The town lives on [tourism]. ~ 小镇靠[旅游]为生。
+L: tourism industry / mass tourism / tourism revenue
+T: bright ✈️
+M: tourist ~ 游客。同根，-ism 是行业，-ist 是人。
+@@track
+C: [track] || 古法语 trac 是「痕迹」。雪地上一串印子——踪迹，顺着印子走——跟踪，铺出来的路——轨道。
+E: We [tracked] the animal for miles. ~ 我们[追踪]它好几英里。
+E: The train left the [track]. ~ 火车[脱轨]了。
+L: keep track of / track down / on track
+T: cool 🛤️
+M: trace ~ 痕迹。track 是可跟着走的迹，trace 是留下的一点痕。
+@@trade
+C: [trade] || 中古荷兰 trade 是「路径」。走熟了的那条路——行业，路上换东西——贸易。
+E: Trade between the two countries grew. ~ 两国[贸易]增长。
+E: He [trades] in old books. ~ 他[做]旧书生[意]。
+L: trade with / trade in / free trade
+T: warm 🤝
+M: trade 后面 in 是「做某行生意」，with 是「与谁做」。
+@@tragedy
+C: [traged]-y || 希腊 tragos 是「山羊」，ode 是「歌」。祭羊时唱的歌，后来唱成悲剧——悲剧、惨事。
+E: The play is a [tragedy]. ~ 这出戏是[悲剧]。
+E: It was a [tragedy] for the family. ~ 对这个家是场[惨事]。
+L: a tragedy for / Greek tragedy / end in tragedy
+T: dark 🎭
+M: comedy ~ 喜剧。一对反义，考场上常并排。
+@@trail
+C: [trail] || 古法语 traillier 是「拖」。拖在后面的东西——痕迹，拖出来的路——小径，拖着走——跟踪。
+E: Follow the [trail] to the lake. ~ 沿[小径]走到湖边。
+E: The dog [trailed] behind us. ~ 狗[跟]在我们后面。
+L: trail behind / a trail of / hit the trail
+T: cool 🥾
+M: trail 与 track：trail 偏「拖出的线」，track 偏「踩出的印」。
+@@transfer
+C: trans-[fer] || fer 是「带」（refer 同源）。从这边带到那边——转移、换乘。
+E: He [transferred] to another school. ~ 他[转]学了。
+E: [Transfer] the money today. ~ 今天[转]账。
+L: transfer to / bank transfer / transfer money
+T: cool 🔄
+M: refer ~ 提及。同根「带」，一个带到别处，一个带到话题上。
+@@transform
+C: trans-[form] || form 是「形」。把形状换掉——转变、改造。
+E: The city has been [transformed]. ~ 城市[变]了样。
+E: Heat [transforms] water into steam. ~ 热把水[转化]为蒸汽。
+L: transform into / transform the economy / be transformed
+T: bright 🦋
+M: reform ~ 改革。都含 form「形」，一个改制，一个变形。
+@@transition
+C: trans-[it]-ion || it 是「走」（exit 同源）。从这头走到那头——过渡。
+E: The [transition] was smooth. ~ [过渡]很平稳。
+E: We are in a period of [transition]. ~ 我们处在[转型]期。
+L: transition from to / in transition / a smooth transition
+T: cool 🌉
+M: transit ~ 过境、运输。同根「走」，一个是走的过程，一个是走过去的状态。
+@@translate
+C: trans-[late] || lat 是「带」（relate 同源）。把话从一种带到另一种——翻译，把话带到行动——转化。
+E: The book was [translated] into Chinese. ~ 这本书被[译]成中文。
+E: Ideas must be [translated] into action. ~ 想法要[转化]为行动。
+L: translate into / translate from / be translated as
+T: warm 🌐
+M: relate ~ 关联。同根「带」，一个带过语言，一个带出关系。
+@@transmission
+C: trans-[miss]-ion || miss 是「送」（mission 使命同源）。送过去——传输、播送。
+E: The [transmission] of the disease is fast. ~ 这种病的[传播]很快。
+E: The car needs a new [transmission]. ~ 车要换[变速箱]。
+L: disease transmission / transmission tower / automatic transmission
+T: cool 📡
+M: mission ~ 使命。同根「送」，一个是送信号，一个是被派出去。
+@@trap
+C: [trap] || 古英语 træppe 是「捕兽的网」。一踩就合上——陷阱、诱捕。
+E: The fox was caught in a [trap]. ~ 狐狸落[网]了。
+E: They were [trapped] in the lift. ~ 他们被[困]在电梯里。
+L: fall into a trap / set a trap / be trapped in
+T: dark 🪤
+M: trip ~ 绊倒。拼写像，trap 是困住，trip 是绊一下。
+@@treasure
+C: [treas]-ure || 希腊 thesaurus 是「宝库」。藏起来值钱的东西——财富、珍视。
+E: They found buried [treasure]. ~ 他们找到埋藏的[宝藏]。
+E: I [treasure] these letters. ~ 我[珍视]这些信。
+L: treasure hunt / national treasure / treasure the memory
+T: bright 💎
+M: thesaurus 是「同义词词典」，也是「宝库」这一支，长得像别混。
+@@treatment
+C: [treat]-ment || treat 是「对待、处理」。怎么对人——对待，怎么对病——治疗。
+E: She is receiving [treatment]. ~ 她正在接受[治疗]。
+E: The [treatment] of prisoners is a concern. ~ 囚犯[待遇]是个问题。
+L: medical treatment / equal treatment / treatment for
+T: calm 💊
+M: treat ~ 对待。同根，-ment 是那个做法或那套疗程。
+@@tremble
+C: [trembl]-e || tremulus 是「发抖」（tremor 震颤同源）。抖成一团——发抖。
+E: Her hands [trembled]. ~ 她的手在[抖]。
+E: He [trembled] with cold. ~ 他冷得[发颤]。
+L: tremble with / tremble at / a tremble in the voice
+T: cool 🥶
+M: tremble 多指害怕、寒冷；shake 可指任何摇动。
+@@trend
+C: [trend] || 古英语 trendan 是「转」。往一个方向转过去——趋势、潮流。
+E: Prices are on an upward [trend]. ~ 物价呈上升[趋势]。
+E: The [trend] is towards smaller cars. ~ [潮流]是小型车。
+L: a trend towards / on trend / break the trend
+T: cool 📈
+M: tend ~ 倾向于。同根「转」，一个是转的动作，一个是转的方向。
+@@trial
+C: [tri]-al || try 是「试、审」。试一试——试验，审一审——审讯，磨一磨——磨难。
+E: The drug is under [trial]. ~ 这药在[试验]中。
+E: The [trial] lasted a week. ~ [审讯]持续一周。
+L: on trial / clinical trial / trial and error
+T: sharp ⚖️
+M: try ~ 尝试。同根，-al 变名词，是「试的那一场」。
+@@trick
+C: [trick] || 古法语 trique 是「诡计」。手上玩的把戏——戏法，拿它骗人——诡计。
+E: He played a [trick] on me. ~ 他[骗]了我一把。
+E: There is a [trick] to it. ~ 这有[窍门]。
+L: play a trick on / trick sb into / do the trick
+T: warm 🎩
+M: treat ~ 对待。一个字母之差，trick 是骗，treat 是待。
+@@trigger
+C: [trigger] || 荷兰语 trekker 是「拉的东西」。枪上那根一拉就响——扳机，一拉就动——触发。
+E: The report [triggered] a debate. ~ 报道[引发]了争论。
+E: He pulled the [trigger]. ~ 他扣动[扳机]。
+L: trigger off / pull the trigger / trigger a reaction
+T: sharp 🔫
+M: trigger 既是名词也是动词，写作里多用它替换 cause。
