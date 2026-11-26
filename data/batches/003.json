@@ -1,0 +1,592 @@
+{
+  "abandon": {
+    "hk": {
+      "cut": "a-[ban]-don",
+      "line": "[ban] 就是「禁令」。一纸[禁令]压下来，手里的东西只能[撒手]——放弃。"
+    },
+    "eg": [
+      [
+        "They [abandoned] the car and walked home.",
+        "他们[丢下]车，走回了家。"
+      ],
+      [
+        "He [abandoned] the plan halfway.",
+        "他半路[放弃]了这个计划。"
+      ]
+    ],
+    "col": [
+      "abandon ship",
+      "abandon hope",
+      "abandon oneself to"
+    ],
+    "mx": [
+      [
+        "abundant",
+        "丰富的。abAndon 是放弃，abUndant 是很多，中间那个字母别搞混。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "🚢"
+  },
+  "abnormal": {
+    "hk": {
+      "cut": "[ab]-normal",
+      "line": "[ab] 是「离开」。离开 normal 那条线——[不正常]。"
+    },
+    "eg": [
+      [
+        "an [abnormal] heartbeat",
+        "[异常的]心跳"
+      ],
+      [
+        "[abnormal] weather this year",
+        "今年反常的天气"
+      ]
+    ],
+    "col": [
+      "abnormal behaviour",
+      "abnormal condition"
+    ],
+    "mx": [
+      [
+        "aboard",
+        "上船、登机。a + board（甲板），跟 abnormal 只差几个字母。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "⚠️"
+  },
+  "absence": {
+    "hk": {
+      "cut": "[ab]-sence",
+      "line": "[ab] 是「离开」，-sence 背后是拉丁 [esse]「存在」。存在跑开了——[缺席]。"
+    },
+    "eg": [
+      [
+        "in the [absence] of evidence",
+        "在缺乏证据的情况下"
+      ],
+      [
+        "his [absence] from class",
+        "他缺课"
+      ]
+    ],
+    "col": [
+      "in the absence of",
+      "absence of mind",
+      "leave of absence"
+    ],
+    "mx": [
+      [
+        "absent",
+        "形容词「缺席的」。absence 是它的名词形式。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🌫️"
+  },
+  "absolute": {
+    "hk": {
+      "cut": "[ab]-solute",
+      "line": "[ab] 是离开，-solute 来自「[松开]」。绳子解开了——不受任何约束，所以是[绝对]。"
+    },
+    "eg": [
+      [
+        "[absolute] power",
+        "[绝对的]权力"
+      ],
+      [
+        "That's [absolute] nonsense.",
+        "那完全是胡说。"
+      ]
+    ],
+    "col": [
+      "absolute power",
+      "absolute majority",
+      "absolute zero"
+    ],
+    "mx": [
+      [
+        "solve",
+        "解决。同一个「松开」——把疙瘩解开。"
+      ],
+      [
+        "absolve",
+        "赦免。把人从罪责里松开。"
+      ]
+    ],
+    "tone": "sharp",
+    "icon": "👑"
+  },
+  "absorb": {
+    "hk": {
+      "cut": "[ab]-sorb",
+      "line": "[ab] 是走开，-sorb 是「[吸]」。水被吸走——[吸收]。"
+    },
+    "eg": [
+      [
+        "Plants [absorb] water through roots.",
+        "植物通过根[吸收]水分。"
+      ],
+      [
+        "I was [absorbed] in the book.",
+        "我[沉浸在]书里。"
+      ]
+    ],
+    "col": [
+      "absorb water",
+      "be absorbed in",
+      "absorb the cost"
+    ],
+    "mx": [
+      [
+        "adsorb",
+        "吸附。absorb 是吸进去，adsorb 只是贴在表面。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🧽"
+  },
+  "abstract": {
+    "hk": {
+      "cut": "[abs]-tract",
+      "line": "[abs] 是离开，-tract 是「[拉]」。从实物里把共性[拉]出来——剩下看不见的，就是[抽象]。"
+    },
+    "eg": [
+      [
+        "an [abstract] concept",
+        "一个[抽象的]概念"
+      ],
+      [
+        "[abstract] painting",
+        "抽象画"
+      ]
+    ],
+    "col": [
+      "abstract concept",
+      "in the abstract",
+      "abstract art"
+    ],
+    "mx": [
+      [
+        "attract",
+        "吸引。同一个 tract，但方向是往里拉。"
+      ],
+      [
+        "contract",
+        "合同、收缩。con 是一起——拉到一起。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🌀"
+  },
+  "abundant": {
+    "hk": {
+      "cut": "[ab]-und-ant",
+      "line": "-und 是「[波浪]」。水一波波涌上来、漫出堤岸——多到[溢出]，所以是[丰富]。"
+    },
+    "eg": [
+      [
+        "[abundant] rainfall",
+        "[充沛的]降雨"
+      ],
+      [
+        "a region [abundant] in wildlife",
+        "野生动物[丰富的]地区"
+      ]
+    ],
+    "col": [
+      "abundant in",
+      "abundant evidence",
+      "abundant resources"
+    ],
+    "mx": [
+      [
+        "abandon",
+        "放弃。abAndon 与 abUndant 只差一个字母。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "🌊"
+  },
+  "abuse": {
+    "hk": {
+      "cut": "[ab]-use",
+      "line": "[ab] 是「偏离」。东西用偏了——[滥用]；人用偏了——[虐待]。"
+    },
+    "eg": [
+      [
+        "[abuse] of power",
+        "[滥用]权力"
+      ],
+      [
+        "child [abuse]",
+        "虐待儿童"
+      ]
+    ],
+    "col": [
+      "abuse of power",
+      "drug abuse",
+      "verbal abuse"
+    ],
+    "mx": [
+      [
+        "misuse",
+        "误用。abuse 带恶意，misuse 只是用错。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "⛓️"
+  },
+  "academic": {
+    "hk": {
+      "cut": "[academ]-ic",
+      "line": "[academ] 是雅典城外那片园林的名字，柏拉图在那儿讲学四十年。园子里的事——[学术]。"
+    },
+    "eg": [
+      [
+        "[academic] performance",
+        "[学业]成绩"
+      ],
+      [
+        "[academic] research",
+        "学术研究"
+      ]
+    ],
+    "col": [
+      "academic year",
+      "academic performance",
+      "academic circles"
+    ],
+    "mx": [
+      [
+        "academy",
+        "学院。同一个地名，指机构本身。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🏛️"
+  },
+  "accelerate": {
+    "hk": {
+      "cut": "ac-[celer]-ate",
+      "line": "[celer] 就是「快」（celerity 同根）。往快的方向去——[加速]。"
+    },
+    "eg": [
+      [
+        "[accelerate] the process",
+        "[加快]进程"
+      ],
+      [
+        "The car [accelerated] smoothly.",
+        "车平稳地[加速]了。"
+      ]
+    ],
+    "col": [
+      "accelerate growth",
+      "accelerate the pace"
+    ],
+    "mx": [
+      [
+        "accessory",
+        "配件。开头像，词根完全不同。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "🏎️"
+  },
+  "accent": {
+    "hk": {
+      "cut": "[ac]-cent",
+      "line": "[ac] 是「附加」，-cent 来自「[唱]」。说话时加在音节上的那点[唱腔]——口音、重音。"
+    },
+    "eg": [
+      [
+        "a British [accent]",
+        "英国[口音]"
+      ],
+      [
+        "The [accent] falls on the first syllable.",
+        "[重音]在第一个音节。"
+      ]
+    ],
+    "col": [
+      "foreign accent",
+      "accent on",
+      "speak without an accent"
+    ],
+    "mx": [
+      [
+        "ascent",
+        "上升。accent 是口音，ascent 是往上走。"
+      ],
+      [
+        "assent",
+        "同意。三个词只差一个字母。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🎵"
+  },
+  "accessible": {
+    "hk": {
+      "cut": "ac-[cess]-ible",
+      "line": "-cess 是「[走]」。能[走近]——进得去、够得着、听得懂。"
+    },
+    "eg": [
+      [
+        "The building is [accessible] to wheelchairs.",
+        "这栋楼轮椅[进得去]。"
+      ],
+      [
+        "[accessible] language",
+        "[通俗易懂的]表述"
+      ]
+    ],
+    "col": [
+      "accessible to",
+      "easily accessible",
+      "accessible price"
+    ],
+    "mx": [
+      [
+        "excessive",
+        "过度的。ex 是向外——走出去太多。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🚪"
+  },
+  "accommodation": {
+    "hk": {
+      "cut": "ac-[commod]-ation",
+      "line": "[commod] 是「合乎尺度」（com 共同 + modus 尺子）。把空间调到合你的尺寸——[住处]。"
+    },
+    "eg": [
+      [
+        "hotel [accommodation]",
+        "酒店[住宿]"
+      ],
+      [
+        "The school provides [accommodation].",
+        "学校提供住宿。"
+      ]
+    ],
+    "col": [
+      "book accommodation",
+      "student accommodation"
+    ],
+    "mx": [
+      [
+        "拼写",
+        "两个 c、两个 m：ac-com-mo-dation。"
+      ],
+      [
+        "commodity",
+        "商品。也是「合适之物」。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "🏨"
+  },
+  "accompany": {
+    "hk": {
+      "cut": "ac-[company]",
+      "line": "[company] 原意是「一起[吃面包]的人」（com 共同 + panis 面包）。跟你分面包的人——[陪伴]。"
+    },
+    "eg": [
+      [
+        "She [accompanied] me to the station.",
+        "她[陪]我去了车站。"
+      ],
+      [
+        "a piano [accompaniment]",
+        "钢琴[伴奏]"
+      ]
+    ],
+    "col": [
+      "accompany sb to",
+      "be accompanied by"
+    ],
+    "mx": [
+      [
+        "companion",
+        "同伴。也是分面包的人。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "🍞"
+  },
+  "accomplish": {
+    "hk": {
+      "cut": "ac-[compl]-ish",
+      "line": "-compl 是「[填满]」（complete 同根）。事情填到没缺口——[完成]。"
+    },
+    "eg": [
+      [
+        "[accomplish] a task",
+        "[完成]一项任务"
+      ],
+      [
+        "She [accomplished] what she set out to do.",
+        "她想做的事都[做成了]。"
+      ]
+    ],
+    "col": [
+      "accomplish a goal",
+      "sense of accomplishment"
+    ],
+    "mx": [
+      [
+        "complete",
+        "complete 强调「补齐、填满」，accomplish 强调「做成、达成」。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "🏁"
+  },
+  "account": {
+    "hk": {
+      "cut": "ac-[count]",
+      "line": "-count 是「[算]」。把账算清楚——钱上是[账户]，话上是[说明]。"
+    },
+    "eg": [
+      [
+        "Open a bank [account].",
+        "开一个银行[账户]。"
+      ],
+      [
+        "How do you [account] for the delay?",
+        "这次延误你怎么[解释]？"
+      ]
+    ],
+    "col": [
+      "account for",
+      "on account of",
+      "take into account",
+      "bank account"
+    ],
+    "mx": [
+      [
+        "accountable",
+        "负责任的。事情能「算」到他头上。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🧮"
+  },
+  "accumulate": {
+    "hk": {
+      "cut": "ac-[cumul]-ate",
+      "line": "-cumul 是「[堆]」（cumulus 积云同根——云就是堆起来的）。一层层往上堆——[积累]。"
+    },
+    "eg": [
+      [
+        "Dust [accumulated] on the shelf.",
+        "架子上[积]了灰。"
+      ],
+      [
+        "[accumulate] experience",
+        "[积累]经验"
+      ]
+    ],
+    "col": [
+      "accumulate wealth",
+      "accumulate experience",
+      "accumulate evidence"
+    ],
+    "mx": [
+      [
+        "cumulative",
+        "累积的。同一个 cumul。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🧱"
+  },
+  "accurate": {
+    "hk": {
+      "cut": "ac-[cur]-ate",
+      "line": "-cur 是「[用心]」（cure 照料同根）。[用心]做出来的东西不走样——[准确]。"
+    },
+    "eg": [
+      [
+        "[accurate] information",
+        "[准确的]信息"
+      ],
+      [
+        "His description was [accurate].",
+        "他的描述很[准]。"
+      ]
+    ],
+    "col": [
+      "accurate information",
+      "highly accurate"
+    ],
+    "mx": [
+      [
+        "accuse",
+        "控告。开头同为 ac-，但词根是 causa（案由）。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🎯"
+  },
+  "accuse": {
+    "hk": {
+      "cut": "ac-[cuse]",
+      "line": "-cuse 来自 [causa]——罗马法里的「案由」。把案子摆到他面前——[指控]。"
+    },
+    "eg": [
+      [
+        "They [accused] him of theft.",
+        "他们[指控]他偷窃。"
+      ],
+      [
+        "[accused] of cheating",
+        "[被指控]作弊"
+      ]
+    ],
+    "col": [
+      "accuse sb of",
+      "be accused of",
+      "falsely accused"
+    ],
+    "mx": [
+      [
+        "charge",
+        "charge 偏正式起诉，accuse 偏当面指责。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "⚖️"
+  },
+  "accustom": {
+    "hk": {
+      "cut": "ac-[custom]",
+      "line": "-custom 是「[惯常]」。处久了成了惯常——[习惯]。"
+    },
+    "eg": [
+      [
+        "[accustom] yourself to the climate.",
+        "让自己[适应]这种气候。"
+      ],
+      [
+        "be [accustomed] to noise",
+        "[习惯]噪音"
+      ]
+    ],
+    "col": [
+      "be accustomed to",
+      "accustom oneself to"
+    ],
+    "mx": [
+      [
+        "costume",
+        "服装。和 custom 是同源双胞胎——本义「惯常的穿戴」。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "🔁"
+  }
+}
