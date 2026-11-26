@@ -1,0 +1,287 @@
+@@tropical
+C: [trop]-ical || 希腊 tropos 是「回转」，指太阳到回归线折返。回归线那一带——热带的。
+E: Bananas grow in [tropical] countries. ~ 香蕉长在[热带]国家。
+E: The weather was [tropical] hot. ~ 天气[炎热]得像热带。
+L: tropical rain forest / tropical fruit / tropical climate
+T: bright 🌴
+M: trope ~ 转义。同根「转」，一个是太阳转向，一个是词义转向。
+@@tuition
+C: [tuit]-ion || 拉丁 tueri 是「看护、照看」。有人照看着教——教学，交的那笔钱——学费。
+E: [Tuition] fees have risen. ~ [学费]涨了。
+E: He gives private [tuition]. ~ 他做私人[辅导]。
+L: tuition fees / private tuition / tuition-free
+T: warm 🎓
+M: tutor ~ 导师。同根「照看」，一个照看学生，一个是那笔钱。
+@@typical
+C: [typ]-ical || 希腊 typus 是「模子、印痕」。打着这个模子出来的——典型的。
+E: This is a [typical] example. ~ 这是个[典型]例子。
+E: It is [typical] of him to be late. ~ 迟到是[他一贯]的做派。
+L: typical of / a typical example / typical weather
+T: cool 🔤
+M: type ~ 类型。同根「模子」，一类东西共用一个模。
+@@unbelievable
+C: un-[believ]-able || un- 是「不」，believe 是「相信」，-able 是「能」。不能信的——难以置信的。
+E: The view is [unbelievable]. ~ 景色[美得难以相信]。
+E: It is [unbelievable] that he agreed. ~ 他居然同意，[难以置信]。
+L: unbelievable news / absolutely unbelievable / it is unbelievable that
+T: bright 😲
+M: incredible ~ 难以置信的。unbelievable 更口语，incredible 更书面。
+@@uncertain
+C: un-[certain] || un- 是「不」，certain 是「确定」。定不下来——不确定的。
+E: The outcome is [uncertain]. ~ 结果[不确定]。
+E: She was [uncertain] what to do. ~ 她[拿不准]该怎么办。
+L: uncertain about / uncertain future / in no uncertain terms
+T: cool ❓
+M: certain ~ 确定的。同一个词，un- 一加就成「没底」。
+@@unconscious
+C: un-[conscious] || un- 是「不」，conscious 是「有意识」。没意识——无知觉的、无意的。
+E: He was [unconscious] for hours. ~ 他[昏迷]了几小时。
+E: It was an [unconscious] habit. ~ 那是[无意识]的习惯。
+L: unconscious of / unconscious bias / knock sb unconscious
+T: dark 😶
+M: subconscious ~ 潜意识的。unconscious 是「没醒着」，subconscious 是「意识下面那层」。
+@@underline
+C: [under]-line || under 是「在下面」，line 是「线」。在下面画一道——划线，引申为强调。
+E: [Underline] the key sentence. ~ 给关键句[划下划线]。
+E: The report [underlines] the risk. ~ 报告[强调]了风险。
+L: underline a word / underline the importance / underlined text
+T: cool ✏️
+M: underscore ~ 强调。意思几乎一样，underscore 更书面。
+@@undoubtedly
+C: un-[doubt]-edly || un- 是「不」，doubt 是「怀疑」。不用怀疑——无疑地。
+E: He is [undoubtedly] right. ~ 他[无疑]是对的。
+E: This is [undoubtedly] the best. ~ 这[毫无疑问]最好。
+L: undoubtedly true / undoubtedly the best / undoubtedly so
+T: bright ✅
+M: doubt ~ 怀疑。同根，-edly 是副词尾。
+@@unemployment
+C: un-[employ]-ment || un- 是「不」，employ 是「雇用」，-ment 是名词。没人雇的状态——失业。
+E: [Unemployment] rose last year. ~ 去年[失业率]上升。
+E: He is on [unemployment] benefit. ~ 他在领[失业]救济。
+L: unemployment rate / unemployment benefit / youth unemployment
+T: dark 📉
+M: employment ~ 就业。同一个 employ，un- 一加就翻了。
+@@unexpected
+C: un-[expect]-ed || un- 是「不」，expect 是「预料」。没料到的——意外的。
+E: The result was [unexpected]. ~ 结果[出乎意料]。
+E: An [unexpected] guest arrived. ~ 来了位[不速之客]。
+L: unexpected result / unexpected visitor / completely unexpected
+T: sharp ❗
+M: unexpected 是「没料到」，unexpecting 几乎不用，别造。
+@@unforgettable
+C: un-[forget]-table || un- 是「不」，forget 是「忘」，-table 是「能」。忘不掉的——难忘的。
+E: It was an [unforgettable] trip. ~ 那是趟[难忘]的旅行。
+E: Her voice was [unforgettable]. ~ 她的声音[令人难忘]。
+L: an unforgettable experience / unforgettable moment / truly unforgettable
+T: bright 💫
+M: forgettable ~ 容易忘的。同一个 table，un- 一加就从「可忘」变「难忘」。
+@@unique
+C: [uni]-que || uni 是「一」（unit、unite 同源）。只有一个——唯一的、独特的。
+E: Each fingerprint is [unique]. ~ 每个指纹都是[独一无二]的。
+E: This is a [unique] chance. ~ 这是[难得]的机会。
+L: unique to / a unique opportunity / absolutely unique
+T: bright 💠
+M: unit ~ 单位。同根「一」，一个是一，一个是「只此一个」。
+@@universal
+C: [uni]-vers-al || uni 是「一」，vers 是「转」。转成一整圈——普遍的、全体的。
+E: Music is a [universal] language. ~ 音乐是[通用]语言。
+E: The problem is [universal]. ~ 这问题很[普遍]。
+L: universal language / universal truth / universal access
+T: cool 🌍
+M: universe ~ 宇宙。同根「转成一」，转成一整片就是宇宙。
+@@unwilling
+C: un-[will]-ing || un- 是「不」，will 是「意愿」。心里不愿——不情愿的。
+E: He was [unwilling] to help. ~ 他[不愿]帮忙。
+E: She gave an [unwilling] nod. ~ 她[勉强]点头。
+L: unwilling to do / unwilling participant / be unwilling
+T: cool 😕
+M: willing ~ 愿意的。同一个 will，un- 一加就别过来了。
+@@urban
+C: [urb]-an || urbs 是「城」（suburb 郊区同源）。城里的——城市的。
+E: [Urban] life is fast. ~ [城市]生活节奏快。
+E: [Urban] traffic is heavy. ~ [市区]交通拥堵。
+L: urban area / urban planning / urban life
+T: cool 🏙️
+M: rural ~ 农村的。urb 是城，rur 是乡，一对反义。
+@@urgent
+C: [urg]-ent || urgere 是「推、催」。有人在后面推——紧急的。
+E: This is an [urgent] matter. ~ 这是[紧急]事。
+E: She spoke in an [urgent] voice. ~ 她语气[急迫]。
+L: urgent need / urgent message / it is urgent that
+T: sharp 🚨
+M: urge ~ 催促。同根「推」，一个是推着走，一个是推得急。
+@@vacant
+C: [vac]-ant || vac 是「空」（vacation 假期同源）。空在那儿没用——空的、空缺的。
+E: The seat is [vacant]. ~ 座位[空着]。
+E: He stared with a [vacant] look. ~ 他[茫然]地盯着。
+L: vacant seat / vacant post / a vacant look
+T: cool 🪑
+M: vacation ~ 假期。同根「空」，一段时间空出来就是假。
+@@vain
+C: [vain] || 拉丁 vanus 是「空的」。白忙一场——徒劳，心里只装自己——虚荣。
+E: All our efforts were in [vain]. ~ 我们的努力全[白费]了。
+E: She is [vain] about her looks. ~ 她对容貌很[自恋]。
+L: in vain / vain attempt / take sb's name in vain
+T: dark 💨
+M: vein ~ 静脉。只差一个字母，vain 是空，vein 是血管。
+@@valid
+C: [val]-id || val 是「强、值」（value 同源）。站得住、算得数——有效的。
+E: The ticket is [valid] for a month. ~ 票[有效]期一个月。
+E: That is a [valid] argument. ~ 那是[站得住]的论点。
+L: valid ticket / valid argument / valid for
+T: cool ✔️
+M: invalid ~ 无效的。同一个 val，in- 一加就作废。
+@@valuable
+C: [valu]-able || value 是「价值」。有价值——贵重的，值钱的东西——贵重物品。
+E: This is [valuable] advice. ~ 这是[宝贵]建议。
+E: Keep your [valuables] safe. ~ 收好[贵重物品]。
+L: valuable advice / valuable time / valuables in the safe
+T: warm 💎
+M: invaluable ~ 无价的。不是「没价值」，是「贵到没法定价」。
+@@vary
+C: [var]-y || variare 是「变化」（various 同源）。有差别、会变——不同、改变。
+E: Prices [vary] with season. ~ 价格随季节[变动]。
+E: Opinions [vary] widely. ~ 意见[分歧]很大。
+L: vary from to / vary with / vary in size
+T: cool 🔀
+M: various ~ 各种各样的。同根「变」，一变就多。
+@@vast
+C: [vast] || 拉丁 vastus 是「空旷、广大」。一眼望不到边——广阔的。
+E: The [vast] plain stretched east. ~ [辽阔]的平原向东延伸。
+E: A [vast] amount of data. ~ [大量]数据。
+L: vast majority / vast amount / a vast difference
+T: cool 🌌
+M: cast ~ 投掷。只差一个字母，vast 是大，cast 是扔。
+@@vehicle
+C: [vehic]-le || vehere 是「载、运」（vector 载体同源）。载人载货的东西——车辆，载思想的——媒介。
+E: The [vehicle] broke down. ~ [车]抛锚了。
+E: Language is a [vehicle] for thought. ~ 语言是思想的[载体]。
+L: motor vehicle / vehicle for / a stolen vehicle
+T: cool 🚗
+M: vector ~ 矢量、载体。同根「载」，一个是车，一个是方向。
+@@version
+C: [vers]-ion || vert 是「转」（reverse 同源）。转出来的一种说法——版本。
+E: This is the latest [version]. ~ 这是最新[版本]。
+E: Her [version] differs from his. ~ 她的[说法]和他不同。
+L: latest version / a version of / foreign version
+T: cool 🔢
+M: reverse ~ 逆转。都含 vers「转」，一个是转出来的样子，一个是转回去。
+@@victim
+C: [victim] || 拉丁 victima 是「祭品」。被推出去承受的那一个——受害者。
+E: The [victims] were taken to hospital. ~ [伤者]被送往医院。
+E: He fell [victim] to the scheme. ~ 他成了这个骗局的[牺牲品]。
+L: fall victim to / accident victim / victim of
+T: dark 🕯️
+M: victory ~ 胜利。同根「祭」，胜利背后是牺牲。
+@@violence
+C: [viol]-ence || vis 是「力」（violent 同源）。动手用力——暴力，风用力——猛烈。
+E: Police condemned the [violence]. ~ 警方谴责[暴力]。
+E: The [violence] of the storm surprised us. ~ 风暴的[猛烈]让人吃惊。
+L: domestic violence / violence against / outbreak of violence
+T: dark ✊
+M: violate ~ 违反。都从 vis「力」，一个是硬来，一个是破规矩。
+@@visible
+C: [vis]-ible || vis 是「看」（vision、visit 同源）。看得见——可见的，看得出来的——明显的。
+E: The star is [visible] tonight. ~ 今晚能[看见]那颗星。
+E: There was no [visible] damage. ~ 没有[明显]损伤。
+L: visible to / clearly visible / visible light
+T: bright 👁️
+M: vision ~ 视力、愿景。同根「看」，一个是能看见，一个是看得远。
+@@vital
+C: [vit]-al || vita 是「生命」（vitamin 维生素同源）。命根子上的——至关重要的。
+E: Sleep is [vital] to health. ~ 睡眠对健康[至关重要]。
+E: The [vitals] are stable. ~ [生命体征]平稳。
+L: vital to / vital role / vital signs
+T: sharp ❤️
+M: vitamin ~ 维生素。同根「生命」，维持命的东西。
+@@vivid
+C: [viv]-id || viv 是「活」（revive 同源）。活的一样——生动的，颜色活——鲜艳的。
+E: She gave a [vivid] description. ~ 她[生动]地描述了一番。
+E: The sky was [vivid] blue. ~ 天空[鲜艳]的蓝。
+L: vivid description / vivid memory / vivid colours
+T: bright 🎨
+M: revive ~ 复苏。都含 viv「活」，一个是活过来，一个是像活的。
+@@volatile
+C: [vol]-atile || vol 是「飞」（volcano 火山同源）。说飞就飞——易挥发的，说变就变——反复无常的。
+E: Petrol is [volatile]. ~ 汽油[易挥发]。
+E: The market is [volatile]. ~ 市场[波动剧烈]。
+L: volatile market / volatile compound / politically volatile
+T: sharp 🌪️
+M: volcano ~ 火山。同根「飞」，火气往外飞就是喷发。
+@@wander
+C: [wander] || 古英语 wandrian 是「漫游」。没有目的地走——漫步，心思乱走——走神。
+E: We [wandered] through the old town. ~ 我们在老城[闲逛]。
+E: My mind [wandered] during the talk. ~ 听讲时我[走神]了。
+L: wander around / wander off / wander from the point
+T: calm 🚶
+M: wonder ~ 想知道。只差一个字母，wander 是走，wonder 是想。
+@@weaken
+C: [weak]-en || weak 是「弱」，-en 是「使…」。使它弱——削弱。
+E: The illness [weakened] him. ~ 病[拖弱]了他。
+E: The argument [weakened] her case. ~ 这论点[削弱]了她的立场。
+L: weaken the case / weaken the economy / gradually weaken
+T: dark 📉
+M: strength ~ 力量。weaken 是它的反动作，看 -en 就知是动词。
+@@wealth
+C: [weal]-th || weal 是「福祉、康健」（well 同源）。过得好、东西多——财富，量多得吓人——大量。
+E: He accumulated great [wealth]. ~ 他积累了巨额[财富]。
+E: There is a [wealth] of detail. ~ 细节[极为丰富]。
+L: a wealth of / wealth gap / accumulate wealth
+T: warm 💰
+M: health ~ 健康。同一个 -th 后缀，一个是有钱，一个是有命。
+@@weigh
+C: [weigh] || 古英语 wegan 是「称、抬」。放秤上称——称重，心里过秤——权衡。
+E: The parcel [weighs] two kilos. ~ 包裹[重]两公斤。
+E: She [weighed] the options. ~ 她[权衡]了几个选择。
+L: weigh up / weigh the pros and cons / weigh on sb
+T: calm ⚖️
+M: weight ~ 重量。同根，-gh 结尾是动作，-ght 结尾是那个分量。
+@@whisper
+C: [whisper] || 拟声词，气声的「嘶」。压低嗓子说——耳语。
+E: She [whispered] in my ear. ~ 她在我耳边[低语]。
+E: There were [whispers] about the deal. ~ 有关这交易有[传言]。
+L: whisper to / in a whisper / whisper about
+T: calm 🤫
+M: whistle ~ 吹口哨。都是气声，whisper 是说话，whistle 是吹。
+@@widen
+C: [wide]-n || wide 是「宽」，-n 是动词尾。弄宽——加宽，范围弄宽——扩大。
+E: They plan to [widen] the road. ~ 他们打算[拓宽]道路。
+E: The gap [widened]. ~ 差距[扩大]了。
+L: widen the gap / widen access / widen one's knowledge
+T: bright ↔️
+M: broaden ~ 扩大。widen 偏「宽度」，broaden 偏「范围、眼界」。
+@@wipe
+C: [wipe] || 古英语 wipian 是「擦」。一抹就掉——擦拭，抹掉不留——消除。
+E: [Wipe] the table. ~ 把桌子[擦]一下。
+E: The data were [wiped]. ~ 数据被[抹掉]了。
+L: wipe out / wipe off / wipe the slate clean
+T: cool 🧽
+M: wipe out 是「彻底消灭」，不是「擦外面」，考场高频。
+@@withdraw
+C: with-[draw] || with 是「回」，draw 是「拉」。往回拉——撤回，把钱拉回来——取款。
+E: He [withdrew] from the race. ~ 他[退出]了比赛。
+E: She [withdrew] 500 yuan. ~ 她[取]了五百元。
+L: withdraw from / withdraw money / withdraw an offer
+T: cool ↩️
+M: draw ~ 拉、画。同根，with- 是往回，合起来就是收回。
+@@witness
+C: [wit]-ness || wit 是「知道、见」（wise 同源）。亲眼见到的——目击、证人。
+E: She [witnessed] the accident. ~ 她[目击]了事故。
+E: He was a [witness] in court. ~ 他是庭上的[证人]。
+L: witness to / eye witness / bear witness to
+T: cool 👁️
+M: wisdom ~ 智慧。同根「知道」，一个是知道得多，一个是看见了。
+@@worthwhile
+C: [worth]-while || worth 是「值」，while 是「一段时间」。值得花这段时间——值得做的。
+E: It is a [worthwhile] cause. ~ 这是件[值得做]的事。
+E: The trip was [worthwhile]. ~ 这趟没[白跑]。
+L: a worthwhile cause / it is worthwhile doing / well worthwhile
+T: warm 👍
+M: worth ~ 值得。worthwhile 常作定语，worth 后接 doing。
+@@wrap
+C: [wrap] || 中古英语 wrappen 是「裹」。卷起来包住——包裹，事情收尾也像「包上」——结束。
+E: She [wrapped] the gift. ~ 她把礼物[包]好。
+E: Let's [wrap] up the meeting. ~ 我们[结束]会议吧。
+L: wrap up / wrap in / gift wrap
+T: warm 🎁
+M: rap ~ 敲击。多一个 w，一个是包，一个是敲。
