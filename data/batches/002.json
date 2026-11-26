@@ -1,0 +1,102 @@
+{
+  "ambiguous": {
+    "t": "ambi-（两边）+ agere（驱动）。拉丁 ambigere 原指「被推向两边、争持不下」，两方各说各的、谁也压不倒谁。所以它的底色不是「模糊」，是「两种解释都站得住」。同源 agent（行动者）、act、exact。",
+    "r": [["ambi-", "两边"], ["agere", "驱动"]],
+    "m": "被两边同时拉——站不定，所以可两解。"
+  },
+  "ambition": {
+    "t": "ambi-（周围）+ ire（走）。拉丁 ambitio 指罗马竞选者四处奔走拉票——绕场一圈拜票。所以「野心」的本义是「跑关系」，带贬义，指为求官位而奔忙。同源 exit（走出去）、itinerary（行程）、transit。",
+    "r": [["ambi-", "周围"], ["ire", "走"]],
+    "m": "绕场拉票——跑出来的野心。"
+  },
+  "amuse": {
+    "t": "a-（加强）+ 古法语 muser（盯着看、出神），可能与 muse（沉思）同源。amuser 原义是「使人发呆、把人弄走神」。17 世纪从「使人出神」滑向「使人愉悦」，语义从发呆变成发笑。",
+    "r": [["a-", "加强"], ["muser", "出神"]],
+    "m": "先让人看呆，再让人笑——从发呆到逗乐。"
+  },
+  "analyze": {
+    "t": "ana-（彻底、向上）+ lysis（松开）。希腊 analysis 就是「解开」。把整体松开成零件，就是分析。同源 paralysis（旁边松开→瘫痪）、catalysis（催化）、dialysis（透析）。",
+    "r": [["ana-", "彻底"], ["lysis", "松开"]],
+    "m": "松开成零件——拆开来看。"
+  },
+  "ancestor": {
+    "t": "古法语 ancestre，源自拉丁 antecessor：ante（前）+ cedere（走）的施事者——「走在前面的那个人」。更古的形式 antecessor 在法律文本里仍偶尔出现，和 ancestor 是同源双形。",
+    "r": [["ante-", "前"], ["cedere", "走"]],
+    "m": "走在你前面的人——祖先。"
+  },
+  "ancient": {
+    "t": "古法语 ancien，源自拉丁 ante（前）——「以前的」。它和 antique 是一对：ancient 走法语这条线进来，antique 直接从拉丁 antiquus 借入，两者同源但分工不同，一个指久远的时代，一个指具体的古物。",
+    "r": [["ante", "前"]],
+    "m": "ante 就是「前」——很久以前。"
+  },
+  "angle": {
+    "t": "拉丁 angulus（角），triangle、rectangle 都是这条线。动词 angle（钓鱼）来路不同，出自古英语 angul（鱼钩），但鱼钩与「角」都源于同一个「弯」的意象，算远亲。所以「角度」和「立场」共用一个词，本质是「从哪个弯处看」。",
+    "r": [["angulus", "角"]],
+    "m": "换个弯处看——角度就是立场。"
+  },
+  "anniversary": {
+    "t": "annus（年）+ vertere（转）——「一年转回来一次」。vertere 这条「转」的根系极旺：convert（转过来）、reverse（转回去）、diverse（转向不同）、universe（转成一体）。",
+    "r": [["annus", "年"], ["vertere", "转"]],
+    "m": "一年转一圈回到原点——周年。"
+  },
+  "announce": {
+    "t": "ad- + nuntiare（报信），源自 nuntius（信使）。拉丁 annuntiare 是「派人去说」。同源 nuncio（教廷使节）、pronounce（向前说出→发音）。",
+    "r": [["ad-", "向"], ["nuntius", "信使"]],
+    "m": "派信使去说——宣告。"
+  },
+  "annoy": {
+    "t": "古法语 anuier，源头是拉丁短语 in odio——「处在憎恨之中」，odium 就是「恨」。所以它的原义远比今天重：使人厌恨。同源 odium（憎恶）、odious（可憎的）。",
+    "r": [["in", "在……中"], ["odium", "憎恨"]],
+    "m": "把人放进「恨」里——惹恼。"
+  },
+  "annual": {
+    "t": "拉丁 annus（年）。同源 annuity（年金）、annals（编年史）、anniversary（周年）。词根 ann- 极好认，凡是带 ann 的多半与「年」有关。",
+    "r": [["annus", "年"]],
+    "m": "ann 即年——annual 每年的。"
+  },
+  "anonymous": {
+    "t": "an-（无）+ onoma（名字），希腊语构词。onoma 这条「名」的根系在英语里留下 pseudonym（假名）、synonym（同义名）、homonym（同形异义）、acronym（首字母缩略）。",
+    "r": [["an-", "无"], ["onoma", "名字"]],
+    "m": "没有名字——匿名。"
+  },
+  "antique": {
+    "t": "拉丁 antiquus，是 ante（前）的形容词形式——「属于更早时候的」。17 世纪指古希腊罗马的文物，18 世纪起泛指旧物、古董。和 ancient 同源，见 ancient 条。",
+    "r": [["ante", "前"]],
+    "m": "古时留下的东西——古董。"
+  },
+  "anxiety": {
+    "t": "拉丁 anxius，源自 angere（勒紧、使窒息）。这个词族的核心意象都是「被掐住脖子」：anxiety 焦虑、anger 愤怒、anguish 剧痛、angina 心绞痛。同一个生理感受，分出了四种情绪词。",
+    "r": [["angere", "勒紧、窒息"]],
+    "m": "胸口被勒紧——焦虑。同族还 anger、anguish。"
+  },
+  "apparent": {
+    "t": "ad- + parere（出现、显露）。拉丁 apparere 是「显出来」。所以 apparent 有两层：看得见的（明显），和只是看起来的（貌似）。同源 appear、apparition（幻影）、transparent（透过去显现）。",
+    "r": [["ad-", "向"], ["parere", "显现"]],
+    "m": "显在眼前——既指明显，也指貌似。"
+  },
+  "appeal": {
+    "t": "ad- + pellere（推、驱动）。拉丁 appellare 是「向某人开口、求助于他」——把诉求推到对方跟前。pellere 这条「推」的根：pulse（脉搏）、expel（推出去）、impulse（内心推动）、repel（推回）。",
+    "r": [["ad-", "向"], ["pellere", "推"]],
+    "m": "把诉求推过去——呼吁、上诉、有吸引力。"
+  },
+  "appetite": {
+    "t": "ad- + petere（追求、扑向）。拉丁 appetitus 就是「趋向某物」。petere 这条「追」的根：compete（共同追求）、petition（请求）、perpetual（一路追到底→永久）。",
+    "r": [["ad-", "向"], ["petere", "追求"]],
+    "m": "朝东西扑过去——食欲。"
+  },
+  "applause": {
+    "t": "ad- + plaudere（拍手）。拉丁 applaudere 是「拍手赞同」。它的完成式 plaus- 还造出了 plausible——本义「值得鼓掌的」，引申为「听着可信的」；以及 explode——古罗马观众拍手把演员轰下台，后来才转为「爆」。",
+    "r": [["ad-", "向"], ["plaudere", "拍手"]],
+    "m": "拍手。plausible 原意就是「值得鼓掌的」。"
+  },
+  "apply": {
+    "t": "ad- + plicare（折叠、贴合）。拉丁 applicare 是「把一物贴到另一物上」。贴上去 → 涂抹（把药贴上）、应用（把方法贴上）、申请（把自己贴到职位上）。同源 ply、duplicate（折两层）、complicated（折在一起→复杂）。",
+    "r": [["ad-", "向"], ["plicare", "贴合"]],
+    "m": "贴上去——贴到用处是应用，贴到岗位是申请。"
+  },
+  "appointment": {
+    "t": "ad- + punctum（点），punctum 出自 pungere（刺）——刺出来的那个小孔就是一个「点」。拉丁 appunctare 是「指定一个点」。约时间就是给人钉一个时间点。同源 point、punctual（踩准点→守时）、puncture（刺穿）。",
+    "r": [["ad-", "向"], ["punctum", "点"]],
+    "m": "钉一个时间点——约定；被任命也是「被点到」。"
+  }
+}
