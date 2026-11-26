@@ -1,0 +1,55 @@
+{
+  "appId": "cn.vocablab.cidan",
+  "productName": "词迹",
+  "copyright": "词迹 VocabLab",
+  "directories": {
+    "output": "../../安装包",
+    "buildResources": "."
+  },
+  "files": [
+    "main.js",
+    "app/index.html",
+    "app/seed.js",
+    "icon.ico",
+    "package.json"
+  ],
+  "win": {
+    "target": [
+      { "target": "nsis", "arch": ["x64"] }
+    ],
+    "icon": "icon.ico",
+    "artifactName": "词迹-安装包-${version}.${ext}"
+  },
+  "linux": {
+    "target": [
+      { "target": "appimage", "arch": ["x64"] },
+      { "target": "deb", "arch": ["x64"] }
+    ],
+    "icon": "icon-512.png",
+    "category": "Education",
+    "synopsis": "认读型背词工具",
+    "artifactName": "词迹-${version}-${arch}.${ext}",
+    "desktop": {
+      "entry": {
+        "Name": "词迹",
+        "Comment": "认读型背词工具",
+        "Categories": "Education;"
+      }
+    }
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "词迹",
+    "installerIcon": "icon.ico",
+    "uninstallerIcon": "icon.ico",
+    "deleteAppDataOnUninstall": false,
+    "runAfterFinish": true,
+    "installerLanguages": ["zh_CN"],
+    "language": "2052"
+  },
+  "compression": "maximum"
+}
