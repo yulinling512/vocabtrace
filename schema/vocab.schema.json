@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vocab-lab.local/schema/vocab.schema.json",
+  "title": "标准词库包契约 v1",
+  "description": "所有来源的词库经流水线加工后，必须产出符合本契约的 JSON。界面只消费此契约，不感知原始格式。",
+  "type": "object",
+  "required": ["meta", "words"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["deckId", "title", "version", "stats"],
+      "additionalProperties": false,
+      "properties": {
+        "deckId": { "type": "string", "description": "词库唯一标识，如 cet6-core" },
+        "title": { "type": "string", "description": "展示名称" },
+        "version": { "type": "integer", "minimum": 1, "description": "加工版本，重新导入时递增" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "sourceFile": { "type": "string", "description": "原始文件名，仅作溯源，界面不展示" },
+        "sourceType": { "type": "string", "description": "适配器标识，如 xlsx / pdf / docx / txt / OCR" },
+        "stats": {
+          "type": "object",
+          "required": ["total", "withMeanings"],
+          "additionalProperties": true,
+          "properties": {
+            "total": { "type": "integer", "description": "最终词条数" },
+            "withMeanings": { "type": "integer", "description": "具备至少一个义项的词数" },
+            "withEtymology": { "type": "integer", "description": "已有词源内容的词数" },
+            "duplicatesRemoved": { "type": "integer" },
+            "parseFailures": { "type": "integer" },
+            "notes": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "words": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "word", "senses"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "description": "稳定词条ID，同一单词跨词库保持一致" },
+          "word": { "type": "string", "description": "词条原形，小写" },
+          "phonetic": { "type": "string", "description": "音标，可为空串" },
+          "senses": {
+            "type": "array",
+            "minItems": 1,
+            "description": "义项数组。必须拆分存储，禁止把多义塞进一条。判分准确性取决于此。",
+            "items": {
+              "type": "object",
+              "required": ["meaning"],
+              "additionalProperties": false,
+              "properties": {
+                "pos": { "type": "string", "description": "词性，如 n. / v. / adj." },
+                "meaning": { "type": "string", "description": "单个义项的中文释义" },
+                "tags": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          },
+          "etymology": {
+            "type": "object",
+            "description": "词源信息。source 与 confidence 必填，用于防止AI凭空编造。",
+            "required": ["text", "source", "confidence"],
+            "additionalProperties": false,
+            "properties": {
+              "text": { "type": "string", "description": "中文词源说明" },
+              "roots": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["part"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "part": { "type": "string" },
+                    "gloss": { "type": "string" }
+                  }
+                }
+              },
+              "source": {
+                "type": "string",
+                "enum": ["etymonline", "wiktionary", "deck", "unknown"],
+                "description": "事实来源。unknown 表示确实查不到，此时文案必须标注为推测。"
+              },
+              "confidence": {
+                "type": "string",
+                "enum": ["high", "medium", "low"],
+                "description": "来源可靠性等级，low 的词界面须显示不确定提示"
+              }
+            }
+          },
+          "mnemonic": { "type": "string", "description": "记忆法，允许AI创作，与词源严格分离" },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["en"],
+              "additionalProperties": false,
+              "properties": {
+                "en": { "type": "string" },
+                "zh": { "type": "string" }
+              }
+            }
+          },
+          "enrichedAt": { "type": "string", "description": "最后一次富化时间，用于缓存判定" }
+        }
+      }
+    }
+  }
+}
