@@ -1550,7 +1550,7 @@ see &#183; say &#183; write
       <div class="row" style="justify-content:flex-start;margin-top:10px">
         <button class="btn ghost sm" id="syncExport">导出一份存档</button>
       </div>
-      <div class="anote" style="margin-top:8px">导出的 JSON 就是整套数据（书架、进度、头像、AI Key、设置），换设备或换云端时可以直接导入，不怕服务端出问题。</div>
+      <div class="anote" style="margin-top:8px">导出的 JSON 就是整套数据（书架、进度、头像、AI Key、设置），电脑上存成文件，手机上没有下载框、会直接复制到剪贴板。云端哪天不伺候了，这份也能拿回来。</div>
     </div>
 
     <div class="box" style="margin-top:18px">
@@ -4225,21 +4225,54 @@ function exportSnapshot(){
     const snap = cloudSnapshot();
     snap.exportedAt = Date.now();
     snap.exportedBy = (ACCT && ACCT.name) || '';
-    const blob = new Blob([JSON.stringify(snap)], {type:'application/json'});
+    const json = JSON.stringify(snap);
     const d = new Date();
     const tag = d.getFullYear() + String(d.getMonth()+1).padStart(2,'0') + String(d.getDate()).padStart(2,'0')
               + '-' + String(d.getHours()).padStart(2,'0') + String(d.getMinutes()).padStart(2,'0');
+    const fname = '词迹存档-' + tag + '.json';
+
+    /* 手机端是 WebView 壳，没有下载对话框：改成把整份 JSON 复制到剪贴板 */
+    if(!DESK){
+      copyText(json).then(ok=>{
+        toast(ok ? ('存档已复制到剪贴板（' + Math.round(json.length/1024) + ' KB），先粘去备忘录存着')
+                 : '复制没成功，先别退出，点「立即同步」让云端存一份');
+      });
+      return;
+    }
+
+    const blob = new Blob([json], {type:'application/json'});
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = '词迹存档-' + tag + '.json';
+    a.download = fname;
     document.body.appendChild(a);
     a.click();
     a.remove();
     setTimeout(()=>{ try{ URL.revokeObjectURL(a.href); }catch(e){} }, 4000);
-    toast('已导出 ' + a.download);
+    toast('已导出 ' + fname);
   }catch(e){
     toast('导出没成功：' + (e && e.message || '浏览器不让写文件'));
   }
+}
+function copyText(txt){
+  return new Promise(res=>{
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(()=>res(true)).catch(()=>res(legacyCopy(txt)));
+    }else{
+      res(legacyCopy(txt));
+    }
+  });
+}
+function legacyCopy(txt){
+  try{
+    const ta = document.createElement('textarea');
+    ta.value = txt;
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    const ok = document.execCommand('copy');
+    ta.remove();
+    return ok;
+  }catch(e){ return false; }
 }
 
 /* 把内存里的整套数据拍成快照——和本地存档同一套字段，方便双向合并 */
