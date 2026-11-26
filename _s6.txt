@@ -1,0 +1,103 @@
+specific|n. 特效药、细节（pl.）
+spirit|n. 情绪、烈酒（pl.）
+splendid|adj. 壮丽的、辉煌的
+spot|n. 斑点、污点；v. 认出
+spread|n. 传播、范围；v. 铺开、涂抹
+stare|n. 凝视、盯视
+starve|v. 渴望（starve for）、饿死
+stick|n. 棍、枝条；v. 卡住
+stimulus|n. 激励、刺激物
+sting|n. 刺、螫针；v. 刺痛
+stress|v. 使紧张；n. 重音
+strict|adj. 精确的、严谨的
+strike|v. 撞、打动；n. 打击
+struggle|v. 努力、艰难地行进
+subordinate|n. 下属；v. 使服从
+suffer|v. 容忍、变差
+summarize|v. 概括、总结
+superior|n. 上级、长官
+suppose|v. 猜想、应该（be supposed to）
+surgery|n. 诊所、手术室
+surround|n. 环绕物；v. 包围
+survive|v. 比…活得长、挺过
+sustainable|adj. 可维持的、能承受的
+swallow|n. 燕子；v. 忍受、吞没
+sweep|n. 扫除、范围；v. 掠过
+switch|n. 开关、转变
+symbol|n. 符号、标志
+sympathy|n. 赞同、慰问
+symptom|n. 征兆、病症
+talent|n. 人才、有天赋的人
+tax|v. 使负重担、征税
+temporary|n. 临时工
+temptation|n. 诱惑物、引诱
+tend|v. 照料、易于
+theory|n. 学说、推测
+thoroughly|adv. 完全地、详尽地
+threaten|v. 预示（危险）、恐吓
+tight|adv. 紧紧地
+time-consuming|adj. 耗费时间的
+tiresome|adj. 令人厌烦的、累人的
+tolerate|v. 耐受、容许
+tough|adj. 强硬的、坚韧的；n. 恶棍
+tourism|n. 观光、旅游业
+track|n. 轨道、踪迹；v. 跟踪
+trade|v. 交易、交换；n. 行业
+tragedy|n. 惨事、悲剧作品
+trail|v. 拖、跟踪；n. 痕迹
+transfer|n. 转移、换乘；v. 调动
+transform|v. 改造、转化
+transition|n. 过渡期、转变
+translate|v. 转化、解释
+transmission|n. 传动装置、播送
+trap|v. 使陷入困境、诱捕
+treasure|v. 珍视；n. 珍宝
+treatment|n. 处理、疗法
+tremble|n. 颤抖、哆嗦
+trend|n. 潮流、倾向
+trial|n. 磨难、审讯
+trick|n. 技巧、戏法；v. 欺骗
+trigger|n. 扳机、诱因
+tropical|adj. 炎热的、热带的
+tuition|n. 教学、讲授
+typical|adj. 一贯的、典型的
+unbelievable|adj. 极好的（口语）
+uncertain|adj. 靠不住的、易变的
+unconscious|adj. 无意的、未察觉的
+underline|n. 下划线；v. 强调
+undoubtedly|adv. 毋庸置疑地
+unemployment|n. 失业人数、失业率
+unexpected|adj. 出乎意料的
+unforgettable|adj. 令人难忘的
+unique|adj. 独特的、唯一的
+universal|adj. 通用的、全体的
+unwilling|adj. 勉强的、不情愿的
+urban|adj. 都市的、城镇的
+urgent|adj. 急迫的、催促的
+vacant|adj. 空缺的、茫然的
+vain|adj. 自负的、虚荣的
+valid|adj. 有根据的、正当的
+valuable|n. 贵重物品（pl.）
+vary|v. 使多样化、变化
+vast|adj. 巨大的、大量的
+vehicle|n. 手段、媒介
+version|n. 说法、改写本
+victim|n. 牺牲品、罹难者
+violence|n. 猛烈、暴行
+visible|adj. 明显的、可见的
+vital|adj. 生命的、有活力的
+vivid|adj. 鲜艳的、逼真的
+volatile|adj. 易挥发的、反复无常的
+wander|v. 走神、偏离
+weaken|v. 使变弱、动摇
+wealth|n. 大量、丰富
+weigh|v. 权衡、使烦恼
+whisper|n. 低语声、传言
+widen|v. 扩大、加宽
+wipe|n. 擦拭、抹布
+withdraw|v. 退出、提款
+witness|v. 见证、作证
+worthwhile|adj. 值得花时间的
+wrap|n. 披肩、包裹材料；v. 缠绕
+reluctant|adj. 迟疑的、难以说服的
+time-consuming|adj. 长期的、冗长的
