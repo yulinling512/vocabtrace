@@ -1624,7 +1624,7 @@ see &#183; say &#183; write
       <h3>快捷键</h3>
       <div class="desc">点按钮，再按一个键就能改；按 Esc 取消。背诵页和默写页各管各的，同一个键在两个页面可以分别当不同的用。</div>
       <div class="setrow" style="margin-top:14px">
-        <div><div class="lb">背诵 · 看释义</div><div class="sb">背的时候按一下翻出中文意思、词源和例句，再按一下收回去</div></div>
+        <div><div class="lb">背诵 · 看释义 / 下一个</div><div class="sb">正面按一下翻出中文意思、词源和例句；释义页再按一下就是下一个词。一个键走完，不用记别的</div></div>
         <button class="keybtn" id="keyReveal"></button>
       </div>
       <div class="setrow">
@@ -1636,7 +1636,7 @@ see &#183; say &#183; write
         <button class="keybtn" id="keySkip"></button>
       </div>
       <div class="keylist" id="keyList"></div>
-      <div class="note" style="margin-top:10px">默写里逗号本来是普通字符（用来分隔多个意思）。如果你把逗号设成跳过键，它就不再当分隔符用了，改用顿号「、」或分号分隔。空格只在全屏时被接管，窗口化时照常打字；Shift+空格 永远能打出真正的空格。</div>
+      <div class="note" style="margin-top:10px">背诵只有两个动作：空格（或你设的键）一路翻释义、下一个；数字 1 是「再看一遍」，只把卡翻回正面重看，不记错、不跳词。默写里逗号本来是普通字符（用来分隔多个意思）。如果你把逗号设成跳过键，它就不再当分隔符用了，改用顿号「、」或分号分隔。默写的判分键任何窗口状态都生效，想打真正的空格用 Shift+空格。</div>
       <div class="row" style="justify-content:flex-start;margin-top:6px">
         <button class="btn ghost sm" id="keyReset">恢复默认</button>
         <span class="kbd" style="margin:0;align-self:center" id="keyHint"></span>
@@ -1713,7 +1713,7 @@ see &#183; say &#183; write
         </div>
       </div>
       <div class="cred" id="credRows">
-        <div class="credrow"><b>版本</b><span id="credVer">1.0.6 · Windows / Android / Linux</span></div>
+        <div class="credrow"><b>版本</b><span id="credVer">1.0.7 · Windows / Android / Linux</span></div>
         <div class="credrow"><b>词库</b><span>《高频词默写》601 词，按真题出现频次排序，每 36 词一页</span></div>
         <div class="credrow"><b>词源</b><span>参考 etymonline；记忆钩子与例句由作者逐词整理</span></div>
         <div class="credrow"><b>判分</b><span>本地字面规则打底，拿不准的交 AI 复核，你可随时翻案</span></div>
@@ -2837,7 +2837,8 @@ function renderHome(){
   const writePct = Math.min(100, Math.round(writeDone / Math.max(1,goal) * 100));
   const s = state.session;
   const seenInSet = (s && s.ids && s.ids.length) ? (s.done ? s.ids.length : s.index) : 0;
-  const sesReady = seenInSet > 0;
+  const carriedN = carryOver().length;
+  const sesReady = seenInSet > 0 || carriedN > 0;
 
   const readSub = !has ? '先导入一本书' :
     (s && !s.done && s.index > 0
@@ -2849,7 +2850,8 @@ function renderHome(){
           return left ? '这一组 ' + Math.min(batchSize(), left) + ' 个词' : '全书过完，进入复习';
         })());
   const writeSub = !has ? '先导入一本书' :
-    (sesReady ? '测刚背过的 ' + seenInSet + ' 个词' : '先背一组才会有词');
+    (seenInSet ? '测刚背过的 ' + seenInSet + ' 个词'
+               : (carriedN ? '补上背过没默的 ' + carriedN + ' 个' : '先背一组才会有词'));
   const wrongSub = !has ? '先导入一本书' : (wrongN ? wrongN + ' 个待复习' : (wrongAll ? wrongDone + ' 个已过 · 可再复习' : '还没有错词'));
   const doneN = state.books.filter(x=>x.doneAt).length;
   const streak = streakDays();
@@ -3140,7 +3142,7 @@ function renderRead(){
       ${state.revealed?'':'<div class="hint">先自己想一想它的意思，再按「'+keyLabel(K.reveal)+'」看释义</div>'}
     </div>
     <div class="row" id="rActions"></div>
-    <div class="kbd">${keyLabel(K.reveal)} 看释义 · 1 认识 · 2 不认识</div>
+    <div class="kbd">${readKbdText()}</div>
   `;
   if(state.revealed) fillBack(w);
   renderReadActions();
@@ -3240,21 +3242,41 @@ function fillBack(w, box){
   if(ety && etyH) etyH.onclick = ()=>{ etyH.classList.toggle('closed', !ety.classList.toggle('open')); };
 }
 
+function readKbdText(){
+  const K = keyCfg();
+  return state.revealed
+    ? keyLabel(K.reveal) + ' 下一个 · 1 再看一遍'
+    : keyLabel(K.reveal) + ' 看释义 · 1 再看一遍';
+}
 function renderReadActions(){
   const a = $('rActions'); if(!a) return;
   if(!state.revealed){
-    a.innerHTML = '<button class="btn primary" id="rShow">看释义</button>';
+    a.innerHTML = '<button class="btn primary" id="rShow">看释义（'+keyLabel(keyCfg().reveal)+'）</button>';
     $('rShow').onclick = revealRead;
   }else{
-    a.innerHTML = '<button class="btn ghost" id="rNo">没想起来</button><button class="btn primary" id="rYes">记住了</button>';
-    $('rNo').onclick = ()=>gradeRead(false);
-    $('rYes').onclick = ()=>gradeRead(true);
+    a.innerHTML = '<button class="btn ghost" id="rAgain">再看一遍（1）</button><button class="btn primary" id="rNext">下一个（'+keyLabel(keyCfg().reveal)+'）</button>';
+    $('rAgain').onclick = readAgain;
+    $('rNext').onclick = ()=>gradeRead(true);
   }
+}
+
+/* 看完释义按 1：把卡翻回正面，重看这一张，不往下走，也不往错词本里记。
+   再按一次空格又能看释义；看够了按空格就是下一个。 */
+function readAgain(){
+  const s = state.session;
+  if(!s || !s.ids || !s.ids.length) return;
+  if(!byId(s.ids[s.index])) return;
+  if(!state.revealed){ toast('先看释义，再按 1 重看这一张'); return; }
+  state.revealed = false;
+  renderRead();
 }
 
 function revealRead(){
   if(state.revealed) return;
+  if(!state.session || state.session.done) return;
   state.revealed = true;
+  const kb = document.querySelector('#view-read .kbd');
+  if(kb) kb.textContent = readKbdText();     /* 翻面之后提示改成「下一个」 */
   const w = byId(state.session.ids[state.session.index]);
   const hint = document.querySelector('#view-read .hint');
   if(hint) hint.remove();
@@ -3313,13 +3335,15 @@ function writeThisSet(){
 }
 function renderReadDone(){
   const s = state.session;
-  const right = s.right || 0;
+  const right = (typeof s.right === 'number') ? s.right : null;
+  const say = right == null ? '这一组已经背过，还没默写。'
+    : (right===s.ids.length?'一个都没漏，漂亮。':'没把握的，等一下默写里还会考。');
   $('view-read').innerHTML = `
     <div class="pagehd">${backTag()}<h1>背诵</h1><span>已完成</span></div>
     <div class="card done">
       <div class="big">${s.review === 'wrong' ? '错词背诵复习完了' : (s.review ? '这一组复习完了' : '这一组背完了')}</div>
-      <div class="big2">${right} / ${s.ids.length}</div>
-      <div class="sub">${right===s.ids.length?'一个都没漏，漂亮。':'没记住的已经进错词本。'}</div>
+      <div class="big2">${right == null ? s.ids.length + ' 个' : right + ' / ' + s.ids.length}</div>
+      <div class="sub">${say}</div>
       <div class="sub" style="margin-top:2px;color:var(--warn)">${s.review === 'wrong'
         ? '只标了背诵这一侧；默写侧还要单独复习。两侧都过了，才算彻底划掉。'
         : '背诵和默写分开记。没默写的话，这一组会留到下次接着默。'}</div>
@@ -3338,8 +3362,10 @@ function renderReadDone(){
 /* ============ 默写 ============ */
 function startWrite(){
   const s = state.session;
-  if(!s || !s.ids || !s.ids.length) return false;
-  const seen = s.done ? s.ids.slice() : s.ids.slice(0, s.index);
+  let seen = (s && s.ids && s.ids.length) ? (s.done ? s.ids.slice() : s.ids.slice(0, s.index)) : [];
+  /* 会话是空的（比如背完随手退出、旧版本又把下一组建好了），
+     就把「背过但没默」的词收回来——这才是「背完就默」的本意 */
+  if(!seen.length) seen = carryOver().slice(0, batchSize()).map(w=>w.id);
   if(!seen.length) return false;
   state.wq = shuffle(seen);
   state.wi = 0;
@@ -3348,10 +3374,31 @@ function startWrite(){
   return true;
 }
 
+/* 背完回首页时，旧版本会在切回背诵时提前建下一组，把「这组还没默」抹掉。
+   开机补一次：只要今天背过、词库里确实有「背过没默」的，就补一个已读完的会话。 */
+function repairSessionAfterRead(){
+  const s = state.session;
+  if(s && s.ids && s.ids.length && (s.done || s.index > 0)) return;
+  const day = todayStat();
+  if(!(day.read > 0)) return;
+  const carried = carryOver().slice(0, batchSize());
+  if(!carried.length) return;
+  const ids = carried.map(w=>w.id);
+  state.session = {
+    ids, index: ids.length, done: true, right: null, recovered: true,
+    createdAt: Date.now(), size: ids.length, carry: ids.length,
+    page: (carried[0] && carried[0].pg) || pageOfWord(carried[0]) || 1,
+    pageCount: pageGroups().length
+  };
+  state.wq = []; state.wi = 0;
+  saveSes();
+}
+
 function renderWrite(){
   state._wPending = false;              /* 换词就清掉判分锁，免得卡住 */
   const s = state.session;
-  const noSeen = !s || !s.ids || !s.ids.length || (!s.done && s.index === 0 && s.review !== 'wrong');
+  const seen = (s && s.ids && s.ids.length) ? (s.done ? s.ids.length : s.index) : 0;
+  const noSeen = seen === 0 && carryOver().length === 0;
   if(!state.words.length || noSeen){
     showEmpty('write','默写','还没有可默写的词','默写只测你刚背过的那一组，先去背一组。','read','去背诵');
     return;
@@ -3362,27 +3409,23 @@ function renderWrite(){
   const w = byId(state.wq[state.wi]);
   if(!w){ state.wi++; renderWrite(); return; }
 
-  const fsm = winFull();               /* 全屏才接管空格；其他快捷键任何窗口状态都生效 */
   const K = keyCfg();
   const sepHint = (K.skip === 'Comma') ? '用顿号「、」或分号隔开' : '用逗号或顿号隔开';
-  const spaceHint = (K.judge === 'Space')
-    ? (fsm ? '（想打空格就按 Shift+空格）' : '（窗口化时空格照常输入）')
-    : '';
+  const spaceHint = (K.judge === 'Space') ? '；想打空格按 Shift+空格' : '';
+  const pageNow = (s && s.ids && s.ids.length) ? ((s.page)||1) : ((w.pg)||pageOfWord(w)||1);
   $('view-write').innerHTML = `
-    <div class="pagehd">${backTag()}<h1>默写</h1><span>第 ${(state.session&&state.session.page)||1} 页 · ${state.wi+1}/${state.wq.length} 个</span></div>
+    <div class="pagehd">${backTag()}<h1>默写</h1><span>第 ${pageNow} 页 · ${state.wi+1}/${state.wq.length} 个</span></div>
     <div class="prompt">${w.word}</div>
     <div class="ptext">${w.phonetic||''}</div>
     <textarea id="wInput" placeholder="写下它的中文意思。多个意思${sepHint}${spaceHint}。"></textarea>
     <div class="row" style="justify-content:flex-start;margin-top:14px">
       <button class="btn primary" id="wSubmit">判分（${keyLabel(K.judge)}）</button>
       <button class="btn ghost" id="wSkip">不会，跳过（${keyLabel(K.skip)}）</button>
-      ${fsm
-        ? '<span class="kbd" style="margin:0;align-self:center">全屏中：空格也能连续作答</span>'
-        : '<span class="kbd" style="margin:0;align-self:center">'+keyLabel(K.skip)+' 现在就生效；空格窗口化时留给打字，全屏后可用「'+keyLabel(K.judge)+'」</span>'}
+      <span class="kbd" style="margin:0;align-self:center">${keyLabel(K.judge)} 判分 · ${keyLabel(K.skip)} 跳过${K.judge === 'Space' ? ' · Shift+空格 打空格' : ''}</span>
     </div>
     <div class="result" id="wResult"></div>
     <div class="row" id="wNextRow" style="display:none;justify-content:flex-start">
-      <button class="btn primary" id="wNext">下一个${fsm?'（'+keyLabel(K.judge)+'）':''}</button>
+      <button class="btn primary" id="wNext">下一个（${keyLabel(K.judge)}）</button>
     </div>
   `;
   const inp = $('wInput');
@@ -3392,12 +3435,10 @@ function renderWrite(){
     if(e.isComposing || e.keyCode === 229) return;
     const plain = !e.ctrlKey && !e.altKey && !e.metaKey;
     const K = keyCfg();
-    const fsm = winFull();
-    /* 空格留给人打字的规矩只对空格本身有效：窗口化时它不抢。
-       其他键（逗号、斜杠、句号……）一旦被设成快捷键，什么时候都生效，
-       而且这里先 preventDefault，字符不会再掉进输入框——
-       以前「设了逗号还是打出一个逗号」就是这个缺口。 */
-    const armed = code => plain && e.code === code && !(code === 'Space' && (!fsm || e.shiftKey));
+    /* 快捷键在窗口化时也直接接管：以前空格被锁在「真全屏」里，
+       窗口化按空格只是往输入框塞一个空格。现在空格就是判分，
+       真想打空格用 Shift+空格。 */
+    const armed = code => plain && e.code === code && !(code === 'Space' && e.shiftKey);
     if(armed(K.judge)){ e.preventDefault(); e.__judged = true; submitWrite(); return; }
     if(armed(K.skip)){ e.preventDefault(); e.__judged = true; skipWrite(); return; }
     /* Enter 保留作备用；若已被设成判分或跳过，就不重复触发 */
@@ -3410,9 +3451,8 @@ function renderWrite(){
   $('wNext').onclick = nextWrite;
 }
 
-/* 默写页的键盘流：判完分后，空格/回车一律算「下一个」，
+/* 默写页的键盘流：判完分后，判分键/回车一律算「下一个」，
    不依赖按钮是否拿到焦点，手不用离开键盘 */
-/* 只有真全屏（盖住任务栏）时才接管空格，平时窗口化空格还是正常打字 */
 function winFull(){
   const b = $('wctl');
   return !!(b && b.classList.contains('fs'));
@@ -3425,8 +3465,6 @@ function writeKeyFlow(e){
   if(state._wPending) return false;              /* 判分还没回来，先别过 */
   const K = keyCfg();
   if(e.code !== 'Enter' && e.code !== K.judge) return false;
-  /* 空格仍要全屏才接管；逗号这类自定义键窗口化也能用 */
-  if(e.code === 'Space' && !winFull()) return false;
   e.preventDefault();
   nextWrite();
   return true;
@@ -3611,10 +3649,12 @@ function renderWriteDone(){
   const rate = Math.round(st.ok / base * 100);
   const sc = Array.isArray(st.scores) ? st.scores : [];
   const avg = sc.length ? Math.round(sc.reduce((a,b)=>a+b,0)/sc.length) : 0;
+  const s = state.session;
+  if(s && !s.review){ s.writeDoneAt = Date.now(); saveSes(); }   /* 这一组真的默完了，下次背诵才开新组 */
   $('view-write').innerHTML = `
     <div class="pagehd">${backTag()}<h1>默写</h1><span>已完成</span></div>
     <div class="card done">
-      <div class="big">${(state.session && state.session.review === 'wrong') ? '错词默写复习完了' : '这一组默完了'}</div>
+      <div class="big">${(s && s.review === 'wrong') ? '错词默写复习完了' : '这一组默完了'}</div>
       <div class="big2"><span id="wRate">0</span>%</div>
       <div class="sub">对 ${st.ok} · 沾边 ${st.near} · 没对上 ${st.bad}${hold?' · 待定 '+hold:''}</div>
       ${sc.length?`<div class="avgline">平均接近率 <b>${avg}%</b></div>`:''}
@@ -3793,14 +3833,13 @@ function paintKeyCfg(){
   if(jb){ jb.textContent = cap(K.judge,'judge');  jb.classList.toggle('listening', keyCapture==='judge'); }
   if(sb){ sb.textContent = cap(K.skip,'skip');    sb.classList.toggle('listening', keyCapture==='skip'); }
   const hint = $('keyHint');
-  if(hint) hint.textContent = '当前：看释义 ' + keyLabel(K.reveal) + ' · 判分 ' + keyLabel(K.judge) + ' · 跳过 ' + keyLabel(K.skip);
+  if(hint) hint.textContent = '当前：背诵 ' + keyLabel(K.reveal) + ' · 默写判分 ' + keyLabel(K.judge) + ' · 跳过 ' + keyLabel(K.skip);
   /* 一张总表：能改的在上面，不能改的列在这里，省得以后又忘 */
   const list = $('keyList');
   if(list){
     const rows = [
-      ['背诵 · 看释义（按一下翻面，再按收回）', keyLabel(K.reveal)],
-      ['背诵 · 认识', '1'],
-      ['背诵 · 不认识', '2'],
+      ['背诵 · 看释义 / 下一个（同一个键）', keyLabel(K.reveal)],
+      ['背诵 · 再看一遍（翻回正面重看）', '1'],
       ['默写 · 判分 / 下一个', keyLabel(K.judge)],
       ['默写 · 不会跳过', keyLabel(K.skip)],
       ['默写 · 判分备用键', '回车'],
@@ -4167,7 +4206,9 @@ function switchView(v, isBack){
   if(v==='shelf') renderShelf();
   if(v==='read'){
     state.revealed = false;
-    if(state.session && state.session.done) createSession();
+    /* 只有「这一组背完也默完了」才自动开下一组。
+       背完但还没默时，进来应该停在完成页——默写还没做，不能把这一组弄丢。 */
+    if(state.session && state.session.done && state.session.writeDoneAt) createSession();
     renderRead();
   }
   if(v==='write'){ if(!state.wq.length) startWrite(); renderWrite(); }
@@ -4700,6 +4741,7 @@ async function enterApp(){
   state.nav = [];                  /* 换账号、重进都从首页重新走 */
   state._mainSession = null; state._revMode = '';
   HYDRATED = true;                 /* 数据到位，此后才允许写盘 */
+  repairSessionAfterRead();        /* 修「背完退出去、默写就进不去」的旧账 */
   /* 合并后的快照（含刚回退的错词标记）要推回云端，别让旧标记一直留在云上 */
   if(ACCT && ACCT.cloud && cloudReady()) queueSync();
   applyLook();
@@ -5859,17 +5901,23 @@ async function init(){
   document.addEventListener('keydown', e=>{
     if(state.view === 'read'){
       if(e.isComposing || e.keyCode === 229) return;
+      /* 完成页、空页不吃这些键 */
+      if(!state.session || state.session.done) return;
       const K = keyCfg();
       const plain = !e.ctrlKey && !e.altKey && !e.metaKey;
-      /* 看释义键：按一下翻面，再按一下收回去。默认是空格 */
+      /* 一个键走完：正面按一下看释义，释义页再按一下就是下一个 */
       if(plain && e.code === K.reveal){
         e.preventDefault();
         if(!state.revealed) revealRead();
-        else { state.revealed = false; renderRead(); }
+        else gradeRead(true);
         return;
       }
-      if(state.revealed && e.key === '1') gradeRead(true);
-      if(state.revealed && e.key === '2') gradeRead(false);
+      /* 1 = 再看一遍：翻回正面重看，不算过 */
+      if(plain && (e.key === '1' || e.code === 'Digit1' || e.code === 'Numpad1')){
+        e.preventDefault();
+        readAgain();
+        return;
+      }
     }
     if(state.view === 'write'){
       if(e.__judged) return;                    /* 这次回车是判分，别再当成「下一个」 */
