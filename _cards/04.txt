@@ -1,0 +1,420 @@
+@@fetch
+C: [fetch] || 古英语 feccan 是「去拿来」。跑一趟带回来——取来，东西卖得多少钱也是「取回」。
+E: Could you [fetch] me a chair? ~ 能给我[拿]把椅子吗？
+E: The painting [fetched] a high price. ~ 这幅画[卖得]高价。
+L: fetch sb sth / fetch a price / fetch water
+T: warm 🐕
+M: bring ~ 带来。fetch 强调「去一趟再回来」，bring 只是「带」。
+@@fierce
+C: [fierce] || 古法语 fers 是「凶猛、骄傲」。下嘴不留情——凶猛的、激烈的。
+E: A [fierce] dog guarded the gate. ~ 一只[凶]狗守着门。
+E: There was [fierce] competition. ~ 竞争十分[激烈]。
+L: fierce competition / fierce dog / fierce debate
+T: sharp 🐺
+M: force ~ 力量。拼写相近，fierce 是「猛」，force 是「力」。
+@@figure
+C: [fig]-ure || fingere 是「捏、塑形」（fiction 虚构同源）。捏出来的形状——身形、图形、数字，也是「人物」。
+E: The [figure] is not accurate. ~ 这个[数字]不准。
+E: She cut a fine [figure] at the party. ~ 她在聚会上很[出风头]。
+L: figure out / a key figure / figure in
+T: cool 🔢
+M: fiction ~ 虚构。同根「捏造」，一个是捏出形象，一个是捏出故事。
+@@flexible
+C: [flex]-ible || flect 是「弯」（reflect 反射同源）。能弯过来——灵活的、柔韧的。
+E: My schedule is [flexible]. ~ 我的时间[灵活]。
+E: The pipe is [flexible]. ~ 这管子很[柔韧]。
+L: flexible working hours / flexible approach / highly flexible
+T: cool 🎋
+M: reflect ~ 反射。都含 flect「弯」，光弯回来就是反射。
+@@fond
+C: [fond] || 古英语 fonned 原是「蠢的、痴的」。痴痴地喜欢——喜爱的。
+E: She is [fond] of music. ~ 她[喜欢]音乐。
+E: He gave her a [fond] look. ~ 他[深情]地看她一眼。
+L: be fond of / fond memories / grow fond of
+T: warm 💞
+M: found ~ 建立。只差一个字母，一个是「喜爱」，一个是「创立」。
+@@forbid
+C: for-[bid] || for- 是否定，bid 是「命令」。下令不许——禁止。
+E: Smoking is [forbidden] here. ~ 此处[禁止]吸烟。
+E: God [forbid] that it happen. ~ 但愿这事别发生。
+L: forbid sb to do / strictly forbidden / God forbid
+T: sharp 🚫
+M: bid ~ 命令。同根，for- 一否定就成了禁令。
+@@format
+C: [form]-at || forma 是「形状、模子」。按模子做出来的样子——版式、格式。
+E: The file is in PDF [format]. ~ 文件是 PDF [格式]。
+E: [Format] the disk first. ~ 先把磁盘[格式化]。
+L: file format / format a disk / in this format
+T: cool 🗂️
+M: form ~ 形式。同根，-at 是那种「定下来的样式」。
+@@fortunate
+C: [fortun]-ate || fortuna 是「运气」（fortune 财富同源）。运气站在你这边——幸运的。
+E: You are [fortunate] to have her. ~ 你有她真是[幸运]。
+E: It was a [fortunate] mistake. ~ 这是个[侥幸]的错误。
+L: be fortunate to / fortunate enough / the less fortunate
+T: bright 🍀
+M: fortune ~ 财富、运气。同根，-ate 是形容词尾。
+@@foster
+C: [foster] || 古英语 fostrian 是「喂养」，和 food 同源。喂大别人的孩子——收养，把想法喂大——培养。
+E: They [fostered] two children. ~ 他们[收养]了两个孩子。
+E: The school [fosters] creativity. ~ 学校[培养]创造力。
+L: foster care / foster parents / foster creativity
+T: warm 🏡
+M: food ~ 食物。同一串「喂」，foster 是把人喂大。
+@@foundation
+C: [found]-ation || fundus 是「底」（fund 资金同源）。压在底下的东西——地基、基础，出钱的机构——基金会。
+E: The [foundation] is solid. ~ [地基]很牢。
+E: She works for a [foundation]. ~ 她在[基金会]工作。
+L: lay the foundation / foundation course / charitable foundation
+T: calm 🏛️
+M: fund ~ 资金。同根「底」，垫底的银子就是基金。
+@@freezing
+C: [freez]-ing || freeze 是「冻」。冻得能结冰——冰冻的、极冷的。
+E: It is [freezing] outside. ~ 外面[冷得要命]。
+E: The water is [freezing]. ~ 水[冰凉]。
+L: freezing point / freezing cold / below freezing
+T: cool 🧊
+M: freeze ~ 结冰（动词）。-ing 结尾既可形容「冻人的」，也可指「冰点」。
+@@frequently
+C: [frequent]-ly || frequens 是「拥挤、反复」。一遍又一遍地来——频繁地。
+E: He [frequently] works late. ~ 他[经常]加班。
+E: The bus runs [frequently]. ~ 公交[班次很密]。
+L: frequently asked questions / occur frequently / frequently used
+T: cool 🔁
+M: frequency ~ 频率。同根，-ly 是副词，-cy 是那个「次数的多少」。
+@@frighten
+C: [fright]-en || fright 是「惊吓」。把怕塞给人——使惊吓，把东西吓跑——吓走。
+E: The noise [frightened] the birds. ~ 声音[吓跑]了鸟。
+E: Don't [frighten] the child. ~ 别[吓]孩子。
+L: be frightened of / frighten away / frighten sb into
+T: dark 👻
+M: fright ~ 惊恐（名词）。同根，-en 变动词，使别人怕。
+@@fulfill
+C: ful-[fill] || full + fill，把容器填满。承诺填满——履行，目标填满——完成。
+E: He [fulfilled] his promise. ~ 他[履行]了诺言。
+E: She [fulfilled] her dream. ~ 她[实现]了梦想。
+L: fulfill a promise / fulfill a dream / fulfill requirements
+T: bright ✅
+M: fill ~ 填满。同根，ful 就是 full 的变形，填到满为止。
+@@function
+C: [funct]-ion || fungi 是「履行、执行」。该它干的活——功能、函数，正常干活——运转。
+E: The [function] of the heart is to pump. ~ 心脏的[功能]是泵血。
+E: The machine [functions] well. ~ 机器[运转]正常。
+L: function as / bodily functions / function properly
+T: cool ⚙️
+M: malfunction ~ 故障。mal 是「坏」，加在 function 前就是不好好干活。
+@@fundamental
+C: [fund]-amental || fundus 是「底」。在底下的、抽掉就塌——基本的。
+E: Reading is a [fundamental] skill. ~ 阅读是[基本]技能。
+E: The [fundamentals] matter most. ~ [基础]最重要。
+L: fundamental principle / fundamental change / be fundamental to
+T: calm 🧱
+M: foundation ~ 基础。同根「底」，一个抽象，一个具体。
+@@gap
+C: [gap] || 古诺斯语 gap 是「裂口」。中间空出的一道——缺口、差距。
+E: There is a [gap] in the fence. ~ 篱笆上有[缺口]。
+E: The wage [gap] is widening. ~ 工资[差距]在扩大。
+L: bridge the gap / generation gap / a gap in
+T: cool 🕳️
+M: gape ~ 张口呆看。同根「张开」，一个张着口，一个空着口子。
+@@giant
+C: [giant] || 希腊 gigas 是「巨人族」。大得不像人——巨人，公司大到那个份上——巨头。
+E: He is a [giant] in physics. ~ 他是物理学[巨擘]。
+E: A [giant] panda was born. ~ 一只[大]熊猫出生了。
+L: giant panda / industry giant / a giant step
+T: warm 🗿
+M: gigantic ~ 巨大的。同根，-ic 是形容词，比 giant 更夸张。
+@@glance
+C: [glance] || 中古法语 glacier 是「滑」。目光滑过去——扫一眼。
+E: She [glanced] at her watch. ~ 她[瞟]了一眼表。
+E: At a [glance], it looks fine. ~ [乍一看]没问题。
+L: glance at / at a glance / a quick glance
+T: cool 👀
+M: glimpse ~ 瞥见。glance 是「看一眼」的动作，glimpse 是「看到了」的结果。
+@@gradually
+C: [grad]-ually || grad 是「步」（grade、graduate 同源）。一步一步地——逐渐。
+E: The pain [gradually] faded. ~ 疼痛[渐渐]消退。
+E: She [gradually] got used to it. ~ 她[逐步]习惯了。
+L: gradually increase / gradually become / only gradually
+T: calm 📈
+M: gradual ~ 逐渐的。同根，-ly 是副词尾。
+@@grant
+C: [grant] || 古法语 graanter 是「答应、准许」。点头给出去——授予，给的钱——拨款。
+E: They [granted] him a visa. ~ 他们[批]了他的签证。
+E: He received a research [grant]. ~ 他拿到研究[经费]。
+L: take for granted / grant a request / research grant
+T: calm 🎫
+M: guarantee ~ 保证。同一族「答应」，grant 是给，guarantee 是担保。
+@@grasp
+C: [grasp] || 古英语 græppan 是「用手抓」。手握住了，脑子也握住了——领会。
+E: He [grasped] my hand. ~ 他[抓住]我的手。
+E: I [grasp] the idea now. ~ 我现在[明白]这意思了。
+L: grasp the meaning / within one's grasp / grasp at
+T: sharp ✊
+M: grip ~ 紧握。grasp 偏「抓住并理解」，grip 偏「死死握住」。
+@@grateful
+C: [grate]-ful || grat 是「感激、悦人」（grace、gratitude 同源）。心里满着谢意——感激的。
+E: I am [grateful] for your help. ~ 我[感激]你的帮助。
+E: She gave a [grateful] smile. ~ 她[感激]地笑了笑。
+L: be grateful to / grateful for / deeply grateful
+T: warm 🙏
+M: gratitude ~ 感激（名词）。同根，-ful 是形容词，-tude 是名词。
+@@gravity
+C: [grav]-ity || grav 是「重」（grave 严重的同源）。东西往下坠的那股劲——重力，事情的「重」——严重性。
+E: [Gravity] pulls things down. ~ [重力]把东西往下拉。
+E: He did not grasp the [gravity] of it. ~ 他没意识到事情的[严重性]。
+L: the law of gravity / the gravity of / zero gravity
+T: cool 🍎
+M: grave ~ 严重的、坟墓。同根「重」，压得重就是严重。
+@@greedy
+C: [greed]-y || 古英语 grædig 是「贪食」。吃了还要——贪婪的。
+E: He is [greedy] for power. ~ 他[贪]权。
+E: Don't be so [greedy]. ~ 别这么[贪心]。
+L: greedy for / greedy miser / greedy algorithm
+T: dark 🐷
+M: need ~ 需要。greed 多一个 r，一个是缺，一个是贪。
+@@guarantee
+C: [guarant]-ee || 与 warrant（令状）同源，古法语 garant 是「担保人」。有人替你担着——保证。
+E: We [guarantee] the quality. ~ 我们[保证]质量。
+E: The watch is still under [guarantee]. ~ 表还在[保修]期。
+L: guarantee quality / under guarantee / guarantee that
+T: cool 🛡️
+M: warrant ~ 令状、正当理由。同根，一个是担保，一个是凭据。
+@@guard
+C: [guard] || 古法语 garder 是「看守」。站在门口盯着——守卫，挡在前面的东西——防护装置。
+E: Two soldiers [guarded] the gate. ~ 两名士兵[守]着大门。
+E: Wear goggles as a [guard]. ~ 戴护目镜作[防护]。
+L: guard against / on guard / security guard
+T: sharp 🛡️
+M: regard ~ 看待。同一串 gard「看」，guard 是看住，regard 是看过去。
+@@guidance
+C: [guid]-ance || guide 是「引路」。在前面带——指导、引导。
+E: Under his [guidance], she improved fast. ~ 在他的[指导]下她进步很快。
+E: The plane needs radio [guidance]. ~ 飞机需要无线电[导航]。
+L: under the guidance of / career guidance / guidance system
+T: calm 🧭
+M: guide ~ 向导。同根，-ance 是名词尾，指那个「领着走」的过程。
+@@guilty
+C: [guilt]-y || 古英语 gylt 是「罪」。心里压着一条罪——内疚的、有罪的。
+E: He felt [guilty] about leaving. ~ 他为离开感到[内疚]。
+E: The jury found him [guilty]. ~ 陪审团裁定他[有罪]。
+L: be guilty of / feel guilty about / guilty conscience
+T: dark ⚖️
+M: guilt ~ 罪责（名词）。同根，-y 变形容词。
+@@habitat
+C: [habit]-at || habitare 是「居住」（habit 习惯同源）。它住的地方——栖息地。
+E: The panda's [habitat] is shrinking. ~ 熊猫[栖息地]在缩小。
+E: This plant's [habitat] is the marsh. ~ 这植物的[产地]是沼泽。
+L: natural habitat / habitat loss / in its habitat
+T: bright 🌿
+M: habit ~ 习惯。同根「住」，长期住下来的行为就是习惯。
+@@handle
+C: [hand]-le || hand 是「手」，-le 是小称。手里握着的那截——把手，用手能办——处理。
+E: She [handled] the situation well. ~ 她[处理]得很好。
+E: The [handle] is broken. ~ [把手]断了。
+L: handle a problem / door handle / handle with care
+T: warm 🚪
+M: hand ~ 手。同根，加 -le 就是「手上那点东西」。
+@@harbour
+C: [harbour] || 古英语 herebeorg 是「军队的庇护所」。船躲风的地方——港口，心里藏着——怀有。
+E: The boat lay in the [harbour]. ~ 船停在[港]里。
+E: He [harbours] a secret hope. ~ 他[怀有]一个秘密的希望。
+L: harbour a grudge / natural harbour / harbour hope
+T: calm ⚓
+M: harbor 是美式拼法，意思完全一样，别当成两个词。
+@@harmony
+C: [harmon]-y || 希腊 harmonia 是「接合、拼合」。几样东西拼得正好——和谐、和声。
+E: They live in [harmony]. ~ 他们[和睦]相处。
+E: The choir sang in [harmony]. ~ 合唱团唱[和声]。
+L: in harmony with / social harmony / harmony of colours
+T: calm 🎵
+M: harmonic ~ 和声的。同根，-ic 是形容词尾。
+@@hesitate
+C: [hesit]-ate || haerere 是「粘住」（adhere 粘附同源）。脚被粘住迈不动——犹豫。
+E: Don't [hesitate] to ask. ~ 别[犹豫]，尽管问。
+E: She [hesitated] before answering. ~ 她回答前[迟疑]了一下。
+L: hesitate to do / hesitate about / without hesitation
+T: cool 🚦
+M: adhere ~ 粘附。同根「粘」，一个是脚粘住，一个是东西粘住。
+@@hire
+C: [hire] || 古英语 hyrian 是「雇、租」。花钱把人或物请来用——雇佣、租用。
+E: They [hired] a new manager. ~ 他们[聘]了新经理。
+E: We [hired] a car for a week. ~ 我们[租]了一周车。
+L: hire sb / for hire / hire out
+T: warm 💼
+M: rent ~ 租。hire 偏「雇人、短期租」，rent 偏「长期租房」。
+@@historical
+C: [histor]-ical || 希腊 historia 是「探究、记述」。记下来的过去——历史的。
+E: The building has [historical] value. ~ 这楼有[历史]价值。
+E: It is a [historical] novel. ~ 这是[历史]小说。
+L: historical value / historical novel / historical records
+T: calm 📜
+M: historic ~ 有历史意义的。historical 是「属于历史的」，historic 是「开创历史的」。
+@@honorable
+C: [honor]-able || honor 是「荣誉」。配得上荣誉的——光荣的、可敬的。
+E: He made an [honorable] decision. ~ 他做了个[光明磊落]的决定。
+E: She is an [honorable] judge. ~ 她是位[可敬]的法官。
+L: honorable mention / honorable discharge / an honorable man
+T: warm 🎖️
+M: honorary ~ 名誉的。honorable 是「值得尊敬」，honorary 是「名义上的」。
+@@horizon
+C: [horiz]-on || 希腊 horizein 是「划界」。天与地划界的那条线——地平线，眼界所及——视野。
+E: The sun sank below the [horizon]. ~ 太阳沉到[地平线]下。
+E: Travel broadens the [horizons]. ~ 旅行开阔[眼界]。
+L: on the horizon / broaden horizons / a new horizon
+T: bright 🌅
+M: horizontal ~ 水平的。同根「划界」，地平线就是那条水平的线。
+@@host
+C: [host] || 拉丁 hospes 既是「主人」也是「客人」。招待别人的人——主人、主持，招待一屋子人——主办。
+E: She [hosted] the dinner. ~ 她[主持]了晚宴。
+E: He was a good [host]. ~ 他是个好[主人]。
+L: host a party / talk show host / host country
+T: warm 🎤
+M: guest ~ 客人。一个是招待的，一个是被招待的，正好一对。
+@@household
+C: [house]-hold || house 是「房子」，hold 是「持有」。一个屋檐下的一摊——家庭、家用的。
+E: The [household] has four members. ~ 这个[家庭]有四口人。
+E: [Household] goods are on sale. ~ [家用]品在打折。
+L: household goods / household name / head of household
+T: warm 🏠
+M: house ~ 房子。同根，-hold 是「握着的那一家子」。
+@@hurricane
+C: [hurric]-ane || 西班牙语 huracán，来自加勒比土语「风暴之神」。转起来的狂风——飓风。
+E: The [hurricane] destroyed the coast. ~ [飓风]摧毁了海岸。
+E: The scandal caused a [hurricane] of criticism. ~ 丑闻掀起[轩然大波]。
+L: hurricane season / hurricane warning / a hurricane of
+T: sharp 🌀
+M: typhoon ~ 台风。同一个东西，大西洋叫 hurricane，太平洋叫 typhoon。
+@@identify
+C: [ident]-ify || idem 是「同一个」（identity 身份同源）。认出「就是它」——识别，认出「就是自己人」——认同。
+E: Can you [identify] the man? ~ 你能[认出]那个人吗？
+E: I [identify] with her struggle. ~ 我[理解并认同]她的挣扎。
+L: identify with / identify as / identify the cause
+T: cool 🔍
+M: identity ~ 身份。同根「同一」，认出来就是确定同一个。
+@@illegal
+C: il-[legal] || il- 是 in- 在 l 前的变体「不」，legal 是「合法」。不合法——非法的。
+E: It is [illegal] to park here. ~ 这里停车[违法]。
+E: The [illegal] trade continues. ~ [非法]交易还在继续。
+L: illegal parking / illegal immigrant / it is illegal to
+T: dark 🚫
+M: legal ~ 合法的。同一个词，il- 一加就反了，illogical、irregular 同理。
+@@illusion
+C: il-[lus]-ion || lud 是「玩」（illusion 里的 lud 同源，ludicrous 荒唐的）。眼前被耍了一下——错觉。
+E: The mirror creates an [illusion]. ~ 镜子造成[错觉]。
+E: He has no [illusions] about it. ~ 他对此不抱[幻想]。
+L: optical illusion / be under an illusion / cherish illusions
+T: cool 🪞
+M: delusion ~ 妄想。illusion 是感官被骗，delusion 是脑子信了假东西。
+@@imagination
+C: [imagin]-ation || imago 是「影像」。脑子里成像的本事——想象力。
+E: Children have rich [imagination]. ~ 孩子[想象力]丰富。
+E: It is just your [imagination]. ~ 那只是你的[想象]。
+L: beyond imagination / use your imagination / a figment of imagination
+T: bright 🌈
+M: image ~ 图像。同根「像」，能造像就是想象。
+@@immigrant
+C: im-[migr]-ant || migr 是「迁移」（migrate 迁徙同源）。迁进来的人——移民。
+E: The city attracts [immigrants]. ~ 这座城市吸引[移民]。
+E: Many [immigrants] work in factories. ~ 许多[移民]在工厂做工。
+L: illegal immigrant / immigrant workers / immigrant family
+T: warm 🧳
+M: emigrant ~ 移出的人。im 是往里，e 是往外，方向一反。
+@@impact
+C: im-[pact] || pact 是「压紧、钉住」（compact 紧凑的同源）。压进去的那一下——冲击、影响。
+E: The law had a big [impact] on farmers. ~ 这条法律对农民[影响]很大。
+E: The car [impacted] the wall. ~ 车[撞]上墙。
+L: have an impact on / environmental impact / impact on
+T: sharp 💥
+M: compact ~ 紧凑的。同根「压紧」，一个是撞进去，一个是压得实。
+@@impractical
+C: im-[practic]-al || im- 是「不」，practic 是「能做」。做不成的——不切实际的。
+E: The plan is [impractical]. ~ 这方案[不切实际]。
+E: He is [impractical] about money. ~ 他对钱[没概念]。
+L: an impractical plan / impractical to / highly impractical
+T: cool 🚧
+M: practical ~ 实际的。同一个词，im- 一加就翻了。
+@@impress
+C: im-[press] || press 是「压」（express 挤出同源）。往人心里压个印子——使留下印象。
+E: She [impressed] the judges. ~ 她[打动]了评委。
+E: He [impressed] on us the need for care. ~ 他向我们[强调]要细心。
+L: be impressed by / impress on / impress sb
+T: sharp 🖐️
+M: express ~ 表达。都含 press「压」，一个压进去，一个挤出来。
+@@jog
+C: [jog] || 拟声词，脚步一下一下的响。跑得慢，一颠一颠——慢跑，肩上轻推一下——提醒。
+E: He [jogs] every morning. ~ 他每天早上[慢跑]。
+E: The photo [jogged] my memory. ~ 照片[唤起]了我的记忆。
+L: go jogging / jog one's memory / jog along
+T: bright 🏃
+M: jog / run：jog 是慢跑，run 是跑，语感上 jog 更轻。
+@@judge
+C: [judg]-e || 拉丁 judex 是 jus（法）+ dicere（说）。照法说一句——审判、判断。
+E: Don't [judge] by appearances. ~ 别以貌[取人]。
+E: The [judge] gave a ruling. ~ [法官]作出裁决。
+L: judge by / judging from / be one's own judge
+T: sharp ⚖️
+M: judgment ~ 判断力。同根，-ment 是那个「说出来的判定」。
+@@justice
+C: [just]-ice || jus 是「法、权利」（just 公正同源）。该得的那一份——正义、司法。
+E: They demanded [justice]. ~ 他们要求[公正]。
+E: The case is before the [justice] system. ~ 案子进入[司法]程序。
+L: bring to justice / social justice / do justice to
+T: calm ⚖️
+M: just ~ 公正的。同根，-ice 是那个「公正的状态」。
+@@keen
+C: [keen] || 古英语 cene 是「勇敢、锐利」。刀口快——敏锐，心思冲——热衷。
+E: She is [keen] on tennis. ~ 她[热衷]网球。
+E: He has [keen] eyesight. ~ 他[眼力]很尖。
+L: be keen on / keen eyesight / keen interest
+T: bright 🔪
+M: kin ~ 亲属。只差一个字母，keen 是热烈，kin 是亲戚。
+@@labor
+C: [labor] || 拉丁 labor 是「劳作、吃力」。出力气干的活——劳动、劳工。
+E: The work needs much [labor]. ~ 这活要花很多[人工]。
+E: They [labored] all night. ~ 他们[苦干]了一夜。
+L: labor force / manual labor / labor market
+T: warm 🔨
+M: labour 是英式拼法，多一个 u，意思一样。
+@@lack
+C: [lack] || 中古荷兰语 lak 是「缺陷、不足」。碗缺了一块——缺乏。
+E: There is a [lack] of water. ~ 缺[水]。
+E: He [lacks] confidence. ~ 他[缺]自信。
+L: lack of / for lack of / lack confidence
+T: cool 🕳️
+M: lake ~ 湖。只差一个字母，一个是缺，一个是湖。
+@@lately
+C: [late]-ly || late 是「晚」，-ly 在这里不是「晚地」而是「近来」。最近这一段。
+E: I have not seen him [lately]. ~ [最近]没见过他。
+E: She looks tired [lately]. ~ 她[近来]显得累。
+L: until lately / only lately / lately I have
+T: cool 📅
+M: later ~ 之后。lately 是「近来」，later 是「以后」，方向相反。
+@@latter
+C: [latt]-er || late 的比较级，指「两个里的后一个」。摆在后面的那个——后者。
+E: Of the two, the [latter] is better. ~ 两者中[后者]更好。
+E: In the [latter] half of the year. ~ 在[后半]年。
+L: the former and the latter / in the latter part / the latter of
+T: cool ➡️
+M: later ~ 更晚。latter 是「后者」，later 是「之后」，只差一个 t。
+@@leak
+C: [leak] || 古诺斯语 leka 是「滴漏」。有个缝，一点点出去——渗漏，消息一点点出去——泄露。
+E: The roof [leaks]. ~ 屋顶[漏]水。
+E: The news [leaked] to the press. ~ 消息[泄露]给了媒体。
+L: leak out / a gas leak / leak information
+T: dark 💧
+M: leek ~ 韭葱。多一个 e，一个是漏，一个是菜。
+@@lean
+C: [lean] || 古英语 hlinian 是「倚靠」。身体靠在一边——倾斜，身上没多余的肉——瘦。
+E: He [leaned] against the wall. ~ 他[靠]在墙上。
+E: [Lean] meat is healthier. ~ [瘦]肉更健康。
+L: lean against / lean on / lean meat
+T: calm 🌾
+M: learn ~ 学习。只差一个字母，lean 是靠，learn 是学。
+@@legal
+C: [leg]-al || lex 是「法」（legislation 立法同源）。法上写着——合法的、法律的。
+E: The contract is [legal]. ~ 合同[合法]。
+E: She sought [legal] advice. ~ 她寻求[法律]意见。
+L: legal advice / legal system / it is legal to
+T: calm 📜
+M: illegal ~ 非法的。同一个 leg「法」，il- 是「不」。
