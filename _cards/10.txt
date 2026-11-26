@@ -1,0 +1,280 @@
+@@ambiguous
+C: amb-[igu]-ous || ambi 是「两边」，agere 是「驱动」。被推向两边、两边都说得通——模棱两可。
+E: The wording is [ambiguous]. ~ 措辞[含糊不清]。
+E: He gave an [ambiguous] answer. ~ 他给了个[模棱两可]的回答。
+L: ambiguous answer / deliberately ambiguous / highly ambiguous
+T: cool 🌫️
+M: ambition ~ 雄心。同一串 ambi「两边」，一个两边都可解，一个四处奔走。
+@@ambition
+C: amb-[it]-ion || ambi 是「周围」，ire 是「走」。古罗马竞选者绕场拜票——野心。
+E: Her [ambition] is to lead the firm. ~ 她的[志向]是领导这家公司。
+E: He is full of [ambition]. ~ 他[野心]勃勃。
+L: achieve one's ambition / political ambition / burning ambition
+T: sharp 🔥
+M: ambiguous ~ 模棱两可。都从 ambi「两边」来，一个走两边，一个两边都可解。
+@@amuse
+C: a-[muse] || 古法语 muser 是「盯着看、出神」。先让人看呆，再让人笑——逗乐。
+E: The clown [amused] the children. ~ 小丑[逗乐]了孩子。
+E: She was [amused] by the story. ~ 她被这故事[逗笑]了。
+L: amuse oneself / be amused by / amusing story
+T: bright 🎪
+M: museum ~ 博物馆。同一串 mus「沉思」，一个是看呆了，一个是看东西的地方。
+@@analyze
+C: ana-[lyze] || ana 是「彻底」，lysis 是「松开」。把整体松开成零件——分析。
+E: We must [analyze] the data. ~ 我们必须[分析]数据。
+E: The sample was [analyzed] in the lab. ~ 样本在实验室被[解析]。
+L: analyze data / analyze the cause / analyze in detail
+T: cool 🔬
+M: analysis ~ 分析（名词）。同根，-ze 是动词，-sis 是名词。
+@@ancestor
+C: an-[cest]-or || ante 是「前」，cedere 是「走」。走在你前面的人——祖先。
+E: His [ancestors] came from the north. ~ 他的[祖先]来自北方。
+E: This tool is the [ancestor] of the modem. ~ 这工具是调制解调器的[前身]。
+L: distant ancestor / common ancestor / ancestor of
+T: warm 🌳
+M: precede ~ 先行。都含 ced「走」，一个走在前，一个是走在前的那个。
+@@ancient
+C: [anci]-ent || 拉丁 ante 是「前」。很久以前那一段——古老的。
+E: The [ancient] wall still stands. ~ [古老]的城墙还在。
+E: This custom is [ancient]. ~ 这风俗很[古老]。
+L: ancient Greece / ancient times / ancient history
+T: warm 🏛️
+M: antique ~ 古董。同一个 ante「前」，ancient 指时代，antique 指物件。
+@@angle
+C: [angle] || 拉丁 angulus 是「角」。两条线拐弯的地方——角度，看问题的那个拐点——立场。
+E: The [angle] is 45 degrees. ~ [角]是四十五度。
+E: Try a different [angle]. ~ 换个[角度]想想。
+L: right angle / from an angle / angle for
+T: cool 📐
+M: angel ~ 天使。只差一个字母，一个是角，一个是天使。
+@@anniversary
+C: [ann]-i-vers-ary || ann 是「年」，vers 是「转」。一年转回来那一圈——周年。
+E: Their tenth [anniversary] is today. ~ 今天是他们十[周年]。
+E: The [anniversary] of the battle was marked. ~ 纪念了那场战役的[周年]。
+L: wedding anniversary / anniversary of / mark the anniversary
+T: warm 🎂
+M: annual ~ 每年的。同一个 ann「年」，一个指周期，一个指那一圈。
+@@announce
+C: an-[nounc]-e || nuntius 是「信使」。让信使出去说——宣布。
+E: They [announced] the winner. ~ 他们[宣布]了获胜者。
+E: The wedding was [announced] in the paper. ~ 婚礼在报上[刊登]了。
+L: announce that / announce a plan / publicly announce
+T: warm 📢
+M: pronounce ~ 发音、宣判。都含 nounc「说」，一个是对众说，一个是把音说出来。
+@@annoy
+C: an-[noy] || 拉丁 in odio 是「处于憎恶中」。被缠得心里冒火——使恼怒。
+E: The noise [annoyed] him. ~ 噪音让他[恼火]。
+E: Stop [annoying] your sister. ~ 别[烦]你妹妹。
+L: be annoyed at / annoy sb / annoying habit
+T: dark 😤
+M: annoy 与 annual 无关；记住 annoy 后面常接 at/about。
+@@annual
+C: [annu]-al || annus 是「年」。一年一回——每年的，一年一本——年刊。
+E: The [annual] meeting is in May. ~ [年度]会议在五月。
+E: She reads the company's [annual] report. ~ 她读公司[年报]。
+L: annual meeting / annual report / annual income
+T: calm 📅
+M: anniversary ~ 周年。同根「年」，一个指周期，一个指纪念日。
+@@anonymous
+C: an-[onym]-ous || an 是「无」，onym 是「名」（synonym 同义词同源）。没有名字——匿名的。
+E: The gift was [anonymous]. ~ 礼物是[匿名]的。
+E: An [anonymous] caller rang. ~ 一个[匿名]电话打来。
+L: anonymous letter / remain anonymous / anonymous source
+T: cool 🕵️
+M: synonym ~ 同义词。都含 onym「名」，一个没名，一个是同名的词。
+@@antique
+C: an-[tique] || 拉丁 ante 是「前」。以前留下来的东西——古董。
+E: She collects [antiques]. ~ 她收藏[古董]。
+E: The desk is [antique]. ~ 这书桌是[古董]。
+L: antique shop / antique furniture / antique dealer
+T: warm 🏺
+M: ancient ~ 古老的。antique 多指器物，ancient 指时代。
+@@anxiety
+C: [anxi]-ety || angere 是「勒紧、使窒息」。心里被勒住——焦虑，盼得心紧——渴望。
+E: She suffers from [anxiety]. ~ 她受[焦虑]困扰。
+E: His [anxiety] about the exam grew. ~ 他对考试的[担心]加重。
+L: anxiety about / anxiety attack / relieve anxiety
+T: dark 😰
+M: anger ~ 愤怒。都从 ang「勒紧」，一个勒出火，一个勒出慌。
+@@apparent
+C: ap-[par]-ent || parere 是「出现」（appear 同源）。看得见——明显的，只看表面——貌似的。
+E: It was [apparent] that he lied. ~ 很[明显]他撒了谎。
+E: The [apparent] calm hid fear. ~ [表面]的平静掩着恐惧。
+L: it is apparent that / apparent reason / for no apparent reason
+T: cool 👁️
+M: appear ~ 出现。同根，-ent 是形容词，「看得见」就是明显。
+@@appeal
+C: ap-[peal] || pellere 是「推」（expel 驱逐同源）。把话推给人——呼吁，把人往里拉——吸引。
+E: They [appealed] for help. ~ 他们[呼吁]援助。
+E: The idea [appeals] to me. ~ 这主意[吸引]我。
+L: appeal to / appeal for / lose an appeal
+T: warm 📣
+M: expel ~ 驱逐。都含 pel「推」，一个推向人，一个推出去。
+@@appetite
+C: ap-[pet]-ite || petere 是「追求」（compete 同源）。身体追着要——食欲，心里追着要——欲望。
+E: He has a good [appetite]. ~ 他[胃口]好。
+E: Her [appetite] for risk is small. ~ 她对风险的[欲望]不大。
+L: lose one's appetite / appetite for / whet the appetite
+T: warm 🍽️
+M: compete ~ 竞争。都含 pet「追」，一个追吃的，一个追赢。
+@@applause
+C: ap-[plause] || plaudere 是「拍手」（explode 同源）。一片巴掌响——鼓掌。
+E: The [applause] lasted a minute. ~ [掌声]持续一分钟。
+E: She won loud [applause]. ~ 她赢得热烈[掌声]。
+L: round of applause / applause for / thunderous applause
+T: bright 👏
+M: explode ~ 爆炸。同根「拍手」，罗马人拍手把演员轰下台，就炸了。
+@@apply
+C: ap-[ply] || plicare 是「折、贴」（complex 同源）。把东西贴上去——涂、应用，把自己贴上去——申请。
+E: [Apply] the cream twice a day. ~ 每天[涂]两次药膏。
+E: She [applied] for the job. ~ 她[申请]了这份工作。
+L: apply for / apply to / apply oneself to
+T: cool 📝
+M: reply ~ 回复。都含 ply「折」，一个贴上去，一个折回来。
+@@appointment
+C: ap-[point]-ment || point 是「点」（punctual 准时的同源）。定到那个点上——约会、任命。
+E: I have an [appointment] at three. ~ 我三点有个[约]。
+E: Her [appointment] as judge was confirmed. ~ 她的法官[任命]被确认。
+L: make an appointment / by appointment / appointment with
+T: warm 📅
+M: point ~ 点。同根「点」，定在某个点见面就是约会。
+@@appreciate
+C: ap-[preci]-ate || pretium 是「价值」（price 同源）。看出它的价——欣赏、感激，价值涨了——增值。
+E: I [appreciate] your help. ~ 我[感激]你的帮助。
+E: The house has [appreciated] in value. ~ 房子[升值]了。
+L: appreciate your help / appreciate the value / fully appreciate
+T: warm 🙏
+M: precious ~ 珍贵的。同根「价值」，一个是看出来，一个是有价值。
+@@approach
+C: ap-[proach] || prope 是「近」（proximity 接近同源）。往近处走——靠近，走近的那条路——途径。
+E: Winter is [approaching]. ~ 冬天[临近]了。
+E: We need a new [approach]. ~ 我们需要新[方法]。
+L: approach to / a new approach / approach the problem
+T: cool 🚶
+M: reproach ~ 责备。多一个 re，一个是走近，一个是当面说人。
+@@appropriate
+C: ap-[propri]-ate || proprius 是「自己的」（property 财产同源）。合自己身份——适当的，拿成自己的——挪用。
+E: Wear [appropriate] clothes. ~ 穿[得体]的衣服。
+E: He [appropriated] the funds. ~ 他[挪用]了资金。
+L: appropriate for / appropriate to / appropriate money
+T: calm ✔️
+M: proper ~ 适当的。同根「自己的」，合身份就是合适。
+@@approve
+C: ap-[prove] || probare 是「证明好」（prove 证明同源）。验过说好——批准。
+E: The board [approved] the plan. ~ 董事会[批准]了方案。
+E: I don't [approve] of smoking. ~ 我不[赞成]吸烟。
+L: approve of / approve a plan / be approved by
+T: cool ✅
+M: prove ~ 证明。同根「验」，一个验完说好，一个只是证。
+@@approximately
+C: ap-[proxim]-ately || proximus 是「最近的」（proximity 同源）。贴近那个数——大约。
+E: It costs [approximately] 200 yuan. ~ 大约两百块。
+E: The trip takes [approximately] two hours. ~ 路程[约]两小时。
+L: approximately equal / approximately 20 / approximately the same
+T: cool ≈
+M: approximate ~ 近似的。同根，-ly 是副词尾。
+@@aptitude
+C: [apt]-itude || aptus 是「适合、接上」。天生接得上——天赋、倾向。
+E: She has an [aptitude] for maths. ~ 她有数学[天赋]。
+E: He showed an [aptitude] for languages. ~ 他显出语言[才能]。
+L: aptitude for / aptitude test / natural aptitude
+T: bright 🎯
+M: attitude ~ 态度。只差一个字母，一个是天分，一个是姿态。
+@@architect
+C: [archi]-tect || archi 是「主、首」，tekton 是「工匠」。工匠的头——建筑师，造出东西的人——缔造者。
+E: The [architect] designed the hall. ~ [建筑师]设计了大厅。
+E: He was the [architect] of the reform. ~ 他是改革的[缔造者]。
+L: chief architect / architect of / landscape architect
+T: cool 📐
+M: architecture ~ 建筑学。同根，-ure 是那门学问。
+@@argument
+C: [argu]-ment || arguere 是「使清楚、辩明」。把理说清——论点，说岔了——争吵。
+E: Her [argument] is convincing. ~ 她的[论点]有说服力。
+E: They had an [argument] about money. ~ 他们为钱[吵]了一架。
+L: an argument for / have an argument / a strong argument
+T: sharp 🗣️
+M: argue ~ 争论。同根，-ment 是那场争论或那条理由。
+@@arise
+C: a-[rise] || rise 是「升起」。事情从底下冒出来——出现、产生。
+E: Problems [arise] from neglect. ~ 问题[由]疏忽[引起]。
+E: A new situation has [arisen]. ~ 出现了新情况。
+L: arise from / problems arise / should the need arise
+T: cool 🌱
+M: rise ~ 上升。同根，arise 只用于抽象事物，不用于人起身。
+@@arouse
+C: a-[rouse] || rouse 是「唤醒」（rouse 叫醒同源）。把人叫醒、把情绪叫起来——引起。
+E: The news [aroused] suspicion. ~ 消息[引起]怀疑。
+E: He was [aroused] by the noise. ~ 他被声音[惊醒]。
+L: arouse interest / arouse suspicion / arouse sb from
+T: sharp ⚡
+M: rise ~ 升起。arouse 多一个 o，一个是起来，一个是把别人叫起来。
+@@arrange
+C: ar-[range] || range 是「排列」。一行行摆好——安排、整理。
+E: She [arranged] the flowers. ~ 她[插]好了花。
+E: We [arranged] to meet at six. ~ 我们[约]好六点见。
+L: arrange for / arrange to do / arrange flowers
+T: calm 🗂️
+M: range ~ 范围、排列。同根，ar- 是加强，摆成行就是安排。
+@@arrest
+C: ar-[rest] || restare 是「停住」（rest 休息同源）。让人停住——逮捕，让进程停住——阻止。
+E: He was [arrested] for theft. ~ 他因盗窃被[捕]。
+E: The drug may [arrest] the disease. ~ 这药也许能[阻止]病情。
+L: under arrest / arrest sb for / cardiac arrest
+T: dark 🚔
+M: rest ~ 休息。同根「停」，一个停下歇，一个被停下。
+@@artificial
+C: [arti]-fic-ial || ars 是「技艺」，fic 是「做」。用技艺做出来的——人造的，做作出来的——虚假的。
+E: [Artificial] flowers last longer. ~ [人造]花放得久。
+E: Her smile was [artificial]. ~ 她的笑很[假]。
+L: artificial intelligence / artificial flower / artificial light
+T: cool 🤖
+M: art ~ 技艺。同根，-ficial 是「做出来的」，不是天生的。
+@@ashamed
+C: a-[shame]-d || shame 是「羞耻」。心里压着羞——感到惭愧的。
+E: He was [ashamed] of his behaviour. ~ 他为自己的行为[羞愧]。
+E: I am [ashamed] to admit it. ~ 我[不好意思]承认。
+L: be ashamed of / ashamed to do / deeply ashamed
+T: dark 😳
+M: shame ~ 羞耻（名词）。同根，a- + -d 是「处在羞里」。
+@@aspect
+C: a-[spect] || spec 是「看」（inspect 同源）。从某个方向看到的那一面——方面、外观。
+E: Consider every [aspect]. ~ 考虑每个[方面]。
+E: The house has a southern [aspect]. ~ 房子[朝向]南。
+L: in all aspects / an important aspect / aspect of
+T: cool 👁️
+M: inspect ~ 检查。都含 spect「看」，一个看一面，一个看细处。
+@@assemble
+C: as-[sembl]-e || simul 是「一起」（similar 同源）。弄到一处——聚集，零件弄到一处——组装。
+E: The crowd [assembled] at noon. ~ 人群中午[聚集]。
+E: They [assembled] the machine. ~ 他们[组装]了机器。
+L: assemble a team / assemble the parts / assembly line
+T: cool 🔧
+M: similar ~ 相似的。同根「一起」，放一起才看得出像。
+@@assertive
+C: as-[sert]-ive || sert 是「连接、断言」（insert 插入同源）。把自己的话钉进去——坚定的、自信的。
+E: She is an [assertive] speaker. ~ 她说话很[有底气]。
+E: Be more [assertive] in meetings. ~ 会上要[主动]些。
+L: assertive behaviour / an assertive tone / be more assertive
+T: sharp 💪
+M: insert ~ 插入。同根「放进去」，一个把话放进去，一个把东西塞进去。
+@@assess
+C: as-[sess] || sedere 是「坐」（session 同源）。坐在旁边定价——评估。
+E: We need to [assess] the damage. ~ 我们得[评估]损失。
+E: The tax was [assessed] at 500. ~ 税被[核定]为五百。
+L: assess the damage / assess the risk / be assessed at
+T: cool 📊
+M: session ~ 会期。都含 sess「坐」，一个坐着评，一个坐着开会。
+@@assignment
+C: as-[sign]-ment || sign 是「记号、指派」。派给你的那份——任务、作业。
+E: The [assignment] is due Monday. ~ [作业]周一交。
+E: He took an overseas [assignment]. ~ 他接了海外[派驻]。
+L: homework assignment / on assignment / a tough assignment
+T: cool 📝
+M: sign ~ 记号。同根「指派」，标上名字就是派给你。
+@@assistant
+C: as-[sist]-ant || sist 是「站」（insist 同源）。站在旁边帮着——助手。
+E: She works as a research [assistant]. ~ 她做研究[助理]。
+E: The [assistant] manager signed it. ~ [副]经理签了字。
+L: assistant manager / shop assistant / personal assistant
+T: warm 🤝
+M: insist ~ 坚持。都含 sist「站」，一个站着帮，一个站着不走。
