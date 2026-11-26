@@ -1,0 +1,266 @@
+词迹 VocabTrace 1.0.4 · 目录结构（全部在 D:\VocabLab 下）
+
+D:\VocabLab
+├─00-安装程序
+│  ├─安卓
+│  │  └─词迹-安卓-1.0.4.apk  (305 KB)
+│  ├─Linux-DEB
+│  │  └─词迹-1.0.4-amd64.deb  (101.9 MB)
+│  └─Windows绿色版
+│     └─安装说明.txt
+├─01-电脑端-Windows
+│  ├─程序
+│  │  ├─locales
+│  │  ├─resources
+│  │  ├─词迹.exe  (180 MB)
+│  │  ├─chrome_100_percent.pak  (148 KB)
+│  │  ├─chrome_200_percent.pak  (223 KB)
+│  │  ├─d3dcompiler_47.dll  (4.7 MB)
+│  │  ├─debug.log  (4 KB)
+│  │  ├─ffmpeg.dll  (2.8 MB)
+│  │  ├─icudtl.dat  (10 MB)
+│  │  ├─libEGL.dll  (482 KB)
+│  │  ├─libGLESv2.dll  (8 MB)
+│  │  ├─LICENSE  (1 KB)
+│  │  ├─LICENSES.chromium.html  (8.7 MB)
+│  │  ├─resources.pak  (5.5 MB)
+│  │  ├─snapshot_blob.bin  (309 KB)
+│  │  ├─v8_context_snapshot.bin  (671 KB)
+│  │  ├─version
+│  │  ├─vk_swiftshader_icd.json
+│  │  ├─vk_swiftshader.dll  (5.3 MB)
+│  │  └─vulkan-1.dll  (874 KB)
+│  ├─界面
+│  │  └─index.html  (344 KB)
+│  └─数据
+│     ├─_cache
+│     ├─账号
+│     ├─进度数据.json  (1 MB)
+│     ├─进度数据.json.bak-20261126-021509  (301 KB)
+│     ├─进度数据.json.bak-20261126-021521  (394 KB)
+│     ├─进度数据.json.bak-20261126-090854  (394 KB)
+│     ├─进度数据.json.bak-20261126-090932  (858 KB)
+│     ├─进度数据.json.bak-20261126-091023  (895 KB)
+│     ├─进度数据.json.bak-20261126-091040  (911 KB)
+│     ├─进度数据.json.bak-20261126-091059  (927 KB)
+│     ├─进度数据.json.bak-20261126-091117  (942 KB)
+│     ├─进度数据.json.bak-20261126-091136  (958 KB)
+│     ├─进度数据.json.bak-20261126-091151  (973 KB)
+│     ├─进度数据.json.bak-20261126-091210  (988 KB)
+│     └─进度数据.json.bak-20261126-091221  (1003 KB)
+├─02-手机端-安卓
+│  ├─工程
+│  │  ├─assets
+│  │  ├─build
+│  │  ├─keystore
+│  │  ├─res
+│  │  ├─src
+│  │  ├─AndroidManifest.xml  (1 KB)
+│  │  ├─build-apk.ps1  (2 KB)
+│  │  ├─build-apk.sh  (2 KB)
+│  │  └─build-apk2.ps1  (2 KB)
+│  └─词迹-安卓-1.0.4.apk  (305 KB)
+├─03-Linux端
+│  ├─linux-unpacked
+│  │  ├─locales
+│  │  ├─resources
+│  │  ├─chrome_100_percent.pak  (148 KB)
+│  │  ├─chrome_200_percent.pak  (225 KB)
+│  │  ├─chrome_crashpad_handler  (2.5 MB)
+│  │  ├─chrome-sandbox  (38 KB)
+│  │  ├─icudtl.dat  (10 MB)
+│  │  ├─libEGL.so  (254 KB)
+│  │  ├─libffmpeg.so  (2.6 MB)
+│  │  ├─libGLESv2.so  (6.6 MB)
+│  │  ├─libvk_swiftshader.so  (4.6 MB)
+│  │  ├─libvulkan.so.1  (2.1 MB)
+│  │  ├─LICENSE.electron.txt  (1 KB)
+│  │  ├─LICENSES.chromium.html  (8.7 MB)
+│  │  ├─resources.pak  (5.7 MB)
+│  │  ├─snapshot_blob.bin  (309 KB)
+│  │  ├─v8_context_snapshot.bin  (671 KB)
+│  │  ├─vk_swiftshader_icd.json
+│  │  └─vocab-trace  (177.7 MB)
+│  └─词迹-1.0.4-amd64.deb  (101.9 MB)
+├─04-源码
+│  ├─_cards
+│  │  ├─01.txt  (24 KB)
+│  │  ├─02.txt  (24 KB)
+│  │  ├─03.txt  (24 KB)
+│  │  ├─04.txt  (23 KB)
+│  │  ├─05.txt  (23 KB)
+│  │  ├─06.txt  (23 KB)
+│  │  ├─07.txt  (22 KB)
+│  │  ├─08.txt  (23 KB)
+│  │  ├─09.txt  (15 KB)
+│  │  └─10.txt  (16 KB)
+│  ├─_etym
+│  │  ├─01.txt  (7 KB)
+│  │  ├─02.txt  (7 KB)
+│  │  ├─03.txt  (6 KB)
+│  │  ├─04.txt  (6 KB)
+│  │  ├─05.txt  (6 KB)
+│  │  ├─06.txt  (6 KB)
+│  │  ├─07.txt  (6 KB)
+│  │  └─08.txt  (2 KB)
+│  ├─_tips
+│  │  └─t01.txt  (4 KB)
+│  ├─app
+│  │  ├─index.html  (344 KB)
+│  │  ├─index.html.bak-20261126-112944  (200 KB)
+│  │  └─index.html.bak-20261126-cloud-125931  (216 KB)
+│  ├─backup
+│  │  └─index.before-books.html  (82 KB)
+│  ├─cache
+│  ├─data
+│  │  ├─batches
+│  │  ├─glossary.json  (51 KB)
+│  │  ├─merge-batch.js  (1 KB)
+│  │  └─merge-enrich.js  (1 KB)
+│  ├─decks
+│  ├─desktop
+│  │  ├─app
+│  │  ├─desktop
+│  │  ├─dist-deb
+│  │  ├─dist-deb2
+│  │  ├─dist-linux
+│  │  ├─build.js  (2 KB)
+│  │  ├─electron-builder.json  (1 KB)
+│  │  ├─exe-icon.png  (2 KB)
+│  │  ├─gen-icon-b.py  (4 KB)
+│  │  ├─gen-icon.py  (3 KB)
+│  │  ├─icon-512.png  (48 KB)
+│  │  ├─icon.ico  (39 KB)
+│  │  ├─main.js  (22 KB)
+│  │  ├─make-deb.py  (10 KB)
+│  │  ├─package-lock.json  (148 KB)
+│  │  ├─package.json  (2 KB)
+│  │  ├─preview-32.png  (3 KB)
+│  │  ├─preview.png  (10 KB)
+│  │  ├─shot.js  (1 KB)
+│  │  ├─shot2.js  (1 KB)
+│  │  ├─shot3.js  (2 KB)
+│  │  ├─squashfs-writer.py  (16 KB)
+│  │  ├─svg_to_ico.py  (2 KB)
+│  │  └─vocab.svg
+│  ├─pipeline
+│  │  └─adapters
+│  ├─schema
+│  │  ├─sample.vocab.json  (4 KB)
+│  │  └─vocab.schema.json  (5 KB)
+│  ├─spec
+│  │  ├─ai-prompt.md  (3 KB)
+│  │  ├─import-format.md  (3 KB)
+│  │  └─template.csv
+│  ├─tools
+│  │  ├─pdf
+│  │  ├─make-lnk.js  (3 KB)
+│  │  └─mkshortcut.js
+│  ├─_etytodo.txt  (10 KB)
+│  ├─_mix.txt  (3 KB)
+│  ├─_s1.txt  (3 KB)
+│  ├─_s2.txt  (4 KB)
+│  ├─_s3.txt  (3 KB)
+│  ├─_s4.txt  (4 KB)
+│  ├─_s5.txt  (3 KB)
+│  ├─_s6.txt  (3 KB)
+│  ├─_todo.txt  (32 KB)
+│  ├─apply-cards.py  (5 KB)
+│  ├─apply-tips.py  (3 KB)
+│  ├─git-init.sh  (2 KB)
+│  ├─merge-etym.py  (2 KB)
+│  ├─merge-senses.py  (4 KB)
+│  ├─proxy.js  (2 KB)
+│  ├─README.md  (2 KB)
+│  └─start.cmd
+├─05-资源
+│  ├─词库
+│  │  ├─高频词默写.csv  (34 KB)
+│  │  ├─高频词默写.csv.bak-20261126-021509  (18 KB)
+│  │  ├─高频词默写.csv.bak-20261126-021521  (34 KB)
+│  │  └─默写纸_答案版（原始）.pdf  (3.7 MB)
+│  └─图标
+│     ├─_s.exe  (44 KB)
+│     ├─_t.exe  (180 MB)
+│     ├─词迹-512.png  (48 KB)
+│     └─词迹.ico  (39 KB)
+├─06-工具
+│  ├─android-sdk
+│  │  ├─.temp
+│  │  ├─build-tools
+│  │  ├─cmdline-tools
+│  │  ├─licenses
+│  │  ├─platform-tools
+│  │  ├─platforms
+│  │  └─tmp
+│  └─tools
+│     ├─edge-test
+│     ├─jdk-17.0.21.1+2
+│     ├─cmdline-tools.zip  (146.5 MB)
+│     ├─jdk17.zip  (182.3 MB)
+│     ├─phone-check.png  (528 KB)
+│     ├─phone-check2.png  (464 KB)
+│     ├─phone-check3.png  (616 KB)
+│     ├─phone-final.png  (40 KB)
+│     ├─phone-fix1.png  (40 KB)
+│     ├─phone-fix2.png  (249 KB)
+│     ├─phone-home-now.png  (715 KB)
+│     ├─phone-home.png  (1.8 MB)
+│     ├─phone-home4.png  (1.8 MB)
+│     ├─phone-now.png  (129 KB)
+│     ├─phone-read-fix.png  (118 KB)
+│     ├─phone-read-reveal.png  (203 KB)
+│     ├─phone-read-scroll.png  (208 KB)
+│     ├─phone-reopen.png  (717 KB)
+│     ├─phone-shimmer.png  (715 KB)
+│     ├─phone-write-final.png  (116 KB)
+│     ├─phone-write-final2.png  (164 KB)
+│     ├─phone-write-fix.png  (117 KB)
+│     ├─phone-write2.png  (172 KB)
+│     ├─vl-dom.html  (316 KB)
+│     └─vl-err.txt
+├─07-文档
+│  ├─打包-UOS-APP.md  (5 KB)
+│  ├─使用说明.txt  (13 KB)
+│  ├─统信-UOS-部署指南.md  (4 KB)
+│  └─README.md  (6 KB)
+├─99-备份
+│  ├─.backup-20261126-150744
+│  │  ├─词迹-1.0.0-amd64.deb.old-icon  (101.8 MB)
+│  │  ├─词迹-安装包-1.0.0.exe.green-icon  (83.4 MB)
+│  │  ├─词迹-安卓-1.0.0.apk.old  (269 KB)
+│  │  ├─app-index.html  (325 KB)
+│  │  ├─desktop-index.html  (325 KB)
+│  │  ├─electron-builder.json
+│  │  ├─ic_launcher.png.old  (16 KB)
+│  │  ├─icon-512.png.green  (60 KB)
+│  │  ├─icon.ico.green  (42 KB)
+│  │  ├─jm-index.html  (325 KB)
+│  │  ├─package.json  (1 KB)
+│  │  ├─README.md  (2 KB)
+│  │  └─seed.js  (494 KB)
+│  ├─.backup-20261126-162256-页序修正
+│  │  ├─2125818866947854336.json  (1.2 MB)
+│  │  ├─高频词默写.csv  (34 KB)
+│  │  ├─index.html.src  (325 KB)
+│  │  ├─index.html.ui  (320 KB)
+│  │  └─seed.js  (494 KB)
+│  ├─.backup-20261126-页序修正
+│  │  └─linux
+│  ├─旧版本
+│  │  ├─安装包历史
+│  │  ├─词迹-1.0.0-amd64.deb  (101.8 MB)
+│  │  ├─词迹-1.0.0-x86_64.AppImage  (103.5 MB)
+│  │  ├─词迹-1.0.1-amd64.deb  (101.9 MB)
+│  │  ├─词迹-1.0.2-amd64.deb  (101.9 MB)
+│  │  ├─词迹-1.0.3-amd64.deb  (101.9 MB)
+│  │  ├─词迹-安装包-1.0.0.exe  (83.5 MB)
+│  │  ├─词迹-安装包-1.0.0.exe.blockmap  (90 KB)
+│  │  ├─词迹-安卓-1.0.0.apk  (261 KB)
+│  │  ├─词迹-安卓-1.0.1.apk  (269 KB)
+│  │  ├─词迹-安卓-1.0.2.apk  (301 KB)
+│  │  ├─词迹-安卓-1.0.3.apk  (305 KB)
+│  │  └─builder-debug.yml  (6 KB)
+│  └─app.asar-旧版备份.bak  (1416 MB)
+└─.gitignore
+
