@@ -1,0 +1,420 @@
+@@release
+C: re-[lease] || lax 是「松」（relax 同源）。把扣着的松开——释放，把东西放出去——发布。
+E: The prisoner was [released]. ~ 囚犯被[释放]了。
+E: The album was [released] in June. ~ 专辑六月[发行]。
+L: release sb from / press release / release a film
+T: bright 🕊️
+M: relax ~ 放松。都从 lax「松」，一个松开人，一个松开自己。
+@@reliable
+C: re-[li]-able || li 是「绑」（rely 依靠同源，原义「绑回去」）。能绑得住——可靠的。
+E: He is a [reliable] friend. ~ 他是个[可靠]的朋友。
+E: The data are [reliable]. ~ 数据[可信]。
+L: reliable source / reliable data / highly reliable
+T: calm 🧱
+M: rely ~ 依靠。同根，-able 是「可以靠的」。
+@@reluctant
+C: re-[luct]-ant || luct 是「挣扎」（reluctance 同源）。心里一直挣着——不情愿的。
+E: She was [reluctant] to leave. ~ 她[不愿]离开。
+E: He gave a [reluctant] nod. ~ 他[勉强]点头。
+L: be reluctant to do / reluctant agreement / a reluctant hero
+T: cool 😕
+M: reluctant 后面接 to do，不接 doing。
+@@remark
+C: re-[mark] || mark 是「记号」。心里标了一下——注意到，说出来的那句——评论。
+E: He [remarked] on her accent. ~ 他[评论]了她的口音。
+E: Her [remarks] hurt him. ~ 她的[话]伤了他。
+L: remark on / opening remarks / a casual remark
+T: warm 💬
+M: mark ~ 标记。同根，re 是「再」，多看一眼才有了话。
+@@remote
+C: re-[mote] || mot 是「移」（move 同源）。移得远远的——偏远的，关系也远——疏远，远距离操控——遥控。
+E: They live in a [remote] village. ~ 他们住[偏远]山村。
+E: The chance is [remote]. ~ 机会[渺茫]。
+L: remote area / remote control / a remote chance
+T: cool 🏔️
+M: remove ~ 移走。同根「移」，一个移到远，一个移开。
+@@represent
+C: re-[present] || present 是「呈现」。把不在场的东西再呈现出来——代表、象征。
+E: She [represents] the company. ~ 她[代表]公司。
+E: The dove [represents] peace. ~ 鸽子[象征]和平。
+L: represent sb / represent a change / be represented by
+T: cool 🎭
+M: present ~ 呈现、礼物。同根，re 是「再」，替别人再出现一次。
+@@resemble
+C: re-[sembl]-e || simil 是「相似」（similar 同源）。看起来像另一个——与…相似。
+E: She [resembles] her mother. ~ 她[像]她母亲。
+E: The two [resemble] each other. ~ 两者[相似]。
+L: resemble sb / closely resemble / bear a resemblance to
+T: calm 🪞
+M: similar ~ 相似的。同根，-ance 是那个「像」的程度。
+@@reserve
+C: re-[serve] || serv 是「保存」（preserve 同源）。先留着——预订、保留，留出来的一块地——保护区。
+E: I [reserved] a table. ~ 我[订]了桌。
+E: He spoke with [reserve]. ~ 他说话[拘谨]。
+L: reserve a room / nature reserve / in reserve
+T: calm 📅
+M: preserve ~ 保护。都含 serv「守」，一个留着用，一个守着不变。
+@@resist
+C: re-[sist] || sist 是「站」（insist 同源）。站着顶回去——抵抗，顶住诱惑——忍住。
+E: They [resisted] the attack. ~ 他们[抵抗]了进攻。
+E: I cannot [resist] chocolate. ~ 我[抵不住]巧克力。
+L: resist temptation / resist change / cannot resist
+T: sharp 🛡️
+M: insist ~ 坚持。都含 sist「站」，一个站着顶，一个站着不走。
+@@resolution
+C: re-[solut]-ion || solv 是「松开」（solve、dissolve 同源）。把死结松开——解决，心里定下来——决心。
+E: The [resolution] of the dispute took months. ~ 争端[解决]花了几个月。
+E: She made a New Year [resolution]. ~ 她立了新年[决心]。
+L: New Year resolution / resolution of / high resolution
+T: cool ✅
+M: solve ~ 解决。同根「松开」，一个是动作，一个是结果。
+@@response
+C: re-[sponse] || spons 是「许诺、回答」（sponsor 同源）。被叫了一声之后的回话——反应、响应。
+E: There was no [response]. ~ 没有[回应]。
+E: Her [response] surprised me. ~ 她的[反应]让我意外。
+L: in response to / response to / a quick response
+T: cool 📨
+M: responsible ~ 负责的。都含 spons「许诺」，一个回话，一个担保。
+@@restless
+C: [rest]-less || rest 是「休息」，-less 是「没有」。歇不下来——不安的。
+E: The child was [restless] all night. ~ 孩子一夜[不安分]。
+E: He felt [restless] in the small town. ~ 他在小城感到[焦躁]。
+L: restless night / grow restless / feel restless
+T: sharp 🌪️
+M: restful ~ 宁静的。同一个 rest，-less 是没有，-ful 是充满。
+@@restore
+C: re-[store] || staur 是「立起」（restaurant 原义「恢复体力之处」）。重新立起来——修复、恢复。
+E: The building was [restored]. ~ 建筑被[修复]了。
+E: Order was [restored] quickly. ~ 秩序很快[恢复]。
+L: restore order / restore confidence / be restored to
+T: bright 🔨
+M: restaurant ~ 餐馆。同根「恢复」，原指让人恢复体力的地方。
+@@restrain
+C: re-[strain] || strain 是「绑紧」（strict、strait 同源）。往后绑紧——抑制。
+E: He could not [restrain] his anger. ~ 他[抑制]不住怒火。
+E: She [restrained] the dog. ~ 她[拉住]了狗。
+L: restrain sb from / restrain oneself / restrain inflation
+T: sharp 🔗
+M: restrict ~ 限制。同一个 strain「绑紧」，一个绑人，一个绑范围。
+@@restrict
+C: re-[strict] || strict 是「拉紧、捆紧」。把范围捆小——限制。
+E: Access is [restricted]. ~ 出入[受限]。
+E: The law [restricts] smoking. ~ 法律[限制]吸烟。
+L: restrict to / restricted area / restrict access
+T: cool 🚧
+M: strict ~ 严格的。同根「捆紧」，一个是绑住范围，一个是绑住人。
+@@resume
+C: re-[sume] || sum 是「取」（assume、consume 同源）。重新拿起来——继续，简历也是一段「重新开始」的纸。
+E: Work [resumed] after lunch. ~ 午饭后[继续]工作。
+E: Send your [resume] first. ~ 先寄[简历]。
+L: resume work / resume a career / send a resume
+T: cool ▶️
+M: assume ~ 假定。都含 sum「取」，re 是「再」，再取起来就是接着干。
+@@retain
+C: re-[tain] || tain 是「握」（maintain 同源）。一直握着不放——保持、保留。
+E: The soil [retains] water. ~ 土壤[保]水。
+E: The firm [retained] its best staff. ~ 公司[留住]了最好的员工。
+L: retain control / retain heat / retain information
+T: calm 🔒
+M: maintain ~ 维持。都含 tain「握」，一个握着不放，一个握着维持。
+@@retire
+C: re-[tire] || tirer 是「拉」。把自己拉回去——退下来，工作退下来——退休。
+E: He [retired] at sixty. ~ 他六十岁[退休]。
+E: She [retired] to her room. ~ 她[回]房间去了。
+L: retire from / retire early / retired teacher
+T: calm 🌇
+M: tired ~ 累的。拼写像，retire 是退，tired 是累。
+@@retreat
+C: re-[treat] || tract 是「拉」（contract 同源）。往后退着拉——撤退，退到安静处——静修。
+E: The army [retreated]. ~ 军队[撤退]了。
+E: He went on a weekend [retreat]. ~ 他去周末[静修]。
+L: retreat from / beat a retreat / a quiet retreat
+T: cool 🏃
+M: treat ~ 对待。同根「拉」，多一个 re 就是往回拉。
+@@reveal
+C: re-[veal] || velum 是「面纱」（veil 同源）。把面纱揭开——揭示、透露。
+E: The study [revealed] a surprise. ~ 研究[揭示]了一个意外。
+E: She [revealed] the truth. ~ 她[道出]了真相。
+L: reveal that / reveal a secret / reveal itself
+T: bright 🔦
+M: veil ~ 面纱。同根，re 是「去掉」，去掉面纱就露出来了。
+@@revenge
+C: re-[venge] || vindicare 是「主张、报复」（vindicate 证明无罪同源）。把账讨回来——报复。
+E: He swore to [revenge] his brother. ~ 他发誓为兄弟[报仇]。
+E: She took [revenge] on them. ~ 她向他们[报复]。
+L: take revenge on / in revenge for / revenge oneself on
+T: dark ⚔️
+M: avenge ~ 为…报仇。revenge 多指「自己出气」，avenge 偏「为正义讨说法」。
+@@reverse
+C: re-[verse] || vert 是「转」（convert 同源）。倒过来转——逆转、相反的。
+E: The decision was [reversed]. ~ 决定被[推翻]了。
+E: The [reverse] is also true. ~ [反过来]也成立。
+L: in reverse / reverse the trend / quite the reverse
+T: cool 🔄
+M: convert ~ 转变。都含 vert「转」，一个转过去，一个转回来。
+@@revive
+C: re-[vive] || viv 是「活」（survive 同源）。重新活过来——复苏。
+E: The old custom has [revived]. ~ 老风俗[复兴]了。
+E: They tried to [revive] him. ~ 他们试图[救醒]他。
+L: revive the economy / revive interest in / be revived
+T: bright 🌱
+M: survive ~ 存活。都含 viv「活」，一个活下来，一个活回来。
+@@reward
+C: re-[ward] || ward 是「看顾」（guard 同源）。回头照看你——给报酬、奖赏。
+E: She got a [reward] for honesty. ~ 她因诚实得到[奖励]。
+E: Hard work is [rewarded]. ~ 努力会有[回报]。
+L: as a reward for / reward sb with / financial reward
+T: warm 🏅
+M: award ~ 授予。reward 是「回馈」，award 是「颁给」，方向不同。
+@@rival
+C: [rival] || 拉丁 rivus 是「溪」。共用一条溪水的人——竞争对手。
+E: They are [rivals] in business. ~ 他们是生意上的[对手]。
+E: No one can [rival] her voice. ~ 没人能[比得上]她的嗓子。
+L: rival firm / rival for / without rival
+T: sharp 🥊
+M: river ~ 河。同根「溪」，抢同一条水的两家人。
+@@rough
+C: [rough] || 古英语 ruh 是「毛糙」。表面不平——粗糙，日子不平——艰难，估算不细——大致的。
+E: The road is [rough]. ~ 路面[不平]。
+E: I have a [rough] idea. ~ 我有个[大致]想法。
+L: rough surface / rough idea / rough weather
+T: dark 🪨
+M: through ~ 穿过。拼写里都有 rough，但 through 读 /θruː/。
+@@routine
+C: [rout]-ine || route 是「路线」。老走那条路——例行公事。
+E: Exercise is part of my [routine]. ~ 锻炼是我的[日常]。
+E: It was a [routine] check. ~ 那是[常规]检查。
+L: daily routine / routine check / break the routine
+T: calm 🔁
+M: route ~ 路线。同根，-ine 是「照着走的那一套」。
+@@rural
+C: [rur]-al || rus 是「乡野」（rustic 乡村的同源）。田那边——农村的。
+E: Life in [rural] areas is slower. ~ [农村]生活节奏慢。
+E: The [rural] economy needs help. ~ [乡村]经济需要扶持。
+L: rural area / rural life / rural development
+T: bright 🌾
+M: urban ~ 城市的。rural 是乡，urban 是城，一对反义。
+@@sacrifice
+C: [sacri]-fice || sacer 是「神圣」，fic 是「做」。做成献给神的——祭品，把自己交出去——牺牲。
+E: They [sacrificed] comfort for freedom. ~ 他们为自由[牺牲]舒适。
+E: The goat was a [sacrifice]. ~ 那只羊是[祭品]。
+L: sacrifice for / make sacrifices / at the sacrifice of
+T: dark 🕯️
+M: sacred ~ 神圣的。同根「神」，一个是神圣，一个是献给神。
+@@salary
+C: [sal]-ary || sal 是「盐」。古罗马用盐当饷——薪水。
+E: The [salary] is paid monthly. ~ [工资]按月发。
+E: She earns a good [salary]. ~ 她[薪水]不错。
+L: annual salary / salary increase / a monthly salary
+T: warm 💰
+M: salt ~ 盐。同根，古罗马人的「盐钱」演成工资。
+@@satisfy
+C: [satis]-fy || satis 是「足够」（satisfaction 同源），fy 是「做」。做到够——使满意，条件够了——符合。
+E: The answer did not [satisfy] him. ~ 这回答没让他[满意]。
+E: He [satisfies] all the conditions. ~ 他[符合]所有条件。
+L: satisfy needs / be satisfied with / satisfy conditions
+T: warm 😌
+M: saturate ~ 饱和。同根「够」，够到满就是饱和。
+@@scan
+C: [scan] || 拉丁 scandere 是「攀、按节奏走」。眼睛一行行走过去——浏览，机器一行行扫——扫描。
+E: He [scanned] the page quickly. ~ 他快速[浏览]那页。
+E: The bag was [scanned]. ~ 包被[扫描]了。
+L: scan through / brain scan / scan for
+T: cool 📡
+M: skim ~ 略读。scan 是找关键词，skim 是抓大意。
+@@scare
+C: [scare] || 古诺斯语 skirra 是「吓跑」。把胆吓掉——使害怕。
+E: The noise [scared] the cat. ~ 声音[吓跑]了猫。
+E: Don't [scare] me like that. ~ 别这么[吓]我。
+L: be scared of / scare away / scare sb into
+T: dark 👻
+M: scarce ~ 稀少的。多一个字母，一个吓人，一个稀少。
+@@schedule
+C: [schedul]-e || 拉丁 schedula 是「小纸片」。写着时间的小纸条——时间表。
+E: The [schedule] is tight. ~ [日程]很紧。
+E: The meeting is [scheduled] for Monday. ~ 会议[定]在周一。
+L: on schedule / behind schedule / schedule for
+T: cool 📅
+M: scheme ~ 方案。同根「纸片」，一个是时间表，一个是计划书。
+@@scratch
+C: [scratch] || 中古英语 cracian 是「刮」。指甲划过去——抓、挠，划出的印——划痕。
+E: The cat [scratched] my arm. ~ 猫[抓]了我的胳膊。
+E: There is a [scratch] on the screen. ~ 屏上有道[划痕]。
+L: from scratch / scratch the surface / scratch card
+T: sharp 🐈
+M: from scratch 是「从零开始」，考场高频。
+@@sculpture
+C: [sculpt]-ure || sculpere 是「刻」。一刀刀刻出来的——雕塑。
+E: The [sculpture] stands in the square. ~ [雕塑]立在广场。
+E: She studies [sculpture]. ~ 她学[雕塑]。
+L: stone sculpture / ice sculpture / modern sculpture
+T: calm 🗿
+M: sculptor ~ 雕塑家。同根，-ure 是作品，-or 是人。
+@@security
+C: se-[cur]-ity || cur 是「关心」（cure、sure 同源）。不用操心——安全，操这份心的人——保安。
+E: [Security] was tight. ~ [安保]很严。
+E: He works in [security]. ~ 他在[安保]行业。
+L: national security / security guard / security system
+T: cool 🛡️
+M: sure ~ 确定的。同根「不操心」，一个是有底，一个是有保障。
+@@seek
+C: [seek] || 古英语 secan 是「寻找」。四处找——寻求。
+E: She [sought] help. ~ 她[寻求]帮助。
+E: He is [seeking] a job. ~ 他在[找]工作。
+L: seek help / seek to do / seek out
+T: cool 🔍
+M: seek 的过去式是 sought，不规则，考试常考。
+@@seize
+C: [seize] || 古法语 saisir 是「抓住、占有」。一把攥住——抓住，抓住机会——把握。
+E: He [seized] my arm. ~ 他[抓住]我胳膊。
+E: She [seized] the chance. ~ 她[抓住]了机会。
+L: seize the chance / seize power / seize on
+T: sharp ✊
+M: cease ~ 停止。只差一个字母，一个抓，一个停。
+@@selfish
+C: [self]-ish || self 是「自己」，-ish 是「有…性质的」。只装着自己——自私的。
+E: It was a [selfish] choice. ~ 那是[自私]的选择。
+E: Don't be so [selfish]. ~ 别这么[自私]。
+L: selfish motive / selfish behaviour / purely selfish
+T: dark 🪞
+M: selfless ~ 无私的。同一个 self，-less 是没有。
+@@sensitive
+C: [sens]-itive || sens 是「感觉」（sense、sensor 同源）。一碰就有感觉——敏感的、体贴的。
+E: She is [sensitive] to criticism. ~ 她对批评很[敏感]。
+E: This is a [sensitive] issue. ~ 这是[敏感]问题。
+L: sensitive to / sensitive information / a sensitive soul
+T: warm 🌸
+M: sensible ~ 明智的。sensitive 是「敏感」，sensible 是「讲道理」。
+@@severe
+C: [sever]-e || severus 是「严厉、不苟」。一点不留情——严厉的，病来得凶——严重的。
+E: The [severe] weather closed the road. ~ [恶劣]天气封了路。
+E: He has a [severe] headache. ~ 他[剧烈]头痛。
+L: severe weather / severe pain / severe punishment
+T: dark ⛈️
+M: several ~ 几个。拼写像，severe 是严，several 是几。
+@@shame
+C: [shame] || 古英语 sceamu 是「羞」。心里那条见不得人的——羞愧，可惜的事也叫「憾事」。
+E: He felt no [shame]. ~ 他毫无[羞耻]。
+E: It is a [shame] you cannot come. ~ 你不能来真[遗憾]。
+L: what a shame / sense of shame / shame on you
+T: dark 😔
+M: ashamed ~ 感到羞愧的。同根，形容词要多一个 a。
+@@sharp
+C: [sharp] || 古英语 scearp 是「锋利」。刀口快——锋利，脑子快——灵敏，涨价快——急剧。
+E: The knife is [sharp]. ~ 刀很[快]。
+E: There was a [sharp] rise in prices. ~ 物价[急剧]上涨。
+L: sharp rise / sharp knife / at six sharp
+T: sharp 🔪
+M: shape ~ 形状。只差一个字母，sharp 是利，shape 是形。
+@@shock
+C: [shock] || 法语 choc 是「撞击」。被猛撞一下——震惊，电流撞身——电击。
+E: The news [shocked] us. ~ 消息让我们[震惊]。
+E: He was treated for [shock]. ~ 他因[休克]接受治疗。
+L: be shocked at / culture shock / electric shock
+T: sharp ⚡
+M: shake ~ 摇。同一条「撞」的线，shock 是撞一下，shake 是摇。
+@@shortcoming
+C: [short]-coming || short 是「短、缺」，coming 是「来」。短了那一截——缺点。
+E: Everyone has [shortcomings]. ~ 人人都有[缺点]。
+E: He admitted his [shortcoming]. ~ 他承认了自己的[不足]。
+L: overcome shortcomings / a serious shortcoming / merits and shortcomings
+T: cool 📉
+M: shortcoming 是「缺点」，shortage 是「短缺」，一字之差。
+@@shrink
+C: [shrink] || 古英语 scrincan 是「蜷缩」。布料一洗就缩——缩水，人往后缩——退缩。
+E: The shirt [shrank] in the wash. ~ 衬衫洗后[缩水]了。
+E: Sales [shrank] by half. ~ 销量[减少]一半。
+L: shrink from / shrink in the wash / shrink back
+T: cool 📉
+M: sink ~ 下沉。拼写像，shrink 是缩，sink 是沉。
+@@significant
+C: [sign]-ific-ant || sign 是「记号」，fic 是「做」。做出记号的——重要的、意味深长的。
+E: This is a [significant] change. ~ 这是[重大]变化。
+E: She gave him a [significant] look. ~ 她[意味深长]地看他一眼。
+L: significant change / statistically significant / be significant to
+T: bright ⭐
+M: sign ~ 记号。同根，做出记号的都是要紧的事。
+@@similarity
+C: [simil]-arity || similis 是「相似」。像的那一点——相似之处。
+E: There is a strong [similarity]. ~ 有很强的[相似性]。
+E: The [similarities] are obvious. ~ [相似点]很明显。
+L: similarity between / bear a similarity to / striking similarity
+T: calm 🪞
+M: similar ~ 相似的。同根，-ity 是名词尾。
+@@simplify
+C: [simpl]-ify || simple 是「简单」，-ify 是「使…」。把复杂压平——简化。
+E: We must [simplify] the form. ~ 表格必须[简化]。
+E: The app [simplifies] the process. ~ 应用[简化]了流程。
+L: simplify the process / simplified version / greatly simplify
+T: cool ✂️
+M: simply ~ 仅仅。同根，-ify 是动词，-ly 是副词。
+@@simulate
+C: [simul]-ate || similis 是「相似」。做得像真的——模拟、假装。
+E: The program [simulates] flight. ~ 程序[模拟]飞行。
+E: He [simulated] illness. ~ 他[装]病。
+L: simulate conditions / computer simulated / simulate interest
+T: cool 🖥️
+M: stimulate ~ 刺激。拼写近，simulate 是「像」，stimulate 是「激」。
+@@simultaneously
+C: [simul]-taneously || simul 是「同时」（simultaneous 同源）。同一刻——同时地。
+E: The two events happened [simultaneously]. ~ 两件事[同时]发生。
+E: She translated [simultaneously]. ~ 她做[同声]传译。
+L: simultaneously with / occur simultaneously / almost simultaneously
+T: cool ⏱️
+M: simultaneous ~ 同时的。同根，-ly 是副词尾。
+@@sincere
+C: [sincer]-e || 拉丁 sincerus 是「纯净、不掺」。心里没掺假——真诚的。
+E: She gave a [sincere] apology. ~ 她[真诚]道歉。
+E: Please accept my [sincere] thanks. ~ 请接受我[诚挚]的谢意。
+L: sincere apology / sincere thanks / a sincere person
+T: warm 🤍
+M: since ~ 自从。拼写像，sincere 有 re 结尾才是「真诚」。
+@@sink
+C: [sink] || 古英语 sincan 是「下沉」。往下沉——下沉，厨房里那个凹下去的池子——水槽。
+E: The boat began to [sink]. ~ 船开始[下沉]。
+E: The dishes are in the [sink]. ~ 碗在[水槽]里。
+L: sink into / sink or swim / kitchen sink
+T: cool 🌊
+M: think ~ 想。只差一个字母，sink 是沉，think 是想。
+@@skeptical
+C: [skept]-ical || 希腊 skeptikos 是「考察、怀疑」。先不急着信——怀疑的。
+E: I am [skeptical] about the claim. ~ 我对这说法[存疑]。
+E: She gave a [skeptical] look. ~ 她[怀疑]地看了一眼。
+L: skeptical about / be skeptical of / a skeptical view
+T: cool 🤨
+M: septic ~ 感染的。字母顺序不同，一个是疑，一个是脓。
+@@skip
+C: [skip] || 古诺斯语 skopa 是「跳」。跳过一格——跳、省略。
+E: [Skip] the first question. ~ [跳过]第一题。
+E: She [skipped] breakfast. ~ 她[没吃]早饭。
+L: skip class / skip over / skip a beat
+T: bright 🦘
+M: skim ~ 略读。skip 是跳过，skim 是浮着读。
+@@slim
+C: [slim] || 荷兰语 slim 是「细、薄」。身上薄——苗条，机会薄——渺茫。
+E: She stays [slim] by swimming. ~ 她靠游泳保持[苗条]。
+E: The chances are [slim]. ~ 机会[渺茫]。
+L: slim chance / stay slim / a slim volume
+T: bright 🧍
+M: thin ~ 瘦。slim 偏「瘦得好看」，thin 只是「薄」。
+@@slip
+C: [slip] || 中古英语 slippen 是「滑」。脚底一滑——滑倒，悄悄溜——溜走，滑出来的小纸——纸条。
+E: He [slipped] on the ice. ~ 他在冰上[滑倒]。
+E: She [slipped] out the back. ~ 她从后门[溜]了。
+L: slip away / slip of the tongue / a slip of paper
+T: cool 🧊
+M: sleep ~ 睡。只差一个字母，slip 是滑，sleep 是睡。
+@@smooth
+C: [smooth] || 古英语 smoth 是「平滑」。表面没刺——光滑，过程没坎——顺利。
+E: The surface is [smooth]. ~ 表面很[光滑]。
+E: The talks went [smoothly]. ~ 会谈[顺利]。
+L: smooth surface / smooth the way / go smoothly
+T: calm 🪞
+M: smother ~ 闷住。同根「平」，一个平顺，一个压得透不过气。
+@@species
+C: [spec]-ies || spec 是「看」（spectacle 同源）。看出来的那个样子——种类、物种。
+E: This [species] is endangered. ~ 这个[物种]濒危。
+E: Many [species] live here. ~ 许多[物种]住在这里。
+L: endangered species / a species of / the human species
+T: bright 🦋
+M: specific ~ 具体的。同根「看」，一个是类别，一个是特指。
