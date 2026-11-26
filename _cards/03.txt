@@ -1,0 +1,420 @@
+@@decorate
+C: [decor]-ate || decus 是「体面、光彩」。把东西装点得有面子——装饰，给人挂勋章也是「添光彩」。
+E: They [decorated] the room with flowers. ~ 他们用花[装饰]房间。
+E: He was [decorated] for bravery. ~ 他因英勇被[授予勋章]。
+L: decorate with / decorate a room / be decorated for
+T: warm 🎀
+M: decoration ~ 装饰品。同根加 -ion，把动作变成东西。
+@@decrease
+C: de-[crease] || crease 是「长」（increase、crescent 同源）。往下长——减少。
+E: Sales [decreased] by ten percent. ~ 销量[下降]了一成。
+E: There was a sharp [decrease]. ~ 出现了急剧[下降]。
+L: decrease in / decrease by / on the decrease
+T: cool 📉
+M: increase ~ 增加。同一个 crease「长」，de 往下，in 往上。
+@@deed
+C: [deed] || 古英语 dæd 就是「做过的事」，和 do 同源。做出来的——行为，盖了章的行为——契约。
+E: Good [deeds] deserve praise. ~ 好[行为]该受表扬。
+E: The [deed] to the house is here. ~ 房子的[契约]在这。
+L: do a good deed / title deed / in deed
+T: calm 📜
+M: indeed ~ 确实。in + deed，字面是「在事实里」。
+@@defect
+C: de-[fect] || fect 是「做」（perfect、effect 同源）。没做好——缺陷；做「离开」的事——叛逃。
+E: The machine has a [defect]. ~ 这台机器有[缺陷]。
+E: He [defected] to the other side. ~ 他[叛逃]到对方。
+L: a birth defect / defect to / defect in
+T: dark 🔧
+M: perfect ~ 完美的。都含 fect「做」，per 是「彻底」，de 是「差一截」。
+@@defend
+C: de-[fend] || fend 是「打」（offend 冒犯同源）。把打过来的挡回去——保卫。
+E: They [defended] the city for a month. ~ 他们[守]城一个月。
+E: He [defended] his decision. ~ 他为自己的决定[辩护]。
+L: defend against / defend oneself / defend a title
+T: sharp 🛡️
+M: offend ~ 冒犯。都含 fend「打」，一个挡回去，一个打出去。
+@@degrade
+C: de-[grade] || grad 是「步、级」（grade 年级、gradual 同源）。把级往下调——降级、降解。
+E: Plastic [degrades] slowly. ~ 塑料[降解]很慢。
+E: Such ads [degrade] women. ~ 这类广告[贬低]女性。
+L: degrade into / degrade the environment / be degraded to
+T: dark ⬇️
+M: upgrade ~ 升级。同一个 grade「级」，up 往上，de 往下。
+@@delay
+C: de-[lay] || 古法语 laier 是「留下、放松」。把事往后留——推迟。
+E: The flight was [delayed] two hours. ~ 航班[延误]两小时。
+E: Don't [delay] seeing a doctor. ~ 别[耽搁]看医生。
+L: delay doing / without delay / a long delay
+T: dark ⏳
+M: relay ~ 接力、转播。只差一个字母，delay 是往后，relay 是传下去。
+@@delete
+C: de-[lete] || 拉丁 delere 是「抹去、销毁」，原义「涂掉字迹」。从纸上抹掉——删除。
+E: [Delete] the last paragraph. ~ 把最后一段[删掉]。
+E: The file was [deleted] by mistake. ~ 文件被误[删]了。
+L: delete a file / delete from / accidentally deleted
+T: cool 🗑️
+M: delegate ~ 委派。字母多一个，别把「删」看成「派」。
+@@deliberately
+C: de-[liber]-ately || liber 是「天平」（libra 磅）。放到天平上称过才做——故意地，也指不慌不忙。
+E: He [deliberately] broke the rule. ~ 他[故意]违规。
+E: She walked [deliberately] to the door. ~ 她[从容]走向门口。
+L: deliberately vague / act deliberately / deliberately slow
+T: sharp 🎯
+M: deliberate ~ 故意的、从容的。同根，-ly 变副词。
+@@delicate
+C: [delic]-ate || 拉丁 delicatus 是「令人愉悦、精细」。细到一碰就坏——脆弱的、精细的。
+E: The vase is very [delicate]. ~ 这花瓶很[易碎]。
+E: It is a [delicate] matter. ~ 这是件[微妙]的事。
+L: delicate skin / a delicate balance / delicate situation
+T: warm 🌸
+M: delicious ~ 美味的。同一串 delic「诱人」，一个诱舌头，一个诱眼睛。
+@@delight
+C: de-[light] || 拉丁 delectare 是「引诱、取悦」。心里被勾得发亮——高兴。
+E: The news gave her great [delight]. ~ 这消息让她[大喜]。
+E: He [delights] in teasing her. ~ 他[乐于]逗她。
+L: take delight in / to one's delight / delight in
+T: bright 😊
+M: light ~ 光。拼写里有 light，但词源是「引诱」，不是「光」。
+@@deliver
+C: de-[liver] || 拉丁 de-liberare 是「放出来」（liberate 解放同源）。把东西放出去——递送，把话放出去——演讲。
+E: They [deliver] to your door. ~ 他们[送货]上门。
+E: She [delivered] a short speech. ~ 她[发表]了简短讲话。
+L: deliver a speech / deliver goods / deliver on a promise
+T: warm 📦
+M: liberate ~ 解放。都从 liber「自由」，deliver 是把东西放出手。
+@@democratic
+C: [demo]-cratic || demo 是「人民」（democracy 同源），crat 是「权力」。人民掌权——民主的。
+E: The country held its first [democratic] election. ~ 该国举行了首次[民主]选举。
+E: The club is run on [democratic] lines. ~ 俱乐部按[民主]方式运作。
+L: democratic election / democratic rights / democratic society
+T: calm 🗳️
+M: democracy ~ 民主。同根，-ic 是形容词，-cy 是制度。
+@@demolition
+C: de-[mol]-ition || mol 是「堆、建」（molecule 同源）。把堆起来的推倒——拆除。
+E: The [demolition] of the bridge began. ~ 大桥[拆除]开始了。
+E: The old houses are marked for [demolition]. ~ 老房子被列为[拆除]。
+L: demolition work / demolition of / scheduled for demolition
+T: dark 🏚️
+M: demolish ~ 拆除（动词）。同根，-ition 是名词尾。
+@@demonstrate
+C: de-[monstr]-ate || monstr 是「指给人看」（monster 原指「示警之物」）。指出来给人看——证明、演示，站到街上给人看——示威。
+E: The results [demonstrate] the theory. ~ 结果[证明]了理论。
+E: Students [demonstrated] against the plan. ~ 学生[示威]反对该计划。
+L: demonstrate that / demonstrate how / demonstrate against
+T: cool 🧪
+M: monster ~ 怪物。原义「示警的东西」，同根，一个是展示，一个是吓人。
+@@depart
+C: de-[part] || part 是「部分、分开」。从原来的地方分开走——离开、启程。
+E: The train [departs] at six. ~ 火车六点[开出]。
+E: He [departed] from his usual style. ~ 他[背离]了一贯风格。
+L: depart from / depart for / depart this life
+T: calm 🚪
+M: part ~ 分开。同根，de- 是「离开」，合起来就是走开。
+@@desert
+C: de-[sert] || sert 是「连接」（series 同源）。把连接解开、丢下——遗弃；断开的地方——沙漠。
+E: He [deserted] his family. ~ 他[抛弃]了家人。
+E: Few plants grow in the [desert]. ~ [沙漠]里植物稀少。
+L: desert island / desert a post / the Sahara Desert
+T: dark 🏜️
+M: dessert ~ 甜点。多一个 s，是「端上来的最后一道」，别把沙漠吃成甜点。
+@@deserve
+C: de-[serve] || serve 是「服务」。给人干了活，就该得到回报——值得、应得。
+E: You [deserve] a rest. ~ 你[该]歇歇了。
+E: He [deserved] the punishment. ~ 他[应受]这惩罚。
+L: deserve to do / deserve attention / deserve better
+T: warm ⚖️
+M: serve ~ 服务。同根，de- 在这里是「完全」，干完了就该拿。
+@@desire
+C: de-[sire] || sidus 是「星星」。仰头盼着那颗星——渴望。
+E: She had a strong [desire] to travel. ~ 她[渴望]旅行。
+E: He [desired] only one thing. ~ 他[只想要]一样东西。
+L: desire for / a strong desire / leave much to be desired
+T: warm ✨
+M: desirous ~ 渴望的。同根，-ous 是形容词尾。
+@@desperate
+C: de-[sper]-ate || sper 是「希望」（prosper 繁荣同源）。希望被抽走——绝望的，绝望了就不顾一切。
+E: They were [desperate] for water. ~ 他们[极度]缺水。
+E: He made a [desperate] attempt. ~ 他做了[孤注一掷]的尝试。
+L: desperate for / a desperate attempt / in desperate need
+T: dark 🆘
+M: prosper ~ 繁荣。都含 sper「希望」，一个有望，一个无望。
+@@destination
+C: de-[stin]-ation || stin 是「站定」（destiny 命运同源）。定好要停的那一站——目的地。
+E: We reached our [destination] at dusk. ~ 黄昏时我们到了[目的地]。
+E: Paris is a popular [destination]. ~ 巴黎是热门[目的地]。
+L: final destination / tourist destination / reach a destination
+T: cool 🗺️
+M: destiny ~ 命运。同根，一个是「定好的地点」，一个是「定好的路」。
+@@destruction
+C: de-[struct]-ion || struct 是「建」（construct 同源）。把建的拆掉——破坏。
+E: The storm caused great [destruction]. ~ 风暴造成巨大[破坏]。
+E: The [destruction] of the forest must stop. ~ 森林的[毁坏]必须停止。
+L: mass destruction / destruction of / cause destruction
+T: dark 💥
+M: construction ~ 建设。同一个 struct，de 是拆，con 是建。
+@@determine
+C: de-[termin]-e || termin 是「边界」（terminal 终点同源）。把边界划死——确定、下决心。
+E: We must [determine] the cause. ~ 我们必须[查明]原因。
+E: She [determined] to leave. ~ 她[下决心]要走。
+L: determine to do / be determined to / determine the cause
+T: sharp 🎯
+M: terminal ~ 终点。都从 termin「界」，划到界就是尽头。
+@@devote
+C: de-[vote] || vot 是「誓愿」（vow 同源）。立下誓把力气交出去——致力于。
+E: She [devoted] herself to teaching. ~ 她[献身]教育。
+E: He [devotes] two hours a day to reading. ~ 他每天[拿出]两小时读书。
+L: devote to / devote oneself to / devoted fan
+T: warm 🕯️
+M: vote ~ 投票。都从 vot「誓愿」，一个发誓给人，一个发誓选人。
+@@disability
+C: dis-[abil]-ity || dis- 是「不」，abil 是「能」（able 同源）。不能的状态——残疾、无能力。
+E: He lives with a [disability]. ~ 他带[残疾]生活。
+E: The building has [disability] access. ~ 这楼有[无障碍]通道。
+L: physical disability / learning disability / disability access
+T: calm ♿
+M: ability ~ 能力。同一个 abil，dis 是「不」。
+@@disappoint
+C: dis-[appoint] || appoint 是「任命、指定」。把定好的人撤了——让人落空——使失望。
+E: The film [disappointed] me. ~ 这电影让我[失望]。
+E: I don't want to [disappoint] you. ~ 我不想让你[失望]。
+L: be disappointed at / disappoint sb / disappointing result
+T: dark 😞
+M: appoint ~ 任命。同根，dis 是「撤掉」，撤掉期望就是失望。
+@@distant
+C: dis-[tant] || sta 是「站」（stand 同源）。站得远远的——遥远的，人也处得远——冷淡的。
+E: The mountains are [distant]. ~ 群山[遥远]。
+E: She seemed [distant] today. ~ 她今天显得[疏远]。
+L: distant relative / in the distant future / distant from
+T: cool 🏔️
+M: instant ~ 立刻的。都从 sta「站」，一个是远处站着，一个是眼前站着。
+@@distinct
+C: dis-[tinct] || stinct 是「刺出记号」（instinct 本能同源）。刺出来的标记——清楚的、不同的。
+E: The two sounds are [distinct]. ~ 两个音[不同]。
+E: There is a [distinct] smell here. ~ 这里有股[明显]的气味。
+L: distinct from / distinct smell / as distinct from
+T: cool 🔍
+M: instinct ~ 本能。同根「刺」，本能是刻在身上的印记。
+@@distinguish
+C: dis-[stingu]-ish || stingu 是「刺、戳」（extinguish 熄灭同源）。戳出记号才能分开——区别。
+E: Can you [distinguish] the twins? ~ 你能[分辨]这对双胞胎吗？
+E: She [distinguished] herself in debate. ~ 她在辩论中[表现出众]。
+L: distinguish from / distinguish between / distinguish oneself
+T: cool 🔬
+M: extinguish ~ 熄灭。同根「戳灭」，一个是分开，一个是弄灭。
+@@eager
+C: [eager] || 拉丁 acer 是「尖锐、激烈」。心尖上挂着——热切的。
+E: She was [eager] to start. ~ 她[急于]开始。
+E: The children were [eager] for the trip. ~ 孩子们[热切]盼着旅行。
+L: eager to do / eager for / eager beaver
+T: bright 🔥
+M: eagle ~ 鹰。只差一个字母，eager 是急切，eagle 是鹰。
+@@economic
+C: [eco]-nomic || oikos 是「家」，nomos 是「管理」。管好一个家——经济的。
+E: The country is in [economic] trouble. ~ 国家陷入[经济]困境。
+E: It is not [economic] to repair it. ~ 修它不[划算]。
+L: economic growth / economic policy / economic crisis
+T: cool 📈
+M: economical ~ 节约的。economic 指「经济体系」，economical 指「省钱」。
+@@embarrass
+C: em-[barr]-ass || barra 是「栏杆、障碍」。在面前设个栏杆挡住——使尴尬。
+E: His question [embarrassed] her. ~ 他的问题让她[尴尬]。
+E: Don't [embarrass] me in public. ~ 别当众让我[难堪]。
+L: be embarrassed about / embarrass sb / embarrassing moment
+T: warm 😳
+M: barrier ~ 障碍。都含 barr「栏」，一个是拦住，一个是被人看住。
+@@emergency
+C: e-[merg]-ency || merg 是「沉」（submerge 淹没同源）。突然浮出水面的事——突发事件。
+E: Call 120 in an [emergency]. ~ [紧急]情况打120。
+E: The [emergency] exit is at the back. ~ [紧急]出口在后面。
+L: in an emergency / emergency exit / state of emergency
+T: sharp 🚨
+M: emerge ~ 出现。同根「浮出」，突然浮出来的就是急事。
+@@emotion
+C: e-[mot]-ion || mot 是「动」（motion、motor 同源）。心里被推着动起来——情绪。
+E: Her voice was full of [emotion]. ~ 她声音充满[感情]。
+E: He tried to hide his [emotions]. ~ 他试图掩饰[情绪]。
+L: with emotion / a flood of emotion / control one's emotions
+T: warm 💗
+M: motion ~ 运动。同根，一个是身体动，一个是心动。
+@@emphasis
+C: [em]-phasis || phas 是「显现」（phase、phenomenon 同源）。让某处显出来——强调。
+E: The school puts [emphasis] on reading. ~ 学校[重视]阅读。
+E: He said it with [emphasis]. ~ 他[加重语气]说这话。
+L: put emphasis on / with emphasis / emphasis on
+T: sharp ❗
+M: phase ~ 阶段。同根「显现」，一个显出重点，一个显出时期。
+@@enable
+C: en-[able] || en- 是「使」，able 是「能」。使它能——使能够。
+E: The app [enables] users to save files. ~ 这个应用[让]用户存文件。
+E: This pass [enables] you to enter. ~ 这张通行证[使]你能进入。
+L: enable sb to do / enable access / be enabled by
+T: bright 🔑
+M: disable ~ 使不能。同一个 able，en 是给，dis 是拿掉。
+@@engage
+C: en-[gage] || gage 是「抵押、保证」（wage 同源）。把自己押进去——从事、订婚；把人请进来——雇用。
+E: She [engages] in charity work. ~ 她[从事]慈善。
+E: They got [engaged] last spring. ~ 他们去年春天[订婚]。
+L: engage in / be engaged to / engage with
+T: warm 💍
+M: wage ~ 工资。都从 gage「抵押」，工钱是押出去的力气换的。
+@@ensure
+C: en-[sure] || sure 是「确定」。把它弄确定——确保。
+E: Please [ensure] the door is locked. ~ 请[确保]门锁好。
+E: The policy [ensures] fair treatment. ~ 该政策[保证]公平对待。
+L: ensure that / ensure safety / ensure against
+T: calm ✅
+M: insure ~ 投保。insure 是买保险，ensure 是使确定。
+@@entire
+C: [entire] || 拉丁 integer 是「完整无缺」（integer 整数同源）。一点没缺——全部的。
+E: He spent the [entire] day reading. ~ 他[整整]一天都在读书。
+E: The [entire] team agreed. ~ [全体]队员都同意。
+L: the entire day / entire life / in its entirety
+T: calm 🔵
+M: integer ~ 整数。同根「完整」，整数就是没有零头的数。
+@@erupt
+C: e-[rupt] || rupt 是「破」（interrupt、bankrupt 同源）。破开冲出来——喷发、爆发。
+E: The volcano [erupted] at dawn. ~ 火山黎明时[喷发]。
+E: Violence [erupted] in the streets. ~ 街上[爆发]暴力。
+L: erupt into / volcano erupts / erupt in applause
+T: sharp 🌋
+M: interrupt ~ 打断。都含 rupt「破」，一个破土，一个破话。
+@@essential
+C: [essent]-ial || ess 是「存在」（essence 本质同源）。少了它就不成其存在——本质的、必需的。
+E: Water is [essential] to life. ~ 水对生命[必不可少]。
+E: The [essentials] are packed. ~ [必需品]装好了。
+L: essential to / essential part / bare essentials
+T: calm 🧱
+M: essence ~ 本质。同根，-ial 是形容词，「本质上的」就是「必需」。
+@@estimate
+C: [estim]-ate || aestimare 是「估价」。心里称一称——估计。
+E: We [estimate] the cost at 2000 yuan. ~ 我们[估计]成本两千。
+E: Her [estimate] was too high. ~ 她的[估算]偏高。
+L: estimate at / rough estimate / it is estimated that
+T: cool 📐
+M: esteem ~ 尊重。同根「估价」，把人的价值估高就是尊重。
+@@evaluate
+C: e-[valu]-ate || valu 是「价值」（value 同源）。把价值算出来——评价。
+E: We must [evaluate] the results. ~ 我们必须[评估]结果。
+E: The plan is being [evaluated]. ~ 方案正在[评估]中。
+L: evaluate the results / evaluate performance / evaluate against
+T: cool 📊
+M: value ~ 价值。同根，-ate 变动词，就是把价值量出来。
+@@exchange
+C: ex-[change] || change 是「换」。换来换去——交换，专门换钱的地方——交易所。
+E: They [exchanged] phone numbers. ~ 他们[交换]了电话。
+E: What is the [exchange] rate today? ~ 今天[汇率]多少？
+L: in exchange for / exchange rate / stock exchange
+T: warm 🔄
+M: change ~ 改变。同根，ex- 是「出」，给出一个换回一个。
+@@exclaim
+C: ex-[claim] || claim 是「喊、宣称」（claim 声称同源）。喊出来——惊叫。
+E: "Wonderful!" she [exclaimed]. ~ “太棒了！”她[叫道]。
+E: He [exclaimed] in surprise. ~ 他[惊呼]一声。
+L: exclaim at / exclaim in surprise / exclaim that
+T: sharp 😲
+M: claim ~ 声称。同根，ex- 是「出声」，喊出来就成惊叹。
+@@exclude
+C: ex-[clude] || clud 是「关」（include、close 同源）。关在门外——排除。
+E: The price [excludes] tax. ~ 价格[不含]税。
+E: He was [excluded] from the team. ~ 他被[排除]在队外。
+L: exclude from / exclude the possibility / be excluded from
+T: cool 🚫
+M: include ~ 包括。同一个 clud「关」，in 是关进来，ex 是关出去。
+@@exhausted
+C: ex-[haust] || haust 是「抽水」（exhaust 排气）。水被抽干——精疲力竭、耗尽。
+E: I was [exhausted] after the trip. ~ 旅行后我[筋疲力尽]。
+E: The fuel is [exhausted]. ~ 燃料[耗尽]了。
+L: exhausted from / exhaust fumes / be exhausted
+T: dark 🪫
+M: exhaust ~ 排气、耗尽。同根，形容词多一个 -ed 就是「被抽干了」。
+@@expense
+C: ex-[pense] || pens 是「称、付」（pension、expensive 同源）。把钱称出去——花费。
+E: The trip was at his [expense]. ~ 旅费由他[出]。
+E: Housing is a big [expense]. ~ 住房是笔大[开支]。
+L: at the expense of / living expenses / expense account
+T: cool 💰
+M: expensive ~ 贵的。同根，-ive 是「花钱的」，-se 是「花掉的钱」。
+@@explode
+C: ex-[plode] || plaud 是「拍手」（applause 同源）。罗马观众拍手把演员轰下台——轰然炸开。
+E: The boiler [exploded]. ~ 锅炉[爆炸]了。
+E: The city's population [exploded]. ~ 城市人口[激增]。
+L: explode with anger / explode in popularity / explode a myth
+T: sharp 💣
+M: applause ~ 掌声。同根「拍手」，一个把演员拍下台，一个把锅拍炸。
+@@exploit
+C: ex-[ploit] || plic 是「折」（explicit、complicated 同源）。把折起来的展开用完——开发、利用，用过头——剥削。
+E: They [exploit] cheap labour. ~ 他们[剥削]廉价劳力。
+E: We should [exploit] this chance. ~ 我们该[利用]这机会。
+L: exploit resources / exploit a chance / commercial exploit
+T: sharp ⛏️
+M: explicit ~ 明确的。都含 plic「折」，一个是展开来说，一个是展开来用。
+@@expose
+C: ex-[pose] || pos 是「放」（compose、position 同源）。放到外面——暴露、揭露。
+E: Don't [expose] the film to light. ~ 别让胶片[曝光]。
+E: The report [exposed] the truth. ~ 报道[揭露]了真相。
+L: expose to / be exposed to / expose the truth
+T: sharp 🔦
+M: impose ~ 强加。都含 pos「放」，一个放出去，一个压上去。
+@@facility
+C: [facil]-ity || facil 是「容易」（facile 容易的）。让事情变容易的东西——设施，学什么都快——才能。
+E: The hotel has good [facilities]. ~ 酒店[设施]不错。
+E: She has a [facility] for languages. ~ 她学语言有[天赋]。
+L: sports facilities / with facility / a facility for
+T: calm 🏢
+M: facilitate ~ 促进。同根「容易」，一个让路好走，一个有本事走快。
+@@faithfully
+C: [faith]-fully || faith 是「信」，-ful 是「满」，-ly 是副词。满心信守地——忠实地。
+E: He served the company [faithfully]. ~ 他[忠诚]地为公司服务。
+E: The letter was copied [faithfully]. ~ 信被[如实]抄录。
+L: serve faithfully / faithfully yours / faithfully reproduced
+T: warm 🤝
+M: faithful ~ 忠诚的。同根，-ly 是副词尾。
+@@fancy
+C: [fancy] || 源自 phantasia「幻想」（fantasy 同源）。脑子里想出来的花样——想象、花哨的。
+E: I [fancy] a cup of tea. ~ 我[想]喝杯茶。
+E: They went to a [fancy] restaurant. ~ 他们去了家[高档]餐厅。
+L: fancy doing / fancy restaurant / take a fancy to
+T: bright 🎩
+M: fantasy ~ 幻想。同一个词根，fancy 偏「一时兴起」，fantasy 偏「成篇的幻想」。
+@@fantasy
+C: [fantas]-y || 希腊 phantasia 是「显现、想象」。脑子里放出来的画面——幻想。
+E: He lives in a world of [fantasy]. ~ 他活在[幻想]世界里。
+E: She writes [fantasy] novels. ~ 她写[奇幻]小说。
+L: fantasy world / live in fantasy / fantasy novel
+T: bright 🐉
+M: fantastic ~ 极好的。同根「想象出来的」，好得不像真的。
+@@fascinate
+C: [fascin]-ate || 拉丁 fascinum 是「咒语、魔物」。被施了咒一样挪不开眼——使着迷。
+E: The stars [fascinate] children. ~ 星星让小孩[着迷]。
+E: I was [fascinated] by her voice. ~ 我被她的声音[迷住]。
+L: be fascinated by / fascinate sb / fascinating story
+T: bright 🌀
+M: fascinating ~ 迷人的。同根，-ing 形容「让人着迷的」。
+@@fasten
+C: [fast]-en || fast 不只是「快」，古义是「牢固」。弄牢——系紧；眼睛钉住——盯住。
+E: [Fasten] your seat belt. ~ [系]好安全带。
+E: He [fastened] his eyes on the door. ~ 他[盯]着门。
+L: fasten to / fasten on / fasten your seat belt
+T: cool 🔒
+M: fast ~ 快的。古义「牢固」，fasten 就是从这儿来的。
+@@feature
+C: [feat]-ure || fact 是「做、造」（fact、effect 同源）。造出来的样子——特征，以它为主打——以…为特色。
+E: The main [feature] is the garden. ~ 主要[特色]是花园。
+E: The film [features] a young actress. ~ 影片[由]一位年轻女演员[主演]。
+L: main feature / feature film / feature in
+T: cool ⭐
+M: fact ~ 事实。同根「做出来的事」，一个是事实，一个是样子。
+@@federal
+C: [feder]-al || foedus 是「盟约」（confederate 同源）。几方立约结盟——联邦的。
+E: The [federal] government acted. ~ [联邦]政府出手了。
+E: Education is partly a [federal] matter. ~ 教育部分属[联邦]事务。
+L: federal government / federal law / federal system
+T: cool 🏛️
+M: confederation ~ 邦联。同根「盟约」，-tion 是那个联合体。
+@@fellow
+C: [fellow] || 古诺斯语 felagi 是「合伙出钱的人」（fee + lay 放钱）。一起搭伙的——同伴、家伙。
+E: He is a [fellow] of mine. ~ 他是我的[同伴]。
+E: The [fellow] next door is noisy. ~ 隔壁那[家伙]很吵。
+L: fellow student / research fellow / fellow feeling
+T: warm 👥
+M: fee ~ 费用。原义「一起放钱的人」，同伙先要是同出资。
