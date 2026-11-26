@@ -1,0 +1,1910 @@
+{
+  "_note": "富化缓存：按单词为键，跨词库复用。src=gen 表示由模型整理、未经词源库核对，界面标『整理·待核』。",
+  "abandon": {
+    "t": "源自古法语 abandoner，字面是 a bandon——「置于他人的支配之下」。bandon 本义是权力、管辖，和 ban（公告、禁令）同源。把你手里的东西交出去、任人处置，就是「放弃」。英语里 14 世纪借入，最初还带法律意味「放弃所有权」，后来才泛化为一般意义上的抛弃。",
+    "r": [
+      [
+        "a-",
+        "到、置于"
+      ],
+      [
+        "bandon",
+        "支配权"
+      ]
+    ],
+    "m": "把东西「交给别人管」——撒手不管。",
+    "hk": {
+      "cut": "a-[ban]-don",
+      "line": "[ban] 就是「禁令」。一纸[禁令]压下来，手里的东西只能[撒手]——放弃。"
+    },
+    "eg": [
+      [
+        "They [abandoned] the car and walked home.",
+        "他们[丢下]车，走回了家。"
+      ],
+      [
+        "He [abandoned] the plan halfway.",
+        "他半路[放弃]了这个计划。"
+      ]
+    ],
+    "col": [
+      "abandon ship",
+      "abandon hope",
+      "abandon oneself to"
+    ],
+    "mx": [
+      [
+        "abundant",
+        "丰富的。abAndon 是放弃，abUndant 是很多，中间那个字母别搞混。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "🚢"
+  },
+  "abnormal": {
+    "t": "ab-（离开）+ norm（规范、标准）+ -al。norm 来自拉丁 norma，原指木匠用的直角尺。偏离那把尺子画出的线，就是「不正常」。这个词是 19 世纪才造出来的，属于近代科学词汇，不是古英语遗产。",
+    "r": [
+      [
+        "ab-",
+        "离开"
+      ],
+      [
+        "norm",
+        "尺子、规范"
+      ]
+    ],
+    "m": "离开尺子的线——歪了，反常。",
+    "hk": {
+      "cut": "[ab]-normal",
+      "line": "[ab] 是「离开」。离开 normal 那条线——[不正常]。"
+    },
+    "eg": [
+      [
+        "an [abnormal] heartbeat",
+        "[异常的]心跳"
+      ],
+      [
+        "[abnormal] weather this year",
+        "今年反常的天气"
+      ]
+    ],
+    "col": [
+      "abnormal behaviour",
+      "abnormal condition"
+    ],
+    "mx": [
+      [
+        "aboard",
+        "上船、登机。a + board（甲板），跟 abnormal 只差几个字母。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "⚠️"
+  },
+  "absence": {
+    "t": "拉丁 absentia，由 ab-（离开）+ esse（存在）构成。esse 是拉丁语「是、在」的不定式，英语 essence（本质）、present（在场）都从它来。人不在那个「在」里，就是缺席。",
+    "r": [
+      [
+        "ab-",
+        "离开"
+      ],
+      [
+        "esse",
+        "存在"
+      ]
+    ],
+    "m": "「存在」跑开了——人不在。",
+    "hk": {
+      "cut": "[ab]-sence",
+      "line": "[ab] 是「离开」，-sence 背后是拉丁 [esse]「存在」。存在跑开了——[缺席]。"
+    },
+    "eg": [
+      [
+        "in the [absence] of evidence",
+        "在缺乏证据的情况下"
+      ],
+      [
+        "his [absence] from class",
+        "他缺课"
+      ]
+    ],
+    "col": [
+      "in the absence of",
+      "absence of mind",
+      "leave of absence"
+    ],
+    "mx": [
+      [
+        "absent",
+        "形容词「缺席的」。absence 是它的名词形式。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🌫️"
+  },
+  "absolute": {
+    "t": "ab-（离开）+ solvere（松开、解开）。字面是「被解开的、不受束缚的」。拉丁 absolutus 在语法里指「完整的、独立的」，因为解开了就自成一体。所以它同时长出了两个方向：不受限制（绝对）和彻底完成（absolve 赦免）。同源词 solve、solution。",
+    "r": [
+      [
+        "ab-",
+        "离开"
+      ],
+      [
+        "solvere",
+        "松开"
+      ]
+    ],
+    "m": "解开绳子——没有束缚，所以「绝对」。",
+    "hk": {
+      "cut": "[ab]-solute",
+      "line": "[ab] 是离开，-solute 来自「[松开]」。绳子解开了——不受任何约束，所以是[绝对]。"
+    },
+    "eg": [
+      [
+        "[absolute] power",
+        "[绝对的]权力"
+      ],
+      [
+        "That's [absolute] nonsense.",
+        "那完全是胡说。"
+      ]
+    ],
+    "col": [
+      "absolute power",
+      "absolute majority",
+      "absolute zero"
+    ],
+    "mx": [
+      [
+        "solve",
+        "解决。同一个「松开」——把疙瘩解开。"
+      ],
+      [
+        "absolve",
+        "赦免。把人从罪责里松开。"
+      ]
+    ],
+    "tone": "sharp",
+    "icon": "👑"
+  },
+  "absorb": {
+    "t": "ab-（离开）+ sorbere（吸、啜）。拉丁 absorbere 就是「吸走」。sorbere 这个「吸」的动作为英语留下了一串词：absorb 吸收、adsorb 吸附、sorbet 雪葩（因为冰凉解渴）。海绵吸水的感觉，就是这个词的原意。",
+    "r": [
+      [
+        "ab-",
+        "离开"
+      ],
+      [
+        "sorbere",
+        "吸"
+      ]
+    ],
+    "m": "吸走——ab（走）+ sorb（吸）。",
+    "hk": {
+      "cut": "[ab]-sorb",
+      "line": "[ab] 是走开，-sorb 是「[吸]」。水被吸走——[吸收]。"
+    },
+    "eg": [
+      [
+        "Plants [absorb] water through roots.",
+        "植物通过根[吸收]水分。"
+      ],
+      [
+        "I was [absorbed] in the book.",
+        "我[沉浸在]书里。"
+      ]
+    ],
+    "col": [
+      "absorb water",
+      "be absorbed in",
+      "absorb the cost"
+    ],
+    "mx": [
+      [
+        "adsorb",
+        "吸附。absorb 是吸进去，adsorb 只是贴在表面。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🧽"
+  },
+  "abstract": {
+    "t": "abs-（离开）+ trahere（拉）。字面「被拉走的」。拉丁 abstrahere 指把某物从原处拽开。14 世纪用来译阿拉伯哲学里的概念：从具体事物中「抽走」共同点，剩下那个看不见的东西就是「抽象的」。同源 tractor（拉的东西）、attract（拉向）。",
+    "r": [
+      [
+        "abs-",
+        "离开"
+      ],
+      [
+        "trahere",
+        "拉"
+      ]
+    ],
+    "m": "从实物里「拉走」共性——剩下看不见的，就是抽象。",
+    "hk": {
+      "cut": "[abs]-tract",
+      "line": "[abs] 是离开，-tract 是「[拉]」。从实物里把共性[拉]出来——剩下看不见的，就是[抽象]。"
+    },
+    "eg": [
+      [
+        "an [abstract] concept",
+        "一个[抽象的]概念"
+      ],
+      [
+        "[abstract] painting",
+        "抽象画"
+      ]
+    ],
+    "col": [
+      "abstract concept",
+      "in the abstract",
+      "abstract art"
+    ],
+    "mx": [
+      [
+        "attract",
+        "吸引。同一个 tract，但方向是往里拉。"
+      ],
+      [
+        "contract",
+        "合同、收缩。con 是一起——拉到一起。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🌀"
+  },
+  "abundant": {
+    "t": "ab-（此处表加强）+ undare（涌流），unda 是拉丁语的「波浪」。河水漫出堤岸、波浪涌上来，就是「多得溢出来」。同源 undulate（起伏如浪）、inundate（淹没）。注意它和 abandon 长得像但毫无关系。",
+    "r": [
+      [
+        "ab-",
+        "加强"
+      ],
+      [
+        "unda",
+        "波浪"
+      ]
+    ],
+    "m": "水漫出来了——多到溢出，即丰富。",
+    "hk": {
+      "cut": "[ab]-und-ant",
+      "line": "-und 是「[波浪]」。水一波波涌上来、漫出堤岸——多到[溢出]，所以是[丰富]。"
+    },
+    "eg": [
+      [
+        "[abundant] rainfall",
+        "[充沛的]降雨"
+      ],
+      [
+        "a region [abundant] in wildlife",
+        "野生动物[丰富的]地区"
+      ]
+    ],
+    "col": [
+      "abundant in",
+      "abundant evidence",
+      "abundant resources"
+    ],
+    "mx": [
+      [
+        "abandon",
+        "放弃。abAndon 与 abUndant 只差一个字母。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "🌊"
+  },
+  "abuse": {
+    "t": "ab-（偏离）+ uti（使用）。拉丁 abuti 就是「用歪了」。uti 是「用」，英语 use、useful、utility 全从它来。用法偏离正道，一是滥用（权力），二是虐待（人）。同一个动作，两个中文说法，取决于被用坏的是什么。",
+    "r": [
+      [
+        "ab-",
+        "偏离"
+      ],
+      [
+        "uti",
+        "使用"
+      ]
+    ],
+    "m": "用歪了——要么滥用，要么虐待。",
+    "hk": {
+      "cut": "[ab]-use",
+      "line": "[ab] 是「偏离」。东西用偏了——[滥用]；人用偏了——[虐待]。"
+    },
+    "eg": [
+      [
+        "[abuse] of power",
+        "[滥用]权力"
+      ],
+      [
+        "child [abuse]",
+        "虐待儿童"
+      ]
+    ],
+    "col": [
+      "abuse of power",
+      "drug abuse",
+      "verbal abuse"
+    ],
+    "mx": [
+      [
+        "misuse",
+        "误用。abuse 带恶意，misuse 只是用错。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "⛓️"
+  },
+  "academic": {
+    "t": "来自希腊语 Akademeia，雅典城外一片园林的名字，传说归英雄 Akademos 所有。柏拉图在那里讲学四十年，地名就成了「学派」的代称。所以这个词的本义不是「学术的」，是「那个园子里的」。17 世纪起才泛指学院、学术。",
+    "r": [
+      [
+        "Akademeia",
+        "雅典柏拉图学园"
+      ]
+    ],
+    "m": "柏拉图那个园子——学院、学术，都从地名来。",
+    "c": "low",
+    "hk": {
+      "cut": "[academ]-ic",
+      "line": "[academ] 是雅典城外那片园林的名字，柏拉图在那儿讲学四十年。园子里的事——[学术]。"
+    },
+    "eg": [
+      [
+        "[academic] performance",
+        "[学业]成绩"
+      ],
+      [
+        "[academic] research",
+        "学术研究"
+      ]
+    ],
+    "col": [
+      "academic year",
+      "academic performance",
+      "academic circles"
+    ],
+    "mx": [
+      [
+        "academy",
+        "学院。同一个地名，指机构本身。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🏛️"
+  },
+  "accelerate": {
+    "t": "ad-（向）+ celer（快）。拉丁 accelerare 就是「加快」。celer 是形容词「迅速的」，英语 celerity（敏捷）直接承它。这个词 16 世纪进入英语，最初用于物理运动，后来才扩展到「加速进程」。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "celer",
+        "快"
+      ]
+    ],
+    "m": "往「快」的方向去——加速。",
+    "hk": {
+      "cut": "ac-[celer]-ate",
+      "line": "[celer] 就是「快」（celerity 同根）。往快的方向去——[加速]。"
+    },
+    "eg": [
+      [
+        "[accelerate] the process",
+        "[加快]进程"
+      ],
+      [
+        "The car [accelerated] smoothly.",
+        "车平稳地[加速]了。"
+      ]
+    ],
+    "col": [
+      "accelerate growth",
+      "accelerate the pace"
+    ],
+    "mx": [
+      [
+        "accessory",
+        "配件。开头像，词根完全不同。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "🏎️"
+  },
+  "accent": {
+    "t": "ad-（向、附加）+ cantus（唱）。拉丁 accentus 是罗马语法学家造来翻译希腊 prosōidia 的，指附加在一个音节上的「调子」。所以口音和重音是同一个词：都是说话时「加」上去的那点旋律。同源 chant（吟唱）、canto。",
+    "r": [
+      [
+        "ad-",
+        "附加"
+      ],
+      [
+        "cantus",
+        "唱"
+      ]
+    ],
+    "m": "说话时加上的那点「唱腔」——口音、重音。",
+    "hk": {
+      "cut": "[ac]-cent",
+      "line": "[ac] 是「附加」，-cent 来自「[唱]」。说话时加在音节上的那点[唱腔]——口音、重音。"
+    },
+    "eg": [
+      [
+        "a British [accent]",
+        "英国[口音]"
+      ],
+      [
+        "The [accent] falls on the first syllable.",
+        "[重音]在第一个音节。"
+      ]
+    ],
+    "col": [
+      "foreign accent",
+      "accent on",
+      "speak without an accent"
+    ],
+    "mx": [
+      [
+        "ascent",
+        "上升。accent 是口音，ascent 是往上走。"
+      ],
+      [
+        "assent",
+        "同意。三个词只差一个字母。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🎵"
+  },
+  "accessible": {
+    "t": "ad-（向）+ cedere（走）。拉丁 accessus 是「走近」。能走近，就是能到达、能进入、能理解。cedere 是「走」，它的完成式 cess- 造出了 process、recess、succeed 一大片。注意 accessible 的「易理解」义是 20 世纪才普及的。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "cedere",
+        "走"
+      ]
+    ],
+    "m": "能走近——路通、门开、话听得懂。",
+    "hk": {
+      "cut": "ac-[cess]-ible",
+      "line": "-cess 是「[走]」。能[走近]——进得去、够得着、听得懂。"
+    },
+    "eg": [
+      [
+        "The building is [accessible] to wheelchairs.",
+        "这栋楼轮椅[进得去]。"
+      ],
+      [
+        "[accessible] language",
+        "[通俗易懂的]表述"
+      ]
+    ],
+    "col": [
+      "accessible to",
+      "easily accessible",
+      "accessible price"
+    ],
+    "mx": [
+      [
+        "excessive",
+        "过度的。ex 是向外——走出去太多。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🚪"
+  },
+  "accommodation": {
+    "t": "ad-（向）+ commodus（合适），commodus 又由 com-（共同）+ modus（尺度）构成——「合乎尺度」。拉丁 accommodare 是「使适应」。给人安排住处，本质是让空间「适配」人的需要，所以这个词既指适应，也指住宿。同源 commodity（合适之物→商品）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "modus",
+        "尺度"
+      ]
+    ],
+    "m": "按人的尺寸调一调——适配出来的住处。",
+    "hk": {
+      "cut": "ac-[commod]-ation",
+      "line": "[commod] 是「合乎尺度」（com 共同 + modus 尺子）。把空间调到合你的尺寸——[住处]。"
+    },
+    "eg": [
+      [
+        "hotel [accommodation]",
+        "酒店[住宿]"
+      ],
+      [
+        "The school provides [accommodation].",
+        "学校提供住宿。"
+      ]
+    ],
+    "col": [
+      "book accommodation",
+      "student accommodation"
+    ],
+    "mx": [
+      [
+        "拼写",
+        "两个 c、两个 m：ac-com-mo-dation。"
+      ],
+      [
+        "commodity",
+        "商品。也是「合适之物」。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "🏨"
+  },
+  "accompany": {
+    "t": "ad-（向）+ 古法语 compaign（同伴），compagnon 由 com-（共同）+ panis（面包）构成——「一起吃面包的人」。中世纪共食一块面包是结伴的象征。所以陪伴的原意极其具体：跟你分面包的那个。同源 company（公司，原指一群人）。",
+    "r": [
+      [
+        "com-",
+        "共同"
+      ],
+      [
+        "panis",
+        "面包"
+      ]
+    ],
+    "m": "共吃一块面包的人——同伴、陪伴。",
+    "hk": {
+      "cut": "ac-[company]",
+      "line": "[company] 原意是「一起[吃面包]的人」（com 共同 + panis 面包）。跟你分面包的人——[陪伴]。"
+    },
+    "eg": [
+      [
+        "She [accompanied] me to the station.",
+        "她[陪]我去了车站。"
+      ],
+      [
+        "a piano [accompaniment]",
+        "钢琴[伴奏]"
+      ]
+    ],
+    "col": [
+      "accompany sb to",
+      "be accompanied by"
+    ],
+    "mx": [
+      [
+        "companion",
+        "同伴。也是分面包的人。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "🍞"
+  },
+  "accomplish": {
+    "t": "ad- + complere（填满），complere 由 com-（完全）+ plere（填）构成。拉丁 complere 是「装满、补足」。事情做到「满了」，就是完成。plere 这条根系带来 complete、supply、complement、deplete（反着填）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "plere",
+        "填满"
+      ]
+    ],
+    "m": "把事填满——填到没缺口，就是完成。",
+    "hk": {
+      "cut": "ac-[compl]-ish",
+      "line": "-compl 是「[填满]」（complete 同根）。事情填到没缺口——[完成]。"
+    },
+    "eg": [
+      [
+        "[accomplish] a task",
+        "[完成]一项任务"
+      ],
+      [
+        "She [accomplished] what she set out to do.",
+        "她想做的事都[做成了]。"
+      ]
+    ],
+    "col": [
+      "accomplish a goal",
+      "sense of accomplishment"
+    ],
+    "mx": [
+      [
+        "complete",
+        "complete 强调「补齐、填满」，accomplish 强调「做成、达成」。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "🏁"
+  },
+  "account": {
+    "t": "ad- + computare（计算），computare 又由 com- + putare（估算、修剪）构成。原本是「算清楚」。算账 → 账目 → 账户，另一路「把事情算清楚讲给人听」→ 叙述、说明。所以 account 既是账户也是描述，account for 是「解释」。同源 count、computer。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "putare",
+        "计算"
+      ]
+    ],
+    "m": "把账算清——钱上是账户，话上是说明。",
+    "hk": {
+      "cut": "ac-[count]",
+      "line": "-count 是「[算]」。把账算清楚——钱上是[账户]，话上是[说明]。"
+    },
+    "eg": [
+      [
+        "Open a bank [account].",
+        "开一个银行[账户]。"
+      ],
+      [
+        "How do you [account] for the delay?",
+        "这次延误你怎么[解释]？"
+      ]
+    ],
+    "col": [
+      "account for",
+      "on account of",
+      "take into account",
+      "bank account"
+    ],
+    "mx": [
+      [
+        "accountable",
+        "负责任的。事情能「算」到他头上。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🧮"
+  },
+  "accumulate": {
+    "t": "ad- + cumulus（堆、丘）。拉丁 cumulare 是「堆起来」。cumulus 既是土堆，也是气象学里的积云（cloud 那种一坨坨的，就叫 cumulus）。一层层往上堆，就是积累。同源 cumulative（累积的）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "cumulus",
+        "堆"
+      ]
+    ],
+    "m": "往上堆土——堆成丘，就是积累。",
+    "hk": {
+      "cut": "ac-[cumul]-ate",
+      "line": "-cumul 是「[堆]」（cumulus 积云同根——云就是堆起来的）。一层层往上堆——[积累]。"
+    },
+    "eg": [
+      [
+        "Dust [accumulated] on the shelf.",
+        "架子上[积]了灰。"
+      ],
+      [
+        "[accumulate] experience",
+        "[积累]经验"
+      ]
+    ],
+    "col": [
+      "accumulate wealth",
+      "accumulate experience",
+      "accumulate evidence"
+    ],
+    "mx": [
+      [
+        "cumulative",
+        "累积的。同一个 cumul。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🧱"
+  },
+  "accurate": {
+    "t": "ad- + curare（关心、照料），cura 是拉丁语的「忧虑、用心」。拉丁 accuratus 是「用心做出来的」。用心的结果就是准。这条根系还长出了 cure（治疗=用心照料）、curious（用心的→好奇的）、secure（se- 无 + cura 忧→无忧）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "cura",
+        "用心"
+      ]
+    ],
+    "m": "用心做出来的——不走样，就是准。",
+    "hk": {
+      "cut": "ac-[cur]-ate",
+      "line": "-cur 是「[用心]」（cure 照料同根）。[用心]做出来的东西不走样——[准确]。"
+    },
+    "eg": [
+      [
+        "[accurate] information",
+        "[准确的]信息"
+      ],
+      [
+        "His description was [accurate].",
+        "他的描述很[准]。"
+      ]
+    ],
+    "col": [
+      "accurate information",
+      "highly accurate"
+    ],
+    "mx": [
+      [
+        "accuse",
+        "控告。开头同为 ac-，但词根是 causa（案由）。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🎯"
+  },
+  "accuse": {
+    "t": "ad- + causa（原因、诉讼案件）。拉丁 accusare 是「提起诉讼、把案子摆到某人面前」。causa 在罗马法里就指案由，所以它既是「原因」也是「诉讼」。今天 cause 只剩「原因」，accuse 只剩「控告」，本是同一个词分家。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "causa",
+        "案由"
+      ]
+    ],
+    "m": "把案子摆到他面前——指控。",
+    "hk": {
+      "cut": "ac-[cuse]",
+      "line": "-cuse 来自 [causa]——罗马法里的「案由」。把案子摆到他面前——[指控]。"
+    },
+    "eg": [
+      [
+        "They [accused] him of theft.",
+        "他们[指控]他偷窃。"
+      ],
+      [
+        "[accused] of cheating",
+        "[被指控]作弊"
+      ]
+    ],
+    "col": [
+      "accuse sb of",
+      "be accused of",
+      "falsely accused"
+    ],
+    "mx": [
+      [
+        "charge",
+        "charge 偏正式起诉，accuse 偏当面指责。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "⚖️"
+  },
+  "accustom": {
+    "t": "ad- + 古法语 costume（习惯），源自拉丁 consuetudo，由 com-（加强）+ suescere（变得习惯）构成。习惯就是「反复到变成本性」。英语里 custom（习俗）和 costume（服装）是同源双胞胎——服装本义是「惯常的穿戴」。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "suescere",
+        "习于"
+      ]
+    ],
+    "m": "处久了就成了惯常——习惯的动词形式。",
+    "hk": {
+      "cut": "ac-[custom]",
+      "line": "-custom 是「[惯常]」。处久了成了惯常——[习惯]。"
+    },
+    "eg": [
+      [
+        "[accustom] yourself to the climate.",
+        "让自己[适应]这种气候。"
+      ],
+      [
+        "be [accustomed] to noise",
+        "[习惯]噪音"
+      ]
+    ],
+    "col": [
+      "be accustomed to",
+      "accustom oneself to"
+    ],
+    "mx": [
+      [
+        "costume",
+        "服装。和 custom 是同源双胞胎——本义「惯常的穿戴」。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "🔁"
+  },
+  "acknowledge": {
+    "t": "ac-（=ad，向）+ knowledge（知道）。中古英语 knowlechen，本是「承认知道某事」。这是个纯粹的本土构词，没有拉丁渊源。它在法律语境里用得极多：承认收到、承认债务、承认错误，比 admit 更主动。",
+    "r": [
+      [
+        "ac-",
+        "向"
+      ],
+      [
+        "knowledge",
+        "知道"
+      ]
+    ],
+    "m": "把「知道」说出来——承认。",
+    "hk": {
+      "cut": "[ac]-knowledge",
+      "line": "ac 是「对着」，knowledge 是「[知道]」。对着人把知道的事[说出来]——承认。"
+    },
+    "eg": [
+      [
+        "He [acknowledged] the mistake.",
+        "他[承认]了错误。"
+      ],
+      [
+        "She [acknowledged] my help.",
+        "她[谢过]了我的帮忙。"
+      ]
+    ],
+    "col": [
+      "acknowledge receipt",
+      "acknowledge the fact",
+      "widely acknowledged"
+    ],
+    "mx": [
+      [
+        "admit",
+        "admit 常指「不情愿地承认」，acknowledge 更中性、更正式。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🙋"
+  },
+  "acquire": {
+    "t": "ad- + quaerere（寻求）。拉丁 acquirere 是「额外求到」。quaerere 这条根系极其旺盛：require（要求）、inquire（询问）、query（疑问）、quest（追寻）、conquer（征服=彻底求取）。求到手，就是获得。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "quaerere",
+        "寻求"
+      ]
+    ],
+    "m": "求到手——acquire 即获得。",
+    "hk": {
+      "cut": "ac-[quire]",
+      "line": "quire 是「[寻求]」（require、query 同根）。求到手——获得。"
+    },
+    "eg": [
+      [
+        "[acquire] a skill",
+        "[掌握]一门技能"
+      ],
+      [
+        "[acquire] a company",
+        "[收购]一家公司"
+      ]
+    ],
+    "col": [
+      "acquire knowledge",
+      "acquire a taste for",
+      "newly acquired"
+    ],
+    "mx": [
+      [
+        "require",
+        "要求。同一个 quire——向你要。"
+      ],
+      [
+        "inquire",
+        "询问。往里问。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🧲"
+  },
+  "adapt": {
+    "t": "ad- + aptus（合适的、 fitting）。拉丁 adaptare 是「使合适」。aptus 本义是「系上的、扣上的」，所以 apt 有「恰当的」和「易于……的」两义。把自己调成合扣的形状，就是适应。同源 apt、aptitude、adept。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "aptus",
+        "合扣的"
+      ]
+    ],
+    "m": "调到能扣上——适配、适应。",
+    "hk": {
+      "cut": "[ad]-apt",
+      "line": "apt 是「[扣得上、合适]」。把自己调到能[扣上]——适应。"
+    },
+    "eg": [
+      [
+        "[adapt] to a new environment",
+        "[适应]新环境"
+      ],
+      [
+        "a film [adapted] from a novel",
+        "由小说[改编]的电影"
+      ]
+    ],
+    "col": [
+      "adapt to",
+      "adapt from",
+      "well adapted"
+    ],
+    "mx": [
+      [
+        "adopt",
+        "adapt 是改自己去贴合，adopt 是拿过来用。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "🧩"
+  },
+  "addiction": {
+    "t": "ad- + dicere（说、宣告）。拉丁 addictio 是罗马法用语：把债务人「判归」债权人。addictus 就是「被判给他人的人」。从「人身归属」到「被某物辖制」，19 世纪才转出「成瘾」义。所以这个词的底色是「被交付、不由自己」。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "dicere",
+        "宣告、判归"
+      ]
+    ],
+    "m": "被判给对方了——身不由己，即成瘾。",
+    "hk": {
+      "cut": "[ad]-[dict]-ion",
+      "line": "dict 是「[说、宣判]」。法官一句宣判，把人[判给]了对方——从此身不由己，即成瘾。"
+    },
+    "eg": [
+      [
+        "drug [addiction]",
+        "毒品[成瘾]"
+      ],
+      [
+        "[addicted] to his phone",
+        "[沉迷]手机"
+      ]
+    ],
+    "col": [
+      "drug addiction",
+      "be addicted to",
+      "addiction to"
+    ],
+    "mx": [
+      [
+        "addict",
+        "上瘾的人；也可作动词「使沉迷」。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "🔗"
+  },
+  "adequate": {
+    "t": "ad- + aequus（相等、平的）。拉丁 adaequare 是「使之相等」。达到需要的量、与之相等，就是「够用」。aequus 这条根系带来 equal（相等）、equator（赤道）、equity（公平）、equilibrium（平衡）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "aequus",
+        "相等"
+      ]
+    ],
+    "m": "拉到与所需齐平——够了，但不多。",
+    "hk": {
+      "cut": "[ad]-[equ]ate",
+      "line": "equ 是「[相等]」（equal 同根）。拉到跟需要[齐平]——够用，但不多。"
+    },
+    "eg": [
+      [
+        "[adequate] supply",
+        "[充足的]供应"
+      ],
+      [
+        "The food was [adequate].",
+        "饭菜还[过得去]。"
+      ]
+    ],
+    "col": [
+      "adequate for",
+      "barely adequate",
+      "adequate supply"
+    ],
+    "mx": [
+      [
+        "sufficient",
+        "sufficient 更书面，adequate 强调「刚好够用」。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "📏"
+  },
+  "adjust": {
+    "t": "ad- + juxta（靠近、在旁边）。拉丁 juxta 是方位词，英语 juxtapose（并置）保留了它的原貌。adjust 的原意是「使贴近、对准」，从中长出「校准」（调整仪器）和「适应」（调整自己）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "juxta",
+        "靠近"
+      ]
+    ],
+    "m": "往近里对一对——对准了就是调好了。",
+    "hk": {
+      "cut": "[ad]-just",
+      "line": "just 本义是「[靠近、对准]」（juxta）。往近里对一对——调整。"
+    },
+    "eg": [
+      [
+        "[adjust] the volume",
+        "[调]音量"
+      ],
+      [
+        "[adjust] to city life",
+        "[适应]城市生活"
+      ]
+    ],
+    "col": [
+      "adjust to",
+      "adjust the settings",
+      "well adjusted"
+    ],
+    "mx": [
+      [
+        "justice",
+        "正义。同源但走远了——just 本义是「合乎准绳」。"
+      ]
+    ],
+    "tone": "calm",
+    "icon": "⚙️"
+  },
+  "administration": {
+    "t": "ad- + ministrare（服务），源自 minister（仆人、助手），由 minus（较少）+ 后缀构成——「地位较低者」。所以 administer 的本义是「为他人做事」，不是「管人」。行政的原意是服务，这层意思今天还在 administrator（管理者/遗产执行人）里。同源 minister（部长）、ministry。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "minister",
+        "仆从"
+      ]
+    ],
+    "m": "为他人做事——服务生出了「管理」。",
+    "hk": {
+      "cut": "ad-[minister]-ation",
+      "line": "minister 是「[仆从]」（minus 较少）。为别人做事——「服务」生出了「管理」。"
+    },
+    "eg": [
+      [
+        "the [administration] of the school",
+        "学校的[管理层]"
+      ],
+      [
+        "drug [administration]",
+        "[给药]（医疗用语）"
+      ]
+    ],
+    "col": [
+      "business administration",
+      "public administration",
+      "the administration"
+    ],
+    "mx": [
+      [
+        "minister",
+        "部长。原意是「仆人」——为众人做事的人。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "📋"
+  },
+  "admire": {
+    "t": "ad- + mirari（惊奇），源自 mirus（奇妙的）。看到某人某物而「向着它惊奇」，就是钦佩。mirari 这条根系带来 miracle（奇迹）、mirror（镜子=照见奇景之物）、mirage（海市蜃楼）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "mirari",
+        "惊奇"
+      ]
+    ],
+    "m": "看得发呆——惊叹即钦佩。",
+    "hk": {
+      "cut": "[ad]-mire",
+      "line": "mire 是「[惊奇]」（miracle 同根）。看着它发呆——钦佩。"
+    },
+    "eg": [
+      [
+        "I [admire] her courage.",
+        "我[佩服]她的勇气。"
+      ],
+      [
+        "[admire] the view",
+        "[欣赏]风景"
+      ]
+    ],
+    "col": [
+      "admire sb for",
+      "greatly admire",
+      "admire the view"
+    ],
+    "mx": [
+      [
+        "admirable",
+        "值得钦佩的。形容词，别和 admire 混。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "✨"
+  },
+  "adolescent": {
+    "t": "ad- + alescere（开始生长），是 alere（滋养）的起始态。拉丁 adolescens 指「正在长成的」。alere 这条根系出 aliment（食物）、alimony（赡养费）、adult（已长成的——就是这个词的完成态）。所以 adolescent 与 adult 只差一个「还在长」和「长完了」。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "alescere",
+        "开始长"
+      ]
+    ],
+    "m": "还在长个儿的那段——adult 是长完版。",
+    "hk": {
+      "cut": "adol-[esc]-ent",
+      "line": "esc 是「[开始长]」。还在长的这一段——青春期；adult 是长完的版本。"
+    },
+    "eg": [
+      [
+        "[adolescent] boys",
+        "[青春期的]男孩"
+      ],
+      [
+        "[adolescent] behaviour",
+        "[幼稚的]行为"
+      ]
+    ],
+    "col": [
+      "adolescent years",
+      "adolescent behaviour"
+    ],
+    "mx": [
+      [
+        "adult",
+        "adult 是「长成了」，adolescent 是「还在长」。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "🌱"
+  },
+  "adopt": {
+    "t": "ad- + optare（选择、愿望）。拉丁 adoptare 是「挑来作为自己的」。optare 带来 option（选项）、opt（选择）、optimism（最好的→乐观）。所以收养的本质不是「领养」，是「选中」。这也解释了它为什么能用于采纳建议、采用方案。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "optare",
+        "选择"
+      ]
+    ],
+    "m": "挑来当自己的——收养、采纳都是这个动作。",
+    "hk": {
+      "cut": "[ad]-opt",
+      "line": "opt 是「[选择]」（option 同根）。挑来当自己的——收养、采纳是同一个动作。"
+    },
+    "eg": [
+      [
+        "[adopt] a child",
+        "[收养]一个孩子"
+      ],
+      [
+        "[adopt] a new method",
+        "[采用]新方法"
+      ]
+    ],
+    "col": [
+      "adopt a policy",
+      "adopt a child",
+      "adopt an approach"
+    ],
+    "mx": [
+      [
+        "adapt",
+        "adapt 改自己，adopt 拿过来。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "🏠"
+  },
+  "adore": {
+    "t": "ad- + orare（说话、祈祷），orare 源自 os（嘴）。拉丁 adorare 是「对着某人说话、向其祈求」。向神开口，就是崇拜；向爱人开口，就是倾慕。同源 oracle（神谕=神开口）、oral（口头的）、oration（演说）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "orare",
+        "开口祈祷"
+      ]
+    ],
+    "m": "对着它开口祈求——崇拜。",
+    "hk": {
+      "cut": "[ad]-ore",
+      "line": "ore 是「[开口说]」（oral 同根）。对着它开口祈求——崇拜、极爱。"
+    },
+    "eg": [
+      [
+        "She [adores] her grandson.",
+        "她[极疼]孙子。"
+      ],
+      [
+        "I [adore] this song.",
+        "我[超爱]这首歌。"
+      ]
+    ],
+    "col": [
+      "adore sb",
+      "absolutely adore"
+    ],
+    "mx": [
+      [
+        "oracle",
+        "神谕。神开口说话。"
+      ],
+      [
+        "oral",
+        "口头的。同一个「口」。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "💗"
+  },
+  "advance": {
+    "t": "来自古法语 avancier，源头是拉丁俗语 abante，即 ab（从）+ ante（前）——「从前面、向前」。所以它的骨架就是「前」。advantage（优势）、advance guard（先遣队）都是同一个「前」字。",
+    "r": [
+      [
+        "ab",
+        "从"
+      ],
+      [
+        "ante",
+        "前"
+      ]
+    ],
+    "m": "ab + ante，一路向前——推进、预付款。",
+    "hk": {
+      "cut": "[ad]-vance",
+      "line": "vance 背后是拉丁 ante——「[前]」。一路向前——推进，也可指预付款。"
+    },
+    "eg": [
+      [
+        "[advance] the deadline",
+        "[提前]截止日期"
+      ],
+      [
+        "pay in [advance]",
+        "[预先]付款"
+      ]
+    ],
+    "col": [
+      "in advance",
+      "advance payment",
+      "make advances"
+    ],
+    "mx": [
+      [
+        "advantage",
+        "优势。同一个「前」——站到前面去。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "⏩"
+  },
+  "advocate": {
+    "t": "ad- + vocare（呼叫），源自 vox（声音）。拉丁 advocatus 是「被叫来帮忙的人」——罗马法庭上，当事人叫朋友来替自己说话，那位朋友就是 advocatus。所以辩护人的本义是「被喊来的」。同源 voice、vocal、vocabulary、vocation（召唤）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "vocare",
+        "呼叫"
+      ]
+    ],
+    "m": "被喊来替你说话的人——辩护、提倡。",
+    "hk": {
+      "cut": "ad-[voc]-ate",
+      "line": "voc 是「[叫、声音]」（voice 同根）。被[叫来]替你说话的——辩护人、提倡者。"
+    },
+    "eg": [
+      [
+        "an [advocate] of reform",
+        "改革的[倡导者]"
+      ],
+      [
+        "[advocate] for change",
+        "[主张]变革"
+      ]
+    ],
+    "col": [
+      "advocate for",
+      "strong advocate",
+      "devil's advocate"
+    ],
+    "mx": [
+      [
+        "voice",
+        "声音。同一个 voc 根。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "📢"
+  },
+  "affair": {
+    "t": "直接借自法语 affaire，就是 à faire——「要做的事」。法语里 faire 是「做」。所以 affair 的原意朴素得惊人：一桩待办之事。后来分出「事务」「事件」「私情」各义，都还是「一件事」。",
+    "r": [
+      [
+        "à",
+        "去"
+      ],
+      [
+        "faire",
+        "做"
+      ]
+    ],
+    "m": "法语「要做的事」——一桩事。",
+    "hk": {
+      "cut": "af-fair",
+      "line": "法语 à faire——「[要做的事]」。一桩待办——事情、事务。"
+    },
+    "eg": [
+      [
+        "current [affairs]",
+        "[时事]"
+      ],
+      [
+        "a love [affair]",
+        "一段[恋情]"
+      ]
+    ],
+    "col": [
+      "current affairs",
+      "foreign affairs",
+      "love affair"
+    ],
+    "mx": [
+      [
+        "matter",
+        "affair 偏「事件、事务」，matter 偏「问题、要紧事」。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "📰"
+  },
+  "affect": {
+    "t": "ad- + facere（做）。拉丁 afficere 是「对……做点什么、施加于」。对一个人施加影响，就是 affect（影响）；在心里被施加上某种状态，就是 affect（情感，心理学用语）。同源 effect（做出来的结果）、factory、perfect（彻底做完）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "facere",
+        "做"
+      ]
+    ],
+    "m": "对谁「做」了一下——影响。effect 是做出来的果。",
+    "hk": {
+      "cut": "af-[fect]",
+      "line": "fect 是「[做]」（factory 同根）。对你做了一下——影响。"
+    },
+    "eg": [
+      [
+        "Smoking [affects] health.",
+        "吸烟[影响]健康。"
+      ],
+      [
+        "deeply [affected] by the news",
+        "被那条消息深深[触动]"
+      ]
+    ],
+    "col": [
+      "be affected by",
+      "affect health",
+      "affect the outcome"
+    ],
+    "mx": [
+      [
+        "effect",
+        "effect 是「结果」（多为名词），affect 是「影响」（动词）。这是最常错的一对。"
+      ]
+    ],
+    "tone": "sharp",
+    "icon": "💥"
+  },
+  "affordable": {
+    "t": "afford 来自古英语 geforthian，本义「推进、实现、办到」。中古英语里 afford 还有「提供、给予」义（afford an opportunity 至今保留）。18 世纪起才专指「有余力承担」，于是 affordable 成了「买得起」。",
+    "r": [
+      [
+        "ge-",
+        "（古英语前缀）"
+      ],
+      [
+        "forthian",
+        "推进、办到"
+      ]
+    ],
+    "m": "办得到的就是付得起——afford 原意「办成」。",
+    "hk": {
+      "cut": "af-[ford]-able",
+      "line": "ford 在古英语里是「[推进、办到]」。办得到——[付得起]。"
+    },
+    "eg": [
+      [
+        "[affordable] housing",
+        "[买得起的]住房"
+      ],
+      [
+        "an [affordable] price",
+        "一个[能承受的]价格"
+      ]
+    ],
+    "col": [
+      "affordable housing",
+      "affordable price"
+    ],
+    "mx": [
+      [
+        "afford",
+        "动词「负担得起」。affordable 是它的形容词。"
+      ]
+    ],
+    "tone": "warm",
+    "icon": "🏷️"
+  },
+  "aggressive": {
+    "t": "ad- + gradi（走、迈步），源自 gradus（步、阶）。拉丁 aggredi 是「走向、逼近」——主动朝对方走过去，所以带攻击性。gradus 这条根系带来 grade（等级）、gradual（逐步）、progress（向前走）、congress（走到一起）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "gradi",
+        "迈步"
+      ]
+    ],
+    "m": "主动朝你走过来——有攻击性。",
+    "hk": {
+      "cut": "ag-[gress]-ive",
+      "line": "gress 是「[走]」（progress 同根）。主动[朝你走过来]——带攻击性。"
+    },
+    "eg": [
+      [
+        "[aggressive] behaviour",
+        "[攻击性的]行为"
+      ],
+      [
+        "an [aggressive] sales plan",
+        "[激进的]销售计划"
+      ]
+    ],
+    "col": [
+      "aggressive behaviour",
+      "aggressive strategy"
+    ],
+    "mx": [
+      [
+        "progressive",
+        "进步的。pro 向前 + gress 走。"
+      ]
+    ],
+    "tone": "dark",
+    "icon": "⚔️"
+  },
+  "allocate": {
+    "t": "ad- + locare（放置），源自 locus（地方）。拉丁 allocare 是「把东西放到某处」。分东西的本质是「指定去处」。同源 locate（定位）、local（本地的）、locomotive（从一处移到另一处）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "locus",
+        "地方"
+      ]
+    ],
+    "m": "指定放在哪儿——分配。",
+    "hk": {
+      "cut": "al-[loc]-ate",
+      "line": "loc 是「[地方]」（local 同根）。指定放在哪儿——分配。"
+    },
+    "eg": [
+      [
+        "[allocate] funds",
+        "[分配]资金"
+      ],
+      [
+        "[allocate] time",
+        "[安排]时间"
+      ]
+    ],
+    "col": [
+      "allocate resources",
+      "allocate funds to"
+    ],
+    "mx": [
+      [
+        "locate",
+        "定位。同一个 loc——找到那个地方。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🗂️"
+  },
+  "alternative": {
+    "t": "源自拉丁 alter（两者中的另一个），alternare 是「轮流、交替」。alternative 17 世纪指「二选一的可能」，20 世纪被环保、医学语境拿去，才长出现在最流行的「另类的、非主流的」这层意思。",
+    "r": [
+      [
+        "alter",
+        "另一个"
+      ]
+    ],
+    "m": "另一个——alternate 是轮换，alternative 是可选。",
+    "hk": {
+      "cut": "[alter]-native",
+      "line": "alter 是「[另一个]」。另一个可选的——替代方案。"
+    },
+    "eg": [
+      [
+        "an [alternative] plan",
+        "一个[备选]方案"
+      ],
+      [
+        "[alternative] energy",
+        "[替代]能源"
+      ]
+    ],
+    "col": [
+      "alternative to",
+      "alternative energy",
+      "have no alternative"
+    ],
+    "mx": [
+      [
+        "alternate",
+        "alternate 是「轮流的」，alternative 是「可选的」。"
+      ]
+    ],
+    "tone": "cool",
+    "icon": "🔀"
+  },
+  "amaze": {
+    "t": "中古英语 amasen，由 a-（加强）+ masen（使迷惑、发愣）构成，可能与 maze（迷宫）同源。最初的意思是「把人搞懵」，语气比今天的「惊奇」重得多。17 世纪后弱化为「使大为惊讶」。源头细节学界尚有分歧。",
+    "r": [
+      [
+        "a-",
+        "加强"
+      ],
+      [
+        "masen",
+        "使发愣"
+      ]
+    ],
+    "m": "把人搞进迷宫——愣住，即惊叹。",
+    "c": "low",
+    "hk": {
+      "cut": "a-[maze]",
+      "line": "maze 是「[迷宫]」。把人绕进迷宫——愣住，就是惊叹。"
+    },
+    "eg": [
+      [
+        "I was [amazed] by the view.",
+        "这景色让我[惊叹]。"
+      ],
+      [
+        "[amazing] news",
+        "[惊人的]消息"
+      ]
+    ],
+    "col": [
+      "be amazed at",
+      "amazing news"
+    ],
+    "mx": [
+      [
+        "maze",
+        "迷宫。amaze 就是「把你弄进迷宫」。"
+      ]
+    ],
+    "tone": "bright",
+    "icon": "😲"
+  },
+  "_updated": "2026-11-25",
+  "ambiguous": {
+    "t": "ambi-（两边）+ agere（驱动）。拉丁 ambigere 原指「被推向两边、争持不下」，两方各说各的、谁也压不倒谁。所以它的底色不是「模糊」，是「两种解释都站得住」。同源 agent（行动者）、act、exact。",
+    "r": [
+      [
+        "ambi-",
+        "两边"
+      ],
+      [
+        "agere",
+        "驱动"
+      ]
+    ],
+    "m": "被两边同时拉——站不定，所以可两解。"
+  },
+  "ambition": {
+    "t": "ambi-（周围）+ ire（走）。拉丁 ambitio 指罗马竞选者四处奔走拉票——绕场一圈拜票。所以「野心」的本义是「跑关系」，带贬义，指为求官位而奔忙。同源 exit（走出去）、itinerary（行程）、transit。",
+    "r": [
+      [
+        "ambi-",
+        "周围"
+      ],
+      [
+        "ire",
+        "走"
+      ]
+    ],
+    "m": "绕场拉票——跑出来的野心。"
+  },
+  "amuse": {
+    "t": "a-（加强）+ 古法语 muser（盯着看、出神），可能与 muse（沉思）同源。amuser 原义是「使人发呆、把人弄走神」。17 世纪从「使人出神」滑向「使人愉悦」，语义从发呆变成发笑。",
+    "r": [
+      [
+        "a-",
+        "加强"
+      ],
+      [
+        "muser",
+        "出神"
+      ]
+    ],
+    "m": "先让人看呆，再让人笑——从发呆到逗乐。"
+  },
+  "analyze": {
+    "t": "ana-（彻底、向上）+ lysis（松开）。希腊 analysis 就是「解开」。把整体松开成零件，就是分析。同源 paralysis（旁边松开→瘫痪）、catalysis（催化）、dialysis（透析）。",
+    "r": [
+      [
+        "ana-",
+        "彻底"
+      ],
+      [
+        "lysis",
+        "松开"
+      ]
+    ],
+    "m": "松开成零件——拆开来看。"
+  },
+  "ancestor": {
+    "t": "古法语 ancestre，源自拉丁 antecessor：ante（前）+ cedere（走）的施事者——「走在前面的那个人」。更古的形式 antecessor 在法律文本里仍偶尔出现，和 ancestor 是同源双形。",
+    "r": [
+      [
+        "ante-",
+        "前"
+      ],
+      [
+        "cedere",
+        "走"
+      ]
+    ],
+    "m": "走在你前面的人——祖先。"
+  },
+  "ancient": {
+    "t": "古法语 ancien，源自拉丁 ante（前）——「以前的」。它和 antique 是一对：ancient 走法语这条线进来，antique 直接从拉丁 antiquus 借入，两者同源但分工不同，一个指久远的时代，一个指具体的古物。",
+    "r": [
+      [
+        "ante",
+        "前"
+      ]
+    ],
+    "m": "ante 就是「前」——很久以前。"
+  },
+  "angle": {
+    "t": "拉丁 angulus（角），triangle、rectangle 都是这条线。动词 angle（钓鱼）来路不同，出自古英语 angul（鱼钩），但鱼钩与「角」都源于同一个「弯」的意象，算远亲。所以「角度」和「立场」共用一个词，本质是「从哪个弯处看」。",
+    "r": [
+      [
+        "angulus",
+        "角"
+      ]
+    ],
+    "m": "换个弯处看——角度就是立场。"
+  },
+  "anniversary": {
+    "t": "annus（年）+ vertere（转）——「一年转回来一次」。vertere 这条「转」的根系极旺：convert（转过来）、reverse（转回去）、diverse（转向不同）、universe（转成一体）。",
+    "r": [
+      [
+        "annus",
+        "年"
+      ],
+      [
+        "vertere",
+        "转"
+      ]
+    ],
+    "m": "一年转一圈回到原点——周年。"
+  },
+  "announce": {
+    "t": "ad- + nuntiare（报信），源自 nuntius（信使）。拉丁 annuntiare 是「派人去说」。同源 nuncio（教廷使节）、pronounce（向前说出→发音）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "nuntius",
+        "信使"
+      ]
+    ],
+    "m": "派信使去说——宣告。"
+  },
+  "annoy": {
+    "t": "古法语 anuier，源头是拉丁短语 in odio——「处在憎恨之中」，odium 就是「恨」。所以它的原义远比今天重：使人厌恨。同源 odium（憎恶）、odious（可憎的）。",
+    "r": [
+      [
+        "in",
+        "在……中"
+      ],
+      [
+        "odium",
+        "憎恨"
+      ]
+    ],
+    "m": "把人放进「恨」里——惹恼。"
+  },
+  "annual": {
+    "t": "拉丁 annus（年）。同源 annuity（年金）、annals（编年史）、anniversary（周年）。词根 ann- 极好认，凡是带 ann 的多半与「年」有关。",
+    "r": [
+      [
+        "annus",
+        "年"
+      ]
+    ],
+    "m": "ann 即年——annual 每年的。"
+  },
+  "anonymous": {
+    "t": "an-（无）+ onoma（名字），希腊语构词。onoma 这条「名」的根系在英语里留下 pseudonym（假名）、synonym（同义名）、homonym（同形异义）、acronym（首字母缩略）。",
+    "r": [
+      [
+        "an-",
+        "无"
+      ],
+      [
+        "onoma",
+        "名字"
+      ]
+    ],
+    "m": "没有名字——匿名。"
+  },
+  "antique": {
+    "t": "拉丁 antiquus，是 ante（前）的形容词形式——「属于更早时候的」。17 世纪指古希腊罗马的文物，18 世纪起泛指旧物、古董。和 ancient 同源，见 ancient 条。",
+    "r": [
+      [
+        "ante",
+        "前"
+      ]
+    ],
+    "m": "古时留下的东西——古董。"
+  },
+  "anxiety": {
+    "t": "拉丁 anxius，源自 angere（勒紧、使窒息）。这个词族的核心意象都是「被掐住脖子」：anxiety 焦虑、anger 愤怒、anguish 剧痛、angina 心绞痛。同一个生理感受，分出了四种情绪词。",
+    "r": [
+      [
+        "angere",
+        "勒紧、窒息"
+      ]
+    ],
+    "m": "胸口被勒紧——焦虑。同族还 anger、anguish。"
+  },
+  "apparent": {
+    "t": "ad- + parere（出现、显露）。拉丁 apparere 是「显出来」。所以 apparent 有两层：看得见的（明显），和只是看起来的（貌似）。同源 appear、apparition（幻影）、transparent（透过去显现）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "parere",
+        "显现"
+      ]
+    ],
+    "m": "显在眼前——既指明显，也指貌似。"
+  },
+  "appeal": {
+    "t": "ad- + pellere（推、驱动）。拉丁 appellare 是「向某人开口、求助于他」——把诉求推到对方跟前。pellere 这条「推」的根：pulse（脉搏）、expel（推出去）、impulse（内心推动）、repel（推回）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "pellere",
+        "推"
+      ]
+    ],
+    "m": "把诉求推过去——呼吁、上诉、有吸引力。"
+  },
+  "appetite": {
+    "t": "ad- + petere（追求、扑向）。拉丁 appetitus 就是「趋向某物」。petere 这条「追」的根：compete（共同追求）、petition（请求）、perpetual（一路追到底→永久）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "petere",
+        "追求"
+      ]
+    ],
+    "m": "朝东西扑过去——食欲。"
+  },
+  "applause": {
+    "t": "ad- + plaudere（拍手）。拉丁 applaudere 是「拍手赞同」。它的完成式 plaus- 还造出了 plausible——本义「值得鼓掌的」，引申为「听着可信的」；以及 explode——古罗马观众拍手把演员轰下台，后来才转为「爆」。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "plaudere",
+        "拍手"
+      ]
+    ],
+    "m": "拍手。plausible 原意就是「值得鼓掌的」。"
+  },
+  "apply": {
+    "t": "ad- + plicare（折叠、贴合）。拉丁 applicare 是「把一物贴到另一物上」。贴上去 → 涂抹（把药贴上）、应用（把方法贴上）、申请（把自己贴到职位上）。同源 ply、duplicate（折两层）、complicated（折在一起→复杂）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "plicare",
+        "贴合"
+      ]
+    ],
+    "m": "贴上去——贴到用处是应用，贴到岗位是申请。"
+  },
+  "appointment": {
+    "t": "ad- + punctum（点），punctum 出自 pungere（刺）——刺出来的那个小孔就是一个「点」。拉丁 appunctare 是「指定一个点」。约时间就是给人钉一个时间点。同源 point、punctual（踩准点→守时）、puncture（刺穿）。",
+    "r": [
+      [
+        "ad-",
+        "向"
+      ],
+      [
+        "punctum",
+        "点"
+      ]
+    ],
+    "m": "钉一个时间点——约定；被任命也是「被点到」。"
+  }
+}
