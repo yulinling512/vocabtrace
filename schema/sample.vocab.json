@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "deckId": "demo-core",
+    "title": "示例词库（用于验证契约与界面）",
+    "version": 1,
+    "createdAt": "2026-11-25T13:54:00Z",
+    "sourceFile": "manual",
+    "sourceType": "handmade",
+    "stats": {
+      "total": 3,
+      "withMeanings": 3,
+      "withEtymology": 2,
+      "duplicatesRemoved": 0,
+      "parseFailures": 0,
+      "notes": ["手写样例，用于确认字段结构"]
+    }
+  },
+  "words": [
+    {
+      "id": "w_address",
+      "word": "address",
+      "phonetic": "/əˈdres/",
+      "senses": [
+        { "pos": "n.", "meaning": "地址；住址", "tags": ["常用"] },
+        { "pos": "v.", "meaning": "处理；应对", "tags": ["高频"] },
+        { "pos": "v.", "meaning": "向……讲话；致辞", "tags": [] }
+      ],
+      "etymology": {
+        "text": "源自古法语 addresser，再往前是拉丁俗语 ad-directiare，本义为「使某物朝向、摆正」。ad- 表方向，directus 意为「引导、取直」。因为「把话对准某人」就是致辞，「把事摆正」就是处理，所以同一词根后来分化出「讲话」与「应对」两路含义。",
+        "roots": [
+          { "part": "ad-", "gloss": "朝向" },
+          { "part": "directus", "gloss": "取直、引导" }
+        ],
+        "source": "etymonline",
+        "confidence": "high"
+      },
+      "mnemonic": "把方向（ad-）对准某人，就是「致辞」；把乱事摆正（direct），就是「处理」。一个词干两件事，都是「对准」。",
+      "examples": [
+        { "en": "She addressed the crowd for ten minutes.", "zh": "她向人群致辞了十分钟。" },
+        { "en": "We must address this problem first.", "zh": "我们必须先处理这个问题。" }
+      ],
+      "enrichedAt": "2026-11-25T13:54:00Z"
+    },
+    {
+      "id": "w_serendipity",
+      "word": "serendipity",
+      "phonetic": "/ˌserənˈdɪpəti/",
+      "senses": [
+        { "pos": "n.", "meaning": "意外发现美好事物的运气；机缘巧合", "tags": ["学术", "低频"] }
+      ],
+      "etymology": {
+        "text": "1754 年由英国作家 Horace Walpole 生造，取自波斯童话《The Three Princes of Serendip》（锡兰三王子）。故事里三位王子在旅途中总能凭着敏锐观察，意外发现并非刻意寻找的东西。Walpole 便用 Serendip（锡兰古称，今斯里兰卡）造出这个词，专指「本来没在找、却意外碰上好东西」的能力。",
+        "roots": [
+          { "part": "Serendip", "gloss": "锡兰古称，今斯里兰卡" }
+        ],
+        "source": "wiktionary",
+        "confidence": "high"
+      },
+      "mnemonic": "锡兰三王子（Serendip）一路随手捡到宝，所以 serendipity 不是「运气好」，是「有本事把意外变成收获」。",
+      "examples": [
+        { "en": "Meeting her was pure serendipity.", "zh": "遇见她纯属机缘巧合。" }
+      ],
+      "enrichedAt": "2026-11-25T13:54:00Z"
+    },
+    {
+      "id": "w_bludgeon",
+      "word": "bludgeon",
+      "phonetic": "/ˈblʌdʒən/",
+      "senses": [
+        { "pos": "n.", "meaning": "大头短棍；棍棒", "tags": [] },
+        { "pos": "v.", "meaning": "用棍棒击打；胁迫", "tags": [] }
+      ],
+      "etymology": {
+        "text": "词源存疑。18 世纪始见于英语，一般推测与方言词 bludgeoner（游荡的流氓）有关，但缺乏确凿祖源。",
+        "roots": [],
+        "source": "unknown",
+        "confidence": "low"
+      },
+      "mnemonic": "",
+      "examples": [],
+      "enrichedAt": "2026-11-25T13:54:00Z"
+    }
+  ]
+}
