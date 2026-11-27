@@ -6,13 +6,13 @@
 - 不创建 release / tag
 - 目标分支：`main`
 
-## 当前状态
+## 补丁包
 
-补丁分支已创建，但运行桌面端的主机中途离线；`app/index.html`（584KB）和 `desktop/main.js` 尚未写入本分支。
+完整补丁包（含最新 `app/index.html`、`desktop/main.js`、`desktop-ui-dict.patch`、说明文件）：
 
-本地改动已保留，没有删除功能，也没有做版本升级。主机恢复后需要把这两个文件和完整补丁补进本分支，再开 PR。
+[下载 vocabtrace-desktop-patch-20261127.zip](https://aka.doubaocdn.com/s/VNYAvcpavJ)
 
-## 计划包含的改动
+## 包含的改动
 
 1. 顶栏四角 20px 圆角 + 柔和阴影，账号入口胶囊化，右侧不重叠。
 2. 首页三卡：Today's Word / Weekly Pulse 左侧上下，News Break 右侧跨两行；每条新闻配图。
@@ -20,3 +20,12 @@
 4. 新增本地 ECDICT 英汉词典（769,031 条），`/api/dict` 二分查找，离线可用。
 5. 查词输入框在完整词卡生成后清空；AI 失败保留原词。
 6. 点击查询即写入生词本，先占位“释义待补全”，词典/AI 完成后再更新，同词不重复。
+
+## 应用
+
+1. 解压补丁包；
+2. 用包内 `app/index.html` 覆盖仓库 `app/index.html`；
+3. 用包内 `desktop/main.js` 覆盖仓库 `desktop/main.js`；
+4. 或者在仓库根目录执行 `git apply desktop-ui-dict.patch`。
+
+本地词典数据（`数据/词典/ecdict.bin`、`ecdict.idx`）不打进补丁包；放到程序数据目录即可离线查词。
