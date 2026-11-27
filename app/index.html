@@ -1713,7 +1713,7 @@ see &#183; say &#183; write
         </div>
       </div>
       <div class="cred" id="credRows">
-        <div class="credrow"><b>版本</b><span id="credVer">1.0.7 · Windows / Android / Linux</span></div>
+        <div class="credrow"><b>版本</b><span id="credVer">1.0.9 · Windows / Android / Linux</span></div>
         <div class="credrow"><b>词库</b><span>《高频词默写》601 词，按真题出现频次排序，每 36 词一页</span></div>
         <div class="credrow"><b>词源</b><span>参考 etymonline；记忆钩子与例句由作者逐词整理</span></div>
         <div class="credrow"><b>判分</b><span>本地字面规则打底，拿不准的交 AI 复核，你可随时翻案</span></div>
@@ -1845,16 +1845,20 @@ const LS = {
   get cfg(){ return ACCT ? 'vl.'+ACCT.id+'.cfg' : 'vocablab.cfg'; },
   get ses(){ return ACCT ? 'vl.'+ACCT.id+'.session' : 'vocablab.session'; },
   get meta(){ return ACCT ? 'vl.'+ACCT.id+'.meta' : 'vocablab.meta'; },
-  get daily(){ return ACCT ? 'vl.'+ACCT.id+'.daily' : 'vocablab.daily'; }
+  get daily(){ return ACCT ? 'vl.'+ACCT.id+'.daily' : 'vocablab.daily'; },
+  get dailyReset(){ return ACCT ? 'vl.'+ACCT.id+'.dailyReset' : 'vocablab.dailyReset'; },
+  get tomb(){ return ACCT ? 'vl.'+ACCT.id+'.tomb' : 'vocablab.tomb'; }
 };
 const LS_REMEMBER = 'vl.remember';
 let DESK = false;          // 是否跑在桌面版里（有本地服务、数据落盘）
 let DESK_FILE = '';        // 数据文件路径，桌面版才有
 let pushTimer = null;
+let QUIET_SYNC = false;   /* 同步流程内部触发的保存不要再排一次云同步，避免 20 秒一圈死循环 */
+let SYNCING = false;      /* 同一时刻只跑一条同步，避免两次拉取互相覆盖 */
 
 /* 一本书 = 一个词库。进度跟着书走，读完盖一个「已过关」章。 */
 const state = {
-  books:[], activeId:'', cfg:{batch:20},
+  books:[], activeId:'', cfg:{batch:20}, tomb:{}, dailyReset:{},
   view:'home', cur:null, revealed:false,
   wq:[], wi:0, wstat:{ok:0,near:0,bad:0,hold:0}, nav:[], daily:{},
   _mainSession:null, _revMode:''
@@ -1893,28 +1897,169 @@ function statDayKey(ts){
 function todayStat(){
   if(!state.daily || typeof state.daily !== 'object') state.daily = {};
   const k = statDayKey();
-  if(!state.daily[k]){
+  const rec = state.daily[k];
+  let dirty = false;
+  if(!rec){
     /* 老存档没有这个字段：用现有记录补出今天的数，不让已经背过的重新点一遍 */
-    let read = 0, write = 0;
-    const s = state.session;
-    if(s && s.createdAt && statDayKey(s.createdAt) === k)
-      read = s.done ? ((s.ids||[]).length) : (s.index||0);
-    Object.keys(state.prog||{}).forEach(id=>{
-      const p = state.prog[id];
-      if(p && p.pass && statDayKey(p.pass) === k) write++;
-    });
-    state.daily[k] = {read, write};
+    const readIds = seedDailyIds('read'), writeIds = seedDailyIds('write');
+    state.daily[k] = {read:readIds.length, write:writeIds.length, readIds, writeIds};
+    dirty = true;
+  }else{
+    /* 老版本只记了「今天几个」，没记「是哪几个」：补一次词表，
+       以后同一天同一个词只算一次，反复背同一组不会把 36 顶成 43 */
+    if(!Array.isArray(rec.readIds)){ rec.readIds = seedDailyIds('read'); dirty = true; }
+    if(!Array.isArray(rec.writeIds)){ rec.writeIds = seedDailyIds('write'); dirty = true; }
+    /* 旧版把批量补进来的几百个词写进了当天词表，这里按「同一个毫秒超过 2 个」清掉 */
+    const pruned = pruneMassWrites(k, rec.writeIds);
+    if(pruned.length !== rec.writeIds.length){ rec.writeIds = pruned; dirty = true; }
+    if(rec.read !== rec.readIds.length){ rec.read = rec.readIds.length; dirty = true; }
+    if(rec.write !== rec.writeIds.length){ rec.write = rec.writeIds.length; dirty = true; }
+  }
+  if(dirty){
     try{ localStorage.setItem(LS.daily, JSON.stringify(state.daily)); }catch(e){}
     pushState();
   }
   return state.daily[k];
 }
-function bumpDaily(kind){
+/* 同一天背过/默过的词表：从当前这一组和默写时间戳里补，升级当天不丢账。
+   注意：批量迁移会把几百个词盖成同一个时间戳，那不是「今天真默过的」，
+   同一个毫秒超过 2 个词就当成批量写入剔掉，别把 36 顶成 252 */
+function seedDailyIds(kind){
+  const k = statDayKey();
+  if(kind === 'read'){
+    const s = state.session;
+    if(s && s.ids && s.createdAt && statDayKey(s.createdAt) === k)
+      return (s.ids||[]).slice(0, s.done ? s.ids.length : (s.index||0));
+    return [];
+  }
+  const list = [];
+  (state.books || []).forEach(b=>{
+    Object.keys((b && b.prog) || {}).forEach(id=>{
+      const p = b.prog[id];
+      if(p && p.pass && statDayKey(p.pass) === k && !list.includes(id)) list.push(id);
+    });
+  });
+  const freq = {};
+  list.forEach(id=>{ const t = passStampOf(id, k); freq[t] = (freq[t]||0) + 1; });
+  return list.filter(id=>freq[passStampOf(id, k)] <= 2);
+}
+/* 跨书找这个词的 pass 时间：今日账是全书共用的，不能只看当前书 */
+function passStampOf(id, day){
+  const bs = state.books || [];
+  for(let i=0;i<bs.length;i++){
+    const p = bs[i] && bs[i].prog && bs[i].prog[id];
+    if(p && p.pass && (!day || statDayKey(p.pass) === day)) return p.pass;
+  }
+  return 0;
+}
+/* 同一天里，同一个毫秒出现超过 2 个 pass，就是批量盖章/迁移，不算当天逐个默的 */
+function pruneMassWrites(day, ids){
+  const freq = {};
+  (ids || []).forEach(id=>{
+    const t = passStampOf(id, day) || passStampOf(id);
+    if(t && statDayKey(t) === day) freq[t] = (freq[t]||0) + 1;
+  });
+  return (ids || []).filter(id=>{
+    const t = passStampOf(id, day) || passStampOf(id);
+    if(!t) return true;
+    const dayOfPass = statDayKey(t);
+    if(dayOfPass > day) return false;   /* 后一天才过的词，不可能出现在前一天的账里 */
+    return !(dayOfPass === day && freq[t] > 2);
+  });
+}
+/* 历史上的「今日账」也要清一遍：旧版把批量迁移的几百个词记进了当天词表 */
+function sanitizeDailyHistory(){
+  let dirty = false;
+  Object.keys(state.daily || {}).forEach(k=>{
+    const rec = state.daily[k];
+    if(!rec || !Array.isArray(rec.writeIds)) return;
+    const pruned = pruneMassWrites(k, rec.writeIds);
+    if(pruned.length !== rec.writeIds.length){
+      rec.writeIds = pruned;
+      rec.write = pruned.length;
+      dirty = true;
+    }
+  });
+  if(dirty){
+    try{ localStorage.setItem(LS.daily, JSON.stringify(state.daily)); }catch(e){}
+    pushState();
+  }
+}
+function bumpDaily(kind, id){
   const d = todayStat();
-  d[kind] = (d[kind]||0) + 1;
+  const key = kind + 'Ids';
+  if(!Array.isArray(d[key])) d[key] = seedDailyIds(kind);
+  if(id && !d[key].includes(id)) d[key].push(id);
+  d[kind] = d[key].length;
   d.at = Date.now();
   try{ localStorage.setItem(LS.daily, JSON.stringify(state.daily)); }catch(e){}
   pushState();
+}
+/* 一组背完后，把这一组真正判过的词全部补进当天词表。
+   以前最后一个词判完时 index 已到 36，偶尔会出现完成页 36/36、首页 33/36 的缺口。 */
+function addTodayIds(kind, ids){
+  const d = todayStat();
+  const key = kind + 'Ids';
+  if(!Array.isArray(d[key])) d[key] = seedDailyIds(kind);
+  let changed = false;
+  (ids || []).forEach(id=>{
+    if(id && !d[key].includes(id)){ d[key].push(id); changed = true; }
+  });
+  if(changed){
+    d[kind] = d[key].length;
+    d.at = Date.now();
+    try{ localStorage.setItem(LS.daily, JSON.stringify(state.daily)); }catch(e){}
+    pushState();
+  }
+}
+function syncSessionDaily(){
+  const s = state.session;
+  if(!s || !s.ids || !s.ids.length || !s.done) return;
+  if(!s.doneAt || statDayKey(s.doneAt) !== statDayKey()) return;
+  /* 今日账只收今天真实操作的 graded；跨天滚入的旧词不能再被算成今天新背 */
+  if(Array.isArray(s.graded) && s.graded.length) addTodayIds('read', s.graded);
+}
+function todayCount(kind){
+  const d = todayStat();
+  const ids = d[kind + 'Ids'];
+  return Array.isArray(ids) ? ids.length : (d[kind]||0);
+}
+/* 首页「今日目标」显示口径：
+   同一天就按今天累计（可以超过 36，显示 39/36）；
+   换了另一天而上一组还有 3 个没背完，就按当前组进度显示 3/36，不把昨天 36 算进今天。 */
+function readGoalView(){
+  const s = state.session;
+  const today = statDayKey();
+  if(s && s.ids && s.ids.length && !s.done &&
+     statDayKey(s.createdAt) !== today && (s.index||0) > 0){
+    return {done: s.index, goal: s.ids.length, fromGroup: true};
+  }
+  const todayDone = todayCount('read');
+  /* 上一组已完成、今天还没开背：下一组里「已经背过、还没默写」的那 3 个
+     就是这一组的前 3 个，首页直接显示 3/36，不必等点进背诵才看到 */
+  if(todayDone === 0){
+    if(s && s.ids && s.ids.length && !s.done)
+      return {done:s.index || 0, goal:s.ids.length, fromGroup:true};
+    return {done:0, goal:dailyGoal('read'), fromGroup:true};
+  }
+  return {done: todayDone, goal: dailyGoal('read'), fromGroup: false};
+}
+/* 当前第一页还没默完的词里，已经背过的那几个（也就是上一组滚下来的） */
+function nextReadCarry(){
+  const groups = pageGroups();
+  const gi = groups.findIndex(g=>g.some(w=>!(state.prog[w.id]||{}).readPass));
+  if(gi < 0) return 0;
+  return (groups[gi] || []).filter(w=>{
+    const p = state.prog[w.id] || {};
+    return !!(p.readPass && !p.pass);
+  }).length;
+}
+/* 每日目标是快照里的显式字段；老存档没有就跟随当前这本书的一组词数 */
+function dailyGoal(kind){
+  const g = (state.cfg && state.cfg.goals) || {};
+  const n = parseInt(g[kind], 10);
+  if(n >= 1) return Math.max(1, Math.min(500, n));
+  return batchSize();
 }
 
 function curBook(){
@@ -1940,7 +2085,7 @@ function uid(){ return 'b' + Date.now().toString(36) + Math.random().toString(36
    这批记录在硬盘、浏览器缓存、云端三份里都有，而且缓存那份没有 cutAt 字段，
    所以下限写死在代码里，任何一份数据加载/合并时都会被清一遍。 */
 const PASS_FLOOR = 1795623020207;
-const CUT_FIELDS = ['pass','writePass','readPass','doneAt','seenAt'];
+const CUT_FIELDS = ['pass','writePass','readPass','doneAt'];
 function applyCut(b){
   if(!b || !b.prog) return b;
   const floor = Math.max(b.cutAt || 0, PASS_FLOOR);   /* 水位只升不降，且不低于代码里的基线 */
@@ -1954,7 +2099,7 @@ function applyCut(b){
       if(!v) return;
       if(v < floor || (c0 && v === c0)){ delete p[f]; if(f === 'pass' || f === 'writePass') faked = true; }
     });
-    if((p.seen||0) > 0 && (!p.seenAt || p.seenAt < floor || (c0 && p.seenAt === c0))) p.seen = 0;
+    if((p.seen||0) > 0 && (!p.seenAt || p.seenAt < floor)) p.seen = 0;
     /* 假 pass 的词本来就没被真正学过，掌握度和正确数一起归零，免得首页数字虚高 */
     if(faked){ p.level = 0; p.right = 0; }
   });
@@ -1968,17 +2113,13 @@ function normBook(b){
   o.words = Array.isArray(o.words) ? o.words : [];
   o.prog = o.prog && typeof o.prog === 'object' ? o.prog : {};
   o.session = o.session || null;
+  o.events = Array.isArray(o.events) ? o.events : [];
   o.createdAt = o.createdAt || Date.now();
   o.doneAt = o.doneAt || null;
-  /* v1 → v2：以前"见过就算过"，现在必须默过才算。
-     老进度补一次 pass，免得已经过掉的页又回来。只补一次。
-     注意用 <2 而不是 !==2：否则 v3/v4 的老档每次加载都会重跑这一步，
-     把已经清掉的 pass 又按 createdAt 补回来（页序修正时踩过这个坑）。 */
+  /* v1 → v2：老档只保留本来就明确存在的 pass。
+     不能再按 level>=3 批量推定「已默过」：level 也可能只来自背诵/复习，
+     那样会在同一秒给一批词造出用户从未操作过的默写通过时间。 */
   if((o.v || 0) < 2){
-    Object.keys(o.prog).forEach(k=>{
-      const p = o.prog[k];
-      if(p && !p.pass && (p.level||0) >= 3) p.pass = p.doneAt || o.createdAt || Date.now();
-    });
     o.v = 2;
   }
   /* v3：背诵和默写分开记。老档的 seen 就是背过，cleared 是复习过，按历史原样拆开，不抹记录。
@@ -2076,6 +2217,10 @@ function load(){
   }catch(e){ state.cfg = {batch:36, theme:'paper', fs:1, anim:'on', keys:Object.assign({}, KEY_DEFAULT)}; }
   if(!state.cfg.keys) state.cfg.keys = Object.assign({}, KEY_DEFAULT);
   try{ state.daily = JSON.parse(localStorage.getItem(LS.daily) || '{}') || {}; }catch(e){ state.daily = {}; }
+  try{ state.dailyReset = JSON.parse(localStorage.getItem(LS.dailyReset) || '{}') || {}; }catch(e){ state.dailyReset = {}; }
+  /* 删书也要跨端记住：只记 id 和时间，书本身已经没了 */
+  try{ state.tomb = JSON.parse(localStorage.getItem(LS.tomb) || '{}') || {}; }catch(e){ state.tomb = {}; }
+  sanitizeDailyHistory();
   if(state.cfg && state.cfg.url && /api\.deepseek\.com/.test(state.cfg.url)) state.cfg.url = '';
 }
 
@@ -2407,7 +2552,7 @@ function dateLine(){
   if(WX && WX.ok && typeof WX.temp === 'number'){
     parts.push(WX.temp + '°' + (WX.text ? ' ' + WX.text : ''));
   }
-  const n = passedToday();
+  const n = todayCount('write');
   if(n) parts.push('今天已默 ' + n + ' 个');
   return parts.join('<i>·</i>');
 }
@@ -2478,18 +2623,20 @@ function pushState(){
   if(!ACCT) return;                 /* 没登录不落盘，免得写乱别人的文件 */
   if(!HYDRATED) return;
   /* 手机网页版没有硬盘可写，但仍要把改动排到云端 */
-  if(!DESK){ queueSync(); return; }
+  if(!DESK){ if(!QUIET_SYNC) queueSync(); return; }
   /* 先把这一刻的数据拍下来：切账号会把内存清空，别把空书架写进硬盘 */
   const snap = {
     uid: ACCT.id, books: state.books, activeId: state.activeId,
     words: state.words, prog: state.prog,
     session: state._mainSession || state.session,
-    cfg: state.cfg, daily: state.daily
+    cfg: state.cfg, daily: state.daily, dailyReset: state.dailyReset || {}, tomb: state.tomb || {}
   };
   const who = ACCT.id;
   clearTimeout(pushTimer);
   pushTimer = setTimeout(()=>{
     try{
+      /* 400ms 内切了账号就作废：别把另一个账号的书架写进这个账号的文件 */
+      if(!ACCT || ACCT.id !== who) return;
       snap.savedAt = Date.now();
       fetch('/api/state?uid=' + encodeURIComponent(who), {
         method:'POST',
@@ -2498,7 +2645,7 @@ function pushState(){
       }).catch(()=>{});
     }catch(e){}
   }, 400);
-  queueSync();
+  if(!QUIET_SYNC) queueSync();
 }
 function stamp(){ if(!HYDRATED) return; try{ localStorage.setItem(LS.meta, JSON.stringify({savedAt:Date.now()})); }catch(e){} }
 
@@ -2507,6 +2654,7 @@ function saveBooks(){
   try{
     localStorage.setItem(LS.books, JSON.stringify(state.books));
     localStorage.setItem(LS.active, state.activeId);
+    localStorage.setItem(LS.tomb, JSON.stringify(state.tomb || {}));
   }catch(e){}
   stamp(); pushState();
 }
@@ -2520,6 +2668,8 @@ const saveDeck = ()=>{
 };
 const saveCfg  = ()=>{ localStorage.setItem(LS.cfg, JSON.stringify(state.cfg)); stamp(); pushState(); };
 const saveSes  = ()=>{
+  const b = curBook();
+  if(b !== EMPTY_BOOK) b.sesAt = Date.now();   /* 这一组游标也要跨端，记时间才知道谁新 */
   try{ localStorage.setItem(LS.ses, JSON.stringify(state._mainSession || state.session)); }catch(e){}
   if(!DESK) saveBooks(); else { stamp(); pushState(); }
 };
@@ -2822,6 +2972,7 @@ const ICON = {
 };
 
 function renderHome(){
+  ensurePageSession();
   const b = curBook();
   const st = bookStats(b);
   const total = st.total;
@@ -2832,26 +2983,32 @@ function renderHome(){
   const wrongDone = wrongCleared().length;
   const day = todayStat();
   const goal = batchSize();
-  const readDone = day.read || 0, writeDone = day.write || 0;
-  const readPct = Math.min(100, Math.round(readDone / Math.max(1,goal) * 100));
+  const rv = readGoalView();
+  const goalR = rv.goal;
+  const readDone = rv.done, writeRaw = todayCount('write');
+  const writeDone = Math.min(writeRaw, goal);
+  /* 首页今日目标按「组」滚动的口径显示；超额照实显示，不截成 36 */
+  const readPct = Math.min(100, Math.round(readDone / Math.max(1,goalR) * 100));
   const writePct = Math.min(100, Math.round(writeDone / Math.max(1,goal) * 100));
   const s = state.session;
-  const seenInSet = (s && s.ids && s.ids.length) ? (s.done ? s.ids.length : s.index) : 0;
-  const carriedN = carryOver().length;
-  const sesReady = seenInSet > 0 || carriedN > 0;
+  if(s) ensureSessionReadEvents(s);
+  const pendingInSet = (s && s.ids && s.ids.length)
+    ? (s.done ? s.ids : s.ids.slice(0, s.index)).filter(id=>!writeDoneForRead(s, id)).length : 0;
+  /* 主默写入口只表示当前 PDF 页，不再拿其他页的 carryOver 凑数 */
+  const sesReady = pendingInSet > 0;
 
   const readSub = !has ? '先导入一本书' :
-    (s && !s.done && s.index > 0
-      ? '进行中 ' + s.index + '/' + s.ids.length + ' 个'
+    (s && s.recovered
+      ? (rv.done < rv.goal ? `今天已背 ${rv.done} 个 · 再背 ${rv.goal-rv.done} 个` : '今天目标已完成 · 可继续下一组')
+      : (s && !s.done
+      ? '第 ' + (s.page || '?') + ' 页 · 进行中 ' + s.index + '/' + s.ids.length + ' 个'
       : (function(){
-          const c = carryOver().length;
-          if(c) return '先补上次没默的 ' + c + ' 个';
           const left = pendingCount();
           return left ? '这一组 ' + Math.min(batchSize(), left) + ' 个词' : '全书过完，进入复习';
-        })());
+        })()));
   const writeSub = !has ? '先导入一本书' :
-    (seenInSet ? '测刚背过的 ' + seenInSet + ' 个词'
-               : (carriedN ? '补上背过没默的 ' + carriedN + ' 个' : '先背一组才会有词'));
+    (pendingInSet ? '第 ' + (s.page || '?') + ' 页背过待默 ' + pendingInSet + ' 个词'
+               : ((s && s.index > 0) ? '本页已背词已默完' : '先背本页才会有词'));
   const wrongSub = !has ? '先导入一本书' : (wrongN ? wrongN + ' 个待复习' : (wrongAll ? wrongDone + ' 个已过 · 可再复习' : '还没有错词'));
   const doneN = state.books.filter(x=>x.doneAt).length;
   const streak = streakDays();
@@ -2905,17 +3062,17 @@ function renderHome(){
     <div class="menu">
       <button class="tile ${has?'':'dis'}" data-go="read">
         ${ICON.read}<span class="tt">背诵</span><span class="dd">${readSub}</span>
-        <span class="tdline"><b>今日目标</b><span>${readDone} / ${goal} 个</span></span>
+        <span class="tdline"><b>今日目标</b><span>${readDone} / ${goalR} 个</span></span>
         <span class="tbar"><i style="width:${readPct}%"></i></span>
       </button>
       <button class="tile ${sesReady?'':'dis'}" data-go="write">
         ${ICON.write}<span class="tt">默写</span><span class="dd">${writeSub}</span>
-        <span class="tdline"><b>今日目标</b><span>${writeDone} / ${goal} 个</span></span>
+        <span class="tdline"><b>今日目标</b><span>${writeDone} / ${goal} 个${writeRaw>goal?` · 共 ${writeRaw}`:''}</span></span>
         <span class="tbar"><i style="width:${writePct}%"></i></span>
       </button>
       <button class="tile ${has?'':'dis'}" data-go="wrong">
         ${ICON.wrong}<span class="tt">错词本</span><span class="dd">${wrongSub}</span>
-        <span class="tdline"><b>累计错词</b><span>${wrongAll} 个 · 待复习 ${wrongN}</span></span>
+        <span class="tdline"><b>累计错词</b><span>${wrongAll} 个</span></span>
         <span class="tbar"><i style="width:${Math.min(100,wrongN*4)}%"></i></span>
       </button>
       <button class="tile" data-go="set">
@@ -3003,10 +3160,13 @@ function wrongCleared(){ return wrongWords().filter(w=>state.prog[w.id].readClea
 function clearWrong(w, ok, side){
   if(!w) return;
   const p = P(w.id);
+  const t = Date.now();
   const sides = side === 'read' ? ['read'] : side === 'write' ? ['write'] : ['read','write'];
-  sides.forEach(s=>{ p[s+'Cleared'] = !!ok; });
+  /* 背/默两侧各自留时间戳：撤销“已复习”也能同步到另一台，不会被旧的 true 顶回来 */
+  sides.forEach(s=>{ p[s+'Cleared'] = !!ok; p[s === 'read' ? 'rcAt' : 'wcAt'] = t; });
+  p.at = t;
   p.cleared = !!(p.readCleared && p.writeCleared);
-  if(p.cleared) p.clearAt = Date.now(); else delete p.clearAt;
+  if(p.cleared) p.clearAt = t; else delete p.clearAt;
 }
 function sideTags(p){
   p = p || {};
@@ -3040,7 +3200,7 @@ function startWrongReview(mode, onlyIds){
   const ids = shuffle(pool);
   state.session = {
     ids, index:0, right:0, done:false, createdAt:Date.now(),
-    size:ids.length, page:1, review:'wrong', mode
+    size:ids.length, page:1, review:'wrong', mode, graded:[], doneAt:0
   };
   state.wq = []; state.wi = 0; state.revealed = false;
   if(mode === 'write'){
@@ -3089,12 +3249,18 @@ function pageOfWord(w){
   return i < 0 ? 0 : Math.floor(i / batchSize()) + 1;
 }
 
-function createSession(){
+function createSession(forcePage){
   const size = batchSize();
   const groups = pageGroups();
-  /* 当前页 = 第一个还没全默过的页。背了没默的那页会一直停在原地，
-     下次还是它，页内重新打乱——正好就是「没默完的补上再往下走」 */
-  let gi = groups.findIndex(g=>g.some(w=>!isPassed(state.prog[w.id])));
+  /* 修复旧的跨页会话时，优先留在它原本标的那一页；
+     否则当前页 = 第一个还没全默过的页。任何情况都不得把不同 PDF 页拼成一组。 */
+  let gi = -1;
+  if(forcePage != null){
+    gi = groups.findIndex(g=>!!((g[0] && g[0].pg) === Number(forcePage)));
+  }
+  /* 2026-11-27 用户明确要求：第1~7页全部背过，第8页及以后从未背过。
+     因此新组按「第一页还有词没背过」顺序推进，不再被旧默写状态拉回前页。 */
+  if(gi < 0) gi = groups.findIndex(g=>g.some(w=>!(state.prog[w.id]||{}).readPass));
   let review = false, pick;
   if(gi < 0){ review = true; gi = groups.length - 1; }   /* 全书都默过了：回头复习错得最多的那批 */
 
@@ -3107,32 +3273,79 @@ function createSession(){
     pick = groups[gi] || [];
   }
 
-  const ids = shuffle(pick).map(w=>w.id);
+  /* 上一组多背的那几个词已经落进这一页：它们算这一组的前 3 个，
+     打开就是 3/36，不用从头再背一遍。把已经背过的排在前面，索引从 3 开始。 */
+  const carryWords = pick.filter(w=>{
+    const p = state.prog[w.id] || {};
+    return !!(p.readPass && !p.pass);
+  });
+  const rest = pick.filter(w=>{
+    const p = state.prog[w.id] || {};
+    return !(p.readPass && !p.pass);
+  });
+  const ids = carryWords.concat(shuffle(rest)).map(w=>w.id);
+  const startAt = carryWords.length;
+  const carryAt = startAt ? Math.min.apply(null, carryWords.map(w=>{
+    const p = state.prog[w.id] || {};
+    return p.readPass || p.pass || Date.now();
+  })) : 0;
   const carry = pick.filter(w=>{ const p = state.prog[w.id]; return p && (p.seen||0) > 0 && !p.pass; }).length;
   state.session = {
-    ids, index:0, done:false, createdAt:Date.now(), right:0,
+    ids, index:startAt, done:false, createdAt:(carryAt || Date.now()), right:0,
     size: ids.length, carry, review,
     page: (pick[0] && pick[0].pg) || (gi + 1),
-    pageCount: groups.length
+    pageCount: groups.length, graded:[], doneAt:0
   };
+  ensureSessionIdentity(state.session);
+  ensureSessionReadEvents(state.session);
   state.wq = []; state.wi = 0;
   state.revealed = false;
   saveSes();
 }
 
+/* 带 pg 的书，一个主背诵会话必须恰好等于原 PDF 的某一页。
+   页内顺序随便打乱，但词集合不能跨页；复习模式不受此限制。 */
+function sessionMatchesPage(s){
+  if(!s || s.review) return true;
+  const ws = state.words || [];
+  if(!ws.length || !ws.every(w=>w && w.pg)) return true;
+  if(!Array.isArray(s.ids) || !s.ids.length) return false;
+  const pg = Number(s.page) || Number((byId(s.ids[0])||{}).pg);
+  const group = pageGroups().find(g=>g[0] && Number(g[0].pg) === pg);
+  if(!group || s.ids.length !== group.length) return false;
+  const expected = new Set(group.map(w=>w.id));
+  const actual = new Set(s.ids);
+  return actual.size === expected.size && s.ids.every(id=>expected.has(id));
+}
+function ensurePageSession(){
+  const s = state.session;
+  if(!s || s.review) return false;
+  if(!s.recovered && sessionMatchesPage(s)) return false;
+  const pg = Number(s.page) || Number((s.ids && byId(s.ids[0]) || {}).pg) || null;
+  createSession(pg);
+  return true;
+}
+/* 旧版 recovered 会话只是把各页「背过没默」拼起来的队列。
+   现在统一重建成其原页的正常 36 词会话，绝不再按当天 readIds 跨页拼装。 */
+function resumeTodayRead(){ return ensurePageSession(); }
+
 function renderRead(){
   if(!state.words.length){ showEmpty('read','背诵','还没有词库','先去设置里导入一份 CSV','set','去导入'); return; }
+  /* 每次进入都校验词集合：旧版跨页会话/recovered 队列在这里重建成原 PDF 单页 */
+  ensurePageSession();
+  /* 昨天已完成的那一组不要跨天冒充今天：跨天进入背诵，直接换今天的新组 */
+  if(state.session && state.session.done && statDayKey(state.session.createdAt) !== statDayKey()) state.session = null;
   if(!state.session || !state.session.ids || !state.session.ids.length) createSession();
 
   const s = state.session;
   if(s.done){ renderReadDone(); return; }
 
   const w = byId(s.ids[s.index]);
-  if(!w){ s.done = true; saveSes(); renderReadDone(); return; }
+  if(!w){ s.done = true; s.doneAt = Date.now(); saveSes(); renderReadDone(); return; }
   const K = keyCfg();
 
   $('view-read').innerHTML = `
-    <div class="pagehd">${backTag()}<h1>背诵</h1><span>第 ${s.page} 页 · ${s.index+1}/${s.ids.length} 个${s.carry?` · 含没默完的 ${s.carry} 个`:''}</span></div>
+    <div class="pagehd">${backTag()}<h1>背诵</h1><span>${s.resumed ? `今日 ${s.index+1}/${s.ids.length} 个 · 接着上次继续` : `第 ${s.page} 页 · ${s.index+1}/${s.ids.length} 个${s.carry?` · 含没默完的 ${s.carry} 个`:''}`}</span></div>
     <div class="card"${w.tone?` data-tone="${w.tone}" style="--tone:${toneColor(w.tone)}"`:''}>
       <div class="cw">
         ${w.icon?`<div class="ico">${w.icon}</div>`:''}
@@ -3298,19 +3511,184 @@ function revealRead(){
   }
 }
 
+/* ===== 逐次学习事件：单词 + 页码 + 时间 + 会话；默写引用具体背诵事件 ===== */
+function ensureSessionIdentity(s){
+  if(!s) return null;
+  if(!s.id) s.id = 's_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8);
+  if(!s.readEventIds || typeof s.readEventIds !== 'object') s.readEventIds = {};
+  return s;
+}
+function addLearningEvent(kind, w, extra){
+  const b = curBook();
+  if(!b || !w) return null;
+  const s = ensureSessionIdentity(state.session);
+  const ev = Object.assign({
+    id: kind.charAt(0) + '_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,9),
+    kind, wordId:w.id, page:w.pg || pageOfWord(w) || 0,
+    ts:Date.now(), sessionId:(s && s.id) || ''
+  }, extra || {});
+  b.events = Array.isArray(b.events) ? b.events : [];
+  b.events.push(ev);
+  return ev;
+}
+function ensureSessionReadEvents(s){
+  if(!s || !s.ids) return;
+  ensureSessionIdentity(s);
+  const b = curBook();
+  b.events = Array.isArray(b.events) ? b.events : [];
+  const upto = s.done ? s.ids.length : Math.min(s.index || 0, s.ids.length);
+  for(let i=0;i<upto;i++){
+    const id = s.ids[i];
+    if(s.readEventIds[id]) continue;
+    let ev = b.events.find(e=>e.kind === 'read' && e.sessionId === s.id && e.wordId === id);
+    if(!ev){
+      const p = state.prog[id] || {};
+      ev = {id:'r_legacy_' + s.id + '_' + id, kind:'read', wordId:id,
+        page:(byId(id)||{}).pg || s.page || 0,
+        ts:p.readPass || p.seenAt || s.createdAt || Date.now(),
+        sessionId:s.id, result:'ok', legacy:true};
+      b.events.push(ev);
+    }
+    s.readEventIds[id] = ev.id;
+  }
+}
+function readEventForWrite(w){
+  const s = state.session, b = curBook();
+  if(!s || !b) return null;
+  ensureSessionReadEvents(s);
+  const rid = s.readEventIds && s.readEventIds[w.id];
+  const evs = b.events || [];
+  if(rid){ const hit = evs.find(e=>e.id === rid); if(hit) return hit; }
+  for(let i=evs.length-1;i>=0;i--){
+    const e = evs[i];
+    if(e.kind === 'read' && e.wordId === w.id && e.sessionId === s.id) return e;
+  }
+  return null;
+}
+function writeDoneForRead(s, id){
+  if(!s) return false;
+  const rid = s.readEventIds && s.readEventIds[id];
+  return ((curBook() && curBook().events) || []).some(e=>e.kind === 'write' && e.wordId === id &&
+    ((rid && e.readEventId === rid) || (!rid && e.sessionId === s.id)));
+}
+function recordReadEvent(w, ok){
+  const s = ensureSessionIdentity(state.session);
+  const ev = addLearningEvent('read', w, {result:ok ? 'ok' : 'bad'});
+  if(s && ev) s.readEventIds[w.id] = ev.id;
+  return ev;
+}
+function recordWriteEvent(w, result, score, skipped){
+  const re = readEventForWrite(w);
+  return addLearningEvent('write', w, {result, score:Number(score)||0, skipped:!!skipped,
+    readEventId:(re && re.id) || '', readAt:(re && re.ts) || 0});
+}
+function recordWrongEvent(w, source, active){
+  return addLearningEvent('wrong', w, {active:active !== false,
+    sourceEventId:(source && source.id) || '',
+    writeEventId:(source && source.kind === 'write') ? source.id : '',
+    readEventId:(source && (source.readEventId || (source.kind === 'read' && source.id))) || ''});
+}
+
+/* 2026-11-27 用户明确要求：第1~7页全部背过；第8页及以后全部当作从未背过。
+   此函数是这次重置的执行记录，后续维护不得改成按旧的 carryOver/pass 反推。 */
+function applyUserRequestedReset20261127(){
+  const t = Date.now(), day = statDayKey(t), firstFreshPage = 8;
+  state.dailyReset = state.dailyReset || {};
+  state.dailyReset[day] = t;
+  state.daily[day] = {read:0, write:0, readIds:[], writeIds:[], at:t};
+  (state.books || []).forEach(b=>{
+    const pageOf = {};
+    (b.words || []).forEach(w=>{ pageOf[w.id] = w.pg || 0; });
+    /* 今日事件全部清；第8页及以后的历史事件也全部清 */
+    b.events = (Array.isArray(b.events) ? b.events : []).filter(ev=>{
+      const pg = ev.page || pageOf[ev.wordId] || 0;
+      return pg < firstFreshPage && statDayKey(ev.ts) !== day;
+    });
+    (b.words || []).forEach(w=>{
+      if((w.pg || 0) < firstFreshPage){
+        const p = b.prog[w.id] || (b.prog[w.id] = {level:0,right:0,wrong:0});
+        if(!p.readPass) p.readPass = t;
+        p.seen = Math.max(1, p.seen || 0);
+        p.seenAt = p.seenAt || p.readPass;
+        p.readBaselineAt = t;
+        p.readBaselineNote = '2026-11-27 用户要求第1~7页全部背过';
+      }else{
+        b.prog[w.id] = {
+          level:0, right:0, wrong:0, seen:0,
+          readPass:0, pass:0, writePass:0, seenAt:0, doneAt:0,
+          at:t, wt:t, readCleared:false, writeCleared:false, cleared:false,
+          rcAt:t, wcAt:t, progResetAt:t, passClearAt:t,
+          resetReason:'2026-11-27 用户要求第8页及以后从未背过'
+        };
+      }
+    });
+    /* 用户同时要求清空当前错题本；其他背默状态不因此改变 */
+    Object.keys(b.prog || {}).forEach(id=>{
+      const p = b.prog[id];
+      if(!p) return;
+      p.wrong = 0; p.wt = t;
+      p.readCleared = false; p.writeCleared = false; p.cleared = false;
+      p.rcAt = t; p.wcAt = t; delete p.clearAt;
+    });
+  });
+  state.session = null; state._mainSession = null;
+  state.wq = []; state.wi = 0; state.revealed = false;
+  try{
+    localStorage.setItem(LS.daily, JSON.stringify(state.daily));
+    localStorage.setItem(LS.dailyReset, JSON.stringify(state.dailyReset));
+  }catch(e){}
+  createSession(firstFreshPage);
+  saveBooks();
+  return {firstSevenRead:state.words.filter(w=>w.pg<8 && (state.prog[w.id]||{}).readPass).length,
+    laterRead:state.words.filter(w=>w.pg>=8 && (state.prog[w.id]||{}).readPass).length,
+    todayRead:todayCount('read'), todayWrite:todayCount('write'), wrong:wrongWords().length,
+    sessionPage:state.session.page, sessionIndex:state.session.index};
+}
+
+/* 2026-11-27 用户追加要求：第1~7页不只是「背过」，要「全部已默」（252/252）。
+   这是用户指定的状态补齐，不是真实默写：不写 write 事件，只补 pass/writePass，
+   并留下 writeBaselineNote 说明来源，避免以后被当成"今天真的默过 12 个"。 */
+function applyUserRequestedAllWritten20261127(){
+  const t = Date.now();
+  (state.books || []).forEach(b=>{
+    (b.words || []).forEach(w=>{
+      if((w.pg || 0) >= 8) return;
+      const p = b.prog[w.id] || (b.prog[w.id] = {level:0,right:0,wrong:0,seen:0});
+      if(!p.readPass) p.readPass = t;
+      p.seen = Math.max(1, p.seen || 0);
+      p.seenAt = p.seenAt || p.readPass;
+      if(!p.pass) p.pass = t;
+      if(!p.writePass) p.writePass = t;
+      if(!p.doneAt) p.doneAt = t;
+      p.writeBaselineAt = t;
+      p.writeBaselineNote = '2026-11-27 用户要求第1~7页全部已默（补记状态，非实际默写记录）';
+    });
+  });
+  saveBooks();
+  return {firstSevenRead:state.words.filter(w=>w.pg<8 && (state.prog[w.id]||{}).readPass).length,
+    firstSevenPass:state.words.filter(w=>w.pg<8 && (state.prog[w.id]||{}).pass).length,
+    laterPass:state.words.filter(w=>w.pg>=8 && (state.prog[w.id]||{}).pass).length,
+    todayRead:todayCount('read'), todayWrite:todayCount('write'), wrong:wrongWords().length};
+}
+
 function gradeRead(ok){
   const s = state.session, w = byId(s.ids[s.index]);
   if(!w) return;
   const p = P(w.id);
+  const t = Date.now();
+  p.at = t;                          /* 这个词最后一次被操作，多端靠它判掌握度 */
   p.seen = (p.seen||0) + 1;          /* 背过；但要默过才算这一页走完 */
-  p.seenAt = Date.now();
-  if(ok){ p.level = Math.min(5, p.level+1); p.right++; s.right = (s.right||0)+1; p.readPass = p.readPass || Date.now(); }
-  else { p.level = Math.max(0, p.level-1); p.wrong++; }
+  p.seenAt = t;
+  if(Array.isArray(s.graded) && !s.graded.includes(w.id)) s.graded.push(w.id);
+  if(ok){ p.level = Math.min(5, p.level+1); p.right++; s.right = (s.right||0)+1; p.readPass = p.readPass || t; }
+  else { p.level = Math.max(0, p.level-1); p.wrong++; p.wt = t; }
+  const readEvent = recordReadEvent(w, ok);
+  if(!ok) recordWrongEvent(w, readEvent, true);
   if(s.review === 'wrong') clearWrong(w, ok, 'read');
   saveProg();
-  bumpDaily('read');
+  bumpDaily('read', w.id);
   s.index++;
-  if(s.index >= s.ids.length){ s.done = true; saveSes(); renderReadDone(); checkBookDone(); }
+  if(s.index >= s.ids.length){ s.done = true; s.doneAt = Date.now(); syncSessionDaily(); saveSes(); renderReadDone(); checkBookDone(); }
   else { saveSes(); state.revealed = false; renderRead(); }
   renderStats();
 }
@@ -3320,13 +3698,20 @@ function repeatRead(){
   const s = state.session;
   if(!s || !s.ids || !s.ids.length) return;
   s.index = 0; s.done = false; s.right = 0; s.createdAt = Date.now();
+  s.id = null; s.readEventIds = {}; ensureSessionIdentity(s);
+  s.graded = []; s.doneAt = 0;
   state.revealed = false;
   saveSes(); renderRead();
 }
 function writeThisSet(){
+  ensurePageSession();
   const s = state.session;
   if(!s || !s.ids || !s.ids.length) return;
-  state.wq = s.ids.slice();
+  /* 默写与背诵共用同一会话，但只取已经背到的范围，不能提前考后面的词 */
+  const seen = s.done ? s.ids.slice() : s.ids.slice(0, s.index);
+  ensureSessionReadEvents(s);
+  state.wq = seen.filter(id=>!writeDoneForRead(s, id));
+  if(!state.wq.length) return;
   state.wi = 0;
   state.wstat = {ok:0,near:0,bad:0,hold:0,scores:[]};
   state._wPending = false; state._wLast = null; state._aiDown = 0;
@@ -3335,6 +3720,7 @@ function writeThisSet(){
 }
 function renderReadDone(){
   const s = state.session;
+  syncSessionDaily();
   const right = (typeof s.right === 'number') ? s.right : null;
   const say = right == null ? '这一组已经背过，还没默写。'
     : (right===s.ids.length?'一个都没漏，漂亮。':'没把握的，等一下默写里还会考。');
@@ -3361,11 +3747,17 @@ function renderReadDone(){
 
 /* ============ 默写 ============ */
 function startWrite(){
+  ensurePageSession();
+  /* 跨天时，昨天那组已完成的词不该再被今天默写：换今天的新组 */
+  if(state.session && state.session.done && statDayKey(state.session.createdAt) !== statDayKey()){
+    state.session = null;
+  }
+  if(!state.session) createSession();
   const s = state.session;
   let seen = (s && s.ids && s.ids.length) ? (s.done ? s.ids.slice() : s.ids.slice(0, s.index)) : [];
-  /* 会话是空的（比如背完随手退出、旧版本又把下一组建好了），
-     就把「背过但没默」的词收回来——这才是「背完就默」的本意 */
-  if(!seen.length) seen = carryOver().slice(0, batchSize()).map(w=>w.id);
+  /* 默写严格对应当前会话的逐次背诵事件；以前默过也不能屏蔽本次重背 */
+  ensureSessionReadEvents(s);
+  seen = seen.filter(id=>!writeDoneForRead(s, id));
   if(!seen.length) return false;
   state.wq = shuffle(seen);
   state.wi = 0;
@@ -3374,36 +3766,37 @@ function startWrite(){
   return true;
 }
 
-/* 背完回首页时，旧版本会在切回背诵时提前建下一组，把「这组还没默」抹掉。
-   开机补一次：只要今天背过、词库里确实有「背过没默」的，就补一个已读完的会话。 */
+/* 开机只修复当前 PDF 页的会话；不再把全书 carryOver 拼成 recovered 假完成组。 */
 function repairSessionAfterRead(){
+  if(ensurePageSession()) return;
   const s = state.session;
   if(s && s.ids && s.ids.length && (s.done || s.index > 0)) return;
   const day = todayStat();
   if(!(day.read > 0)) return;
-  const carried = carryOver().slice(0, batchSize());
+  const group = pageGroups().find(g=>g.some(w=>!(state.prog[w.id]||{}).readPass));
+  if(!group) return;
+  const carried = group.filter(w=>{
+    const p = state.prog[w.id] || {};
+    return !!(p.readPass && !p.pass);
+  });
   if(!carried.length) return;
-  const ids = carried.map(w=>w.id);
-  state.session = {
-    ids, index: ids.length, done: true, right: null, recovered: true,
-    createdAt: Date.now(), size: ids.length, carry: ids.length,
-    page: (carried[0] && carried[0].pg) || pageOfWord(carried[0]) || 1,
-    pageCount: pageGroups().length
-  };
-  state.wq = []; state.wi = 0;
-  saveSes();
+  createSession((group[0] && group[0].pg) || null);
 }
 
 function renderWrite(){
   state._wPending = false;              /* 换词就清掉判分锁，免得卡住 */
+  ensurePageSession();
   const s = state.session;
   const seen = (s && s.ids && s.ids.length) ? (s.done ? s.ids.length : s.index) : 0;
-  const noSeen = seen === 0 && carryOver().length === 0;
+  const noSeen = seen === 0;
   if(!state.words.length || noSeen){
-    showEmpty('write','默写','还没有可默写的词','默写只测你刚背过的那一组，先去背一组。','read','去背诵');
+    showEmpty('write','默写','还没有可默写的词','默写只测当前 PDF 页已经背到的词，先去背本页。','read','去背诵');
     return;
   }
-  if(!state.wq.length && !startWrite()) return;
+  if(!state.wq.length && !startWrite()){
+    showEmpty('write','默写','本页暂时没有待默词','已背范围里没有「未默过」的词。','read','返回背诵');
+    return;
+  }
   if(state.wi >= state.wq.length){ renderWriteDone(); return; }
 
   const w = byId(state.wq[state.wi]);
@@ -3553,14 +3946,18 @@ async function submitWrite(){
   }
 
   const p = P(w.id);
+  const t = Date.now();
+  p.at = t;                          /* 最后一次操作时间：level 按它跨端取新 */
   if(verdict === 'ok'){ p.level = Math.min(5,p.level+1); p.right++; }
-  else if(verdict === 'near'){ p.wrong++; }
+  else if(verdict === 'near'){ p.wrong++; p.wt = t; }
   else if(verdict === 'hold'){ /* 待定：不动成绩 */ }
-  else { p.level = Math.max(0,p.level-1); p.wrong++; }
-  p.pass = p.pass || Date.now();     /* 默过了，这一页就算走完，不再滚到下一批 */
+  else { p.level = Math.max(0,p.level-1); p.wrong++; p.wt = t; }
+  p.pass = p.pass || t;              /* 默过了，这一页就算走完，不再滚到下一批 */
   p.writePass = p.writePass || p.pass;
+  const writeEvent = recordWriteEvent(w, verdict, score, false);
+  if(verdict === 'near' || verdict === 'bad') recordWrongEvent(w, writeEvent, true);
   if(state.session && state.session.review === 'wrong') clearWrong(w, verdict === 'ok', 'write');
-  saveProg(); bumpDaily('write'); renderStats();
+  saveProg(); bumpDaily('write', w.id); renderStats();
   if(state.wstat[verdict] == null) state.wstat[verdict] = 0;
   state.wstat[verdict]++;
   if(!Array.isArray(state.wstat.scores)) state.wstat.scores = [];
@@ -3572,7 +3969,8 @@ async function submitWrite(){
     : score >= 48 ? '沾到边了，还差一层意思'
     : (ans.length < 2 ? '只写了一个字，AI 也没法接' : '没落到这本书给的义项上');
 
-  state._wLast = {w, verdict, score, comment, aiErr, note, ans};
+  state._wLast = {w, verdict, score, comment, aiErr, note, ans,
+    writeEventId:writeEvent && writeEvent.id, readEventId:writeEvent && writeEvent.readEventId};
   paintWriteResult(state._wLast);
   $('wNextRow').style.display = 'flex';
   state._wPending = false;
@@ -3584,7 +3982,9 @@ function markRight(){
   const d = state._wLast;
   if(!d || d.verdict === 'ok') return;
   const p = P(d.w.id), v = d.verdict;
-  if(v === 'near' || v === 'bad') p.wrong = Math.max(0, p.wrong - 1);
+  const t = Date.now();
+  p.at = t;
+  if(v === 'near' || v === 'bad'){ p.wrong = Math.max(0, p.wrong - 1); p.wt = t; }
   if(v === 'bad') p.level = Math.min(5, p.level + 1);     /* 先补回被扣的那级 */
   if((state.wstat[v] || 0) > 0) state.wstat[v]--;
   p.level = Math.min(5, p.level + 1);
@@ -3593,6 +3993,9 @@ function markRight(){
   state.wstat.ok = (state.wstat.ok || 0) + 1;
   const sc = state.wstat.scores;
   if(Array.isArray(sc) && sc.length) sc[sc.length-1] = Math.max(sc[sc.length-1], 90);
+  const we = ((curBook() && curBook().events) || []).find(e=>e.id === d.writeEventId);
+  if(we){ we.previousVerdict = we.result; we.result = 'ok'; we.correctedAt = t; we.score = Math.max(we.score||0, 90); }
+  if(we) recordWrongEvent(d.w, we, false);
   saveProg(); renderStats();
 
   d.verdict = 'ok';
@@ -3607,10 +4010,15 @@ function skipWrite(){
   const w = byId(state.wq[state.wi]);
   if(!w) return;
   const p = P(w.id);
+  const t = Date.now();
+  p.at = t;
   p.wrong++;
-  p.pass = p.pass || Date.now();     /* 跳过也算过了一遍，进错词本，别拖到明天 */
+  p.wt = t;
+  p.pass = p.pass || t;              /* 跳过也算过了一遍，进错词本，别拖到明天 */
   p.writePass = p.writePass || p.pass;
-  saveProg(); bumpDaily('write'); renderStats();
+  const writeEvent = recordWriteEvent(w, 'bad', 0, true);
+  recordWrongEvent(w, writeEvent, true);
+  saveProg(); bumpDaily('write', w.id); renderStats();
   state.wstat.bad++;
   if(!Array.isArray(state.wstat.scores)) state.wstat.scores = [];
   state.wstat.scores.push(0);
@@ -3691,7 +4099,7 @@ function renderWrong(){
   const done = wrongCleared();
   const rd = wrongReadPending().length, wr = wrongWritePending().length;
 
-  let h = `<div class="pagehd">${backTag()}<h1>错词本</h1><span>${todo.length} 个待复习 · 累计 ${bad.length}</span></div>`;
+  let h = `<div class="pagehd">${backTag()}<h1>错词本</h1><span>${todo.length} 个待复习 · 已过 ${done.length} 个</span></div>`;
 
   if(todo.length){
     h += `<div class="revtier">
@@ -3888,11 +4296,14 @@ function renderAccountData(){
   const written = state.words.filter(w=>!!(state.prog[w.id]||{}).pass).length;
   const pct = total ? Math.round(written/total*100) : 0;
   const today = todayStat();
+  const todayGoal = batchSize();
+  const rv = readGoalView();
+  const todayW = todayCount('write');
   const books = state.books.filter(x=>x!==EMPTY_BOOK).length;
   rows.innerHTML = `
     <div class="datarow"><span>书架索引</span><b>${books} 本 · 当前《${esc(b.title||'')}》</b></div>
     <div class="datarow"><span>背默进度</span><b>背 ${seen}（背对 ${readOk}）· 默 ${written} / ${total}（${pct}%）</b></div>
-    <div class="datarow"><span>今天</span><b>背 ${today.read||0} · 默 ${today.write||0}</b></div>
+    <div class="datarow"><span>今天</span><b>背 ${rv.done} / ${rv.goal} · 默 ${todayW} / ${todayGoal}</b></div>
     <div class="datarow"><span>错词本</span><b>待复习 ${wrongPending().length}（背 ${wrongReadPending().length} · 默 ${wrongWritePending().length}）· 累计 ${wrongWords().length}</b></div>`;
   const bar = $('dataBar'); if(bar) bar.style.width = pct + '%';
 }
@@ -4102,9 +4513,10 @@ function doImport(text, title){
   const rp = $('importReport');
   if(!r.ok){ if(rp) rp.innerHTML = '<span style="color:#A8342A">'+esc(r.msg)+'</span>'; return; }
   const name = (title||'').trim() || ('新书 · ' + fmtDate(Date.now()));
+  const now = Date.now();
   const b = normBook({
     id:uid(), title:name, words:r.words, prog:{}, session:null,
-    createdAt:Date.now(), src:'导入'
+    createdAt:now, src:'导入', wordsAt:now, metaAt:now
   });
   state.books.push(b);
   state.activeId = b.id;
@@ -4142,12 +4554,14 @@ function renderBookList(){
     inp.onchange = ()=>{
       const v = inp.value.trim();
       if(!v){ inp.value = b.title; return; }
-      b.title = v; saveBooks(); renderBookList(); renderHome(); toast('已改名');
+      b.title = v; b.metaAt = Date.now(); saveBooks(); renderBookList(); renderHome(); toast('已改名');
     };
     row.querySelector('.bkdel').onclick = ()=>{
       if(state.books.length <= 1){ toast('至少留一本，想清空就删词条'); return; }
       if(!confirm('删掉《' + b.title + '》？这本书的进度会一起消失，删了找不回来。')) return;
       state.books = state.books.filter(x=>x.id!==id);
+      /* 墓碑：让云端和其他设备也删掉这本书，否则下次拉取又会合并回来 */
+      state.tomb[id] = Date.now();
       if(state.activeId === id){
         state.activeId = state.books[0].id;
         state.wq = []; state.wi = 0;
@@ -4252,15 +4666,17 @@ function refreshChrome(){
 const CLOUD_CFG = {
   endpoint: 'https://vocab-trace.app.workbuddy.host',
   oauthRelayBaseUrl: 'https://www.workbuddy.cn/v2/as/genie-baas/oauth',
-  publishableKey: 'wbpk_CYckYEnaSS5tPccIvauw3w_m35p22DriKA8A5Mqlz3VSrX4WoquXI9H'
+  publishableKey: ''   /* 使用前填入你自己的 WorkBuddy publishableKey，见 README */
 };
-const DEFAULT_EMAIL = 'liuqiwei512@163.com';
+const DEFAULT_EMAIL = '';   /* 发布版不预填任何账号，使用者自行登录 */
 let CLOUD = null, CLOUD_USER = null;
 let SYNC_STATE = 'off';   /* off | ok | busy | fail */
 let pendingEmailOtp = null;
 let pendingPwdReset = null;
 let syncTimer = null, syncHardTimer = null;
 let syncLastAt = 0, syncPending = false;
+let PULLING = false;      /* 只读轮询：手机改了进度，电脑端要能自己发现，不能等本机再操作一次 */
+let cloudWatchTimer = null;
 let CLOUD_META = null;   /* 最近一次云端存档的概况：时间/大小/包含项 */
 let PULL_INFO = null;    /* 最近一次从云端取回时的现场，用来提示「换设备恢复」 */
 
@@ -4359,126 +4775,289 @@ function legacyCopy(txt){
 }
 
 /* 把内存里的整套数据拍成快照——和本地存档同一套字段，方便双向合并 */
-function cloudSnapshot(){
+function cloudSnapshot(now){
+  let savedAt = Date.now();
+  if(!now){
+    /* 拉取时要比「上次真正保存」的时间，不能拿当前时刻冒充，
+       否则本机永远算更新，云端的改名/设置/当前书就永远采不到 */
+    try{ savedAt = JSON.parse(localStorage.getItem(LS.meta) || '{}').savedAt || 0; }catch(e){ savedAt = 0; }
+  }
   return {
     uid: ACCT ? ACCT.id : '',
     books: state.books, activeId: state.activeId,
     words: state.words, prog: state.prog,
     session: state._mainSession || state.session,
-    cfg: state.cfg, daily: state.daily,
-    savedAt: Date.now()
+    cfg: state.cfg, daily: state.daily, dailyReset: state.dailyReset || {}, tomb: state.tomb || {},
+    savedAt: savedAt
   };
 }
 
-/* 进度合并：只进不退，错次取最大不翻倍，和本地 pullDisk 的口径一致。
-   fresh 是较新那一份的 prog：背/默的「复习通过」标记允许撤销，必须按较新的一份算，
-   否则旧的 true 会把新一轮的「待复习」又盖回去。 */
-function mergeProg(a, b, fresh){
+/* 进度合并：累计量只进不退，状态量按「谁最后动过」算。
+   以前 level、错词数、背/默复习划掉都靠 max/OR，一台设备降级或撤销，另一台永远看不到；
+   清空进度和删书也没有时间戳/墓碑，一拉云端就全复活。这里逐词带 at/wt/rcAt/wcAt，
+   书级带 resetAt/metaAt，配合 mergeSnap 里的 tomb 一起用。 */
+function mergeProg(a, b, fresh, resetAt){
   const out = JSON.parse(JSON.stringify(a || {}));
-  const auth = fresh || null;
+  const floor = resetAt || 0;
+  const stampOf = p => Math.max(p.at||0, p.wt||0, p.rcAt||0, p.wcAt||0, p.clearAt||0,
+                                p.seenAt||0, p.doneAt||0, p.pass||0, p.readPass||0, p.writePass||0,
+                                p.passClearAt||0, p.progResetAt||0);
+  /* 清空进度是「这本书从此归零」：不仅远端旧账要丢，本地这份旧账也要丢。
+     否则反方向合并（本地旧、云端已清）会把旧 pass 原样留下，再推回云端复活。 */
+  if(floor){
+    Object.keys(out).forEach(k=>{
+      const p = out[k];
+      if(!p) return;
+      if(stampOf(p) < floor){ delete out[k]; return; }
+      ['pass','readPass','writePass','doneAt','seenAt'].forEach(f=>{
+        if(p[f] && p[f] < floor) delete p[f];
+      });
+    });
+  }
   Object.keys(b || {}).forEach(k=>{
-    const x = out[k] || {}, y = b[k] || {};
-    ['seen','right','level'].forEach(f=>{ x[f] = Math.max(x[f]||0, y[f]||0); });
-    /* wrong 带时间戳：谁最后动过听谁的，否则「清空错词本」会被云端旧计数顶回来 */
+    let y = b[k] || {};
+    const ys = stampOf(y);
+    /* 本书在这台设备上「清空进度」之前的记录，一律不认 */
+    if(floor && ys < floor) return;
+    const x = out[k] || (out[k] = {level:0,right:0,wrong:0});
+    /* 逐词重置墓碑：第8页及以后按用户要求清零，旧设备上的 seen/readPass/right 不能复活。
+       重置后若有新操作（时间大于 progResetAt），新进度仍正常合并。 */
+    const wordReset = Math.max(x.progResetAt||0, y.progResetAt||0);
+    const activity = p=>Math.max(p.at||0, p.wt||0, p.seenAt||0, p.readPass||0,
+                                  p.pass||0, p.writePass||0, p.doneAt||0);
+    if(wordReset){
+      x.progResetAt = wordReset;
+      if(activity(y) <= wordReset){
+        y = Object.assign({}, y, {level:0,right:0,wrong:0,seen:0,readPass:0,pass:0,writePass:0,
+          doneAt:0,seenAt:0,at:wordReset,wt:wordReset});
+      }
+    }
+    /* 撤回误标的 pass 也要能跨端传播：旧的云端/另一台设备不能在合并时把它复活。
+       撤回之后若用户重新默过，新 pass 的时间晚于 passClearAt，仍正常保留。 */
+    const passClearAt = Math.max(x.passClearAt||0, y.passClearAt||0);
+    if(passClearAt){
+      x.passClearAt = passClearAt;
+      if((x.pass||0) <= passClearAt) x.pass = 0;
+      if((x.writePass||0) <= passClearAt) x.writePass = 0;
+    }
+    ['seen','right'].forEach(f=>{ x[f] = Math.max(x[f]||0, y[f]||0); });
+    ['readPass','doneAt','seenAt'].forEach(f=>{
+      const yv = y[f] || 0;
+      if(yv && (!floor || yv >= floor)) x[f] = Math.max(x[f]||0, yv);
+    });
+    ['pass','writePass'].forEach(f=>{
+      const yv = y[f] || 0;
+      if(yv && yv > passClearAt && (!floor || yv >= floor)) x[f] = Math.max(x[f]||0, yv);
+    });
+    /* level 是「现在掌握到什么程度」，不是累计量：按这个词最后一次动作的时间取 */
+    const xt0 = x.at || 0, yt0 = y.at || 0;
+    if(yt0 > xt0){ x.level = y.level || 0; }
+    else if(yt0 === xt0){
+      const s = fresh && fresh[k];
+      /* 老数据没有 at：按历史最大保留，别让较新快照里一个 0 把掌握度抹掉 */
+      x.level = (yt0 === 0) ? Math.max(x.level||0, y.level||0)
+              : ((s && typeof s.level === 'number') ? s.level : Math.max(x.level||0, y.level||0));
+    }
+    /* 错词数：每次错/消错都会盖 wt，谁新听谁；同刻才取大 */
     const xt = x.wt || 0, yt = y.wt || 0;
     if(yt > xt){ x.wrong = y.wrong || 0; x.wt = yt; }
-    else if(xt > yt){ x.wrong = x.wrong || 0; x.wt = xt; }
-    else { x.wrong = Math.max(x.wrong||0, y.wrong||0); }
-    /* pass 是「这一页默写过没过」的时间戳，必须一起合并，否则整页进度会被冲成 0 */
-    ['readPass','writePass','doneAt','seenAt','pass'].forEach(f=>{
-      x[f] = Math.max(x[f]||0, y[f]||0);
+    else if(yt === xt){ x.wrong = Math.max(x.wrong||0, y.wrong||0); if(yt) x.wt = yt; }
+    /* 背/默两侧的「复习已划掉」各自带时间戳，撤销也能同步过去 */
+    [['readCleared','rcAt'],['writeCleared','wcAt']].forEach(pair=>{
+      const f = pair[0], af = pair[1];
+      const yf = y[af] || 0, xf = x[af] || 0;
+      if(yf > xf){ x[f] = !!y[f]; x[af] = yf; }
+      else if(yf === xf){
+        const s = fresh && fresh[k];
+        if(s && Object.prototype.hasOwnProperty.call(s, f)) x[f] = !!s[f];
+        else if(y[f] != null) x[f] = !!(x[f] || y[f]);
+      }
+      if(x[f] == null) x[f] = !!y[f];
     });
-    const src = auth && auth[k] ? auth[k] : null;
-    if(src && Object.prototype.hasOwnProperty.call(src,'readCleared')) x.readCleared = !!src.readCleared;
-    else x.readCleared = !!(x.readCleared || y.readCleared);
-    if(src && Object.prototype.hasOwnProperty.call(src,'writeCleared')) x.writeCleared = !!src.writeCleared;
-    else x.writeCleared = !!(x.writeCleared || y.writeCleared);
     x.cleared = !!(x.readCleared && x.writeCleared);
     if(x.cleared){
-      x.clearAt = Math.max(x.clearAt||0, y.clearAt||0, (src&&src.clearAt)||0) || Date.now();
-    }else{
-      delete x.clearAt;
-    }
-    /* src 是词的来源标记，任一边有就留着 */
+      const sf = fresh && fresh[k];
+      x.clearAt = Math.max(x.clearAt||0, y.clearAt||0, (sf&&sf.clearAt)||0) || Date.now();
+    }else delete x.clearAt;
     if(y.src && !x.src) x.src = y.src;
+    x.at = Math.max(xt0, yt0);
+    if(wordReset && activity(x) <= wordReset){
+      Object.assign(x, {level:0,right:0,wrong:0,seen:0,readPass:0,pass:0,writePass:0,
+        doneAt:0,seenAt:0,at:wordReset,wt:wordReset});
+    }
     out[k] = x;
   });
   return out;
 }
-function mergeDaily(a, b){
+function mergeEvents(a, b, resets, prog){
+  const map = new Map();
+  (Array.isArray(a) ? a : []).concat(Array.isArray(b) ? b : []).forEach(ev=>{
+    if(!ev || !ev.id || !ev.kind || !ev.wordId || !ev.ts) return;
+    const dayReset = resets && resets[statDayKey(ev.ts)] || 0;
+    const wordReset = prog && prog[ev.wordId] && prog[ev.wordId].progResetAt || 0;
+    if((dayReset && ev.ts <= dayReset) || (wordReset && ev.ts <= wordReset)) return;
+    map.set(ev.id, Object.assign({}, map.get(ev.id) || {}, ev));
+  });
+  return Array.from(map.values()).sort((x,y)=>x.ts-y.ts || String(x.id).localeCompare(String(y.id)));
+}
+function mergeDaily(a, b, resets){
   const out = JSON.parse(JSON.stringify(a || {}));
+  resets = resets || {};
+  const empty = at=>({at:at || 0, read:0, write:0, readIds:[], writeIds:[]});
+  Object.keys(out).forEach(k=>{
+    const r = resets[k] || 0;
+    if(r && (out[k] && out[k].at || 0) <= r) out[k] = empty(r);
+  });
+  const ids = (x, y)=>{
+    const arr = [];
+    (Array.isArray(x) ? x : []).forEach(id=>{ if(id && !arr.includes(id)) arr.push(id); });
+    (Array.isArray(y) ? y : []).forEach(id=>{ if(id && !arr.includes(id)) arr.push(id); });
+    return arr;
+  };
   Object.keys(b || {}).forEach(k=>{
-    const x = out[k] || {}, y = b[k] || {};
-    const xt = x.at || 0, yt = y.at || 0;
-    if(yt > xt) out[k] = {read:y.read||0, write:y.write||0, at:yt};
-    else if(xt > yt) out[k] = {read:x.read||0, write:x.write||0, at:xt};
-    else out[k] = {read:Math.max(x.read||0,y.read||0), write:Math.max(x.write||0,y.write||0)};
+    const r = resets[k] || 0, y = b[k] || {};
+    if(r && (y.at || 0) <= r) return;
+    let x = out[k] || empty(r);
+    if(r && (x.at || 0) <= r) x = empty(r);
+    const rIds = ids(x.readIds, y.readIds), wIds = ids(x.writeIds, y.writeIds);
+    const rec = {at: Math.max(x.at||0, y.at||0)};
+    rec.read = rIds.length ? rIds.length : Math.max(x.read||0, y.read||0);
+    rec.write = wIds.length ? wIds.length : Math.max(x.write||0, y.write||0);
+    if(rIds.length) rec.readIds = rIds;
+    if(wIds.length) rec.writeIds = wIds;
+    out[k] = rec;
+  });
+  return out;
+}
+function mergeTomb(a, b){
+  const out = Object.assign({}, a || {});
+  Object.keys(b || {}).forEach(k=>{
+    const t = Number(b[k]) || 0;
+    if(t > (out[k] || 0)) out[k] = t;
   });
   return out;
 }
 function mergeSnap(local, remote){
   if(!remote || typeof remote !== 'object') return local;
   const out = JSON.parse(JSON.stringify(local));
-  /* 书架按 id 合并：两边各自导入的书都留下 */
+  const remoteNewer = (remote.savedAt||0) > (out.savedAt||0);
+  /* 删书墓碑：删掉的书要在所有设备上真的消失，不能一拉云端又长回来 */
+  const tomb = mergeTomb(out.tomb, remote.tomb);
+  out.tomb = tomb;
+  const dailyReset = mergeTomb(out.dailyReset, remote.dailyReset);
+  out.dailyReset = dailyReset;
   const rb = Array.isArray(remote.books) ? remote.books : [];
   const lb = Array.isArray(out.books) ? out.books : [];
   const map = new Map();
-  lb.forEach(b=>{ if(b && b.id) map.set(b.id, JSON.parse(JSON.stringify(b))); });
+  lb.forEach(b=>{ if(b && b.id && !tomb[b.id]) map.set(b.id, JSON.parse(JSON.stringify(b))); });
   rb.forEach(b=>{
-    if(!b || !b.id) return;
+    if(!b || !b.id || tomb[b.id]) return;
     const cur = map.get(b.id);
     if(!cur){ map.set(b.id, JSON.parse(JSON.stringify(b))); return; }
-    cur.prog = mergeProg(cur.prog, b.prog);
-    /* 词序：谁的顺序版本新就用谁的。以前只比长度，两边一样长时永远留本机那份，
-       手机上就一直停在旧的字母序上 */
+    /* 本书的「清空进度」时间：这台设备清过，另一台的旧账就不能再复活 */
+    const resetAt = Math.max(cur.resetAt||0, b.resetAt||0);
+    cur.resetAt = resetAt;
+    const freshBook = remoteNewer ? (b.prog || {}) : (cur.prog || {});
+    cur.prog = mergeProg(cur.prog, b.prog, freshBook, resetAt);
+    cur.events = mergeEvents(cur.events, b.events, dailyReset, cur.prog);
+    /* 书名、每组词数：谁最后改听谁的 */
+    const bm = b.metaAt||0, cm = cur.metaAt||0;
+    if(bm > cm){
+      if(b.title) cur.title = b.title;
+      if(b.batch) cur.batch = b.batch;
+      cur.metaAt = bm;
+    }
+    /* 词序/词条：导入时间新、顺序版本新，或单纯更长的那份说了算 */
+    const bwa = b.wordsAt||0, cwa = cur.wordsAt||0;
     const curOV = cur.orderV||0, remOV = b.orderV||0;
-    if(b.words && b.words.length && (remOV > curOV || b.words.length > (cur.words||[]).length)){
+    if(b.words && b.words.length && (bwa > cwa ||
+       (bwa === cwa && (remOV > curOV || b.words.length > (cur.words||[]).length)))){
       cur.words = b.words;
+      cur.wordsAt = Math.max(cwa, bwa);
     }
     cur.orderV = Math.max(curOV, remOV);
     cur.cutAt = Math.max(cur.cutAt||0, b.cutAt||0);
-    cur.doneAt = Math.max(cur.doneAt||0, b.doneAt||0);
+    cur.doneAt = Math.max(cur.doneAt||0, b.doneAt||0) || null;
+    if(resetAt && (cur.doneAt||0) < resetAt) cur.doneAt = null;
+    /* 当前背到哪一组：先比这一组是什么时候建的，再比最后推进时间；
+       避免昨天已完成的老组因为 sesAt 被刷新，反过来盖掉今天的新组 */
+    const bs = b.sesAt||0, cs = cur.sesAt||0;
+    const bCreated = (b.session && b.session.createdAt)||0;
+    const cCreated = (cur.session && cur.session.createdAt)||0;
+    /* recovered 只是旧版为默写补出的待默队列，不是真实背诵组。
+       一端已经恢复成 resumed/正常会话后，同步时绝不能再被另一端的 recovered 盖回去。 */
+    const bRecovered = !!(b.session && b.session.recovered);
+    const cRecovered = !!(cur.session && cur.session.recovered);
+    const preferRemote = b.session && cur.session && bRecovered !== cRecovered
+      ? !bRecovered
+      : (bCreated > cCreated || (bCreated === cCreated && bs > cs));
+    if(preferRemote){
+      cur.session = b.session || null; cur.sesAt = bs;
+    }
+    else if(!cs && remoteNewer && !cur.session && b.session){ cur.session = b.session; }
     map.set(b.id, cur);
   });
   out.books = Array.from(map.values()).map(applyCut);
-  /* 谁更新，谁的「背/默是否复习过」说了算；计数仍按两边最大合并 */
-  const freshProg = (remote.savedAt||0) > (local.savedAt||0) ? remote.prog : local.prog;
-  out.prog = mergeProg(out.prog, remote.prog, freshProg);
-  out.daily = mergeDaily(out.daily, remote.daily);
-  /* 词卡内容、设置以云端为准（新补的词源、记法都在云端那份） */
-  const remHasPg = Array.isArray(remote.words) && remote.words.some(w=>w && w.pg);
-  if(remote.words && (remote.words.length > (out.words||[]).length || (remHasPg && !(out.words||[]).some(w=>w&&w.pg)))) out.words = remote.words;
-  if(remote.cfg && Object.keys(remote.cfg).length) out.cfg = remote.cfg;
-  if(remote.activeId) out.activeId = remote.activeId;
+  /* 云端删了当前这本书，就换一本活着的 */
+  let activeId = out.activeId;
+  if(!out.books.some(b=>b.id === activeId)) activeId = '';
+  if(remoteNewer && remote.activeId && out.books.some(b=>b.id === remote.activeId)) activeId = remote.activeId;
+  if(!activeId) activeId = (out.books[0] && out.books[0].id) || '';
+  out.activeId = activeId;
+  const activeBook = out.books.find(b=>b.id === activeId) || null;
+  /* 顶层 prog/words 只是当前书的镜像：合并完书之后再取，绝不跨书覆盖 */
+  out.prog = activeBook ? JSON.parse(JSON.stringify(activeBook.prog || {})) : {};
+  out.words = activeBook ? activeBook.words : (out.words || []);
+  out.daily = mergeDaily(out.daily, remote.daily, dailyReset);
+  /* 设置跟快照走：谁最后保存听谁的 */
+  if(remote.cfg && Object.keys(remote.cfg).length && remoteNewer) out.cfg = remote.cfg;
   out.savedAt = Math.max(out.savedAt||0, remote.savedAt||0);
   return out;
 }
 
 /* 从云端拉一份，和本地合并后落回本地；返回是否真的拿到了数据 */
-async function pullCloud(){
+async function pullCloud(onlyNewer){
   if(!cloudReady()) return false;
+  const local = cloudSnapshot(false);
+  /* 定时轮询先只看云端时间戳：没变就不下载 1MB 的整包，手机流量和电都省 */
+  if(onlyNewer && (local.books || []).length){
+    const m = await CLOUD.database.from('vocab_saves').select('saved_at').maybeSingle();
+    if(m && m.error) throw m.error;
+    const remoteAt = Number(m && m.data && m.data.saved_at) || 0;
+    if(remoteAt && remoteAt <= (local.savedAt || 0)) return false;
+  }
   const r = await CLOUD.database.from('vocab_saves').select('snapshot').maybeSingle();
   if(r && r.error) throw r.error;
   const remote = r && r.data && r.data.snapshot;
   if(!remote) return false;
-  const local = cloudSnapshot();
+  /* 定时轮询只做「云端比我新」时才合并；否则每次轮询都会把同一份数据再写一遍 */
+  if(onlyNewer && (local.books || []).length && (remote.savedAt || 0) <= (local.savedAt || 0)) return false;
   /* 这台设备上来是不是「一张白纸」：决定了要不要给一句「已从云端恢复」 */
   const blankBefore = !((local.books||[]).length) && !((local.words||[]).length) && !(Object.keys(local.daily||{}).length);
   const merged = mergeSnap(local, remote);
   state.books = merged.books || [];
-  state.activeId = merged.activeId || state.activeId;
-  state.words = merged.words || state.words;
-  state.prog = merged.prog || {};
-  /* 顶层的 prog 是旧格式残留，这个 setter 会整个盖到当前这本书上，
-     绕过了 mergeSnap 里的清洗，所以这里必须再清一次 */
+  state.activeId = merged.activeId || '';
+  const activeBook = state.books.find(b=>b.id === state.activeId) || state.books[0] || null;
+  /* 顶层 prog/words/session 是当前书的镜像；合并后必须一起换，
+     否则书架里已经是 253，首页和背诵页还拿着旧的 20 在算 */
+  state.words = activeBook ? (activeBook.words || []) : (merged.words || []);
+  state.prog = activeBook ? (activeBook.prog || {}) : (merged.prog || {});
+  state.session = activeBook ? (activeBook.session || null) : (merged.session || null);
   state.books.forEach(applyCut);
   state.daily = merged.daily || {};
+  state.dailyReset = merged.dailyReset || {};
+  /* 合并会把另一台还没清洗的旧日账并回来（例如 11-26 的 253 条批量章），
+     落盘前按书里真实的 pass 再洗一遍，否则本地刚洗干净的账又被云端灌回去 */
+  sanitizeDailyHistory();
+  state.tomb = merged.tomb || {};
   if(merged.cfg) state.cfg = merged.cfg;
   localStorage.setItem(LS.books, JSON.stringify(state.books));
   localStorage.setItem(LS.active, state.activeId);
   localStorage.setItem(LS.deck, JSON.stringify(state.words));
   localStorage.setItem(LS.prog, JSON.stringify(state.prog));
   localStorage.setItem(LS.daily, JSON.stringify(state.daily));
+  localStorage.setItem(LS.dailyReset, JSON.stringify(state.dailyReset));
+  localStorage.setItem(LS.tomb, JSON.stringify(state.tomb));
   localStorage.setItem(LS.cfg, JSON.stringify(state.cfg));
   localStorage.setItem(LS.meta, JSON.stringify({savedAt: merged.savedAt || Date.now()}));
   /* 记下云端那份的概况：换设备时用户能自己看见「拿回来的是什么」 */
@@ -4493,8 +5072,8 @@ async function pullCloud(){
     books: (state.books || []).length
   };
   renderSyncMeta();
-  /* 桌面版再把合并结果写回硬盘，两边彻底对齐 */
-  pushState();
+  /* 桌面版再把合并结果写回硬盘；手机没有硬盘，pullCloud 不再顺带排队推送 */
+  if(DESK) pushState();
   return true;
 }
 
@@ -4519,11 +5098,12 @@ function metaOf(snap){
 /* 把本地整包推上云。owner_id 不传，数据库用 auth.uid() 自动填 */
 async function pushCloud(){
   if(!cloudReady()) return;
-  const snap = cloudSnapshot();
+  const snap = cloudSnapshot(true);
   const r = await CLOUD.database.from('vocab_saves').upsert({snapshot:snap, saved_at:snap.savedAt});
   if(r && r.error) throw r.error;
   syncLastAt = Date.now();
-  syncPending = false;
+  /* 不要在这里清 syncPending：推送期间用户可能又改了数据，
+     清掉会把那次改动排的下一轮同步吞掉。由 flushSync 在开始同步前清。 */
   CLOUD_META = metaOf(snap);
   renderSyncMeta();
 }
@@ -4547,21 +5127,26 @@ async function migrateLocalToCloud(){
   /* 合并：老存档 + 当前 state，进度只进不退 */
   const old = {
     books:d.books, activeId:d.activeId, words:d.words || [], prog:d.prog || {},
-    daily:d.daily || {}, cfg:d.cfg || {}, session:d.session || null, savedAt:d.savedAt || 0
+    daily:d.daily || {}, dailyReset:d.dailyReset || {}, cfg:d.cfg || {}, session:d.session || null,
+    tomb:d.tomb || {}, savedAt:d.savedAt || 0
   };
-  const merged = mergeSnap(cloudSnapshot(), old);
+  const merged = mergeSnap(cloudSnapshot(false), old);
   state.books = merged.books || [];
-  state.activeId = merged.activeId || state.activeId;
+  state.activeId = merged.activeId || '';
   state.words = merged.words || state.words;
-  state.prog = merged.prog || {};
-  state.books.forEach(applyCut);   /* 顶层旧格式 prog 盖回来时再清一次，见 pullCloud 里的说明 */
+  state.books.forEach(applyCut);   /* 顶层旧格式 prog 不再写回，书内已合并 */
   state.daily = merged.daily || {};
+  state.dailyReset = merged.dailyReset || {};
+  sanitizeDailyHistory();
+  state.tomb = merged.tomb || {};
   if(merged.cfg) state.cfg = merged.cfg;
   localStorage.setItem(LS.books, JSON.stringify(state.books));
   localStorage.setItem(LS.active, state.activeId);
   localStorage.setItem(LS.deck, JSON.stringify(state.words));
   localStorage.setItem(LS.prog, JSON.stringify(state.prog));
   localStorage.setItem(LS.daily, JSON.stringify(state.daily));
+  localStorage.setItem(LS.dailyReset, JSON.stringify(state.dailyReset));
+  localStorage.setItem(LS.tomb, JSON.stringify(state.tomb));
   localStorage.setItem(LS.cfg, JSON.stringify(state.cfg));
   await pushCloud();
   setSync('ok','本机进度已搬到云端');
@@ -4571,19 +5156,66 @@ async function migrateLocalToCloud(){
 /* 一次完整同步：先拉后推，保证两边都拿到对方的记录 */
 async function syncCloud(silent){
   if(!cloudReady()){ setSync('off'); return false; }
+  if(SYNCING || PULLING){ syncPending = true; queueSync(); return false; }
+  SYNCING = true;
   setSync('busy');
   try{
-    await pullCloud();
+    /* 先拉再推：每次落云前都把对方的新记录合并进来，避免后写的半边把先写的盖掉 */
+    QUIET_SYNC = true;
+    try{ await pullCloud(); }
+    finally{ QUIET_SYNC = false; }
     await pushCloud();
+    /* 推送期间用户又改了：保留 syncPending 并再排一轮，别把最后几词丢掉 */
+    if(syncPending) queueSync();
     setSync('ok', '已同步 · ' + new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'}));
     renderStats(); renderAccountData();
+    SYNCING = false;
     return true;
   }catch(e){
+    SYNCING = false;
+    QUIET_SYNC = false;
+    /* 这一轮失败不能当作已落云：保留待同步标记，稍后自动再试 */
+    if(cloudReady()){ syncPending = true; queueSync(); }
     setSync('fail');
     if(!silent) toast('云端没连上，本地记录没事：' + (e && e.message || '网络错误'));
     return false;
   }
 }
+/* 只读轮询云端：本机没有新操作，但另一台设备已经背了新词 / 改了错词。
+   只拉不推，避免每 30 秒无意义地重写一次整包；真正有本地改动时仍由 queueSync 推。 */
+async function pollCloud(){
+  if(!cloudReady() || !ACCT || !ACCT.cloud) return false;
+  if(SYNCING || PULLING) return false;
+  if(document.hidden) return false;
+  /* 正在背/默、正在翻卡时先不插队，回到首页或设置页再对齐 */
+  if(state.view && state.view !== 'home' && state.view !== 'set') return false;
+  PULLING = true;
+  try{
+    /* pullCloud 内部会 pushState；轮询只拉不推，必须静默，否则每 30 秒又往云端写一遍 */
+    QUIET_SYNC = true;
+    let got = false;
+    try{ got = await pullCloud(true); }
+    finally{ QUIET_SYNC = false; }
+    if(!got) return false;
+    renderStats();
+    if(typeof renderAccountData === 'function') renderAccountData();
+    if(state.view === 'home') renderHome();
+    else if(state.view === 'set' && typeof renderAcctBox === 'function') renderAcctBox();
+    setSync('ok', '已同步 · ' + new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'}));
+    return true;
+  }catch(e){
+    /* 轮询失败不打断用户，保留本地数据；下一次 focus/定时器会重试 */
+    return false;
+  }finally{
+    PULLING = false;
+  }
+}
+
+function startCloudWatch(){
+  if(cloudWatchTimer) clearInterval(cloudWatchTimer);
+  cloudWatchTimer = setInterval(()=>{ if(!document.hidden) pollCloud(); }, 30000);
+}
+
 /* 数据变了就延迟推一次，别每次按键都发请求。
    整包约 1MB，手机上每判一个词都传一遍太费流量，所以：距上次推送不足 20 秒就往后压，
    压到 20 秒整点再发；另外挂一个 60 秒硬兜底，持续操作也保证一分钟内一定落云。 */
@@ -4598,15 +5230,20 @@ function queueSync(){
   syncHardTimer = setTimeout(()=>{ if(syncPending) flushSync(); }, 60000);
 }
 function flushSync(){
+  /* 正在同步时不要动 syncPending：这一脚等当前同步收尾后还会再补一次 */
+  if(SYNCING) return false;
   if(!syncPending && CLOUD_META) return;
   clearTimeout(syncTimer); clearTimeout(syncHardTimer);
   syncPending = false;
-  setSync('busy');
-  return pushCloud().then(()=>{ setSync('ok', '已同步 · ' + new Date().toLocaleTimeString('zh-CN',{hour:'2-digit',minute:'2-digit'})); })
-                    .catch(()=>{ setSync('fail'); syncPending = true; });
+  return syncCloud(true);   /* 拉+推：每次自动同步都是一次双向对齐 */
 }
-/* 切走/关窗口前尽量补一脚，别把最后几十秒的进度落在本机 */
-document.addEventListener('visibilitychange', ()=>{ if(document.hidden && syncPending) flushSync(); });
+/* 切走/关窗口前尽量补一脚，别把最后几十秒的进度落在本机；回到窗口时先对一次云端 */
+document.addEventListener('visibilitychange', ()=>{
+  if(document.hidden){ if(syncPending) flushSync(); }
+  else{ pollCloud(); }
+});
+window.addEventListener('focus', ()=>{ pollCloud(); });
+window.addEventListener('online', ()=>{ pollCloud(); });
 window.addEventListener('pagehide', ()=>{ if(syncPending) flushSync(); });
 
 /* 邮箱验证码：两个动作分开，发码和验证各自独立 */
@@ -4682,6 +5319,7 @@ async function acctApi(p, body){
 /* 进主界面：先把账号数据从硬盘拉回来，再渲染 */
 async function enterApp(){
   state.books = []; state.activeId = ''; state.session = null;
+  state.tomb = {}; state.daily = {}; state.dailyReset = {};   /* 切账号不能把上一个账号的墓碑/今日账带过去 */
   if(DESK && ACCT) await pullDisk();
   load();
   /* 云端账号：先把云端的存档取下来合并，再用合并结果渲染。
@@ -4715,7 +5353,7 @@ async function enterApp(){
       const dayKey = dd.getFullYear() + '-' + String(dd.getMonth() + 1).padStart(2, '0') + '-' + String(dd.getDate()).padStart(2, '0');
       state.daily = state.daily || {};
       const _now = Date.now();
-      state.daily[dayKey] = { read: 0, write: 0, at: _now };
+      state.daily[dayKey] = { read: 0, write: 0, readIds: [], writeIds: [], at: _now };
       const zero = (pr)=>{
         if(!pr) return;
         Object.keys(pr).forEach(k=>{
@@ -4741,6 +5379,7 @@ async function enterApp(){
   state.nav = [];                  /* 换账号、重进都从首页重新走 */
   state._mainSession = null; state._revMode = '';
   HYDRATED = true;                 /* 数据到位，此后才允许写盘 */
+  syncSessionDaily();              /* 修旧版「完成页 36/36、首页 33/36」的当天词表缺口 */
   repairSessionAfterRead();        /* 修「背完退出去、默写就进不去」的旧账 */
   /* 合并后的快照（含刚回退的错词标记）要推回云端，别让旧标记一直留在云上 */
   if(ACCT && ACCT.cloud && cloudReady()) queueSync();
@@ -4754,6 +5393,7 @@ async function enterApp(){
   /* 天气是「今日配色」的参考之一，取不到就安静地不用它 */
   loadWeather().then(()=>{ tickAmbient(); if(state.view === 'home') renderHome(); });
   startAmbient();
+  startCloudWatch();              /* 30 秒只读轮询：另一台设备改了进度，这里自己跟上 */
 }
 
 /* 记住我：下次直接进；没勾就每次输密码 */
@@ -4833,6 +5473,7 @@ async function hydrateEmail(){
 function showAuth(list){
   ACCT = null;
   state.books = []; state.activeId = ''; state.session = null;
+  state.tomb = {}; state.daily = {}; state.dailyReset = {};
   document.body.classList.add('authing');
   /* 登录页沿用上次的配色，切进来不会突然变成另一个颜色 */
   try{
@@ -5666,45 +6307,40 @@ function bindWinCtl(){
   });
   go('state');
 }
-/* 桌面版开机：先问本地服务要数据，硬盘上的比浏览器里的新就采纳 */
+/* 桌面版开机：先问本地服务要数据，硬盘上的和浏览器里的按同一套规则合并，
+   不再靠「分数谁高就整包覆盖」——那样会丢另一边的书、单词状态和删除记录 */
 async function pullDisk(){
   try{
     const r = await fetch('/api/state?uid=' + encodeURIComponent(ACCT.id), {cache:'no-store'});
     const d = await r.json();
     if(!d || d.empty) return;
-    const local = JSON.parse(localStorage.getItem(LS.meta) || '{}');
-    const lsSes = JSON.parse(localStorage.getItem(LS.ses) || 'null');
-    const lsProg = JSON.parse(localStorage.getItem(LS.prog) || '{}');
-    /* 进度分：背到第几个 + 已过关词数。谁的记录更靠前就听谁的，
-       防止浏览器缓存里的旧快照把硬盘上更新的记录冲掉 */
-    const score = (ses, prog) =>
-      ((ses && ses.index) ? ses.index : 0) +
-      Object.keys(prog || {}).filter(k => (prog[k] || {}).doneAt).length;
-    const dScore = score(d.session, d.prog);
-    const lScore = score(lsSes, lsProg);
-    const keepLocal = lScore > dScore || (lScore === dScore && (local.savedAt || 0) > (d.savedAt || 0));
-    if((d.savedAt || 0) <= (local.savedAt || 0) && !keepLocal) return;
-    if(Array.isArray(d.books) && d.books.length){
-      localStorage.setItem(LS.books, JSON.stringify(d.books));
-      localStorage.setItem(LS.active, d.activeId || d.books[0].id);
-    }
-    /* 旧格式（只有一份词库）也接住；词卡内容永远以硬盘为准（新补的词源、记法都在这） */
-    if(d.words) localStorage.setItem(LS.deck, JSON.stringify(d.words));
-    if(d.cfg) localStorage.setItem(LS.cfg, JSON.stringify(d.cfg));
-    if(d.daily && typeof d.daily === 'object'){
-      const ld = JSON.parse(localStorage.getItem(LS.daily) || '{}');
-      Object.keys(d.daily).forEach(k=>{
-        const a = d.daily[k] || {}, b = ld[k] || {};
-        ld[k] = {read:Math.max(a.read||0,b.read||0), write:Math.max(a.write||0,b.write||0)};
-      });
-      localStorage.setItem(LS.daily, JSON.stringify(ld));
-    }
-    /* 学习记录：只在本地更靠前时才保留本地 */
-    if(!keepLocal){
-      if(d.prog) localStorage.setItem(LS.prog, JSON.stringify(d.prog || {}));
-      localStorage.setItem(LS.ses, JSON.stringify(d.session || null));
-    }
-    localStorage.setItem(LS.meta, JSON.stringify({savedAt: Math.max(d.savedAt || 0, local.savedAt || 0)}));
+    const localMeta = JSON.parse(localStorage.getItem(LS.meta) || '{}');
+    const parse = (k, fb)=>{ try{ return JSON.parse(localStorage.getItem(k) || '') ?? fb; }catch(e){ return fb; } };
+    const local = {
+      uid: ACCT.id,
+      books: parse(LS.books, []),
+      activeId: localStorage.getItem(LS.active) || '',
+      words: parse(LS.deck, []),
+      prog: parse(LS.prog, {}),
+      session: parse(LS.ses, null),
+      cfg: parse(LS.cfg, null),
+      daily: parse(LS.daily, {}),
+      tomb: parse(LS.tomb, {}),
+      savedAt: localMeta.savedAt || 0
+    };
+    const merged = mergeSnap(local, d);
+    const books = merged.books || [];
+    const active = merged.activeId || (books[0] && books[0].id) || '';
+    const book = books.find(b=>b.id === active) || null;
+    localStorage.setItem(LS.books, JSON.stringify(books));
+    localStorage.setItem(LS.active, active);
+    localStorage.setItem(LS.deck, JSON.stringify(merged.words || (book && book.words) || []));
+    localStorage.setItem(LS.prog, JSON.stringify((book && book.prog) || {}));
+    localStorage.setItem(LS.ses, JSON.stringify((book && book.session) || null));
+    if(merged.cfg) localStorage.setItem(LS.cfg, JSON.stringify(merged.cfg));
+    localStorage.setItem(LS.daily, JSON.stringify(merged.daily || {}));
+    localStorage.setItem(LS.tomb, JSON.stringify(merged.tomb || {}));
+    localStorage.setItem(LS.meta, JSON.stringify({savedAt: Math.max(d.savedAt || 0, localMeta.savedAt || 0)}));
   }catch(e){ /* 没有服务就直接用浏览器里的 */ }
 }
 
@@ -5769,7 +6405,9 @@ async function init(){
     const num = parseInt(v, 10);
     if(!(num >= 5 && num <= 500)){ toast('填 5 到 500 之间的数'); return; }
     b2.batch = num;
-    saveBooks(); renderSet();
+    b2.metaAt = Date.now();
+    state.cfg.goals = {read:num, write:num};   /* 手机端按 goals 显示今日目标，跟着一起改 */
+    saveBooks(); saveCfg(); renderSet();
     toast('《' + b2.title + '》每组 ' + num + ' 个');
   };
 
@@ -5891,7 +6529,10 @@ async function init(){
   $('resetBtn').onclick = ()=>{
     const b = curBook();
     if(!confirm('清空《' + b.title + '》的学习进度？词条和其他书都不动。')) return;
+    const t = Date.now();
     b.prog = {}; b.session = null; b.doneAt = null;
+    b.resetAt = t;            /* 清空也要跨端：另一台的旧进度不能再合并回来 */
+    b.sesAt = t;
     state.wq = []; state.wi = 0;
     saveProg(); saveSes(); saveBooks();
     renderStats(); switchView('home');
