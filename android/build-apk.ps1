@@ -1,20 +1,20 @@
 # 打安卓 APK（Windows 版，等价于 build-apk.sh）
-# 用法：pwsh -File build-apk.ps1 -Ver 1.0.2 -Code 3
+# 用法：$env:KS_PASS="你的签名密码"; pwsh -File build-apk.ps1 -Ver 1.0.14 -Code 115
 param(
-  [string]$Ver = "1.0.2",
-  [int]$Code = 3
+  [string]$Ver = "1.0.14",
+  [int]$Code = 115
 )
 $ErrorActionPreference = "Stop"
 
-$ROOT = "D:\VocabLab"
-$SDK = "D:\VocabLab\06-工具\android-sdk"
-$JDK = "D:\VocabLab\06-工具\tools\jdk-17.0.21.1+2"
+# 目录按仓库相对路径推导，克隆下来即可直接构建
+$PROJ = Split-Path -Parent $MyInvocation.MyCommand.Path
+$ROOT = Split-Path -Parent $PROJ
+$SDK = if ($env:ANDROID_SDK_ROOT) { $env:ANDROID_SDK_ROOT } else { "$env:LOCALAPPDATA\Android\Sdk" }
+$JDK = if ($env:JAVA_HOME) { $env:JAVA_HOME } else { "C:\Program Files\Java\jdk-17" }
 $BT = "$SDK\build-tools\34.0.0"
 $AJAR = "$SDK\platforms\android-34\android.jar"
-$PROJ = "D:\VocabLab\02-手机端-安卓\工程"
-$OUT = "D:\VocabLab\00-安装程序\安卓\词迹-安卓-$Ver.apk"
+$OUT = "$ROOT\dist\词迹-安卓-$Ver.apk"
 
-$env:JAVA_HOME = $JDK
 $env:PATH = "$JDK\bin;$env:PATH"
 
 if (Test-Path "$PROJ\build") { Remove-Item "$PROJ\build" -Recurse -Force }
@@ -47,15 +47,11 @@ if (!(Test-Path $KS)) { throw "缺少签名钥匙 $KS" }
 
 Write-Host "[6/7] 对齐并签名"
 & "$BT\zipalign.exe" -f -p 4 "$PROJ\build\base.apk" "$PROJ\build\aligned.apk"
-& "$BT\apksigner.bat" sign --ks $KS --ks-pass pass:123456 --key-pass pass:123456 `
+if (-not $env:KS_PASS) { throw "缺少签名密码：先设置环境变量 KS_PASS" }
+& "$BT\apksigner.bat" sign --ks $KS --ks-pass "pass:$env:KS_PASS" --key-pass "pass:$env:KS_PASS" `
   --out $OUT "$PROJ\build\aligned.apk"
 
 Write-Host "[7/7] 校验"
 & "$BT\apksigner.bat" verify --print-certs $OUT
 Get-Item $OUT | Select-Object FullName,Length
 Write-Host "APK_OK"
-
-
-
-
-
