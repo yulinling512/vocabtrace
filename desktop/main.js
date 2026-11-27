@@ -153,6 +153,11 @@ function readBody(req, limitMb) {
   });
 }
 function sendJSON(res, code, obj) {
+  /* 上游流可能已经发过头再报错：这时再 writeHead 会抛 ERR_HTTP_HEADERS_SENT，直接把连接收掉 */
+  if (res.headersSent || res.writableEnded) {
+    if (!res.writableEnded) { try { res.destroy(); } catch (e) {} }
+    return;
+  }
   const body = JSON.stringify(obj);
   res.writeHead(code, { 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': Buffer.byteLength(body) });
   res.end(body);
@@ -249,6 +254,127 @@ function serveWeather(res, city) {
   r.setTimeout(8000, () => { try { r.destroy(); } catch (e) {} fail(); });
 }
 
+/* ---------- 世界新闻：公开 RSS，主进程读取，页面不让 AI 凭空编新闻 ---------- */
+const NEWS_CACHE = new Map();
+function newsDecode(s) {
+  return String(s || '').replace(/^\s*<!\[CDATA\[|\]\]>\s*$/g, '').replace(/&(#x?[0-9a-f]+|amp|lt|gt|quot|apos|nbsp);/gi, (m, k) => {
+    const map = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+    const low = String(k).toLowerCase();
+    if (map[low]) return map[low];
+    try { return String.fromCodePoint(low[1] === 'x' ? parseInt(low.slice(2), 16) : parseInt(low.slice(1), 10)); } catch (_) { return m; }
+  });
+}
+function newsTag(block, tag) {
+  const m = block.match(new RegExp('<' + tag + '(?:\\s[^>]*)?>([\\s\\S]*?)</' + tag + '>', 'i'));
+  return m ? newsDecode(m[1]).trim() : '';
+}
+function newsImage(block) {
+  const tags = block.match(/<(?:media:content|media:thumbnail|enclosure)[^>]*>/gi) || [];
+  for (const t of tags) {
+    if (!/image|thumbnail/i.test(t)) continue;
+    const m = t.match(/url=["']([^"']+)["']/i);
+    if (m) return newsDecode(m[1]).trim();
+  }
+  const img = block.match(/<img[^>]+src=["']([^"']+)["']/i);
+  const url = img ? newsDecode(img[1]).trim() : '';
+  if (!url || /(tracking|pixel|spacer|blank\.gif|1x1)/i.test(url)) return '';
+  return url;
+}
+function newsFetchText(url) {
+  return new Promise((resolve, reject) => {
+    let done = false;
+    const fail = e => { if (!done) { done = true; reject(e instanceof Error ? e : new Error(String(e || 'news failed'))); } };
+    const req = https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 VocabTraceBeta/2.2', 'Accept': 'application/rss+xml,application/xml,text/xml' } }, resp => {
+      if (resp.statusCode !== 200) { resp.resume(); return fail(new Error('HTTP ' + resp.statusCode)); }
+      let text = '', size = 0;
+      resp.setEncoding('utf8');
+      resp.on('data', d => { size += Buffer.byteLength(d); if (size > 2 * 1024 * 1024) { req.destroy(); return fail(new Error('feed too large')); } text += d; });
+      resp.on('end', () => { if (!done) { done = true; resolve(text); } });
+      resp.on('error', fail);
+    });
+    req.on('error', fail);
+    req.setTimeout(12000, () => { req.destroy(); fail(new Error('news timeout')); });
+  });
+}
+async function serveNews(res) {
+  const hit = NEWS_CACHE.get('world');
+  if (hit && Date.now() - hit.at < 20 * 60 * 1000) return sendJSON(res, 200, { ok: true, items: hit.items, at: hit.at, cached: true });
+  const feeds = [
+    { name: 'Sky News World', url: 'https://feeds.skynews.com/feeds/rss/world.xml' },
+    { name: 'NPR World', url: 'https://feeds.npr.org/1004/rss.xml' }
+  ];
+  let lastError = '';
+  for (const feed of feeds) {
+    try {
+      const xml = await newsFetchText(feed.url);
+      const blocks = xml.match(/<item(?:\s[^>]*)?>[\s\S]*?<\/item>/gi) || [];
+      let items = blocks.slice(0, 12).map(block => ({
+        title: newsTag(block, 'title').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
+        description: newsTag(block, 'description').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
+        link: newsTag(block, 'link'),
+        pubDate: newsTag(block, 'pubDate'),
+        image: newsImage(block),
+        sourceName: feed.name
+      })).filter(x => x.title && /^https?:\/\//.test(x.link));
+      if (!items.length) throw new Error('empty feed');
+      const at = Date.now();
+      NEWS_CACHE.set('world', { at, items });
+      return sendJSON(res, 200, { ok: true, items, at, cached: false });
+    } catch (e) { lastError = e.message; }
+  }
+  return sendJSON(res, 200, { ok: false, msg: lastError || '新闻源暂时不可用' });
+}
+
+/* ---------- 本地英汉词典：ECDICT 精简索引 ----------
+   数据文件：数据\词典\ecdict.bin（word \t phonetic \t 中文释义）
+   索引：ecdict.idx（每条 8 字节偏移）。启动后第一次查词才读入内存，
+   用二分查找定位，避免把 77 万条全部解析成 JSON。 */
+const DICT_DIR = path.join(DATA_DIR, '词典');
+const DICT_FILE = path.join(DICT_DIR, 'ecdict.bin');
+const DICT_INDEX = path.join(DICT_DIR, 'ecdict.idx');
+let DICT_CACHE = null;
+function loadDict() {
+  if (DICT_CACHE) return DICT_CACHE;
+  if (!fs.existsSync(DICT_FILE) || !fs.existsSync(DICT_INDEX)) return null;
+  const bin = fs.readFileSync(DICT_FILE);
+  const idx = fs.readFileSync(DICT_INDEX);
+  if (!idx.length || idx.length % 8) return null;
+  DICT_CACHE = { bin, idx, count: idx.length / 8, at: Date.now() };
+  return DICT_CACHE;
+}
+function dictLineAt(offset) {
+  const d = DICT_CACHE;
+  let end = d.bin.indexOf(10, offset);
+  if (end < 0) end = d.bin.length;
+  return d.bin.toString('utf8', offset, end);
+}
+function dictLookup(word) {
+  const d = loadDict();
+  if (!d) return null;
+  const q = String(word || '').trim().toLowerCase();
+  if (!/^[a-z][a-z'\- ]{0,60}$/.test(q)) return null;
+  let lo = 0, hi = d.count - 1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    const off = Number(d.idx.readBigUInt64LE(mid * 8));
+    const line = dictLineAt(off);
+    const p1 = line.indexOf('\t');
+    if (p1 < 0) { lo = mid + 1; continue; }
+    const head = line.slice(0, p1).toLowerCase();
+    if (head === q) {
+      const p2 = line.indexOf('\t', p1 + 1);
+      return {
+        word: line.slice(0, p1),
+        phonetic: p2 >= 0 ? line.slice(p1 + 1, p2).trim() : '',
+        translation: p2 >= 0 ? line.slice(p2 + 1).trim() : '',
+        source: 'ECDICT'
+      };
+    }
+    if (head < q) lo = mid + 1; else hi = mid - 1;
+  }
+  return null;
+}
+
 /* ---------- 本地服务 ---------- */
 function createServer() {
   return http.createServer((req, res) => {
@@ -257,6 +383,12 @@ function createServer() {
     const uid = parsed.searchParams.get('uid') || '';
 
     if (url === '/api/ping') return sendJSON(res, 200, { ok: true, desktop: true, dataFile: stateFileFor(uid) });
+
+    if (url === '/api/dict') {
+      const q = parsed.searchParams.get('word') || '';
+      const hit = dictLookup(q);
+      return sendJSON(res, 200, { ok: true, query: q, hit: hit || null, source: 'ECDICT', count: DICT_CACHE ? DICT_CACHE.count : 0 });
+    }
 
     /* ---------- 账号 ---------- */
     if (url === '/api/acct/list') {
@@ -396,6 +528,7 @@ function createServer() {
     }
 
     if (url === '/api/weather') return serveWeather(res, parsed.searchParams.get('city') || '');
+    if (url === '/api/news') return serveNews(res);
 
     if (url === '/api/open-data') {
       shell.openPath(DATA_DIR);
@@ -475,6 +608,7 @@ function createWindow(port) {
     transparent: true,          /* 透明底 + 页面里的 16px 圆角 = 真正的圆角窗口 */
     roundedCorners: true,
     title: '词迹',
+     icon: path.join(__dirname, 'icon.ico'),
     frame: false,
     autoHideMenuBar: true,
     show: false,

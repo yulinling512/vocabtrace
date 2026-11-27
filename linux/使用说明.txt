@@ -1,0 +1,47 @@
+词迹 1.1.0 · Linux ARM64 便携版
+================================
+
+适用：华为麒麟 990（aarch64）/ 统信 UOS 20 专业版，以及其它 ARM64 Linux 桌面。
+
+一、怎么跑
+----------
+1. 解压：
+   tar -xzf 词迹-1.1.0-linux-arm64.tar.gz
+2. 进入目录并启动：
+   cd 词迹-1.1.0-linux-arm64
+   ./start.sh
+   如果提示没有权限：bash start.sh
+
+启动脚本里带了 --no-sandbox，因为便携目录里的 chrome-sandbox 不是 root 所有，
+不关沙箱 Electron 会拒绝启动。这是便携版的正常做法，不是报错。
+
+二、目录结构（和 Windows 版一一对应）
+------------------------------------
+  程序/             Electron 33.4.11 ARM64 运行时 + 应用代码
+    vocab-trace     主程序（AArch64）
+    resources/app/  main.js（29,388 B）、package.json、app/index.html
+  界面/index.html   外置界面（618,325 B，1.1.0）——改 UI 只改这里，不用重打包
+  数据/词典/        内置 ECDICT 精简词典（ecdict.bin 38.6 MB + ecdict.idx 6.2 MB）
+  start.sh         启动脚本
+
+主程序优先读「界面/index.html」，读不到才回退到内置那份。两份当前内容完全相同。
+
+三、数据与同步
+--------------
+首次启动会在本目录下自动建「数据/」，进度文件是 数据/进度数据.json，
+账号在 数据/账号/。登录同一个云端账号（2125818866947854336）即可把进度拉下来，
+或在设置里用「云同步」手动 pull→merge→push。
+
+四、版本与校验
+--------------
+界面 SHA256：48B6A83D6508F3D8...（与 Windows 端外置/内置界面同哈希）
+主程序：ELF 64-bit LSB，machine 0xB7（AArch64），178,145,024 B
+词典：ecdict.bin 38,612,746 B / ecdict.idx 6,152,248 B
+
+五、已知限制
+------------
+- 便携版没有系统菜单项和图标注册，需要自己建快捷方式，或在文件管理器里双击启动脚本。
+- 用的是 Electron 通用 ARM64 运行时，未在麒麟 990 真机验证；若报缺库（libgtk-3-0、libnss3、
+  libasound2 等），用 sudo apt -f install 补齐。
+- 语音朗读走 Chromium 的 speechSynthesis，UOS 上有没有中文语音取决于系统装没装语音引擎。
+
