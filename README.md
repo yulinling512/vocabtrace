@@ -35,10 +35,10 @@
 
 到 Releases 取安装包（最新为 `v1.1.1` 一版多附件）：
 
-- Windows：`词迹-1.1.0-win-portable.zip`，解压即用，含本地词典
-- 安卓：`词迹-安卓-1.1.1.apk`，直接安装
-- Linux ARM64：`词迹-1.1.0-linux-arm64.tar.gz`，解压后 `./start.sh`；旧的 amd64 deb 仍在历史 Release
-- 源码：`词迹-源码-1.1.1.zip`
+- Windows：`vocabtrace-win-1.1.0-portable.zip`，解压即用，含本地词典
+- 安卓：`vocabtrace-android-1.1.1.apk`，直接安装
+- Linux ARM64：`vocabtrace-linux-arm64-1.1.0.tar.gz`，解压后 `./start.sh`；旧的 amd64 deb 仍在历史 Release
+- 源码：`vocabtrace-source-1.1.1.zip`
 
 ## 目录
 
